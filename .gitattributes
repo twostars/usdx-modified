@@ -173,7 +173,6 @@ Game/Graphics/us.ico -text
 Modis/5000Points/Until5000.dpr -text
 Modis/Blind/Blind.dpr -text
 Modis/Don't_Get_Worse/Hold_The_Line.dpr -text
-Modis/Duell/Duell.cfg -text
 Modis/Duell/Duell.dpr -text
 Modis/SDK/ModiSDK.pas -text
 Modis/SDK/StrUtils.pas -text
