@@ -129,15 +129,8 @@ Game/Code/Screens/UScreenTop5.dcu -text
 Game/Code/Screens/UScreenTop5.pas -text
 Game/Code/Screens/UScreenWelcome.dcu -text
 Game/Code/Screens/UScreenWelcome.pas -text
-Game/Code/UltraStar.RES -text
-Game/Code/UltraStar.bdsproj -text
-Game/Code/UltraStar.bdsproj.local -text
-Game/Code/UltraStar.cfg -text
-Game/Code/UltraStar.dof -text
 Game/Code/UltraStar.dpr -text
-Game/Code/UltraStar.identcache2 -text
 Game/Code/UltraStar.rc -text
-Game/Code/UltraStar.~dpr -text
 Game/Code/rccompillieren.bat -text
 Game/Fonts/512x512[!!-~]Normal.dat -text
 Game/Fonts/Backup/Bold/Font[!!-~]1024[!!-~]Bold[!!-~]16.bmp -text
