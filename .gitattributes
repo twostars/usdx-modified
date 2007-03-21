@@ -34,8 +34,6 @@ Game/Code/Menu/UMenuSelect.pas -text
 Game/Code/Menu/UMenuSelectSlide.pas -text
 Game/Code/Menu/UMenuStatic.pas -text
 Game/Code/Menu/UMenuText.pas -text
-Game/Code/SMpeg/USmpeg.alt.pas -text
-Game/Code/SMpeg/USmpeg.dcu -text
 Game/Code/SMpeg/USmpeg.pas -text
 Game/Code/Screens/UScreenEdit.pas -text
 Game/Code/Screens/UScreenEditConvert.pas -text
