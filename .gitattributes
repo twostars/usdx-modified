@@ -3,6 +3,7 @@ Game/Code/Classes/TextGL.pas -text
 Game/Code/Classes/UCatCovers.pas -text
 Game/Code/Classes/UCovers.pas -text
 Game/Code/Classes/UDLLManager.pas -text
+Game/Code/Classes/UDataBase.pas -text
 Game/Code/Classes/UDraw.pas -text
 Game/Code/Classes/UFiles.pas -text
 Game/Code/Classes/UGraphic.pas -text
@@ -19,7 +20,6 @@ Game/Code/Classes/UMusic.pas -text
 Game/Code/Classes/UParty.pas -text
 Game/Code/Classes/UPliki.pas -text
 Game/Code/Classes/URecord.pas -text
-Game/Code/Classes/UScores.pas -text
 Game/Code/Classes/USkins.pas -text
 Game/Code/Classes/USongs.pas -text
 Game/Code/Classes/UTexture.pas -text
