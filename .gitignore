@@ -63,3 +63,15 @@ Modis/Blind/Blind.~dpr
 Modis/Duell/Duell.cfg
 Modis/Duell/Duell.dof
 Modis/Duell/Duell.~dpr
+ScoreConverter/ScoreConverter.cfg
+ScoreConverter/ScoreConverter.dof
+ScoreConverter/ScoreConverter.exe
+ScoreConverter/ScoreConverter.~dpr
+ScoreConverter/UBrowseDialog.~pas
+ScoreConverter/UScores.dcu
+ScoreConverter/USongs.dcu
+ScoreConverter/USongs.~pas
+ScoreConverter/Umainform.dcu
+ScoreConverter/Umainform.~dfm
+ScoreConverter/Umainform.~pas
+ScoreConverter/sqlite3.dll

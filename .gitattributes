@@ -99,6 +99,14 @@ Modis/Don't_Get_Worse/Hold_The_Line.dpr -text
 Modis/Duell/Duell.dpr -text
 Modis/SDK/ModiSDK.pas -text
 Modis/SDK/StrUtils.pas -text
+ScoreConverter/ScoreConverter.dpr -text
+ScoreConverter/ScoreConverter.ico -text
+ScoreConverter/ScoreConverter.res -text
+ScoreConverter/ToDo.txt -text
+ScoreConverter/UScores.pas -text
+ScoreConverter/USongs.pas -text
+ScoreConverter/Umainform.dfm -text
+ScoreConverter/Umainform.pas -text
 Skins/Classic/Ball3.bmp -text
 Skins/Classic/Bar.jpg -text
 Skins/Classic/Button.jpg -text
