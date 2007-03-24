@@ -68,8 +68,12 @@ Game/Code/UltraStar.rc -text
 Game/Code/rccompillieren.bat -text
 Game/Fonts/Bold/Font[!!-~]1024[!!-~]Bold[!!-~]16.png -text
 Game/Fonts/Bold/Font[!!-~]1024[!!-~]Bold.dat -text
+Game/Fonts/Bold/eurostar_regular_bold.dat -text
+Game/Fonts/Bold/eurostar_regular_bold.png -text
 Game/Fonts/Normal/Font[!!-~]Normal[!!-~]16.png -text
 Game/Fonts/Normal/Font[!!-~]Normal.dat -text
+Game/Fonts/Normal/eurostar_regular.dat -text
+Game/Fonts/Normal/eurostar_regular.png -text
 Game/Fonts/Outline[!!-~]1/Outline[!!-~]36[!!-~](1024)[!!-~]16c.png -text
 Game/Fonts/Outline[!!-~]1/Outline[!!-~]36[!!-~](1024).dat -text
 Game/Fonts/Outline[!!-~]2/5[!!-~]-[!!-~]Outline[!!-~]Dark[!!-~]Edited[!!-~]16c.PNG -text
