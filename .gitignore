@@ -24,6 +24,16 @@ Game/Code/Classes/USongs.dcu
 Game/Code/Classes/UTexture.dcu
 Game/Code/Classes/UThemes.dcu
 Game/Code/Classes/UTime.dcu
+Game/Code/Menu/UDisplay.dcu
+Game/Code/Menu/UDrawTexture.dcu
+Game/Code/Menu/UMenu.dcu
+Game/Code/Menu/UMenuButton.dcu
+Game/Code/Menu/UMenuInteract.dcu
+Game/Code/Menu/UMenuSelect.dcu
+Game/Code/Menu/UMenuSelectSlide.dcu
+Game/Code/Menu/UMenuStatic.dcu
+Game/Code/Menu/UMenuText.dcu
+Game/Code/SMpeg/USmpeg.dcu
 Game/Code/Screens/UScreenEdit.dcu
 Game/Code/Screens/UScreenEditConvert.dcu
 Game/Code/Screens/UScreenEditHeader.dcu
