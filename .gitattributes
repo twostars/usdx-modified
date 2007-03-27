@@ -63,6 +63,7 @@ Game/Code/Screens/UScreenSong.pas -text
 Game/Code/Screens/UScreenSongMenu.pas -text
 Game/Code/Screens/UScreenTop5.pas -text
 Game/Code/Screens/UScreenWelcome.pas -text
+Game/Code/UltraStar.RES -text
 Game/Code/UltraStar.dpr -text
 Game/Code/UltraStar.rc -text
 Game/Code/rccompillieren.bat -text
@@ -79,6 +80,7 @@ Game/Fonts/Outline[!!-~]1/Outline[!!-~]36[!!-~](1024).dat -text
 Game/Fonts/Outline[!!-~]2/5[!!-~]-[!!-~]Outline[!!-~]Dark[!!-~]Edited[!!-~]16c.PNG -text
 Game/Fonts/Outline[!!-~]2/Outline.dat -text
 Game/Graphics/us.ico -text
+Game/Graphics/ustar-icon_v01.ico -text
 Languages/Catalan.ini -text
 Languages/Croatian.ini -text
 Languages/Czech.ini -text
