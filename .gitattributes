@@ -63,7 +63,6 @@ Game/Code/Screens/UScreenSong.pas -text
 Game/Code/Screens/UScreenSongMenu.pas -text
 Game/Code/Screens/UScreenTop5.pas -text
 Game/Code/Screens/UScreenWelcome.pas -text
-Game/Code/UltraStar.RES -text
 Game/Code/UltraStar.dpr -text
 Game/Code/UltraStar.rc -text
 Game/Code/rccompillieren.bat -text
