@@ -130,6 +130,7 @@ Skins/Classic/Note[!!-~]BG[!!-~]Left.bmp -text
 Skins/Classic/Note[!!-~]BG[!!-~]Mid.bmp -text
 Skins/Classic/Note[!!-~]BG[!!-~]Right.bmp -text
 Skins/Classic/Note[!!-~]Star.jpg -text
+Skins/Classic/NotePerfectStar.jpg -text
 Skins/Classic/P.jpg -text
 Skins/Classic/Right[!!-~]gray.bmp -text
 Skins/Classic/Score[!!-~]Box.jpg -text
@@ -191,6 +192,7 @@ Skins/Deluxe/cd.jpg -text
 Skins/Deluxe/exit.jpg -text
 Skins/Deluxe/leiste1.jpg -text
 Skins/Deluxe/leiste2.jpg -text
+Skins/Deluxe/mainicon.jpg -text
 Skins/Deluxe/options.jpg -text
 Themes/Classic.ini -text
 Themes/Deluxe.ini -text
