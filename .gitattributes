@@ -133,6 +133,7 @@ Skins/Classic/Note[!!-~]BG[!!-~]Right.bmp -text
 Skins/Classic/Note[!!-~]Star.jpg -text
 Skins/Classic/NotePerfectStar.jpg -text
 Skins/Classic/P.jpg -text
+Skins/Classic/Pointer.bmp -text
 Skins/Classic/Right[!!-~]gray.bmp -text
 Skins/Classic/Score[!!-~]Box.jpg -text
 Skins/Classic/Score[!!-~]Level[!!-~]Round.jpg -text
@@ -168,7 +169,7 @@ Skins/Deluxe/Note[!!-~]BG[!!-~]Right.bmp -text
 Skins/Deluxe/Note[!!-~]Star.jpg -text
 Skins/Deluxe/NotePerfectStar.jpg -text
 Skins/Deluxe/P.jpg -text
-Skins/Deluxe/Pointer.jpg -text
+Skins/Deluxe/Pointer.bmp -text
 Skins/Deluxe/Right[!!-~]gray.bmp -text
 Skins/Deluxe/Score[!!-~]Box.jpg -text
 Skins/Deluxe/Score[!!-~]Level[!!-~]Round.jpg -text
