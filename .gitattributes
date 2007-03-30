@@ -97,6 +97,7 @@ Languages/Portuguese.ini -text
 Languages/Spanish.ini -text
 Languages/Swedish.ini -text
 Languages/Turkish.ini -text
+Languages/readme.txt -text
 Modis/5000Points/Until5000.dpr -text
 Modis/Blind/Blind.dpr -text
 Modis/Don't_Get_Worse/Hold_The_Line.dpr -text
