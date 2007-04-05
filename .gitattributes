@@ -46,6 +46,7 @@ Game/Code/Screens/UScreenMain.pas -text
 Game/Code/Screens/UScreenName.pas -text
 Game/Code/Screens/UScreenOpen.pas -text
 Game/Code/Screens/UScreenOptions.pas -text
+Game/Code/Screens/UScreenOptionsAdvanced.pas -text
 Game/Code/Screens/UScreenOptionsGame.pas -text
 Game/Code/Screens/UScreenOptionsGraphics.pas -text
 Game/Code/Screens/UScreenOptionsLyrics.pas -text
