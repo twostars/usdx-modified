@@ -179,7 +179,6 @@ Skins/Deluxe/Sing[!!-~]Bar[!!-~]Back.jpg -text
 Skins/Deluxe/Sing[!!-~]Bar[!!-~]Bar.jpg -text
 Skins/Deluxe/Sing[!!-~]Bar[!!-~]Front.jpg -text
 Skins/Deluxe/Sing[!!-~]Score[!!-~]BG.jpg -text
-Skins/Deluxe/Song[!!-~]Cover.jpg -text
 Skins/Deluxe/Song[!!-~]Fade.jpg -text
 Skins/Deluxe/Song[!!-~]Selection.jpg -text
 Skins/Deluxe/Square.jpg -text
@@ -197,6 +196,7 @@ Skins/Deluxe/\[icon\]search.jpg -text
 Skins/Deluxe/\[icon\]songmenu.jpg -text
 Skins/Deluxe/\[main\]playerNumberBox.jpg -text
 Skins/Deluxe/\[main\]scoreLine.jpg -text
+Skins/Deluxe/\[main\]songCover.jpg -text
 Skins/Deluxe/\[main\]songSelection1.jpg -text
 Skins/Deluxe/\[main\]songSelection2.jpg -text
 Skins/Deluxe/\[menu\]jumpToBg.jpg -text
