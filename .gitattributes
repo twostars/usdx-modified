@@ -161,7 +161,6 @@ Skins/Deluxe/Button.jpg -text
 Skins/Deluxe/Buttonf.jpg -text
 Skins/Deluxe/Joker.jpg -text
 Skins/Deluxe/Left[!!-~]gray.bmp -text
-Skins/Deluxe/Line[!!-~]Bonus[!!-~]PopUp.JPG -text
 Skins/Deluxe/Line.jpg -text
 Skins/Deluxe/LoadingBackground.jpg -text
 Skins/Deluxe/Main[!!-~]Bar.jpg -text
@@ -178,12 +177,8 @@ Skins/Deluxe/Score[!!-~]Box.jpg -text
 Skins/Deluxe/Score[!!-~]Level[!!-~]Round.jpg -text
 Skins/Deluxe/Score[!!-~]Level.jpg -text
 Skins/Deluxe/Score[!!-~]Line.jpg -text
-Skins/Deluxe/Sing[!!-~]Bar[!!-~]Back.jpg -text
-Skins/Deluxe/Sing[!!-~]Bar[!!-~]Bar.jpg -text
-Skins/Deluxe/Sing[!!-~]Bar[!!-~]Front.jpg -text
 Skins/Deluxe/Sing[!!-~]Score[!!-~]BG.jpg -text
 Skins/Deluxe/Song[!!-~]Fade.jpg -text
-Skins/Deluxe/Song[!!-~]Selection.jpg -text
 Skins/Deluxe/Square.jpg -text
 Skins/Deluxe/Text[!!-~]Bar.jpg -text
 Skins/Deluxe/W&C.ini -text
@@ -206,8 +201,13 @@ Skins/Deluxe/\[main\]songSelection2.jpg -text
 Skins/Deluxe/\[menu\]jumpToBg.jpg -text
 Skins/Deluxe/\[menu\]songMenuBg.jpg -text
 Skins/Deluxe/\[score\]endcap.jpg -text
+Skins/Deluxe/\[sing\]lineBonusPopUp.jpg -text
 Skins/Deluxe/\[sing\]lyricsHelpBar.bmp -text
 Skins/Deluxe/\[sing\]scoreBg.jpg -text
+Skins/Deluxe/\[sing\]singBarBack.jpg -text
+Skins/Deluxe/\[sing\]singBarBar.jpg -text
+Skins/Deluxe/\[sing\]singBarFront.jpg -text
+Skins/Deluxe/\[sing\]textBar.jpg -text
 Skins/Deluxe/\[special\]bar1.jpg -text
 Skins/Deluxe/\[special\]bar2.jpg -text
 Skins/Deluxe/button_alt.jpg -text
