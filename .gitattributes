@@ -64,6 +64,8 @@ Game/Code/Screens/UScreenSingModi.pas -text
 Game/Code/Screens/UScreenSong.pas -text
 Game/Code/Screens/UScreenSongJumpto.pas -text
 Game/Code/Screens/UScreenSongMenu.pas -text
+Game/Code/Screens/UScreenStatDetail.pas -text
+Game/Code/Screens/UScreenStatMain.pas -text
 Game/Code/Screens/UScreenTop5.pas -text
 Game/Code/Screens/UScreenWelcome.pas -text
 Game/Code/UltraStar.dpr -text
