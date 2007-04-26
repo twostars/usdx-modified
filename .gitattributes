@@ -36,6 +36,7 @@ Game/Code/Menu/UMenuSelectSlide.pas -text
 Game/Code/Menu/UMenuStatic.pas -text
 Game/Code/Menu/UMenuText.pas -text
 Game/Code/SMpeg/USmpeg.pas -text
+Game/Code/Screens/UScreenCredits.pas -text
 Game/Code/Screens/UScreenEdit.pas -text
 Game/Code/Screens/UScreenEditConvert.pas -text
 Game/Code/Screens/UScreenEditHeader.pas -text
@@ -86,6 +87,7 @@ Game/Fonts/Outline[!!-~]2/Outline.dat -text
 Game/Graphics/NoCover.jpg -text
 Game/Graphics/us.ico -text
 Game/Graphics/ustar-icon_v01.ico -text
+Game/Sounds/wome_-_echoes.mp3 -text
 Languages/Catalan.ini -text
 Languages/Croatian.ini -text
 Languages/Czech.ini -text
