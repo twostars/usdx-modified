@@ -30,6 +30,7 @@ Game/Code/Menu/UDisplay.pas -text
 Game/Code/Menu/UDrawTexture.pas -text
 Game/Code/Menu/UMenu.pas -text
 Game/Code/Menu/UMenuButton.pas -text
+Game/Code/Menu/UMenuButtonCollection.pas -text
 Game/Code/Menu/UMenuInteract.pas -text
 Game/Code/Menu/UMenuSelect.pas -text
 Game/Code/Menu/UMenuSelectSlide.pas -text
