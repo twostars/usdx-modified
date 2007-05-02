@@ -60,6 +60,7 @@ Game/Code/Screens/UScreenPartyOptions.pas -text
 Game/Code/Screens/UScreenPartyPlayer.pas -text
 Game/Code/Screens/UScreenPartyScore.pas -text
 Game/Code/Screens/UScreenPartyWin.pas -text
+Game/Code/Screens/UScreenPopup.pas -text
 Game/Code/Screens/UScreenScore.pas -text
 Game/Code/Screens/UScreenSing.pas -text
 Game/Code/Screens/UScreenSingModi.pas -text
