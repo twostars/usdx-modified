@@ -159,89 +159,78 @@ Skins/Classic/Song[!!-~]Selection.jpg -text
 Skins/Classic/Square.jpg -text
 Skins/Classic/Standard.ini -text
 Skins/Classic/Text[!!-~]Bar.jpg -text
-Skins/Deluxe/Ball3.bmp -text
-Skins/Deluxe/Bar.jpg -text
 Skins/Deluxe/Blue.ini -text
-Skins/Deluxe/Blue.jpg -text
-Skins/Deluxe/Button.jpg -text
-Skins/Deluxe/ButtonFade.jpg -text
-Skins/Deluxe/Buttonf.jpg -text
-Skins/Deluxe/Joker.bak.jpg -text
-Skins/Deluxe/Joker.jpg -text
-Skins/Deluxe/Left[!!-~]gray.bmp -text
-Skins/Deluxe/Line.jpg -text
-Skins/Deluxe/LoadingBackground.jpg -text
-Skins/Deluxe/Main[!!-~]Bar.jpg -text
-Skins/Deluxe/MainBG_Blue.jpg -text
-Skins/Deluxe/Mid[!!-~]gray.bmp -text
-Skins/Deluxe/Note[!!-~]BG[!!-~]Left.bmp -text
-Skins/Deluxe/Note[!!-~]BG[!!-~]Mid.bmp -text
-Skins/Deluxe/Note[!!-~]BG[!!-~]Right.bmp -text
-Skins/Deluxe/P.bak.jpg -text
-Skins/Deluxe/P.jpg -text
-Skins/Deluxe/Pointer.bmp -text
-Skins/Deluxe/Right[!!-~]gray.bmp -text
-Skins/Deluxe/RoundPartyBG.JPG -text
-Skins/Deluxe/Score[!!-~]Box.jpg -text
-Skins/Deluxe/Score[!!-~]Level[!!-~]Round.jpg -text
-Skins/Deluxe/Score[!!-~]Level.jpg -text
-Skins/Deluxe/Score[!!-~]Line.jpg -text
-Skins/Deluxe/Sing[!!-~]Score[!!-~]BG.jpg -text
-Skins/Deluxe/Song[!!-~]Fade.jpg -text
-Skins/Deluxe/Square.jpg -text
-Skins/Deluxe/Text[!!-~]Bar.jpg -text
-Skins/Deluxe/W&C.ini -text
-Skins/Deluxe/\[BG\]PartyRound.jpg -text
-Skins/Deluxe/\[BG\]PartyRounds.jpg -text
-Skins/Deluxe/\[bg-load\]summer.jpg -text
-Skins/Deluxe/\[bg-main\]summer.jpg -text
-Skins/Deluxe/\[effect\]goldenNoteStar.jpg -text
-Skins/Deluxe/\[effect\]perfectNoteStar.jpg -text
-Skins/Deluxe/\[icon\]cd.jpg -text
-Skins/Deluxe/\[icon\]main.jpg -text
-Skins/Deluxe/\[icon\]options.jpg -text
-Skins/Deluxe/\[icon\]party.jpg -text
-Skins/Deluxe/\[icon\]score.jpg -text
-Skins/Deluxe/\[icon\]search.jpg -text
-Skins/Deluxe/\[icon\]songmenu.jpg -text
-Skins/Deluxe/\[main\]playerNumberBox.jpg -text
-Skins/Deluxe/\[main\]scoreLine.jpg -text
-Skins/Deluxe/\[main\]songCover.jpg -text
-Skins/Deluxe/\[main\]songSelection1.jpg -text
-Skins/Deluxe/\[main\]songSelection2.jpg -text
-Skins/Deluxe/\[menu\]jumpToBg.jpg -text
-Skins/Deluxe/\[menu\]songMenuBg.jpg -text
-Skins/Deluxe/\[party\]playerButton.jpg -text
-Skins/Deluxe/\[party\]playerTeamButton.jpg -text
-Skins/Deluxe/\[party\]roundBG1.jpg -text
-Skins/Deluxe/\[party\]roundBG2.jpg -text
-Skins/Deluxe/\[party\]roundBG3.jpg -text
-Skins/Deluxe/\[party\]roundBG4.jpg -text
-Skins/Deluxe/\[party\]roundTeamButton.jpg -text
-Skins/Deluxe/\[score\]endcap.jpg -text
-Skins/Deluxe/\[sing\]lineBonusPopUp.jpg -text
-Skins/Deluxe/\[sing\]lyricsHelpBar.bak.bmp -text
-Skins/Deluxe/\[sing\]lyricsHelpBar.bmp -text
-Skins/Deluxe/\[sing\]notesBgLeft.bmp -text
-Skins/Deluxe/\[sing\]notesBgMid.bmp -text
-Skins/Deluxe/\[sing\]notesBgRight.bmp -text
-Skins/Deluxe/\[sing\]notesLeft.bmp -text
-Skins/Deluxe/\[sing\]notesMid.bmp -text
-Skins/Deluxe/\[sing\]notesRight.bmp -text
-Skins/Deluxe/\[sing\]p.jpg -text
-Skins/Deluxe/\[sing\]scoreBg.jpg -text
-Skins/Deluxe/\[sing\]singBarBack.jpg -text
-Skins/Deluxe/\[sing\]singBarBar.jpg -text
-Skins/Deluxe/\[sing\]singBarFront.jpg -text
-Skins/Deluxe/\[sing\]textBar.jpg -text
-Skins/Deluxe/\[special\]bar1.jpg -text
-Skins/Deluxe/\[special\]bar2.jpg -text
-Skins/Deluxe/button_alt.jpg -text
-Skins/Deluxe/button_az.jpg -text
-Skins/Deluxe/button_enter.jpg -text
-Skins/Deluxe/button_j.jpg -text
-Skins/Deluxe/button_m.jpg -text
-Skins/Deluxe/button_p.jpg -text
-Skins/Deluxe/rectangle.jpg -text
+Skins/Deluxe/W&C-Summer.ini -text
+Skins/Deluxe/\[bg-load\]summer.jpg -text svneol=unset#unset
+Skins/Deluxe/\[bg-main\]summer.jpg -text svneol=unset#unset
+Skins/Deluxe/\[button\]alt.jpg -text
+Skins/Deluxe/\[button\]az.jpg -text
+Skins/Deluxe/\[button\]enter.jpg -text
+Skins/Deluxe/\[button\]j.jpg -text
+Skins/Deluxe/\[button\]m.jpg -text
+Skins/Deluxe/\[button\]navi.jpg -text
+Skins/Deluxe/\[button\]p.jpg -text
+Skins/Deluxe/\[effect\]goldenNoteStar.jpg -text svneol=unset#unset
+Skins/Deluxe/\[effect\]perfectNoteStar.jpg -text svneol=unset#unset
+Skins/Deluxe/\[helper\]buttonFade.jpg -text
+Skins/Deluxe/\[helper\]rectangle.jpg -text
+Skins/Deluxe/\[icon\]cd.jpg -text svneol=unset#unset
+Skins/Deluxe/\[icon\]main.jpg -text svneol=unset#unset
+Skins/Deluxe/\[icon\]options.jpg -text svneol=unset#unset
+Skins/Deluxe/\[icon\]party.jpg -text svneol=unset#unset
+Skins/Deluxe/\[icon\]score.jpg -text svneol=unset#unset
+Skins/Deluxe/\[icon\]search.jpg -text svneol=unset#unset
+Skins/Deluxe/\[icon\]songmenu.jpg -text svneol=unset#unset
+Skins/Deluxe/\[main\]button.jpg -text
+Skins/Deluxe/\[main\]buttonf.jpg -text
+Skins/Deluxe/\[main\]mainBar.jpg -text
+Skins/Deluxe/\[main\]playerNumberBox.jpg -text svneol=unset#unset
+Skins/Deluxe/\[main\]songCover.jpg -text svneol=unset#unset
+Skins/Deluxe/\[main\]songSelection1.jpg -text svneol=unset#unset
+Skins/Deluxe/\[main\]songSelection2.jpg -text svneol=unset#unset
+Skins/Deluxe/\[menu\]jumpToBg.jpg -text svneol=unset#unset
+Skins/Deluxe/\[menu\]songMenuBg.jpg -text svneol=unset#unset
+Skins/Deluxe/\[party\]Joker.jpg -text
+Skins/Deluxe/\[party\]playerButton.jpg -text svneol=unset#unset
+Skins/Deluxe/\[party\]playerTeamButton.jpg -text svneol=unset#unset
+Skins/Deluxe/\[party\]pointer.bmp -text
+Skins/Deluxe/\[party\]roundBG1.jpg -text svneol=unset#unset
+Skins/Deluxe/\[party\]roundBG2.jpg -text svneol=unset#unset
+Skins/Deluxe/\[party\]roundBG3.jpg -text svneol=unset#unset
+Skins/Deluxe/\[party\]roundBG4.jpg -text svneol=unset#unset
+Skins/Deluxe/\[party\]roundTeamButton.jpg -text svneol=unset#unset
+Skins/Deluxe/\[score\]Line.jpg -text
+Skins/Deluxe/\[score\]box.jpg -text
+Skins/Deluxe/\[score\]endcap.jpg -text svneol=unset#unset
+Skins/Deluxe/\[score\]level.jpg -text
+Skins/Deluxe/\[score\]levelRound.jpg -text
+Skins/Deluxe/\[sing\]LyricsBall.bmp -text
+Skins/Deluxe/\[sing\]lineBonusPopUp.jpg -text svneol=unset#unset
+Skins/Deluxe/\[sing\]lyricsHelpBar.bmp -text svneol=unset#unset
+Skins/Deluxe/\[sing\]notesBgLeft.bmp -text svneol=unset#unset
+Skins/Deluxe/\[sing\]notesBgMid.bmp -text svneol=unset#unset
+Skins/Deluxe/\[sing\]notesBgRight.bmp -text svneol=unset#unset
+Skins/Deluxe/\[sing\]notesLeft.bmp -text svneol=unset#unset
+Skins/Deluxe/\[sing\]notesMid.bmp -text svneol=unset#unset
+Skins/Deluxe/\[sing\]notesRight.bmp -text svneol=unset#unset
+Skins/Deluxe/\[sing\]p.jpg -text svneol=unset#unset
+Skins/Deluxe/\[sing\]scoreBg.jpg -text svneol=unset#unset
+Skins/Deluxe/\[sing\]singBarBack.jpg -text svneol=unset#unset
+Skins/Deluxe/\[sing\]singBarBar.jpg -text svneol=unset#unset
+Skins/Deluxe/\[sing\]singBarFront.jpg -text svneol=unset#unset
+Skins/Deluxe/\[sing\]textBar.jpg -text svneol=unset#unset
+Skins/Deluxe/\[sing\]timeBar.jpg -text
+Skins/Deluxe/\[special\]bar1.jpg -text svneol=unset#unset
+Skins/Deluxe/\[special\]bar2.jpg -text svneol=unset#unset
+Skins/Deluxe/x_W&C-Autum.ini -text
+Skins/Deluxe/x_W&C-Winter.ini -text
+Skins/Deluxe/x_\[bg-load\]autum.jpg -text
+Skins/Deluxe/x_\[bg-load\]blue.jpg -text
+Skins/Deluxe/x_\[bg-load\]winter.jpg -text
+Skins/Deluxe/x_\[bg-main\]autum.jpg -text
+Skins/Deluxe/x_\[bg-main\]blue.jpg -text
+Skins/Deluxe/x_\[bg-main\]winter.jpg -text
+Skins/Deluxe/x_\[button\]esc.jpg -text
+Skins/Deluxe/x_\[icon\]stats.jpg -text
 Themes/Classic.ini -text
 Themes/Deluxe.ini -text
