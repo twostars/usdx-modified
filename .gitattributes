@@ -161,8 +161,13 @@ Skins/Classic/Standard.ini -text
 Skins/Classic/Text[!!-~]Bar.jpg -text
 Skins/Deluxe/Blue.ini -text
 Skins/Deluxe/W&C-Summer.ini -text
+Skins/Deluxe/W&C-Winter.ini -text
+Skins/Deluxe/\[bg-load\]blue.jpg -text
 Skins/Deluxe/\[bg-load\]summer.jpg -text svneol=unset#unset
+Skins/Deluxe/\[bg-load\]winter.jpg -text
+Skins/Deluxe/\[bg-main\]blue.jpg -text
 Skins/Deluxe/\[bg-main\]summer.jpg -text svneol=unset#unset
+Skins/Deluxe/\[bg-main\]winter.jpg -text
 Skins/Deluxe/\[button\]alt.jpg -text
 Skins/Deluxe/\[button\]az.jpg -text
 Skins/Deluxe/\[button\]enter.jpg -text
@@ -225,13 +230,8 @@ Skins/Deluxe/\[sing\]timeBar.jpg -text
 Skins/Deluxe/\[special\]bar1.jpg -text svneol=unset#unset
 Skins/Deluxe/\[special\]bar2.jpg -text svneol=unset#unset
 Skins/Deluxe/x_W&C-Autum.ini -text
-Skins/Deluxe/x_W&C-Winter.ini -text
 Skins/Deluxe/x_\[bg-load\]autum.jpg -text
-Skins/Deluxe/x_\[bg-load\]blue.jpg -text
-Skins/Deluxe/x_\[bg-load\]winter.jpg -text
 Skins/Deluxe/x_\[bg-main\]autum.jpg -text
-Skins/Deluxe/x_\[bg-main\]blue.jpg -text
-Skins/Deluxe/x_\[bg-main\]winter.jpg -text
 Skins/Deluxe/x_\[icon\]stats.jpg -text
 Themes/Classic.ini -text
 Themes/Deluxe.ini -text
