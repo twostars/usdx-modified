@@ -166,6 +166,7 @@ Skins/Deluxe/\[bg-main\]summer.jpg -text svneol=unset#unset
 Skins/Deluxe/\[button\]alt.jpg -text
 Skins/Deluxe/\[button\]az.jpg -text
 Skins/Deluxe/\[button\]enter.jpg -text
+Skins/Deluxe/\[button\]esc.jpg -text
 Skins/Deluxe/\[button\]j.jpg -text
 Skins/Deluxe/\[button\]m.jpg -text
 Skins/Deluxe/\[button\]navi.jpg -text
@@ -231,7 +232,6 @@ Skins/Deluxe/x_\[bg-load\]winter.jpg -text
 Skins/Deluxe/x_\[bg-main\]autum.jpg -text
 Skins/Deluxe/x_\[bg-main\]blue.jpg -text
 Skins/Deluxe/x_\[bg-main\]winter.jpg -text
-Skins/Deluxe/x_\[button\]esc.jpg -text
 Skins/Deluxe/x_\[icon\]stats.jpg -text
 Themes/Classic.ini -text
 Themes/Deluxe.ini -text
