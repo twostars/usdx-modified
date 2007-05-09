@@ -1,4 +1,5 @@
 * text=auto !eol
+Game/Changelog.txt -text
 Game/Code/Classes/TextGL.pas -text
 Game/Code/Classes/UCatCovers.pas -text
 Game/Code/Classes/UCovers.pas -text
