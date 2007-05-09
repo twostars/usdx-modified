@@ -210,6 +210,9 @@ Skins/Deluxe/\[party\]roundTeamButton.jpg -text svneol=unset#unset
 Skins/Deluxe/\[party\]scoreBG1.jpg -text
 Skins/Deluxe/\[party\]scoreBG2.jpg -text
 Skins/Deluxe/\[party\]teamPoints.jpg -text
+Skins/Deluxe/\[party\]winTeamButton1.jpg -text
+Skins/Deluxe/\[party\]winTeamButton2.jpg -text
+Skins/Deluxe/\[party\]winTeamButton3.jpg -text
 Skins/Deluxe/\[score\]Line.jpg -text
 Skins/Deluxe/\[score\]box.jpg -text
 Skins/Deluxe/\[score\]endcap.jpg -text svneol=unset#unset
@@ -240,5 +243,6 @@ Skins/Deluxe/x_\[bg-load\]autum.jpg -text
 Skins/Deluxe/x_\[bg-main\]autum.jpg -text
 Skins/Deluxe/x_\[icon\]stats.jpg -text
 Skins/Deluxe/x_\[party\]scoreDecoration.jpg -text
+Skins/Deluxe/x_\[party\]winDecoration1.jpg -text
 Themes/Classic.ini -text
 Themes/Deluxe.ini -text
