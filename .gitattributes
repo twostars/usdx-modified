@@ -235,10 +235,13 @@ Skins/Deluxe/\[sing\]singBarBar.jpg -text svneol=unset#unset
 Skins/Deluxe/\[sing\]singBarFront.jpg -text svneol=unset#unset
 Skins/Deluxe/\[sing\]textBar.jpg -text svneol=unset#unset
 Skins/Deluxe/\[sing\]timeBar.jpg -text
+Skins/Deluxe/\[sing\]timeBar1.jpg -text
 Skins/Deluxe/\[special\]bar1.jpg -text svneol=unset#unset
 Skins/Deluxe/\[special\]bar2.jpg -text svneol=unset#unset
-Skins/Deluxe/\[stat\]EntryBG.jpg -text
-Skins/Deluxe/\[stat\]OverviewBG.jpg -text
+Skins/Deluxe/\[stat\]detailBG1.jpg -text
+Skins/Deluxe/\[stat\]mainBG1.jpg -text
+Skins/Deluxe/\[stat\]mainBG2.jpg -text
+Skins/Deluxe/\[stat\]mainBG3.jpg -text
 Skins/Deluxe/x_Autum.ini -text
 Skins/Deluxe/x_\[bg-load\]autum.jpg -text
 Skins/Deluxe/x_\[bg-main\]autum.jpg -text
