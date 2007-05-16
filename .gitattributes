@@ -191,9 +191,11 @@ Skins/Deluxe/\[effect\]perfectNoteStar.jpg -text svneol=unset#unset
 Skins/Deluxe/\[helper\]buttonFade.jpg -text
 Skins/Deluxe/\[helper\]rectangle.jpg -text
 Skins/Deluxe/\[icon\]cd.jpg -text svneol=unset#unset
+Skins/Deluxe/\[icon\]error.jpg -text
 Skins/Deluxe/\[icon\]main.jpg -text svneol=unset#unset
 Skins/Deluxe/\[icon\]options.jpg -text svneol=unset#unset
 Skins/Deluxe/\[icon\]party.jpg -text svneol=unset#unset
+Skins/Deluxe/\[icon\]question.jpg -text
 Skins/Deluxe/\[icon\]score.jpg -text svneol=unset#unset
 Skins/Deluxe/\[icon\]search.jpg -text svneol=unset#unset
 Skins/Deluxe/\[icon\]songmenu.jpg -text svneol=unset#unset
