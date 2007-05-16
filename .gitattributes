@@ -208,6 +208,7 @@ Skins/Deluxe/\[main\]songCover.jpg -text svneol=unset#unset
 Skins/Deluxe/\[main\]songSelection1.jpg -text svneol=unset#unset
 Skins/Deluxe/\[main\]songSelection2.jpg -text svneol=unset#unset
 Skins/Deluxe/\[menu\]PopUpBg.JPG -text
+Skins/Deluxe/\[menu\]PopUpFg.JPG -text
 Skins/Deluxe/\[menu\]jumpToBg.jpg -text svneol=unset#unset
 Skins/Deluxe/\[menu\]songMenuBg.jpg -text svneol=unset#unset
 Skins/Deluxe/\[menu\]songMenuSelectBg.jpg -text
