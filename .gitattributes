@@ -90,6 +90,7 @@ Game/Fonts/Outline[!!-~]2/Outline.dat -text
 Game/Graphics/NoCover.jpg -text
 Game/Graphics/us.ico -text
 Game/Graphics/ustar-icon_v01.ico -text
+Game/Sounds/dismissed.mp3 -text
 Game/Sounds/wome_-_echoes.mp3 -text
 Languages/Catalan.ini -text
 Languages/Croatian.ini -text
@@ -178,6 +179,7 @@ Skins/Deluxe/\[bg-main\]autum.jpg -text
 Skins/Deluxe/\[bg-main\]blue.jpg -text
 Skins/Deluxe/\[bg-main\]summer.jpg -text svneol=unset#unset
 Skins/Deluxe/\[bg-main\]winter.jpg -text
+Skins/Deluxe/\[button\]13.jpg -text
 Skins/Deluxe/\[button\]alt.jpg -text
 Skins/Deluxe/\[button\]az.jpg -text
 Skins/Deluxe/\[button\]enter.jpg -text
@@ -256,7 +258,6 @@ Skins/Deluxe/\[stat\]detailBG1.jpg -text
 Skins/Deluxe/\[stat\]mainBG1.jpg -text
 Skins/Deluxe/\[stat\]mainBG2.jpg -text
 Skins/Deluxe/\[stat\]mainBG3.jpg -text
-Skins/Deluxe/x_\[icon\]stats.jpg -text
 Skins/Deluxe/x_\[party\]scoreDecoration.jpg -text
 Skins/Deluxe/x_\[party\]winDecoration1.jpg -text
 Themes/Classic.ini -text
