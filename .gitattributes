@@ -118,7 +118,6 @@ Modis/SDK/StrUtils.pas -text
 ScoreConverter/ScoreConverter.dpr -text
 ScoreConverter/ScoreConverter.ico -text
 ScoreConverter/ScoreConverter.res -text
-ScoreConverter/ToDo.txt -text
 ScoreConverter/UScores.pas -text
 ScoreConverter/USongs.pas -text
 ScoreConverter/Umainform.dfm -text
