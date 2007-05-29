@@ -133,6 +133,8 @@ Skins/Classic/\[button\]p.jpg -text
 Skins/Classic/\[effect\]goldenNoteStar.jpg -text
 Skins/Classic/\[effect\]perfectNoteStar.jpg -text
 Skins/Classic/\[icon\]Star.jpg -text
+Skins/Classic/\[icon\]error.jpg -text
+Skins/Classic/\[icon\]question.jpg -text
 Skins/Classic/\[main\]Bar.jpg -text
 Skins/Classic/\[main\]Button.jpg -text
 Skins/Classic/\[main\]ButtonEditor.jpg -text
@@ -144,6 +146,8 @@ Skins/Classic/\[mainbutton\]Multi.jpg -text
 Skins/Classic/\[mainbutton\]Options.jpg -text
 Skins/Classic/\[mainbutton\]Solo.jpg -text
 Skins/Classic/\[mainbutton\]Stats.jpg -text
+Skins/Classic/\[menu\]PopUpBg.JPG -text
+Skins/Classic/\[menu\]PopUpFg.JPG -text
 Skins/Classic/\[party\]pointer.bmp -text
 Skins/Classic/\[score\]box.jpg -text
 Skins/Classic/\[score\]level.jpg -text
