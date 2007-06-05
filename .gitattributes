@@ -133,9 +133,19 @@ Skins/Classic/\[button\]p.jpg -text
 Skins/Classic/\[effect\]goldenNoteStar.jpg -text
 Skins/Classic/\[effect\]perfectNoteStar.jpg -text
 Skins/Classic/\[icon\]Star.jpg -text
+Skins/Classic/\[icon\]cd.jpg -text
 Skins/Classic/\[icon\]error.jpg -text
+Skins/Classic/\[icon\]main.jpg -text
+Skins/Classic/\[icon\]options.jpg -text
+Skins/Classic/\[icon\]party.jpg -text
 Skins/Classic/\[icon\]question.jpg -text
+Skins/Classic/\[icon\]score.jpg -text
+Skins/Classic/\[icon\]search.jpg -text
+Skins/Classic/\[icon\]songmenu.jpg -text
+Skins/Classic/\[icon\]stats.jpg -text
+Skins/Classic/\[icon\]video.jpg -text
 Skins/Classic/\[main\]Bar.jpg -text
+Skins/Classic/\[main\]Bar1.jpg -text
 Skins/Classic/\[main\]Button.jpg -text
 Skins/Classic/\[main\]ButtonEditor.jpg -text
 Skins/Classic/\[main\]Logo.jpg -text
@@ -148,6 +158,7 @@ Skins/Classic/\[mainbutton\]Solo.jpg -text
 Skins/Classic/\[mainbutton\]Stats.jpg -text
 Skins/Classic/\[menu\]PopUpBg.JPG -text
 Skins/Classic/\[menu\]PopUpFg.JPG -text
+Skins/Classic/\[party\]playerTeamButton.jpg -text
 Skins/Classic/\[party\]pointer.bmp -text
 Skins/Classic/\[score\]box.jpg -text
 Skins/Classic/\[score\]level.jpg -text
@@ -155,6 +166,7 @@ Skins/Classic/\[score\]levelround.jpg -text
 Skins/Classic/\[score\]line.jpg -text
 Skins/Classic/\[sing\]LyricsBall.bmp -text
 Skins/Classic/\[sing\]lineBonusPopUp.jpg -text
+Skins/Classic/\[sing\]lyricsHelpBar.bmp -text
 Skins/Classic/\[sing\]notesBgLeft.bmp -text
 Skins/Classic/\[sing\]notesBgMid.bmp -text
 Skins/Classic/\[sing\]notesBgRight.bmp -text
@@ -170,6 +182,10 @@ Skins/Classic/\[sing\]textBar.jpg -text
 Skins/Classic/\[song\]BGFade.jpg -text
 Skins/Classic/\[song\]EqualizerBG.jpg -text
 Skins/Classic/\[song\]selection.jpg -text
+Skins/Classic/\[stat\]detailBG1.jpg -text
+Skins/Classic/\[stat\]mainBG1.jpg -text
+Skins/Classic/\[stat\]mainBG2.jpg -text
+Skins/Classic/\[stat\]mainBG3.jpg -text
 Skins/Deluxe/Autum.ini -text
 Skins/Deluxe/Blue.ini -text
 Skins/Deluxe/Summer.ini -text
