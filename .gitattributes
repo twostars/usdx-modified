@@ -132,6 +132,7 @@ Skins/Classic/\[button\]navi.jpg -text
 Skins/Classic/\[button\]p.jpg -text
 Skins/Classic/\[effect\]goldenNoteStar.jpg -text
 Skins/Classic/\[effect\]perfectNoteStar.jpg -text
+Skins/Classic/\[helper\]rectangle.jpg -text
 Skins/Classic/\[icon\]Star.jpg -text
 Skins/Classic/\[icon\]cd.jpg -text
 Skins/Classic/\[icon\]error.jpg -text
@@ -158,6 +159,10 @@ Skins/Classic/\[mainbutton\]Solo.jpg -text
 Skins/Classic/\[mainbutton\]Stats.jpg -text
 Skins/Classic/\[menu\]PopUpBg.JPG -text
 Skins/Classic/\[menu\]PopUpFg.JPG -text
+Skins/Classic/\[menu\]songMenuBg.jpg -text
+Skins/Classic/\[menu\]songMenuBorder.jpg -text
+Skins/Classic/\[menu\]songMenuButtonBG.jpg -text
+Skins/Classic/\[menu\]songMenuSelectBG.jpg -text
 Skins/Classic/\[party\]playerTeamButton.jpg -text
 Skins/Classic/\[party\]pointer.bmp -text
 Skins/Classic/\[score\]box.jpg -text
