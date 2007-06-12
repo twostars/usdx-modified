@@ -148,6 +148,8 @@ Skins/Classic/\[icon\]video.jpg -text
 Skins/Classic/\[main\]Bar.jpg -text
 Skins/Classic/\[main\]Bar1.jpg -text
 Skins/Classic/\[main\]Button.jpg -text
+Skins/Classic/\[main\]Button2.jpg -text
+Skins/Classic/\[main\]Button3.jpg -text
 Skins/Classic/\[main\]ButtonEditor.jpg -text
 Skins/Classic/\[main\]Logo.jpg -text
 Skins/Classic/\[main\]songCover.jpg -text
@@ -163,6 +165,7 @@ Skins/Classic/\[menu\]songMenuBg.jpg -text
 Skins/Classic/\[menu\]songMenuBorder.jpg -text
 Skins/Classic/\[menu\]songMenuButtonBG.jpg -text
 Skins/Classic/\[menu\]songMenuSelectBG.jpg -text
+Skins/Classic/\[party\]Joker.jpg -text
 Skins/Classic/\[party\]playerTeamButton.jpg -text
 Skins/Classic/\[party\]pointer.bmp -text
 Skins/Classic/\[score\]box.jpg -text
@@ -191,15 +194,15 @@ Skins/Classic/\[stat\]detailBG1.jpg -text
 Skins/Classic/\[stat\]mainBG1.jpg -text
 Skins/Classic/\[stat\]mainBG2.jpg -text
 Skins/Classic/\[stat\]mainBG3.jpg -text
-Skins/Deluxe/Autum.ini -text
+Skins/Deluxe/Autumn.ini -text
 Skins/Deluxe/Blue.ini -text
 Skins/Deluxe/Summer.ini -text
 Skins/Deluxe/Winter.ini -text
-Skins/Deluxe/\[bg-load\]autum.jpg -text
+Skins/Deluxe/\[bg-load\]autumn.jpg -text
 Skins/Deluxe/\[bg-load\]blue.jpg -text
 Skins/Deluxe/\[bg-load\]summer.jpg -text svneol=unset#unset
 Skins/Deluxe/\[bg-load\]winter.jpg -text
-Skins/Deluxe/\[bg-main\]autum.jpg -text
+Skins/Deluxe/\[bg-main\]autumn.jpg -text
 Skins/Deluxe/\[bg-main\]blue.jpg -text
 Skins/Deluxe/\[bg-main\]summer.jpg -text svneol=unset#unset
 Skins/Deluxe/\[bg-main\]winter.jpg -text
