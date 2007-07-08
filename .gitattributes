@@ -84,10 +84,10 @@ Game/Fonts/Normal/Font[!!-~]Normal[!!-~]16.png -text
 Game/Fonts/Normal/Font[!!-~]Normal.dat -text
 Game/Fonts/Normal/eurostar_regular.dat -text
 Game/Fonts/Normal/eurostar_regular.png -text
-Game/Fonts/Outline[!!-~]1/Outline[!!-~]36[!!-~](1024)[!!-~]16c.png -text
-Game/Fonts/Outline[!!-~]1/Outline[!!-~]36[!!-~](1024).dat -text
-Game/Fonts/Outline[!!-~]2/5[!!-~]-[!!-~]Outline[!!-~]Dark[!!-~]Edited[!!-~]16c.PNG -text
-Game/Fonts/Outline[!!-~]2/Outline.dat -text
+Game/Fonts/Outline[!!-~]1/Outline[!!-~]1.dat -text
+Game/Fonts/Outline[!!-~]1/Outline[!!-~]1.png -text
+Game/Fonts/Outline[!!-~]2/Outline[!!-~]2.dat -text
+Game/Fonts/Outline[!!-~]2/Outline[!!-~]2.png -text
 Game/Graphics/NoCover.jpg -text
 Game/Graphics/us.ico -text
 Game/Graphics/ustar-icon_v01.ico -text
