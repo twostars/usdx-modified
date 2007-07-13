@@ -247,7 +247,9 @@ Skins/Deluxe/\[party\]roundBG4.jpg -text svneol=unset#unset
 Skins/Deluxe/\[party\]roundTeamButton.jpg -text svneol=unset#unset
 Skins/Deluxe/\[party\]scoreBG1.jpg -text
 Skins/Deluxe/\[party\]scoreBG2.jpg -text
+Skins/Deluxe/\[party\]scoreDecoration.jpg -text
 Skins/Deluxe/\[party\]teamPoints.jpg -text
+Skins/Deluxe/\[party\]winDecoration.jpg -text
 Skins/Deluxe/\[party\]winTeamButton1.jpg -text
 Skins/Deluxe/\[party\]winTeamButton2.jpg -text
 Skins/Deluxe/\[party\]winTeamButton3.jpg -text
@@ -280,7 +282,5 @@ Skins/Deluxe/\[stat\]detailBG1.jpg -text
 Skins/Deluxe/\[stat\]mainBG1.jpg -text
 Skins/Deluxe/\[stat\]mainBG2.jpg -text
 Skins/Deluxe/\[stat\]mainBG3.jpg -text
-Skins/Deluxe/x_\[party\]scoreDecoration.jpg -text
-Skins/Deluxe/x_\[party\]winDecoration1.jpg -text
 Themes/Classic.ini -text
 Themes/Deluxe.ini -text
