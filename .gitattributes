@@ -120,6 +120,7 @@ Game/Sounds/dismissed.mp3 -text
 Game/Sounds/wome_-_echoes.mp3 -text
 Languages/Dutch.ini -text svneol=unset#application/octet-stream
 Languages/English.ini -text
+Languages/French.ini -text
 Languages/German.ini -text
 Languages/readme.txt -text
 /License.txt -text
