@@ -122,6 +122,7 @@ Languages/Dutch.ini -text svneol=unset#application/octet-stream
 Languages/English.ini -text
 Languages/French.ini -text
 Languages/German.ini -text
+Languages/Swedish.ini -text
 Languages/readme.txt -text
 /License.txt -text
 Modis/5000Points/Until5000.dpr -text
