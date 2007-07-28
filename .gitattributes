@@ -226,16 +226,16 @@ Skins/Classic/\[stat\]detailBG1.jpg -text
 Skins/Classic/\[stat\]mainBG1.jpg -text
 Skins/Classic/\[stat\]mainBG2.jpg -text
 Skins/Classic/\[stat\]mainBG3.jpg -text
-Skins/Deluxe/Autumn.ini -text
 Skins/Deluxe/Blue.ini -text
+Skins/Deluxe/Fall.ini -text
 Skins/Deluxe/Summer.ini -text
 Skins/Deluxe/Winter.ini -text
-Skins/Deluxe/\[bg-load\]autumn.jpg -text
 Skins/Deluxe/\[bg-load\]blue.jpg -text
+Skins/Deluxe/\[bg-load\]fall.jpg -text
 Skins/Deluxe/\[bg-load\]summer.jpg -text svneol=unset#unset
 Skins/Deluxe/\[bg-load\]winter.jpg -text
-Skins/Deluxe/\[bg-main\]autumn.jpg -text
 Skins/Deluxe/\[bg-main\]blue.jpg -text
+Skins/Deluxe/\[bg-main\]fall.jpg -text
 Skins/Deluxe/\[bg-main\]summer.jpg -text svneol=unset#unset
 Skins/Deluxe/\[bg-main\]winter.jpg -text
 Skins/Deluxe/\[button\]13.jpg -text
