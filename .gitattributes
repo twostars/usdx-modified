@@ -292,6 +292,10 @@ Skins/Deluxe/\[score\]box.jpg -text
 Skins/Deluxe/\[score\]endcap.jpg -text svneol=unset#unset
 Skins/Deluxe/\[score\]level.jpg -text
 Skins/Deluxe/\[score\]levelRound.jpg -text
+Skins/Deluxe/\[sing.player1\]lyric_active.png -text
+Skins/Deluxe/\[sing.player1\]lyric_inactive.png -text
+Skins/Deluxe/\[sing.player2\]lyric_active.png -text
+Skins/Deluxe/\[sing.player2\]lyric_inactive.png -text
 Skins/Deluxe/\[sing\]LyricsBall.bmp -text
 Skins/Deluxe/\[sing\]lineBonusPopUp.jpg -text svneol=unset#unset
 Skins/Deluxe/\[sing\]lyricsHelpBar.bmp -text svneol=unset#unset
