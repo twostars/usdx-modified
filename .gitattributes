@@ -123,6 +123,7 @@ Languages/Dutch.ini -text svneol=unset#application/octet-stream
 Languages/English.ini -text
 Languages/French.ini -text
 Languages/German.ini -text
+Languages/Italian.ini -text
 Languages/Norwegian.ini -text
 Languages/Spanish.ini -text
 Languages/Swedish.ini -text
