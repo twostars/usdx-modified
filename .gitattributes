@@ -317,11 +317,12 @@ Skins/Deluxe/\[sing\]notesBgRight.bmp -text svneol=unset#unset
 Skins/Deluxe/\[sing\]notesLeft.bmp -text svneol=unset#unset
 Skins/Deluxe/\[sing\]notesMid.bmp -text svneol=unset#unset
 Skins/Deluxe/\[sing\]notesRight.bmp -text svneol=unset#unset
-Skins/Deluxe/\[sing\]p.jpg -text svneol=unset#unset
+Skins/Deluxe/\[sing\]p.png -text
 Skins/Deluxe/\[sing\]scoreBg.jpg -text svneol=unset#unset
-Skins/Deluxe/\[sing\]singBarBack.jpg -text svneol=unset#unset
+Skins/Deluxe/\[sing\]scoreBg.png -text
+Skins/Deluxe/\[sing\]singBarBack.png -text
 Skins/Deluxe/\[sing\]singBarBar.jpg -text svneol=unset#unset
-Skins/Deluxe/\[sing\]singBarFront.jpg -text svneol=unset#unset
+Skins/Deluxe/\[sing\]singBarFront.png -text
 Skins/Deluxe/\[sing\]textBar.png -text
 Skins/Deluxe/\[sing\]timeBar.jpg -text
 Skins/Deluxe/\[sing\]timeBarBG.png -text
@@ -331,7 +332,6 @@ Skins/Deluxe/\[stat\]detailBG1.jpg -text
 Skins/Deluxe/\[stat\]mainBG1.jpg -text
 Skins/Deluxe/\[stat\]mainBG2.jpg -text
 Skins/Deluxe/\[stat\]mainBG3.jpg -text
-Skins/Deluxe/testing.png -text
 Sounds/credits-outro-tune.mp3 -text
 Sounds/wome-credits-tune.mp3 -text
 Themes/Classic.ini -text
