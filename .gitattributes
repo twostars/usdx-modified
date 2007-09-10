@@ -365,18 +365,23 @@ Skins/Deluxe/\[sing.player6\]lyric_active.png -text
 Skins/Deluxe/\[sing.player6\]lyric_inactive.png -text
 Skins/Deluxe/\[sing\]LyricsBall.bmp -text
 Skins/Deluxe/\[sing\]lineBonusPopUp.jpg -text svneol=unset#unset
+Skins/Deluxe/\[sing\]lineBonusPopUp.png -text
 Skins/Deluxe/\[sing\]lyricsHelpBar.bmp -text svneol=unset#unset
-Skins/Deluxe/\[sing\]notesBgLeft.bmp -text svneol=unset#unset
-Skins/Deluxe/\[sing\]notesBgMid.bmp -text svneol=unset#unset
-Skins/Deluxe/\[sing\]notesBgRight.bmp -text svneol=unset#unset
-Skins/Deluxe/\[sing\]notesLeft.bmp -text svneol=unset#unset
-Skins/Deluxe/\[sing\]notesMid.bmp -text svneol=unset#unset
-Skins/Deluxe/\[sing\]notesRight.bmp -text svneol=unset#unset
+Skins/Deluxe/\[sing\]notesBgLeft.png -text
+Skins/Deluxe/\[sing\]notesBgMid.png -text
+Skins/Deluxe/\[sing\]notesBgRight.png -text
+Skins/Deluxe/\[sing\]notesLeft.png -text
+Skins/Deluxe/\[sing\]notesMid.png -text
+Skins/Deluxe/\[sing\]notesPlainLeft.png -text
+Skins/Deluxe/\[sing\]notesPlainMid.png -text
+Skins/Deluxe/\[sing\]notesPlainRight.png -text
+Skins/Deluxe/\[sing\]notesRight.png -text
 Skins/Deluxe/\[sing\]p.png -text
 Skins/Deluxe/\[sing\]scoreBg.jpg -text svneol=unset#unset
 Skins/Deluxe/\[sing\]scoreBg.png -text
 Skins/Deluxe/\[sing\]singBarBack.png -text
 Skins/Deluxe/\[sing\]singBarBar.jpg -text svneol=unset#unset
+Skins/Deluxe/\[sing\]singBarBar.png -text
 Skins/Deluxe/\[sing\]singBarFront.png -text
 Skins/Deluxe/\[sing\]textBar.png -text
 Skins/Deluxe/\[sing\]timeBar.jpg -text
