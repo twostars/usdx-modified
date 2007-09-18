@@ -110,6 +110,8 @@ Game/Code/lib/SQLite/example/TestSqlite.exe -text
 Game/Code/lib/SQLite/example/TestSqlite.res -text
 Game/Code/lib/SQLite/example/uTestSqlite.dfm -text
 Game/Code/lib/SQLite/example/uTestSqlite.pas -text
+Game/Code/lib/SQLite/lazarustest.lpi -text
+Game/Code/lib/SQLite/lazarustest.lpr -text
 Game/Code/lib/SQLite/readme.txt -text
 Game/Code/lib/bass/bass.chm -text
 Game/Code/lib/bass/bass.dll -text
