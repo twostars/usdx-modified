@@ -86,6 +86,8 @@ Game/Code/lib/PngImage/Tpngimage.dof -text
 Game/Code/lib/PngImage/Tpngimage.drc -text
 Game/Code/lib/PngImage/Tpngimage.res -text
 Game/Code/lib/PngImage/Tpngimage.stat -text
+Game/Code/lib/PngImage/lazarustest.lpi -text
+Game/Code/lib/PngImage/lazarustest.lpr -text
 Game/Code/lib/PngImage/obj/adler32.obj -text
 Game/Code/lib/PngImage/obj/deflate.obj -text
 Game/Code/lib/PngImage/obj/infblock.obj -text
