@@ -4,6 +4,7 @@ Game/Changelog.txt -text
 Game/Code/Classes/TextGL.pas -text
 Game/Code/Classes/UCatCovers.pas -text
 Game/Code/Classes/UCommandLine.pas -text
+Game/Code/Classes/UCommon.pas -text
 Game/Code/Classes/UCovers.pas -text
 Game/Code/Classes/UDLLManager.pas -text
 Game/Code/Classes/UDataBase.pas -text
