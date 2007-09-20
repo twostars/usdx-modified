@@ -18,8 +18,8 @@ Game/Code/Classes/ULCD.pas -text
 Game/Code/Classes/ULanguage.pas -text
 Game/Code/Classes/ULight.pas -text
 Game/Code/Classes/ULog.pas -text
-Game/Code/Classes/ULyrics.bak.pas -text
 Game/Code/Classes/ULyrics.pas -text
+Game/Code/Classes/ULyrics_bak.pas -text
 Game/Code/Classes/UMain.pas -text
 Game/Code/Classes/UMusic.pas -text
 Game/Code/Classes/UParty.pas -text
