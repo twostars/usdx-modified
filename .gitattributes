@@ -435,3 +435,5 @@ Sounds/credits-outro-tune.mp3 -text
 Sounds/wome-credits-tune.mp3 -text
 Themes/Classic.ini -text
 Themes/Deluxe.ini -text
+Tools/USDXResCompiler.lpi -text
+Tools/USDXResCompiler.lpr -text
