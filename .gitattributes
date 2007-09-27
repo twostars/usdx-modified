@@ -82,6 +82,7 @@ Game/Code/Screens/UScreenWelcome.pas -text
 Game/Code/UltraStar.dpr -text
 Game/Code/UltraStar.lpr -text
 Game/Code/UltraStar.rc -text
+Game/Code/bamboo-build-win-laz.bat -text
 Game/Code/build.bat -text
 Game/Code/developer_changelog.txt -text
 Game/Code/lazres-UltraStar.bat -text
