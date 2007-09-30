@@ -215,6 +215,8 @@ Game/Graphics/us.ico -text
 Game/Graphics/ustar-icon_v01.ico -text
 Game/ReadMe.txt -text
 Game/Sounds/dismissed.mp3 -text
+Installer/INSTALLER-README.txt -text
+Installer/UltraStarDeluxe.nsi -text
 Languages/Catalan.ini -text
 Languages/Dutch.ini -text svneol=unset#application/octet-stream
 Languages/English.ini -text
