@@ -79,6 +79,7 @@ Game/Code/Screens/UScreenStatDetail.pas -text
 Game/Code/Screens/UScreenStatMain.pas -text
 Game/Code/Screens/UScreenTop5.pas -text
 Game/Code/Screens/UScreenWelcome.pas -text
+Game/Code/USDXResCompiler.exe -text
 Game/Code/UltraStar.dpr -text
 Game/Code/UltraStar.lpr -text
 Game/Code/UltraStar.rc -text
