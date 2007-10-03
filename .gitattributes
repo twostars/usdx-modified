@@ -25,6 +25,7 @@ Game/Code/Classes/UMusic.pas -text
 Game/Code/Classes/UParty.pas -text
 Game/Code/Classes/UPlaylist.pas -text
 Game/Code/Classes/UPliki.pas -text
+Game/Code/Classes/UPluginInterface.pas -text
 Game/Code/Classes/URecord.pas -text
 Game/Code/Classes/USingNotes.pas -text
 Game/Code/Classes/USingScores.pas -text
@@ -236,6 +237,7 @@ Modis/Don't_Get_Worse/Hold_The_Line.dpr -text
 Modis/Duell/Duell.dpr -text
 Modis/SDK/ModiSDK.pas -text
 Modis/SDK/StrUtils.pas -text
+Modis/SDK/UPluginDefs.pas -text
 ScoreConverter/ScoreConverter.dpr -text
 ScoreConverter/ScoreConverter.ico -text
 ScoreConverter/ScoreConverter.res -text
