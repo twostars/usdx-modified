@@ -5,6 +5,8 @@ Game/Code/Classes/TextGL.pas -text
 Game/Code/Classes/UCatCovers.pas -text
 Game/Code/Classes/UCommandLine.pas -text
 Game/Code/Classes/UCommon.pas -text
+Game/Code/Classes/UCore.pas -text
+Game/Code/Classes/UCoreModule.pas -text
 Game/Code/Classes/UCovers.pas -text
 Game/Code/Classes/UDLLManager.pas -text
 Game/Code/Classes/UDataBase.pas -text
@@ -12,6 +14,7 @@ Game/Code/Classes/UDraw.pas -text
 Game/Code/Classes/UFiles.pas -text
 Game/Code/Classes/UGraphic.pas -text
 Game/Code/Classes/UGraphicClasses.pas -text
+Game/Code/Classes/UHooks.pas -text
 Game/Code/Classes/UIni.pas -text
 Game/Code/Classes/UJoystick.pas -text
 Game/Code/Classes/ULCD.pas -text
@@ -21,12 +24,14 @@ Game/Code/Classes/ULog.pas -text
 Game/Code/Classes/ULyrics.pas -text
 Game/Code/Classes/ULyrics_bak.pas -text
 Game/Code/Classes/UMain.pas -text
+Game/Code/Classes/UModules.pas -text
 Game/Code/Classes/UMusic.pas -text
 Game/Code/Classes/UParty.pas -text
 Game/Code/Classes/UPlaylist.pas -text
 Game/Code/Classes/UPliki.pas -text
 Game/Code/Classes/UPluginInterface.pas -text
 Game/Code/Classes/URecord.pas -text
+Game/Code/Classes/UServices.pas -text
 Game/Code/Classes/USingNotes.pas -text
 Game/Code/Classes/USingScores.pas -text
 Game/Code/Classes/USkins.pas -text
@@ -237,7 +242,10 @@ Modis/5000Points/Until5000.dpr -text
 Modis/Blind/Blind.dpr -text
 Modis/Don't_Get_Worse/Hold_The_Line.dpr -text
 Modis/Duell/Duell.dpr -text
+Modis/SDK/Hooks.txt -text
 Modis/SDK/ModiSDK.pas -text
+Modis/SDK/Plugin[!!-~]DLL[!!-~]Exports.txt -text
+Modis/SDK/Services.txt -text
 Modis/SDK/StrUtils.pas -text
 Modis/SDK/UPluginDefs.pas -text
 ScoreConverter/ScoreConverter.dpr -text
