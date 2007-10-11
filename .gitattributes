@@ -26,6 +26,7 @@ Game/Code/Classes/ULyrics_bak.pas -text
 Game/Code/Classes/UMain.pas -text
 Game/Code/Classes/UModules.pas -text
 Game/Code/Classes/UMusic.pas -text
+Game/Code/Classes/UMusic_BASS.pas -text
 Game/Code/Classes/UParty.pas -text
 Game/Code/Classes/UPlaylist.pas -text
 Game/Code/Classes/UPliki.pas -text
