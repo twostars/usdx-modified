@@ -45,6 +45,7 @@ Game/Code/Classes/UThemes.pas -text
 Game/Code/Classes/UTime.pas -text
 Game/Code/Classes/UVideo.pas -text
 Game/Code/Classes/Ulazjpeg.pas -text
+Game/Code/Classes/uPluginLoader.pas -text
 Game/Code/Menu/UDisplay.pas -text
 Game/Code/Menu/UDrawTexture.pas -text
 Game/Code/Menu/UMenu.pas -text
