@@ -462,3 +462,4 @@ Themes/Classic.ini -text
 Themes/Deluxe.ini -text
 Tools/USDXResCompiler.lpi -text
 Tools/USDXResCompiler.lpr -text
+Tools/linux-build.sh -text
