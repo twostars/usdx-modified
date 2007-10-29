@@ -253,6 +253,7 @@ Modis/SDK/ModiSDK.pas -text
 Modis/SDK/Plugin[!!-~]DLL[!!-~]Exports.txt -text
 Modis/SDK/Services.txt -text
 Modis/SDK/StrUtils.pas -text
+Modis/SDK/UPartyDefs.pas -text
 Modis/SDK/UPluginDefs.pas -text
 ScoreConverter/ScoreConverter.dpr -text
 ScoreConverter/ScoreConverter.ico -text
