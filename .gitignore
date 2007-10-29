@@ -24,6 +24,7 @@ Game/Code/Classes/USongs.dcu
 Game/Code/Classes/UTexture.dcu
 Game/Code/Classes/UThemes.dcu
 Game/Code/Classes/UTime.dcu
+Game/Code/MacOSX/build
 Game/Code/Menu/UDisplay.dcu
 Game/Code/Menu/UDrawTexture.dcu
 Game/Code/Menu/UMenu.dcu
