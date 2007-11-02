@@ -198,6 +198,8 @@ Game/Code/lib/midi/midiComp.cfg -text
 Game/Code/lib/midi/midiComp.dpk -text
 Game/Code/lib/midi/midiComp.res -text
 Game/Code/lib/midi/readme.txt -text
+Game/Code/lib/other/DirWatch.dcu -text
+Game/Code/lib/other/DirWatch.pas -text
 Game/Code/lib/requirements.txt -text
 Game/Code/lib/zlportio/Example/README.TXT -text
 Game/Code/lib/zlportio/Example/install.txt -text
