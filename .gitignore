@@ -67,6 +67,7 @@ Game/Code/UltraStar.dof
 Game/Code/UltraStar.rc
 Game/Code/UltraStar.~dpr
 Game/Code/lib/ffmpeg/*.dylib
+Game/Graphics/img2icns.app
 Modis/Blind/Blind.cfg
 Modis/Blind/Blind.dll
 Modis/Blind/Blind.dof
