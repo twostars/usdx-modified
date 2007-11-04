@@ -177,7 +177,7 @@ Game/ReadMe.txt -text
 Game/Sounds/dismissed.mp3 -text
 Game/Sounds/wome_-_echoes.mp3 -text
 Installer/Readme.txt -text
-Installer/UltraStar[!!-~]Deluxe.nsi -text
+Installer/UltraStarDeluxe.nsi -text
 Installer/clanguage/English.nsh -text
 Installer/clanguage/German.nsh -text
 Installer/gdf/UltraStar[!!-~]Deluxe.gdf.xml -text
