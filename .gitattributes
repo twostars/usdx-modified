@@ -57,7 +57,7 @@ Game/Code/MacOSX/UltraStarDX.xcodeproj/eddie.pbxuser -text
 Game/Code/MacOSX/UltraStarDX.xcodeproj/project.pbxproj -text
 Game/Code/MacOSX/Wrapper/Graphics.pas -text
 Game/Code/MacOSX/Wrapper/JPEG.pas -text
-Game/Code/MacOSX/Wrapper/MacClasses.pas -text
+Game/Code/MacOSX/Wrapper/MacResources.pas -text
 Game/Code/MacOSX/Wrapper/Messages.pas -text
 Game/Code/MacOSX/Wrapper/MidiFile.pas -text
 Game/Code/MacOSX/Wrapper/MidiOut.pas -text
