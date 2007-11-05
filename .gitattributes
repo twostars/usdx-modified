@@ -183,8 +183,8 @@ Installer/clanguage/German.nsh -text
 Installer/gdf/UltraStar[!!-~]Deluxe.gdf.xml -text
 Installer/gdf/UltraStar[!!-~]Deluxe.rc -text
 Installer/gdf/boxart.png -text
-Installer/gdf/gameicon.ico -text
 Installer/gdf/gameux.h -text
+Installer/gdf/icon.ico -text
 Installer/icons/uninstall.ico -text
 Installer/icons/ustar.ico -text
 Installer/settings/GameExplorer.nsh -text
