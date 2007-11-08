@@ -59,12 +59,9 @@ Game/Code/MacOSX/Wrapper/Graphics.pas -text
 Game/Code/MacOSX/Wrapper/JPEG.pas -text
 Game/Code/MacOSX/Wrapper/MacResources.pas -text
 Game/Code/MacOSX/Wrapper/Messages.pas -text
-Game/Code/MacOSX/Wrapper/MidiFile.pas -text
-Game/Code/MacOSX/Wrapper/MidiOut.pas -text
 Game/Code/MacOSX/Wrapper/OpenGL12.pas -text
-Game/Code/MacOSX/Wrapper/PNGImage.pas -text
+Game/Code/MacOSX/Wrapper/PseudoThread.pas -text
 Game/Code/MacOSX/Wrapper/Windows.pas -text
-Game/Code/MacOSX/Wrapper/zlportio.pas -text
 Game/Code/Menu/UDisplay.pas -text
 Game/Code/Menu/UDrawTexture.pas -text
 Game/Code/Menu/UMenu.pas -text
