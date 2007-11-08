@@ -30,6 +30,10 @@ Game/Code/Classes/UMedia_dummy.pas -text
 Game/Code/Classes/UModules.pas -text
 Game/Code/Classes/UMusic.pas -text
 Game/Code/Classes/UParty.pas -text
+Game/Code/Classes/UPlatform.pas -text
+Game/Code/Classes/UPlatformLinux.pas -text
+Game/Code/Classes/UPlatformMacOSX.pas -text
+Game/Code/Classes/UPlatformWindows.pas -text
 Game/Code/Classes/UPlaylist.pas -text
 Game/Code/Classes/UPliki.pas -text
 Game/Code/Classes/UPluginInterface.pas -text
