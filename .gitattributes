@@ -246,6 +246,7 @@ Modis/Don't_Get_Worse/Hold_The_Line.dpr -text
 Modis/Duell/Duell.dpr -text
 Modis/SDK/ModiSDK.pas -text
 Modis/SDK/StrUtils.pas -text
+Modis/Team_Duell/TeamDuell.dpr -text
 ScoreConverter/ScoreConverter.dpr -text
 ScoreConverter/ScoreConverter.ico -text
 ScoreConverter/ScoreConverter.res -text
