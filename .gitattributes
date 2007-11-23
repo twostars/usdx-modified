@@ -213,8 +213,10 @@ Installer/u3portable/Manifest/manifest.u3i -text
 Installer/u3portable/Readme.txt -text
 Installer/u3portable/copy.bat -text
 InstallerDependencies/dll/SDL.dll -text
+InstallerDependencies/dll/avcodec-51.dll -text
+InstallerDependencies/dll/avformat-50.dll -text
+InstallerDependencies/dll/avutil-49.dll -text
 InstallerDependencies/dll/bass.dll -text
-InstallerDependencies/dll/smpeg.dll -text
 InstallerDependencies/dll/sqlite3.dll -text
 InstallerDependencies/documents/Changelog.german.txt -text
 InstallerDependencies/documents/Changelog.txt -text
