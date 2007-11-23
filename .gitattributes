@@ -179,6 +179,7 @@ Game/Sounds/dismissed.mp3 -text
 Game/Sounds/wome_-_echoes.mp3 -text
 Installer/Readme.txt -text
 Installer/UltraStarDeluxe.nsi -text
+Installer/UltraStarDeluxeFull.nsi -text
 Installer/clanguage/English.nsh -text
 Installer/clanguage/German.nsh -text
 Installer/gdf/UltraStar[!!-~]Deluxe.gdf.xml -text
@@ -195,6 +196,8 @@ Installer/settings/functions.nsh -text
 Installer/settings/io.ini -text
 Installer/settings/langstrings.nsh -text
 Installer/settings/optional/in_orange.nsh -text
+Installer/settings/optional/in_song1.nsh -text
+Installer/settings/optional/in_song2.nsh -text
 Installer/settings/optional/in_streetlight.nsh -text
 Installer/settings/optional/in_vistar.nsh -text
 Installer/settings/optional/opt_uninstall.nsh -text
