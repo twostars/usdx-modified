@@ -66,6 +66,7 @@ Game/Code/MacOSX/Wrapper/Messages.pas -text
 Game/Code/MacOSX/Wrapper/OpenGL12.pas -text
 Game/Code/MacOSX/Wrapper/PseudoThread.pas -text
 Game/Code/MacOSX/Wrapper/Windows.pas -text
+Game/Code/Makefile -text
 Game/Code/Menu/UDisplay.pas -text
 Game/Code/Menu/UDrawTexture.pas -text
 Game/Code/Menu/UMenu.pas -text
@@ -121,6 +122,7 @@ Game/Code/bamboo-build-win-laz.bat -text
 Game/Code/build.bat -text
 Game/Code/developer_changelog.txt -text
 Game/Code/lazres-UltraStar.bat -text
+Game/Code/lazres-UltraStar.sh -text
 Game/Code/lib/FreeImage/FreeBitmap.pas -text
 Game/Code/lib/FreeImage/FreeImage.pas -text
 Game/Code/lib/FreeImage/libfreeimage.dylib -text
