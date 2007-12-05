@@ -183,6 +183,7 @@ Game/Code/lib/ffmpeg/lazarustest.lpr -text
 Game/Code/lib/ffmpeg/mmreg.pas -text
 Game/Code/lib/ffmpeg/opt.pas -text
 Game/Code/lib/ffmpeg/rational.pas -text
+Game/Code/lib/ffmpeg/swscale.pas -text
 Game/Code/lib/midi/CIRCBUF.PAS -text
 Game/Code/lib/midi/DELPHMCB.PAS -text
 Game/Code/lib/midi/MIDIDEFS.PAS -text
