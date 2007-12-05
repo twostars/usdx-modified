@@ -205,6 +205,7 @@ Game/Code/lib/midi/readme.txt -text
 Game/Code/lib/other/DirWatch.pas -text
 Game/Code/lib/portaudio/delphi/portaudio.pas -text
 Game/Code/lib/portmixer/delphi/portmixer.pas -text
+Game/Code/lib/projectM/projectM.pas -text
 Game/Code/lib/requirements.txt -text
 Game/Code/lib/zlportio/Example/README.TXT -text
 Game/Code/lib/zlportio/Example/install.txt -text
