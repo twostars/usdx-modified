@@ -519,6 +519,7 @@ InstallerDependencies/dll/libprojectM.dll -text
 Languages/Catalan.ini -text
 Languages/Dutch.ini -text svneol=unset#application/octet-stream
 Languages/English.ini -text
+Languages/Euskara.ini -text
 Languages/French.ini -text
 Languages/German.ini -text
 Languages/Italian.ini -text
