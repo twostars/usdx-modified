@@ -263,6 +263,7 @@ Game/Graphics/ustar-icon_v01.icns -text
 Game/Graphics/ustar-icon_v01.ico -text
 Game/ReadMe.txt -text
 Game/Sounds/dismissed.mp3 -text
+InstallerDependencies/dll/libprojectM.dll -text
 Languages/Catalan.ini -text
 Languages/Dutch.ini -text svneol=unset#application/octet-stream
 Languages/English.ini -text
