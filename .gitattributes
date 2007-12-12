@@ -654,7 +654,9 @@ Skins/Deluxe/\[button\]m.png -text
 Skins/Deluxe/\[button\]navi.png -text
 Skins/Deluxe/\[button\]p.png -text
 Skins/Deluxe/\[effect\]goldenNoteStar.jpg -text svneol=unset#unset
+Skins/Deluxe/\[effect\]goldenNoteStar.png -text
 Skins/Deluxe/\[effect\]perfectNoteStar.jpg -text svneol=unset#unset
+Skins/Deluxe/\[effect\]perfectNoteStar.png -text
 Skins/Deluxe/\[helper\]buttonFade.png -text
 Skins/Deluxe/\[helper\]rectangle.jpg -text
 Skins/Deluxe/\[icon\]cd.png -text
