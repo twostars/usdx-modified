@@ -237,12 +237,15 @@ InstallerDependencies/plugins/nsisunz.dll -text
 Languages/Catalan.ini -text
 Languages/Dutch.ini -text
 Languages/English.ini -text
+Languages/Euskara.ini -text
 Languages/French.ini -text
 Languages/German.ini -text
 Languages/Italian.ini -text
 Languages/Norwegian.ini -text
+Languages/Polish.ini -text
 Languages/Portuguese.ini -text
 Languages/Serbian.ini -text
+Languages/Slovak.ini -text
 Languages/Spanish.ini -text
 Languages/Swedish.ini -text
 Languages/readme.txt -text
