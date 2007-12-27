@@ -187,8 +187,6 @@ Installer/gdf/UltraStar[!!-~]Deluxe.rc -text
 Installer/gdf/boxart.png -text
 Installer/gdf/gameux.h -text
 Installer/gdf/icon.ico -text
-Installer/icons/uninstall.ico -text
-Installer/icons/ustar.ico -text
 Installer/settings/GameExplorer.nsh -text
 Installer/settings/files_in.nsh -text
 Installer/settings/files_un.nsh -text
@@ -198,6 +196,7 @@ Installer/settings/langstrings.nsh -text
 Installer/settings/optional/in_orange.nsh -text
 Installer/settings/optional/in_song1.nsh -text
 Installer/settings/optional/in_song2.nsh -text
+Installer/settings/optional/in_song3.nsh -text
 Installer/settings/optional/in_streetlight.nsh -text
 Installer/settings/optional/in_vistar.nsh -text
 Installer/settings/optional/opt_uninstall.nsh -text
@@ -215,6 +214,8 @@ Installer/u3portable/Manifest/USdx.ico -text
 Installer/u3portable/Manifest/manifest.u3i -text
 Installer/u3portable/Readme.txt -text
 Installer/u3portable/copy.bat -text
+Installer/uninstall.ico -text
+Installer/ustar.ico -text
 InstallerDependencies/dll/SDL.dll -text
 InstallerDependencies/dll/avcodec-51.dll -text
 InstallerDependencies/dll/avformat-50.dll -text
