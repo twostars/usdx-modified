@@ -123,6 +123,7 @@ Game/Code/USDXResCompiler.exe -text
 Game/Code/UltraStar.dpr -text
 Game/Code/UltraStar.lpr -text
 Game/Code/UltraStar.rc -text
+Game/Code/UltraStarDeluxe.control -text
 Game/Code/bamboo-build-lin-laz.bat -text
 Game/Code/bamboo-build-lin-laz.sh -text
 Game/Code/bamboo-build-win-delphi.bat -text
