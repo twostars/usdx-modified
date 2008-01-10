@@ -182,7 +182,6 @@ Game/Code/lib/bass/delphi/bass.pas -text
 Game/Code/lib/bass/lazarustest.lpi -text
 Game/Code/lib/bass/lazarustest.lpr -text
 Game/Code/lib/bass/libbass.dylib -text
-Game/Code/lib/ffmpeg/MATHEMATICS.pas -text
 Game/Code/lib/ffmpeg/acm_unit.pas -text
 Game/Code/lib/ffmpeg/avcodec.pas -text
 Game/Code/lib/ffmpeg/avformat.pas -text
