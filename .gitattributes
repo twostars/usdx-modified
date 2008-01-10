@@ -189,6 +189,7 @@ Game/Code/lib/ffmpeg/avio.pas -text
 Game/Code/lib/ffmpeg/avutil.pas -text
 Game/Code/lib/ffmpeg/lazarustest.lpi -text
 Game/Code/lib/ffmpeg/lazarustest.lpr -text
+Game/Code/lib/ffmpeg/mathematics.pas -text
 Game/Code/lib/ffmpeg/mmreg.pas -text
 Game/Code/lib/ffmpeg/opt.pas -text
 Game/Code/lib/ffmpeg/rational.pas -text
