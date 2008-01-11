@@ -197,6 +197,7 @@ Game/Code/lib/ffmpeg/src/MacOSX/MacOSXReadMe.txt -text
 Game/Code/lib/ffmpeg/src/MacOSX/build_ffmpeg.sh -text
 Game/Code/lib/ffmpeg/src/MacOSX/copy_and_patch_dylibs.sh -text
 Game/Code/lib/ffmpeg/swscale.pas -text
+Game/Code/lib/ffmpeg/version.inc -text
 Game/Code/lib/midi/CIRCBUF.PAS -text
 Game/Code/lib/midi/DELPHMCB.PAS -text
 Game/Code/lib/midi/MIDIDEFS.PAS -text
