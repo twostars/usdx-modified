@@ -45,6 +45,7 @@ Game/Code/Classes/UServices.pas -text
 Game/Code/Classes/USingNotes.pas -text
 Game/Code/Classes/USingScores.pas -text
 Game/Code/Classes/USkins.pas -text
+Game/Code/Classes/USong.pas -text
 Game/Code/Classes/USongs.pas -text
 Game/Code/Classes/UTextClasses.pas -text
 Game/Code/Classes/UTexture.pas -text
