@@ -131,6 +131,7 @@ Game/Code/build.bat -text
 Game/Code/config.inc.in -text
 Game/Code/configure.ac -text
 Game/Code/developer_changelog.txt -text
+Game/Code/install-sh -text
 Game/Code/lazres-UltraStar.bat -text
 Game/Code/lazres-UltraStar.sh -text
 Game/Code/lib/FreeImage/FreeBitmap.pas -text
