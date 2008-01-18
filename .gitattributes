@@ -73,6 +73,7 @@ Game/Code/MacOSX/Wrapper/OpenGL12.pas -text
 Game/Code/MacOSX/Wrapper/PseudoThread.pas -text
 Game/Code/MacOSX/Wrapper/Windows.pas -text
 Game/Code/Makefile -text
+Game/Code/Makefile.in -text
 Game/Code/Menu/UDisplay.pas -text
 Game/Code/Menu/UDrawTexture.pas -text
 Game/Code/Menu/UMenu.pas -text
@@ -127,6 +128,8 @@ Game/Code/bamboo-build-lin-laz.sh -text
 Game/Code/bamboo-build-win-delphi.bat -text
 Game/Code/bamboo-build-win-laz.bat -text
 Game/Code/build.bat -text
+Game/Code/config.inc.in -text
+Game/Code/configure.ac -text
 Game/Code/developer_changelog.txt -text
 Game/Code/lazres-UltraStar.bat -text
 Game/Code/lazres-UltraStar.sh -text
@@ -232,6 +235,7 @@ Game/Code/lib/zlportio/ddkint.pas -text
 Game/Code/lib/zlportio/install.txt -text
 Game/Code/lib/zlportio/zlportio.pas -text
 Game/Code/linux-build.sh -text
+Game/Code/m4/fpc.m4 -text
 Game/Code/package_debian.sh -text
 Game/Code/rccompillieren.bat -text
 Game/Code/switches.inc -text
