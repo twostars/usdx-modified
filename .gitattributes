@@ -2,6 +2,7 @@
 Game/Changelog.german.txt -text
 Game/Changelog.txt -text
 Game/Code/Classes/TextGL.pas -text
+Game/Code/Classes/UAudioCore_Bass.pas -text
 Game/Code/Classes/UAudioDecoder_FFMpeg.pas -text
 Game/Code/Classes/UAudioInput_Bass.pas -text
 Game/Code/Classes/UAudioInput_Portaudio.pas -text
@@ -136,7 +137,6 @@ Game/Code/configure.ac -text
 Game/Code/developer_changelog.txt -text
 Game/Code/install-sh -text
 Game/Code/lazres-UltraStar.bat -text
-Game/Code/lazres-UltraStar.sh -text
 Game/Code/lib/FreeImage/FreeBitmap.pas -text
 Game/Code/lib/FreeImage/FreeImage.pas -text
 Game/Code/lib/FreeImage/libfreeimage.dylib -text
@@ -261,7 +261,6 @@ Game/Code/lib/zlportio/Sys/zlportio.sys -text
 Game/Code/lib/zlportio/ddkint.pas -text
 Game/Code/lib/zlportio/install.txt -text
 Game/Code/lib/zlportio/zlportio.pas -text
-Game/Code/linux-build.sh -text
 Game/Code/m4/fpc.m4 -text
 Game/Code/package_debian.sh -text
 Game/Code/rccompillieren.bat -text
