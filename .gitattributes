@@ -129,6 +129,7 @@ Game/Code/bamboo-build-lin-laz.sh -text
 Game/Code/bamboo-build-win-delphi.bat -text
 Game/Code/bamboo-build-win-laz.bat -text
 Game/Code/build.bat -text
+Game/Code/config-macosx.inc -text
 Game/Code/config-win.inc -text
 Game/Code/config.inc.in -text
 Game/Code/configure.ac -text
