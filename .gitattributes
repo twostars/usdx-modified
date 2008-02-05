@@ -10,6 +10,7 @@ Game/Code/Classes/UAudioPlayback_Portaudio.pas -text
 Game/Code/Classes/UCatCovers.pas -text
 Game/Code/Classes/UCommandLine.pas -text
 Game/Code/Classes/UCommon.pas -text
+Game/Code/Classes/UConfig.pas -text
 Game/Code/Classes/UCore.pas -text
 Game/Code/Classes/UCoreModule.pas -text
 Game/Code/Classes/UCovers.pas -text
@@ -128,6 +129,7 @@ Game/Code/bamboo-build-lin-laz.sh -text
 Game/Code/bamboo-build-win-delphi.bat -text
 Game/Code/bamboo-build-win-laz.bat -text
 Game/Code/build.bat -text
+Game/Code/config-win.inc -text
 Game/Code/config.inc.in -text
 Game/Code/configure.ac -text
 Game/Code/developer_changelog.txt -text
