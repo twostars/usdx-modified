@@ -74,7 +74,6 @@ Game/Code/MacOSX/Wrapper/Messages.pas -text
 Game/Code/MacOSX/Wrapper/OpenGL12.pas -text
 Game/Code/MacOSX/Wrapper/PseudoThread.pas -text
 Game/Code/MacOSX/Wrapper/Windows.pas -text
-Game/Code/Makefile -text
 Game/Code/Makefile.in -text
 Game/Code/Menu/UDisplay.pas -text
 Game/Code/Menu/UDrawTexture.pas -text
