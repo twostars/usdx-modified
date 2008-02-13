@@ -560,6 +560,7 @@ InstallerDependencies/Visuals/projectM/presets/shifter[!!-~]-[!!-~]timepeice.mil
 InstallerDependencies/dll/libprojectM.dll -text
 Languages/Catalan.ini -text
 Languages/Croatian.ini -text
+Languages/Danish.ini -text
 Languages/Dutch.ini -text svneol=unset#application/octet-stream
 Languages/English.ini -text
 Languages/Euskara.ini -text
