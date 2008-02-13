@@ -235,6 +235,8 @@ InstallerDependencies/plugins/gdf.dll -text
 InstallerDependencies/plugins/nsProcess.dll -text
 InstallerDependencies/plugins/nsisunz.dll -text
 Languages/Catalan.ini -text
+Languages/Croatian.ini -text
+Languages/Danish.ini -text
 Languages/Dutch.ini -text
 Languages/English.ini -text
 Languages/Euskara.ini -text
