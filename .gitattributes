@@ -682,6 +682,7 @@ Skins/Classic/\[stat\]detailBG1.jpg -text
 Skins/Classic/\[stat\]mainBG1.jpg -text
 Skins/Classic/\[stat\]mainBG2.jpg -text
 Skins/Classic/\[stat\]mainBG3.jpg -text
+Skins/Deluxe/Ani.ini -text
 Skins/Deluxe/Blue.ini -text
 Skins/Deluxe/Fall.ini -text
 Skins/Deluxe/Summer.ini -text
@@ -810,6 +811,7 @@ Skins/Deluxe/\[stat\]detailBG1.png -text
 Skins/Deluxe/\[stat\]mainBG1.png -text
 Skins/Deluxe/\[stat\]mainBG2.png -text
 Skins/Deluxe/\[stat\]mainBG3.png -text
+Skins/Deluxe/rotate.mov -text
 Sounds/credits-outro-tune.mp3 -text
 Sounds/wome-credits-tune.mp3 -text
 Themes/Classic.ini -text
