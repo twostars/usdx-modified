@@ -246,6 +246,10 @@ Game/Code/lib/other/DirWatch.pas -text
 Game/Code/lib/portaudio/delphi/portaudio.pas -text
 Game/Code/lib/portmixer/delphi/portmixer.pas -text
 Game/Code/lib/projectM/0.9/projectM.pas -text
+Game/Code/lib/projectM/1.0/cwrapper/projectM-cwrapper.sln -text
+Game/Code/lib/projectM/1.0/cwrapper/projectM-cwrapper.vcproj -text
+Game/Code/lib/projectM/1.0/cwrapper/projectM.cpp -text
+Game/Code/lib/projectM/1.0/cwrapper/projectM.h -text
 Game/Code/lib/projectM/1.0/projectM.pas -text
 Game/Code/lib/requirements.txt -text
 Game/Code/lib/zlportio/Example/README.TXT -text
