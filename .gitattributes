@@ -253,6 +253,7 @@ Game/Code/lib/projectM/1.0/cwrapper/projectM.cpp -text
 Game/Code/lib/projectM/1.0/cwrapper/projectM.h -text
 Game/Code/lib/projectM/1.0/projectM.pas -text
 Game/Code/lib/requirements.txt -text
+Game/Code/lib/samplerate/samplerate.pas -text
 Game/Code/lib/zlportio/Example/README.TXT -text
 Game/Code/lib/zlportio/Example/install.txt -text
 Game/Code/lib/zlportio/Example/mainform.dfm -text
