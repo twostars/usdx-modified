@@ -8,6 +8,8 @@ Game/Code/Classes/UAudioInput_Bass.pas -text
 Game/Code/Classes/UAudioInput_Portaudio.pas -text
 Game/Code/Classes/UAudioPlayback_Bass.pas -text
 Game/Code/Classes/UAudioPlayback_Portaudio.pas -text
+Game/Code/Classes/UAudioPlayback_SDL.pas -text
+Game/Code/Classes/UAudioPlayback_SoftMixer.pas -text
 Game/Code/Classes/UCatCovers.pas -text
 Game/Code/Classes/UCommandLine.pas -text
 Game/Code/Classes/UCommon.pas -text
