@@ -1,4 +1,5 @@
 * text=auto !eol
+Artwork/usdx_icon.svg -text
 Game/Changelog.german.txt -text
 Game/Changelog.txt -text
 Game/Code/Classes/TextGL.pas -text
