@@ -4,6 +4,7 @@ Game/Changelog.german.txt -text
 Game/Changelog.txt -text
 Game/Code/Classes/TextGL.pas -text
 Game/Code/Classes/UAudioCore_Bass.pas -text
+Game/Code/Classes/UAudioCore_Portaudio.pas -text
 Game/Code/Classes/UAudioDecoder_FFMpeg.pas -text
 Game/Code/Classes/UAudioInput_Bass.pas -text
 Game/Code/Classes/UAudioInput_Portaudio.pas -text
