@@ -128,6 +128,13 @@ Game/Code/UltraStar.dpr -text
 Game/Code/UltraStar.lpr -text
 Game/Code/UltraStar.rc -text
 Game/Code/UltraStarDeluxe.control -text
+Game/Code/UnitTests/switches.inc -text
+Game/Code/UnitTests/test_libraries.compiled -text
+Game/Code/UnitTests/test_libraries.lpi -text
+Game/Code/UnitTests/test_libraries.lpi.bak -text
+Game/Code/UnitTests/test_libraries.lpr -text
+Game/Code/UnitTests/testsqllite.pas -text
+Game/Code/UnitTests/testsqllite.ppu -text
 Game/Code/autogen.sh -text
 Game/Code/bamboo-build-lin-laz.bat -text
 Game/Code/bamboo-build-lin-laz.sh -text
