@@ -44,7 +44,6 @@ Game/Code/Classes/UPlatformLinux.pas -text
 Game/Code/Classes/UPlatformMacOSX.pas -text
 Game/Code/Classes/UPlatformWindows.pas -text
 Game/Code/Classes/UPlaylist.pas -text
-Game/Code/Classes/UPliki.pas -text
 Game/Code/Classes/UPluginInterface.pas -text
 Game/Code/Classes/URecord.pas -text
 Game/Code/Classes/UServices.pas -text
