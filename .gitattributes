@@ -672,7 +672,7 @@ Skins/Classic/\[score\]box.jpg -text
 Skins/Classic/\[score\]level.jpg -text
 Skins/Classic/\[score\]levelround.jpg -text
 Skins/Classic/\[score\]line.jpg -text
-Skins/Classic/\[sing\]LyricsBall.bmp -text
+Skins/Classic/\[sing\]LyricsBall.png -text
 Skins/Classic/\[sing\]lineBonusPopUp.jpg -text
 Skins/Classic/\[sing\]lyricsHelpBar.bmp -text
 Skins/Classic/\[sing\]notesBgLeft.bmp -text
@@ -795,7 +795,7 @@ Skins/Deluxe/\[sing.player5\]lyric_active.png -text
 Skins/Deluxe/\[sing.player5\]lyric_inactive.png -text
 Skins/Deluxe/\[sing.player6\]lyric_active.png -text
 Skins/Deluxe/\[sing.player6\]lyric_inactive.png -text
-Skins/Deluxe/\[sing\]LyricsBall.bmp -text
+Skins/Deluxe/\[sing\]LyricsBall.png -text
 Skins/Deluxe/\[sing\]lineBonusPopUp.png -text
 Skins/Deluxe/\[sing\]lyricsHelpBar.bmp -text svneol=unset#unset
 Skins/Deluxe/\[sing\]notesBgLeft.png -text
