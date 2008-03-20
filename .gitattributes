@@ -151,6 +151,7 @@ Game/Code/lib/FreeImage/FreeBitmap.pas -text
 Game/Code/lib/FreeImage/FreeImage.pas -text
 Game/Code/lib/FreeImage/libfreeimage.dylib -text
 Game/Code/lib/JEDI-SDL/JEDI-SDL-README.txt -text
+Game/Code/lib/JEDI-SDL/OpenGL-Set8087CW.patch -text
 Game/Code/lib/JEDI-SDL/OpenGL/Pas/geometry.pas -text
 Game/Code/lib/JEDI-SDL/OpenGL/Pas/gl.pas -text
 Game/Code/lib/JEDI-SDL/OpenGL/Pas/glext.pas -text
