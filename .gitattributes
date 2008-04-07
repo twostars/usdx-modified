@@ -261,6 +261,8 @@ Game/Code/lib/zlportio/zlportio.pas -text
 Game/Code/m4/ac_define_dir.m4 -text
 Game/Code/m4/fpc.m4 -text
 Game/Code/package_debian.sh -text
+Game/Code/rccompile-delphi.bat -text
+Game/Code/rccompile-fpc.bat -text
 Game/Code/rccompillieren.bat -text
 Game/Code/switches.inc -text
 Game/ReadMe.txt -text
