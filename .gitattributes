@@ -125,7 +125,6 @@ Game/Code/Screens/UScreenStatDetail.pas -text
 Game/Code/Screens/UScreenStatMain.pas -text
 Game/Code/Screens/UScreenTop5.pas -text
 Game/Code/Screens/UScreenWelcome.pas -text
-Game/Code/USDXResCompiler.exe -text
 Game/Code/UltraStar.dpr -text
 Game/Code/UltraStar.lpr -text
 Game/Code/UltraStar.rc -text
@@ -814,6 +813,8 @@ Sounds/credits-outro-tune.mp3 -text
 Sounds/wome-credits-tune.mp3 -text
 Themes/Classic.ini -text
 Themes/Deluxe.ini -text
-Tools/USDXResCompiler.lpi -text
-Tools/USDXResCompiler.lpr -text
-Tools/linux-build.sh -text
+Tools/ResourceExtractor/ResourceExtractor.lpi -text
+Tools/ResourceExtractor/ResourceExtractor.pas -text
+Tools/USDXResCompiler/USDXResCompiler.lpi -text
+Tools/USDXResCompiler/USDXResCompiler.lpr -text
+Tools/USDXResCompiler/linux-build.sh -text
