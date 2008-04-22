@@ -813,6 +813,7 @@ Themes/Deluxe/\[stat\]mainBG2.png -text
 Themes/Deluxe/\[stat\]mainBG3.png -text
 Themes/Deluxe/deluxe.mov -text
 Themes/Deluxe/ocean.ini -text
+Tools/ResourceExtractor/Makefile.in -text
 Tools/ResourceExtractor/ResourceExtractor.lpi -text
 Tools/ResourceExtractor/ResourceExtractor.pas -text
 Tools/USDXResCompiler/USDXResCompiler.lpi -text
