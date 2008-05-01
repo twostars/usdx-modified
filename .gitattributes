@@ -180,6 +180,7 @@ Game/Code/lib/JEDI-SDL/SDL_Image/Pas/sdl_image.pas -text
 Game/Code/lib/JEDI-SDL/SDL_ttf/Pas/sdl_ttf.pas -text
 Game/Code/lib/JEDI-SDL/SDL_ttf/Pas/sdltruetypefont.pas -text
 Game/Code/lib/JEDI-SDL/fpc-install.sh -text
+Game/Code/lib/JEDI-SDL/jedi-sdl-64bit.patch -text
 Game/Code/lib/SQLite/SQLite3.pas -text
 Game/Code/lib/SQLite/SQLiteTable3.pas -text
 Game/Code/lib/SQLite/example/Sunset.jpg -text
