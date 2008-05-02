@@ -158,8 +158,6 @@ Game/Code/lib/JEDI-SDL/OpenGL/Pas/glext.pas -text
 Game/Code/lib/JEDI-SDL/OpenGL/Pas/glu.pas -text
 Game/Code/lib/JEDI-SDL/OpenGL/Pas/glut.pas -text
 Game/Code/lib/JEDI-SDL/OpenGL/Pas/glx.pas -text
-Game/Code/lib/JEDI-SDL/OpenGL/Pas/opengl12.pas -text
-Game/Code/lib/JEDI-SDL/OpenGL/Pas/opengl12.rst -text
 Game/Code/lib/JEDI-SDL/SDL/Pas/Readme.txt -text
 Game/Code/lib/JEDI-SDL/SDL/Pas/jedi-sdl.inc -text
 Game/Code/lib/JEDI-SDL/SDL/Pas/libxmlparser.pas -text
