@@ -8,6 +8,7 @@ Game/Code/Classes/UAudioCore_Portaudio.pas -text
 Game/Code/Classes/UAudioDecoder_FFMpeg.pas -text
 Game/Code/Classes/UAudioInput_Bass.pas -text
 Game/Code/Classes/UAudioInput_Portaudio.pas -text
+Game/Code/Classes/UAudioPlaybackBase.pas -text
 Game/Code/Classes/UAudioPlayback_Bass.pas -text
 Game/Code/Classes/UAudioPlayback_Portaudio.pas -text
 Game/Code/Classes/UAudioPlayback_SDL.pas -text
