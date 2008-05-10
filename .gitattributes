@@ -192,14 +192,11 @@ Game/Code/lib/SQLite/lazarustest.lpi -text
 Game/Code/lib/SQLite/lazarustest.lpr -text
 Game/Code/lib/SQLite/libsqlite3.dylib -text
 Game/Code/lib/SQLite/readme.txt -text
-Game/Code/lib/bass/MacOSX/Bass.pas -text
 Game/Code/lib/bass/bass.chm -text
 Game/Code/lib/bass/bass.dll -text
 Game/Code/lib/bass/bass.txt -text
-Game/Code/lib/bass/delphi/bass.bpg -text
+Game/Code/lib/bass/delphi/bass-macosx.patch -text
 Game/Code/lib/bass/delphi/bass.pas -text
-Game/Code/lib/bass/lazarustest.lpi -text
-Game/Code/lib/bass/lazarustest.lpr -text
 Game/Code/lib/bass/libbass.dylib -text
 Game/Code/lib/ffmpeg/avcodec.pas -text
 Game/Code/lib/ffmpeg/avformat.pas -text
