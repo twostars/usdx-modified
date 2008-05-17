@@ -592,7 +592,15 @@ ScoreConverter/UScores.pas -text
 ScoreConverter/USongs.pas -text
 ScoreConverter/Umainform.dfm -text
 ScoreConverter/Umainform.pas -text
+Sounds/Common[!!-~]back.mp3 -text
+Sounds/Common[!!-~]start.mp3 -text
 Sounds/credits-outro-tune.mp3 -text
+Sounds/dismissed.mp3 -text
+Sounds/menu[!!-~]swoosh.mp3 -text
+Sounds/option[!!-~]change[!!-~]col.mp3 -text
+Sounds/rimshot022b.mp3 -text
+Sounds/select[!!-~]music[!!-~]change[!!-~]music[!!-~]50.mp3 -text
+Sounds/select[!!-~]music[!!-~]change[!!-~]music.mp3 -text
 Sounds/wome-credits-tune.mp3 -text
 Themes/Classic.ini -text
 Themes/Classic/Star.ini -text
