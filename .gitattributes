@@ -196,7 +196,6 @@ Game/Code/lib/bass/bass.chm -text
 Game/Code/lib/bass/bass.dll -text
 Game/Code/lib/bass/bass.txt -text
 Game/Code/lib/bass/delphi/bass-macosx.patch -text
-Game/Code/lib/bass/delphi/bass.pas -text
 Game/Code/lib/bass/libbass.dylib -text
 Game/Code/lib/ffmpeg/avcodec.pas -text
 Game/Code/lib/ffmpeg/avformat.pas -text
