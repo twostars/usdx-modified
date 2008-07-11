@@ -9,6 +9,9 @@ Game/Code/MacOSX/UltraStarDX.xcodeproj/eddie.mode1 -text
 Game/Code/MacOSX/UltraStarDX.xcodeproj/eddie.mode1v3 -text
 Game/Code/MacOSX/UltraStarDX.xcodeproj/eddie.pbxuser -text
 Game/Code/MacOSX/UltraStarDX.xcodeproj/project.pbxproj -text
+Game/Code/UltraStar-linux.lpi -text
+Game/Code/UltraStar.lpi -text
+Game/Code/clean.bat -text
 Game/Code/lib/FreeImage/libfreeimage.dylib -text
 Game/Code/lib/JEDI-SDL/OpenGL-Set8087CW.patch -text
 Game/Code/lib/JEDI-SDL/jedi-sdl-64bit.patch -text
