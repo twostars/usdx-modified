@@ -475,7 +475,7 @@ Themes/Deluxe/\[menu\]songMenuSelectBg.png -text
 Themes/Deluxe/\[party\]Joker.png -text
 Themes/Deluxe/\[party\]playerButton.png -text
 Themes/Deluxe/\[party\]playerTeamButton.png -text
-Themes/Deluxe/\[party\]pointer.bmp -text
+Themes/Deluxe/\[party\]pointer.png -text
 Themes/Deluxe/\[party\]roundBG1.png -text
 Themes/Deluxe/\[party\]roundBG2.png -text
 Themes/Deluxe/\[party\]roundBG3.png -text
@@ -526,7 +526,7 @@ Themes/Deluxe/\[sing.player6\]lyric_active.png -text
 Themes/Deluxe/\[sing.player6\]lyric_inactive.png -text
 Themes/Deluxe/\[sing\]LyricsBall.png -text
 Themes/Deluxe/\[sing\]lineBonusPopUp.png -text
-Themes/Deluxe/\[sing\]lyricsHelpBar.bmp -text svneol=unset#unset
+Themes/Deluxe/\[sing\]lyricsHelpBar.png -text
 Themes/Deluxe/\[sing\]notesBgLeft.png -text
 Themes/Deluxe/\[sing\]notesBgMid.png -text
 Themes/Deluxe/\[sing\]notesBgRight.png -text
