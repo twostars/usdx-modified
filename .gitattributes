@@ -20,7 +20,6 @@ Game/Code/lib/SQLite/example/TestSqlite.res -text
 Game/Code/lib/SQLite/example/uTestSqlite.dfm -text
 Game/Code/lib/bass/bass.chm -text
 Game/Code/lib/bass/delphi/bass-macosx.patch -text
-Game/Code/lib/bass/libbass.dylib -text
 Game/Code/lib/ctypes/ctypes.pas -text
 Game/Code/lib/midi/demo/MidiTest.dfm -text
 Game/Code/lib/midi/demo/Project1.res -text
