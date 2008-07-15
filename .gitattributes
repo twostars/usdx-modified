@@ -12,16 +12,13 @@ Game/Code/MacOSX/UltraStarDX.xcodeproj/project.pbxproj -text
 Game/Code/UltraStar-linux.lpi -text
 Game/Code/UltraStar.lpi -text
 Game/Code/clean.bat -text
-Game/Code/lib/FreeImage/libfreeimage.dylib -text
 Game/Code/lib/JEDI-SDL/OpenGL-Set8087CW.patch -text
 Game/Code/lib/JEDI-SDL/jedi-sdl-64bit.patch -text
 Game/Code/lib/JEDI-SDL/moduleloader-libc.patch -text
 Game/Code/lib/SQLite/example/Sunset.jpg -text
 Game/Code/lib/SQLite/example/TestSqlite.res -text
 Game/Code/lib/SQLite/example/uTestSqlite.dfm -text
-Game/Code/lib/SQLite/libsqlite3.dylib -text
 Game/Code/lib/bass/bass.chm -text
-Game/Code/lib/bass/bass.dll -text
 Game/Code/lib/bass/delphi/bass-macosx.patch -text
 Game/Code/lib/bass/libbass.dylib -text
 Game/Code/lib/ctypes/ctypes.pas -text
