@@ -27,6 +27,7 @@ Game/Code/lib/midi/midiComp.dpk -text
 Game/Code/lib/midi/midiComp.res -text
 Game/Code/lib/projectM/cwrapper/projectM-cwrapper.sln -text
 Game/Code/lib/projectM/cwrapper/projectM-cwrapper.vcproj -text
+Game/Code/ultrastardx.desktop -text
 Resources/Fonts/Bold/Font[!!-~]1024[!!-~]Bold[!!-~]16.png -text
 Resources/Fonts/Bold/Font[!!-~]1024[!!-~]Bold.dat -text
 Resources/Fonts/Bold/eurostar_regular_bold.dat -text
