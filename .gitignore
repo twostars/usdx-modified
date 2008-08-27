@@ -17,13 +17,13 @@ Tools/ScoreConverter/Umainform.dcu
 Tools/ScoreConverter/Umainform.~dfm
 Tools/ScoreConverter/Umainform.~pas
 Tools/ScoreConverter/sqlite3.dll
-src/Classes/*.dcu
-src/Classes/__history
 src/MacOSX/build
 src/Menu/*.dcu
 src/UltraStar.cfg
 src/UltraStar.dof
 src/UltraStar.~dpr
+src/classes0/*.dcu
+src/classes0/__history
 src/lib/ffmpeg/*.dylib
 src/lib/ffmpeg/src/MacOSX/ffmpeg
 src/screens/*.dcu
