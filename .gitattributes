@@ -1,6 +1,14 @@
 * text=auto !eol
 artwork/usdx_icon.svg -text
 dists/ultrastardx.desktop -text
+dists/xcode/English.lproj/InfoPlist.strings -text
+dists/xcode/English.lproj/SDLMain.nib/classes.nib -text
+dists/xcode/English.lproj/SDLMain.nib/info.nib -text
+dists/xcode/English.lproj/SDLMain.nib/objects.nib -text
+dists/xcode/UltraStarDX.xcodeproj/eddie.mode1 -text
+dists/xcode/UltraStarDX.xcodeproj/eddie.mode1v3 -text
+dists/xcode/UltraStarDX.xcodeproj/eddie.pbxuser -text
+dists/xcode/UltraStarDX.xcodeproj/project.pbxproj -text
 game/resources/credits/credits_v5_bg.png -text
 game/resources/credits/credits_v5_overlay.png -text
 game/resources/credits/intro-l-01.png -text
@@ -278,15 +286,7 @@ src/lib/midi/midiComp.dpk -text
 src/lib/midi/midiComp.res -text
 src/lib/projectM/cwrapper/projectM-cwrapper.sln -text
 src/lib/projectM/cwrapper/projectM-cwrapper.vcproj -text
-src/macosx/English.lproj/InfoPlist.strings -text
-src/macosx/English.lproj/SDLMain.nib/classes.nib -text
-src/macosx/English.lproj/SDLMain.nib/info.nib -text
-src/macosx/English.lproj/SDLMain.nib/objects.nib -text
 src/macosx/Info.plist -text
-src/macosx/UltraStarDX.xcodeproj/eddie.mode1 -text
-src/macosx/UltraStarDX.xcodeproj/eddie.mode1v3 -text
-src/macosx/UltraStarDX.xcodeproj/eddie.pbxuser -text
-src/macosx/UltraStarDX.xcodeproj/project.pbxproj -text
 src/ultrastardx-linux.lpi -text
 src/ultrastardx.lpi -text
 tools/ScoreConverter/ScoreConverter.ico -text
