@@ -67,9 +67,6 @@ Resources/Graphics/ustar-icon.png -text
 Resources/Graphics/ustar-icon_v01.icns -text
 Resources/Graphics/ustar-icon_v01.ico -text
 Resources/Sounds/dismissed.mp3 -text
-ScoreConverter/ScoreConverter.ico -text
-ScoreConverter/ScoreConverter.res -text
-ScoreConverter/Umainform.dfm -text
 Sounds/Bebeto_-_Loop010.mp3 -text
 Sounds/Common[!!-~]back.mp3 -text
 Sounds/Common[!!-~]start.mp3 -text
@@ -293,3 +290,6 @@ Themes/Deluxe/\[stat\]detailBG1.png -text
 Themes/Deluxe/\[stat\]mainBG1.png -text
 Themes/Deluxe/\[stat\]mainBG2.png -text
 Themes/Deluxe/\[stat\]mainBG3.png -text
+Tools/ScoreConverter/ScoreConverter.ico -text
+Tools/ScoreConverter/ScoreConverter.res -text
+Tools/ScoreConverter/Umainform.dfm -text
