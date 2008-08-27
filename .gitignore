@@ -22,8 +22,8 @@ src/Menu/*.dcu
 src/UltraStar.cfg
 src/UltraStar.dof
 src/UltraStar.~dpr
-src/classes0/*.dcu
-src/classes0/__history
+src/classes/*.dcu
+src/classes/__history
 src/lib/ffmpeg/*.dylib
 src/lib/ffmpeg/src/MacOSX/ffmpeg
 src/screens/*.dcu
