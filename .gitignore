@@ -18,7 +18,6 @@ Tools/ScoreConverter/Umainform.~dfm
 Tools/ScoreConverter/Umainform.~pas
 Tools/ScoreConverter/sqlite3.dll
 src/MacOSX/build
-src/Menu/*.dcu
 src/UltraStar.cfg
 src/UltraStar.dof
 src/UltraStar.~dpr
@@ -26,4 +25,5 @@ src/classes/*.dcu
 src/classes/__history
 src/lib/ffmpeg/*.dylib
 src/lib/ffmpeg/src/MacOSX/ffmpeg
+src/menu0/*.dcu
 src/screens/*.dcu
