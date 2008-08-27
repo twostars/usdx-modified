@@ -10,7 +10,6 @@ game/fonts/Outline[!!-~]1/Outline[!!-~]1.dat -text
 game/fonts/Outline[!!-~]1/Outline[!!-~]1.png -text
 game/fonts/Outline[!!-~]2/Outline[!!-~]2.dat -text
 game/fonts/Outline[!!-~]2/Outline[!!-~]2.png -text
-game/resources/Graphics/NoCover.jpg -text
 game/resources/credits/credits_v5_bg.png -text
 game/resources/credits/credits_v5_overlay.png -text
 game/resources/credits/intro-l-01.png -text
@@ -34,6 +33,7 @@ game/resources/credits/names_whiteshark.png -text
 game/resources/credits/outro-bg.png -text
 game/resources/credits/outro-esc.png -text
 game/resources/credits/outro-exit-dark.png -text
+game/resources/graphics/NoCover.jpg -text
 game/sounds/Bebeto_-_Loop010.mp3 -text
 game/sounds/Common[!!-~]back.mp3 -text
 game/sounds/Common[!!-~]start.mp3 -text
