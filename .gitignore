@@ -25,5 +25,5 @@ src/classes/*.dcu
 src/classes/__history
 src/lib/ffmpeg/*.dylib
 src/lib/ffmpeg/src/MacOSX/ffmpeg
-src/menu0/*.dcu
+src/menu/*.dcu
 src/screens/*.dcu
