@@ -26,4 +26,4 @@ src/UltraStar.dof
 src/UltraStar.~dpr
 src/lib/ffmpeg/*.dylib
 src/lib/ffmpeg/src/MacOSX/ffmpeg
-src/screens0/*.dcu
+src/screens/*.dcu
