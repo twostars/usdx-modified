@@ -1,15 +1,6 @@
 * text=auto !eol
 artwork/usdx_icon.svg -text
-game/fonts/Bold/Font[!!-~]1024[!!-~]Bold[!!-~]16.png -text
-game/fonts/Bold/Font[!!-~]1024[!!-~]Bold.dat -text
-game/fonts/Bold/eurostar_regular_bold.dat -text
-game/fonts/Bold/eurostar_regular_bold.png -text
-game/fonts/Normal/eurostar_regular.dat -text
-game/fonts/Normal/eurostar_regular.png -text
-game/fonts/Outline[!!-~]1/Outline[!!-~]1.dat -text
-game/fonts/Outline[!!-~]1/Outline[!!-~]1.png -text
-game/fonts/Outline[!!-~]2/Outline[!!-~]2.dat -text
-game/fonts/Outline[!!-~]2/Outline[!!-~]2.png -text
+dists/ultrastardx.desktop -text
 game/resources/credits/credits_v5_bg.png -text
 game/resources/credits/credits_v5_overlay.png -text
 game/resources/credits/intro-l-01.png -text
@@ -33,7 +24,18 @@ game/resources/credits/names_whiteshark.png -text
 game/resources/credits/outro-bg.png -text
 game/resources/credits/outro-esc.png -text
 game/resources/credits/outro-exit-dark.png -text
+game/resources/fonts/Bold/Font[!!-~]1024[!!-~]Bold[!!-~]16.png -text
+game/resources/fonts/Bold/Font[!!-~]1024[!!-~]Bold.dat -text
+game/resources/fonts/Bold/eurostar_regular_bold.dat -text
+game/resources/fonts/Bold/eurostar_regular_bold.png -text
+game/resources/fonts/Normal/eurostar_regular.dat -text
+game/resources/fonts/Normal/eurostar_regular.png -text
+game/resources/fonts/Outline[!!-~]1/Outline[!!-~]1.dat -text
+game/resources/fonts/Outline[!!-~]1/Outline[!!-~]1.png -text
+game/resources/fonts/Outline[!!-~]2/Outline[!!-~]2.dat -text
+game/resources/fonts/Outline[!!-~]2/Outline[!!-~]2.png -text
 game/resources/graphics/NoCover.jpg -text
+game/resources/icons/ultrastardx-icon.png -text
 game/sounds/Bebeto_-_Loop010.mp3 -text
 game/sounds/Common[!!-~]back.mp3 -text
 game/sounds/Common[!!-~]start.mp3 -text
@@ -257,7 +259,6 @@ game/themes/Deluxe/\[stat\]detailBG1.png -text
 game/themes/Deluxe/\[stat\]mainBG1.png -text
 game/themes/Deluxe/\[stat\]mainBG2.png -text
 game/themes/Deluxe/\[stat\]mainBG3.png -text
-icons/ultrastardx-icon.png -text
 icons/ultrastardx.icns -text
 icons/ultrastardx.ico -text
 plugins/Don't_Get_Worse/dismissed.mp3 -text
@@ -287,7 +288,6 @@ src/macosx/UltraStarDX.xcodeproj/eddie.mode1v3 -text
 src/macosx/UltraStarDX.xcodeproj/eddie.pbxuser -text
 src/macosx/UltraStarDX.xcodeproj/project.pbxproj -text
 src/ultrastardx-linux.lpi -text
-src/ultrastardx.desktop -text
 src/ultrastardx.lpi -text
 tools/ScoreConverter/ScoreConverter.ico -text
 tools/ScoreConverter/ScoreConverter.res -text
