@@ -262,8 +262,6 @@ Themes/Deluxe/\[stat\]mainBG1.png -text
 Themes/Deluxe/\[stat\]mainBG2.png -text
 Themes/Deluxe/\[stat\]mainBG3.png -text
 artwork/usdx_icon.svg -text
-src/UltraStar-linux.lpi -text
-src/UltraStar.lpi -text
 src/clean.bat -text
 src/lib/JEDI-SDL/OpenGL-Set8087CW.patch -text
 src/lib/JEDI-SDL/jedi-sdl-64bit.patch -text
@@ -289,7 +287,9 @@ src/macosx/UltraStarDX.xcodeproj/eddie.mode1 -text
 src/macosx/UltraStarDX.xcodeproj/eddie.mode1v3 -text
 src/macosx/UltraStarDX.xcodeproj/eddie.pbxuser -text
 src/macosx/UltraStarDX.xcodeproj/project.pbxproj -text
+src/ultrastardx-linux.lpi -text
 src/ultrastardx.desktop -text
+src/ultrastardx.lpi -text
 tools/ScoreConverter/ScoreConverter.ico -text
 tools/ScoreConverter/ScoreConverter.res -text
 tools/ScoreConverter/Umainform.dfm -text
