@@ -257,9 +257,9 @@ game/themes/Deluxe/\[stat\]detailBG1.png -text
 game/themes/Deluxe/\[stat\]mainBG1.png -text
 game/themes/Deluxe/\[stat\]mainBG2.png -text
 game/themes/Deluxe/\[stat\]mainBG3.png -text
-icons/ustar-icon.png -text
-icons/ustar-icon_v01.icns -text
-icons/ustar-icon_v01.ico -text
+icons/ultrastardx-icon.png -text
+icons/ultrastardx.icns -text
+icons/ultrastardx.ico -text
 plugins/Don't_Get_Worse/dismissed.mp3 -text
 src/clean.bat -text
 src/lib/JEDI-SDL/OpenGL-Set8087CW.patch -text
