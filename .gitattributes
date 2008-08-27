@@ -1,5 +1,4 @@
 * text=auto !eol
-Artwork/usdx_icon.svg -text
 Resources/Fonts/Bold/Font[!!-~]1024[!!-~]Bold[!!-~]16.png -text
 Resources/Fonts/Bold/Font[!!-~]1024[!!-~]Bold.dat -text
 Resources/Fonts/Bold/eurostar_regular_bold.dat -text
@@ -262,9 +261,7 @@ Themes/Deluxe/\[stat\]detailBG1.png -text
 Themes/Deluxe/\[stat\]mainBG1.png -text
 Themes/Deluxe/\[stat\]mainBG2.png -text
 Themes/Deluxe/\[stat\]mainBG3.png -text
-Tools/ScoreConverter/ScoreConverter.ico -text
-Tools/ScoreConverter/ScoreConverter.res -text
-Tools/ScoreConverter/Umainform.dfm -text
+artwork/usdx_icon.svg -text
 src/UltraStar-linux.lpi -text
 src/UltraStar.lpi -text
 src/clean.bat -text
@@ -293,3 +290,6 @@ src/macosx/UltraStarDX.xcodeproj/eddie.mode1v3 -text
 src/macosx/UltraStarDX.xcodeproj/eddie.pbxuser -text
 src/macosx/UltraStarDX.xcodeproj/project.pbxproj -text
 src/ultrastardx.desktop -text
+tools/ScoreConverter/ScoreConverter.ico -text
+tools/ScoreConverter/ScoreConverter.res -text
+tools/ScoreConverter/Umainform.dfm -text
