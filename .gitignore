@@ -1,13 +1,3 @@
-Game/Code/Classes/*.dcu
-Game/Code/Classes/__history
-Game/Code/MacOSX/build
-Game/Code/Menu/*.dcu
-Game/Code/Screens/*.dcu
-Game/Code/UltraStar.cfg
-Game/Code/UltraStar.dof
-Game/Code/UltraStar.~dpr
-Game/Code/lib/ffmpeg/*.dylib
-Game/Code/lib/ffmpeg/src/MacOSX/ffmpeg
 Modis/Blind/Blind.cfg
 Modis/Blind/Blind.dll
 Modis/Blind/Blind.dof
@@ -27,3 +17,13 @@ Tools/ScoreConverter/Umainform.dcu
 Tools/ScoreConverter/Umainform.~dfm
 Tools/ScoreConverter/Umainform.~pas
 Tools/ScoreConverter/sqlite3.dll
+src/Classes/*.dcu
+src/Classes/__history
+src/MacOSX/build
+src/Menu/*.dcu
+src/Screens/*.dcu
+src/UltraStar.cfg
+src/UltraStar.dof
+src/UltraStar.~dpr
+src/lib/ffmpeg/*.dylib
+src/lib/ffmpeg/src/MacOSX/ffmpeg
