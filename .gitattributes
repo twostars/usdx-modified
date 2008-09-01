@@ -1,5 +1,8 @@
 * text=auto !eol
 artwork/usdx_icon.svg -text
+/configure -text
+dists/autogen/config.guess -text
+dists/autogen/config.sub -text
 dists/ultrastardx.desktop -text
 dists/xcode/English.lproj/InfoPlist.strings -text
 dists/xcode/English.lproj/SDLMain.nib/classes.nib -text
