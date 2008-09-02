@@ -8,8 +8,8 @@ plugins/Duell/Duell.~dpr
 src/UltraStar.cfg
 src/UltraStar.dof
 src/UltraStar.~dpr
-src/classes/*.dcu
-src/classes/__history
+src/base/*.dcu
+src/base/__history
 src/lib/ffmpeg/*.dylib
 src/lib/ffmpeg/src/MacOSX/ffmpeg
 src/macosx/build
