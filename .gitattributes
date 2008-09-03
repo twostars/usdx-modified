@@ -1,5 +1,6 @@
 * text=auto !eol
 artwork/usdx_icon.svg -text
+artwork/usdx_icon_512.png -text
 /configure -text
 dists/autogen/config.guess -text
 dists/autogen/config.sub -text
