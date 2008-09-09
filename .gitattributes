@@ -1,9 +1,6 @@
 * text=auto !eol
-artwork/usdx_icon.svg -text
 artwork/usdx_icon_512.png -text
 /configure -text
-dists/autogen/config.guess -text
-dists/autogen/config.sub -text
 dists/ultrastardx.desktop -text
 dists/xcode/English.lproj/InfoPlist.strings -text
 dists/xcode/English.lproj/SDLMain.nib/classes.nib -text
@@ -271,6 +268,7 @@ game/themes/Deluxe/\[stat\]detailBG1.png -text
 game/themes/Deluxe/\[stat\]mainBG1.png -text
 game/themes/Deluxe/\[stat\]mainBG2.png -text
 game/themes/Deluxe/\[stat\]mainBG3.png -text
+icons/ultrastardx-icon.svg -text
 icons/ultrastardx.icns -text
 icons/ultrastardx.ico -text
 plugins/Don't_Get_Worse/dismissed.mp3 -text
