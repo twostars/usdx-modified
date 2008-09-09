@@ -1,6 +1,9 @@
 * text=auto !eol
 artwork/usdx_icon_512.png -text
 /configure -text
+dists/gentoo/readme.txt -text
+dists/gentoo/ultrastardx-1.1_alpha.ebuild -text
+dists/gentoo/ultrastardx-9999.ebuild -text
 dists/ultrastardx.desktop -text
 dists/xcode/English.lproj/InfoPlist.strings -text
 dists/xcode/English.lproj/SDLMain.nib/classes.nib -text
