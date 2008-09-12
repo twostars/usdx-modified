@@ -294,7 +294,6 @@ src/lib/midi/midiComp.res -text
 src/lib/projectM/cwrapper/projectM-cwrapper.sln -text
 src/lib/projectM/cwrapper/projectM-cwrapper.vcproj -text
 src/macosx/Info.plist -text
-src/resource.inc -text
 src/ultrastardx-linux.lpi -text
 src/ultrastardx.lpi -text
 tools/ScoreConverter/ScoreConverter.ico -text
