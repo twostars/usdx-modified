@@ -1,5 +1,9 @@
 * text=auto !eol
 /configure -text
+dists/delphi2005/readme.txt -text
+dists/delphi2005/ultrastardx.bdsproj -text
+dists/delphi7/readme.txt -text
+dists/delphi7/ultrastardx.dof -text
 dists/gentoo/readme.txt -text
 dists/gentoo/ultrastardx-1.1_alpha.ebuild -text
 dists/gentoo/ultrastardx-9999.ebuild -text
