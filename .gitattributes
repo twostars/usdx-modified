@@ -174,8 +174,6 @@ game/themes/Deluxe/\[icon\]options.png -text
 game/themes/Deluxe/\[icon\]party.png -text
 game/themes/Deluxe/\[icon\]question.png -text
 game/themes/Deluxe/\[icon\]score.png -text
-game/themes/Deluxe/\[icon\]search.png -text
-game/themes/Deluxe/\[icon\]songmenu.png -text
 game/themes/Deluxe/\[icon\]stats.png -text
 game/themes/Deluxe/\[icon\]video.png -text
 game/themes/Deluxe/\[main\]button.png -text
@@ -186,7 +184,6 @@ game/themes/Deluxe/\[main\]selectbg.png -text
 game/themes/Deluxe/\[main\]songCover.jpg -text svneol=unset#unset
 game/themes/Deluxe/\[main\]songSelection1.png -text
 game/themes/Deluxe/\[main\]songSelection2.png -text
-game/themes/Deluxe/\[menu\]PopUpBg.png -text
 game/themes/Deluxe/\[menu\]PopUpFg.png -text
 game/themes/Deluxe/\[menu\]jumpToBg.png -text
 game/themes/Deluxe/\[menu\]songMenuBg.png -text
@@ -273,6 +270,11 @@ game/themes/Deluxe/\[stat\]detailBG1.png -text
 game/themes/Deluxe/\[stat\]mainBG1.png -text
 game/themes/Deluxe/\[stat\]mainBG2.png -text
 game/themes/Deluxe/\[stat\]mainBG3.png -text
+game/themes/Deluxe/icon/song_menu.png -text
+game/themes/Deluxe/icon/song_search.png -text
+game/themes/Deluxe/icon/song_video.png -text
+game/themes/Deluxe/interface/dialog_background.png -text
+game/themes/Deluxe/interface/selectbg_search.png -text
 icons/readme.txt -text
 icons/ultrastardx-icon.res -text
 icons/ultrastardx-icon.svg -text
