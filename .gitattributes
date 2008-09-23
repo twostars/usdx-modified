@@ -284,6 +284,7 @@ icons/ultrastardx-icon_512.png -text
 icons/ultrastardx.icns -text
 icons/ultrastardx.ico -text
 plugins/Don't_Get_Worse/dismissed.mp3 -text
+src/base/UPluginLoader.pas -text
 src/clean.bat -text
 src/lib/JEDI-SDL/OpenGL-Set8087CW.patch -text
 src/lib/JEDI-SDL/jedi-sdl-64bit.patch -text
