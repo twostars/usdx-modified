@@ -17,6 +17,7 @@ dists/xcode/UltraStarDX.xcodeproj/eddie.mode1 -text
 dists/xcode/UltraStarDX.xcodeproj/eddie.mode1v3 -text
 dists/xcode/UltraStarDX.xcodeproj/eddie.pbxuser -text
 dists/xcode/UltraStarDX.xcodeproj/project.pbxproj -text
+doc/Makefile -text
 game/fonts/bold/eurostar_regular_bold.dat -text
 game/fonts/bold/eurostar_regular_bold.png -text
 game/fonts/fonts.ini -text
