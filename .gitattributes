@@ -312,6 +312,8 @@ src/clean.bat -text
 src/lib/JEDI-SDL/OpenGL-Set8087CW.patch -text
 src/lib/JEDI-SDL/jedi-sdl-64bit.patch -text
 src/lib/JEDI-SDL/moduleloader-libc.patch -text
+src/lib/SQLite/SQLite3.patch -text
+src/lib/SQLite/SQLiteTable3.patch -text
 src/lib/SQLite/example/Sunset.jpg -text
 src/lib/SQLite/example/TestSqlite.res -text
 src/lib/SQLite/example/uTestSqlite.dfm -text
