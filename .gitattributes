@@ -320,6 +320,7 @@ src/lib/SQLite/example/uTestSqlite.dfm -text
 src/lib/bass/bass.chm -text
 src/lib/bass/delphi/bass-macosx.patch -text
 src/lib/ctypes/ctypes.pas -text
+src/lib/lib-info.txt -text
 src/lib/midi/demo/MidiTest.dfm -text
 src/lib/midi/demo/Project1.res -text
 src/lib/midi/midiComp.dpk -text
