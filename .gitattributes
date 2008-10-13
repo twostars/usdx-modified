@@ -327,6 +327,12 @@ src/lib/midi/midiComp.res -text
 src/lib/projectM/cwrapper/projectM-cwrapper.sln -text
 src/lib/projectM/cwrapper/projectM-cwrapper.vcproj -text
 src/macosx/Info.plist -text
+src/menu/UMenuBackground.pas -text
+src/menu/UMenuBackgroundColor.pas -text
+src/menu/UMenuBackgroundFade.pas -text
+src/menu/UMenuBackgroundNone.pas -text
+src/menu/UMenuBackgroundTexture.pas -text
+src/menu/UMenuBackgroundVideo.pas -text
 src/ultrastardx-linux.lpi -text
 src/ultrastardx.lpi -text
 tools/ScoreConverter/ScoreConverter.ico -text
