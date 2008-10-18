@@ -320,8 +320,6 @@ src/lib/SQLite/example/uTestSqlite.dfm -text
 src/lib/bass/bass.chm -text
 src/lib/bass/delphi/bass-macosx.patch -text
 src/lib/ctypes/ctypes.pas -text
-src/lib/freetype/demo/Kopie[!!-~]von[!!-~]UFreeType.pas -text
-src/lib/freetype/demo/Kopie[!!-~]von[!!-~]lesson43.dpr -text
 src/lib/freetype/demo/UFont.pas -text
 src/lib/freetype/demo/lesson43.bdsproj -text
 src/lib/freetype/demo/lesson43.dpr -text
