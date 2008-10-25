@@ -8,6 +8,8 @@ dists/delphi7/ultrastardx.dof -text
 dists/gentoo/readme.txt -text
 dists/gentoo/ultrastardx-1.1_alpha.ebuild -text
 dists/gentoo/ultrastardx-9999.ebuild -text
+dists/lazarus/readme.txt -text
+dists/lazarus/ultrastardx-unix.lpi -text
 dists/ultrastardx.desktop -text
 dists/xcode/English.lproj/InfoPlist.strings -text
 dists/xcode/English.lproj/SDLMain.nib/classes.nib -text
@@ -343,7 +345,6 @@ src/menu/UMenuBackgroundFade.pas -text
 src/menu/UMenuBackgroundNone.pas -text
 src/menu/UMenuBackgroundTexture.pas -text
 src/menu/UMenuBackgroundVideo.pas -text
-src/ultrastardx-linux.lpi -text
 src/ultrastardx.lpi -text
 tools/ScoreConverter/ScoreConverter.ico -text
 tools/ScoreConverter/ScoreConverter.res -text
