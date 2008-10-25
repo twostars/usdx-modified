@@ -20,9 +20,14 @@ dists/xcode/UltraStarDX.xcodeproj/project.pbxproj -text
 doc/Makefile -text
 game/covers/Covers.ini -text
 game/covers/NoCover.jpg -text
+game/fonts/FreeSans.ttf -text
+game/fonts/FreeSansBold.ttf -text
+game/fonts/Vera.ttf -text
+game/fonts/VeraBd.ttf -text
 game/fonts/bold/eurostar_regular_bold.dat -text
 game/fonts/bold/eurostar_regular_bold.png -text
 game/fonts/fonts.ini -text
+game/fonts/fontsTTF.ini -text
 game/fonts/normal/eurostar_regular.dat -text
 game/fonts/normal/eurostar_regular.png -text
 game/fonts/outline1/outline1.dat -text
