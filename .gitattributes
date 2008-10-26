@@ -316,7 +316,6 @@ installerdependencies/plugins/gdf.dll -text
 installerdependencies/plugins/nsProcess.dll -text
 installerdependencies/plugins/nsisunz.dll -text
 plugins/Don't_Get_Worse/dismissed.mp3 -text
-src/base/UFont.pas -text
 src/base/UPluginLoader.pas -text
 src/lib/JEDI-SDL/OpenGL-Set8087CW.patch -text
 src/lib/JEDI-SDL/jedi-sdl-64bit.patch -text
@@ -327,10 +326,9 @@ src/lib/SQLite/example/uTestSqlite.dfm -text
 src/lib/bass/bass.chm -text
 src/lib/bass/delphi/bass-macosx.patch -text
 src/lib/ctypes/ctypes.pas -text
-src/lib/freetype/demo/UFont.pas -text
-src/lib/freetype/demo/lesson43.bdsproj -text
-src/lib/freetype/demo/lesson43.dpr -text
-src/lib/freetype/demo/lesson43.lpi -text
+src/lib/freetype/demo/engine-test.bdsproj -text
+src/lib/freetype/demo/engine-test.lpi -text
+src/lib/freetype/demo/nehe/lesson43.bdsproj -text
 src/lib/freetype/freetype.pas -text
 src/lib/lib-info.txt -text
 src/lib/midi/demo/MidiTest.dfm -text
