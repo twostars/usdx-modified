@@ -345,6 +345,7 @@ src/menu/UMenuBackgroundFade.pas -text
 src/menu/UMenuBackgroundNone.pas -text
 src/menu/UMenuBackgroundTexture.pas -text
 src/menu/UMenuBackgroundVideo.pas -text
+src/ultrastardx-win.lpi -text
 src/ultrastardx.lpi -text
 tools/ScoreConverter/ScoreConverter.ico -text
 tools/ScoreConverter/ScoreConverter.res -text
