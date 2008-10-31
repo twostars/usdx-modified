@@ -318,6 +318,7 @@ installerdependencies/plugins/nsisunz.dll -text
 plugins/Don't_Get_Worse/dismissed.mp3 -text
 src/base/TextGLFreetype.pas -text
 src/base/UPluginLoader.pas -text
+src/base/UTextEncoding.pas -text
 src/lib/JEDI-SDL/OpenGL-Set8087CW.patch -text
 src/lib/JEDI-SDL/jedi-sdl-64bit.patch -text
 src/lib/JEDI-SDL/moduleloader-libc.patch -text
