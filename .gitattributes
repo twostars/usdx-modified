@@ -316,7 +316,6 @@ unicode/installerdependencies/plugins/gdf.dll -text
 unicode/installerdependencies/plugins/nsProcess.dll -text
 unicode/installerdependencies/plugins/nsisunz.dll -text
 unicode/plugins/Don't_Get_Worse/dismissed.mp3 -text
-unicode/src/base/TextGLFreetype.pas -text
 unicode/src/base/UPluginLoader.pas -text
 unicode/src/base/UTextEncoding.pas -text
 unicode/src/lib/JEDI-SDL/OpenGL-Set8087CW.patch -text
