@@ -37,7 +37,7 @@ unicode/game/fonts/FreeSans/CREDITS -text
 unicode/game/fonts/FreeSans/FreeSans.ttf -text
 unicode/game/fonts/FreeSans/FreeSansBold.ttf -text
 unicode/game/fonts/FreeSans/README -text
-unicode/game/fonts/fontsTTF.ini -text
+unicode/game/fonts/fonts.ini -text
 unicode/game/resources/credits/credits_v5_bg.png -text
 unicode/game/resources/credits/credits_v5_overlay.png -text
 unicode/game/resources/credits/intro-l-01.png -text
