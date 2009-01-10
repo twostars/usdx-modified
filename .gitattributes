@@ -307,7 +307,6 @@ installer/settings/functions.nsh -text
 installer/settings/settings-1031.ini -text
 installer/settings/settings-1033.ini -text
 installer/settings/variables.nsh -text
-installer/version.txt -text
 installerdependencies/documents/documentation.pdf -text
 installerdependencies/documents/license.txt -text
 installerdependencies/images/header.bmp -text
