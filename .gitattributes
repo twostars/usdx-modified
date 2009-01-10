@@ -297,6 +297,7 @@ icons/ultrastardx-icon_512.png -text
 icons/ultrastardx.icns -text
 icons/ultrastardx.ico -text
 installer/UltraStar[!!-~]Deluxe.nsi -text
+installer/Update.nsi -text
 installer/languages/English.nsh -text
 installer/languages/German.nsh -text
 installer/settings/GameExplorer.nsh -text
@@ -306,6 +307,7 @@ installer/settings/functions.nsh -text
 installer/settings/settings-1031.ini -text
 installer/settings/settings-1033.ini -text
 installer/settings/variables.nsh -text
+installer/version.txt -text
 installerdependencies/documents/documentation.pdf -text
 installerdependencies/documents/license.txt -text
 installerdependencies/images/header.bmp -text
