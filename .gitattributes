@@ -37,6 +37,7 @@ game/fonts/outline1/outline1.dat -text
 game/fonts/outline1/outline1.png -text
 game/fonts/outline2/outline2.dat -text
 game/fonts/outline2/outline2.png -text
+game/languages/Finnish.ini -text
 game/languages/Slovenian.ini -text
 game/resources/credits/credits_v5_bg.png -text
 game/resources/credits/credits_v5_overlay.png -text
