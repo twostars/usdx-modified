@@ -1,6 +1,7 @@
 * text=auto !eol
 Covers/Covers.ini -text
 Covers/NoCover.jpg -text
+Game/Changelog-GERMAN.txt -text
 Game/Changelog.german.txt -text
 Game/Changelog.txt -text
 Game/Code/Classes/TextGL.pas -text
