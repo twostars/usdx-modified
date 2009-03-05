@@ -1,3 +1,8 @@
+/Makefile
+/UltraStarDeluxe.app
+/config.log
+/config.status
+/link.res
 plugins/Blind/Blind.cfg
 plugins/Blind/Blind.dll
 plugins/Blind/Blind.dof
@@ -5,15 +10,15 @@ plugins/Blind/Blind.~dpr
 plugins/Duell/Duell.cfg
 plugins/Duell/Duell.dof
 plugins/Duell/Duell.~dpr
-src/UltraStar.cfg
-src/UltraStar.dof
-src/UltraStar.~dpr
+/ppaslink.sh
+src/Makefile
 src/base/*.dcu
 src/base/__history
 src/lib/ffmpeg/*.dylib
 src/lib/ffmpeg/src/MacOSX/ffmpeg
 src/macosx/build
 src/menu/*.dcu
+src/paths.inc
 src/screens/*.dcu
 tools/ScoreConverter/ScoreConverter.cfg
 tools/ScoreConverter/ScoreConverter.dof
