@@ -323,6 +323,7 @@ plugins/Don't_Get_Worse/Hold_The_Line.bdsproj -text
 plugins/Don't_Get_Worse/Hold_The_Line.lpi -text
 plugins/Don't_Get_Worse/dismissed.mp3 -text
 src/base/TextGLFreetype.pas -text
+src/base/UNote.pas -text
 src/base/UPath.pas -text
 src/base/UPluginLoader.pas -text
 src/base/UTextEncoding.pas -text
