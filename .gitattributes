@@ -706,6 +706,12 @@ ServiceBasedPlugins/src/menu/UMenuBackgroundFade.pas -text
 ServiceBasedPlugins/src/menu/UMenuBackgroundNone.pas -text
 ServiceBasedPlugins/src/menu/UMenuBackgroundTexture.pas -text
 ServiceBasedPlugins/src/menu/UMenuBackgroundVideo.pas -text
+ServiceBasedPlugins/src/pluginsupport/UPartyDefines.pas -text
+ServiceBasedPlugins/src/pluginsupport/UPlugin.pas -text
+ServiceBasedPlugins/src/pluginsupport/UPluginDefines.pas -text
+ServiceBasedPlugins/src/pluginsupport/UPluginLoader_DLL.pas -text
+ServiceBasedPlugins/src/pluginsupport/UPluginLoader_Included.pas -text
+ServiceBasedPlugins/src/pluginsupport/UPluginManager.pas -text
 ServiceBasedPlugins/tools/ScoreConverter/ScoreConverter.ico -text
 ServiceBasedPlugins/tools/ScoreConverter/ScoreConverter.res -text
 ServiceBasedPlugins/tools/ScoreConverter/Umainform.dfm -text
