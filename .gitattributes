@@ -317,9 +317,9 @@ installerdependencies/images/install.ico -text
 installerdependencies/images/side.bmp -text
 installerdependencies/images/uninstall.ico -text
 installerdependencies/plugins/NSISdl.dll -text
+installerdependencies/plugins/ZipDLL.dll -text
 installerdependencies/plugins/gdf.dll -text
 installerdependencies/plugins/nsProcess.dll -text
-installerdependencies/plugins/nsisunz.dll -text
 plugins/Don't_Get_Worse/Hold_The_Line.bdsproj -text
 plugins/Don't_Get_Worse/Hold_The_Line.lpi -text
 plugins/Don't_Get_Worse/dismissed.mp3 -text
