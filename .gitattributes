@@ -40,13 +40,13 @@ game/fonts/outline1/outline1.dat -text
 game/fonts/outline1/outline1.png -text
 game/fonts/outline2/outline2.dat -text
 game/fonts/outline2/outline2.png -text
+game/languages/Dutch.ini -text
 game/languages/Finnish.ini -text
 game/languages/French.ini -text
 game/languages/Spanish.ini -text
 game/languages/old/Catalan.ini -text
 game/languages/old/Croatian.ini -text
 game/languages/old/Danish.ini -text
-game/languages/old/Dutch.ini -text
 game/languages/old/Euskara.ini -text
 game/languages/old/French.ini -text
 game/languages/old/Japanese.ini -text
