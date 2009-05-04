@@ -39,8 +39,10 @@ Lua/game/fonts/outline1/outline1.png -text
 Lua/game/fonts/outline2/outline2.dat -text
 Lua/game/fonts/outline2/outline2.png -text
 Lua/game/languages/Slovenian.ini -text
+Lua/game/plugins/LuaTest.usdx -text
 Lua/game/plugins/PluginDescription.odt -text
 Lua/game/plugins/duel.usdx -text
+Lua/game/plugins/hooks.txt -text
 Lua/game/resources/credits/credits_v5_bg.png -text
 Lua/game/resources/credits/credits_v5_overlay.png -text
 Lua/game/resources/credits/intro-l-01.png -text
@@ -349,6 +351,7 @@ Lua/src/lua/UHookableEvent.pas -text
 Lua/src/lua/ULuaCore.pas -text
 Lua/src/lua/ULuaParty.pas -text
 Lua/src/lua/ULuaUsdx.pas -text
+Lua/src/lua/ULuaUtils.pas -text
 Lua/src/macosx/Info.plist -text
 Lua/src/menu/UMenuBackground.pas -text
 Lua/src/menu/UMenuBackgroundColor.pas -text
