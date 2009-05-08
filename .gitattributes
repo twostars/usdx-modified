@@ -748,7 +748,6 @@ cmake/dists/xcode/UltraStarDX.xcodeproj/eddie.mode1 -text
 cmake/dists/xcode/UltraStarDX.xcodeproj/eddie.mode1v3 -text
 cmake/dists/xcode/UltraStarDX.xcodeproj/eddie.pbxuser -text
 cmake/dists/xcode/UltraStarDX.xcodeproj/project.pbxproj -text
-cmake/doc/Makefile -text
 cmake/game/covers/Covers.ini -text
 cmake/game/covers/NoCover.jpg -text
 cmake/game/fonts/FreeSans.ttf -text
@@ -1062,9 +1061,9 @@ cmake/installerdependencies/plugins/NSISdl.dll -text
 cmake/installerdependencies/plugins/ZipDLL.dll -text
 cmake/installerdependencies/plugins/gdf.dll -text
 cmake/installerdependencies/plugins/nsProcess.dll -text
-cmake/plugins/Don't_Get_Worse/Hold_The_Line.bdsproj -text
-cmake/plugins/Don't_Get_Worse/Hold_The_Line.lpi -text
-cmake/plugins/Don't_Get_Worse/dismissed.mp3 -text
+cmake/plugins/Dont_Get_Worse/Hold_The_Line.bdsproj -text
+cmake/plugins/Dont_Get_Worse/Hold_The_Line.lpi -text
+cmake/plugins/Dont_Get_Worse/dismissed.mp3 -text
 cmake/plugins/SDK/USDXStrUtils.pas -text
 cmake/src/base/TextGLFreetype.pas -text
 cmake/src/base/UNote.pas -text
@@ -1087,8 +1086,6 @@ cmake/src/lib/midi/demo/MidiTest.dfm -text
 cmake/src/lib/midi/demo/Project1.res -text
 cmake/src/lib/midi/midiComp.dpk -text
 cmake/src/lib/midi/midiComp.res -text
-cmake/src/lib/projectM/cwrapper/projectM-cwrapper.sln -text
-cmake/src/lib/projectM/cwrapper/projectM-cwrapper.vcproj -text
 cmake/src/macosx/Info.plist -text
 cmake/src/menu/UMenuBackground.pas -text
 cmake/src/menu/UMenuBackgroundColor.pas -text

@@ -66,6 +66,7 @@ cmake/UltraStarDeluxe.app
 cmake/build/*
 cmake/config.log
 cmake/config.status
+cmake/game/*.dll
 cmake/game/plugins/*
 cmake/game/ultrastardx*
 cmake/link.res
