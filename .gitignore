@@ -5,9 +5,8 @@ Lua/plugins/Blind/Blind.~dpr
 Lua/plugins/Duell/Duell.cfg
 Lua/plugins/Duell/Duell.dof
 Lua/plugins/Duell/Duell.~dpr
-Lua/src/UltraStar.cfg
-Lua/src/UltraStar.dof
-Lua/src/UltraStar.~dpr
+Lua/src/*.dcu
+Lua/src/*.~pas
 Lua/src/base/*.dcu
 Lua/src/base/__history
 Lua/src/lib/ffmpeg/*.dylib
@@ -15,6 +14,9 @@ Lua/src/lib/ffmpeg/src/MacOSX/ffmpeg
 Lua/src/macosx/build
 Lua/src/menu/*.dcu
 Lua/src/screens/*.dcu
+Lua/src/ultrastardx.cfg
+Lua/src/ultrastardx.dof
+Lua/src/ultrastardx.~dpr
 Lua/tools/ScoreConverter/ScoreConverter.cfg
 Lua/tools/ScoreConverter/ScoreConverter.dof
 Lua/tools/ScoreConverter/ScoreConverter.exe
