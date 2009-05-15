@@ -371,6 +371,7 @@ src/menu/UMenuBackgroundFade.pas -text
 src/menu/UMenuBackgroundNone.pas -text
 src/menu/UMenuBackgroundTexture.pas -text
 src/menu/UMenuBackgroundVideo.pas -text
+test/test001.pas -text
 tools/ScoreConverter/ScoreConverter.ico -text
 tools/ScoreConverter/ScoreConverter.res -text
 tools/ScoreConverter/Umainform.dfm -text
