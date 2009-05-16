@@ -40,6 +40,7 @@ game/fonts/outline1/outline1.dat -text
 game/fonts/outline1/outline1.png -text
 game/fonts/outline2/outline2.dat -text
 game/fonts/outline2/outline2.png -text
+game/languages/Catalan.ini -text
 game/languages/Croatian.ini -text
 game/languages/Dutch.ini -text
 game/languages/Euskara.ini -text
@@ -50,7 +51,6 @@ game/languages/Japanese.ini -text
 game/languages/Portuguese.ini -text
 game/languages/Spanish.ini -text
 game/languages/Swedish.ini -text
-game/languages/old/Catalan.ini -text
 game/languages/old/Danish.ini -text
 game/languages/old/French.ini -text
 game/languages/old/Norwegian.ini -text
