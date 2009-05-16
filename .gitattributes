@@ -68,8 +68,6 @@ Lua/game/resources/credits/outro-esc.png -text
 Lua/game/resources/credits/outro-exit-dark.png -text
 Lua/game/resources/graphics/NoCover.jpg -text
 Lua/game/resources/icons/ultrastardx-icon.png -text
-Lua/game/scripts/main.lua -text
-Lua/game/scripts/party/Until5000.lua -text
 Lua/game/sounds/Bebeto_-_Loop010.mp3 -text
 Lua/game/sounds/Common[!!-~]back.mp3 -text
 Lua/game/sounds/Common[!!-~]start.mp3 -text
