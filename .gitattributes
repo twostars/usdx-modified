@@ -725,6 +725,8 @@ ServiceBasedPlugins/tools/ScoreConverter/Umainform.dfm -text
 cmake/COPYRIGHT.txt -text
 cmake/ChangeLog.GERMAN.txt -text
 cmake/RELEASEBLOCKERS.txt -text
+cmake/dists/bundle-startup.sh -text
+cmake/dists/cmake/Modules/AnalyzeDylibDeps.cmake -text
 cmake/dists/code.svnprops -text
 cmake/dists/delphi2005/readme.txt -text
 cmake/dists/delphi2005/ultrastardx.bdsproj -text
