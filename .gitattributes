@@ -39,6 +39,7 @@ Lua/game/fonts/outline1/outline1.png -text
 Lua/game/fonts/outline2/outline2.dat -text
 Lua/game/fonts/outline2/outline2.png -text
 Lua/game/languages/Slovenian.ini -text
+Lua/game/plugins/5000points.usdx -text
 Lua/game/plugins/LuaTest.usdx -text
 Lua/game/plugins/PluginDescription.odt -text
 Lua/game/plugins/duel.usdx -text
