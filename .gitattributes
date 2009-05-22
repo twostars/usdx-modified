@@ -1098,6 +1098,7 @@ cmake/src/menu/UMenuBackgroundVideo.pas -text
 cmake/tools/ScoreConverter/ScoreConverter.ico -text
 cmake/tools/ScoreConverter/ScoreConverter.res -text
 cmake/tools/ScoreConverter/Umainform.dfm -text
+unicode/BuildBot.trigger -text
 unicode/COPYRIGHT.txt -text
 unicode/ChangeLog.GERMAN.txt -text
 unicode/configure -text
