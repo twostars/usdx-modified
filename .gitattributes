@@ -348,6 +348,7 @@ Lua/src/lib/projectM/cwrapper/projectM-cwrapper.vcproj -text
 Lua/src/lua/UHookableEvent.pas -text
 Lua/src/lua/ULuaCore.pas -text
 Lua/src/lua/ULuaParty.pas -text
+Lua/src/lua/ULuaScreenSing.pas -text
 Lua/src/lua/ULuaUsdx.pas -text
 Lua/src/lua/ULuaUtils.pas -text
 Lua/src/macosx/Info.plist -text
