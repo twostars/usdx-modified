@@ -42,6 +42,7 @@ Lua/game/languages/Slovenian.ini -text
 Lua/game/plugins/5000points.usdx -text
 Lua/game/plugins/LuaTest.usdx -text
 Lua/game/plugins/PluginDescription.odt -text
+Lua/game/plugins/blind.usdx -text
 Lua/game/plugins/duel.usdx -text
 Lua/game/plugins/hooks.txt -text
 Lua/game/resources/credits/credits_v5_bg.png -text
