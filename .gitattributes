@@ -309,6 +309,8 @@ game/themes/Deluxe/icon/song_menu.png -text
 game/themes/Deluxe/icon/song_search.png -text
 game/themes/Deluxe/icon/song_video.png -text
 game/themes/Deluxe/interface/dialog_background.png -text
+game/themes/Deluxe/interface/select_arrow_left.png -text
+game/themes/Deluxe/interface/select_arrow_right.png -text
 game/themes/Deluxe/interface/selectbg_search.png -text
 icons/readme.txt -text
 icons/ultrastardx-icon.res -text
