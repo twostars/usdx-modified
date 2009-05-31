@@ -308,6 +308,8 @@ game/themes/Deluxe/\[stat\]mainBG3.png -text
 game/themes/Deluxe/icon/song_menu.png -text
 game/themes/Deluxe/icon/song_search.png -text
 game/themes/Deluxe/icon/song_video.png -text
+game/themes/Deluxe/interface/cursor.png -text
+game/themes/Deluxe/interface/cursor_pressed.png -text
 game/themes/Deluxe/interface/dialog_background.png -text
 game/themes/Deluxe/interface/select_arrow_left.png -text
 game/themes/Deluxe/interface/select_arrow_right.png -text
