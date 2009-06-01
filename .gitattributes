@@ -2,6 +2,7 @@
 /BuildBot.trigger -text
 /COPYRIGHT.txt -text
 /ChangeLog.GERMAN.txt -text
+/DisplayChanges.patch -text
 /RELEASEBLOCKERS.txt -text
 dists/code.svnprops -text
 dists/delphi2005/readme.txt -text
