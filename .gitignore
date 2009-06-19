@@ -19,7 +19,6 @@ src/Makefile
 src/base/*.dcu
 src/base/__history
 src/lib/ffmpeg/*.dylib
-src/lib/ffmpeg/src/MacOSX/ffmpeg
 src/macosx/build
 src/menu/*.dcu
 src/paths.inc
