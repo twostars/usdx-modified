@@ -725,8 +725,10 @@ ServiceBasedPlugins/src/pluginsupport/UPluginManager.pas -text
 ServiceBasedPlugins/tools/ScoreConverter/ScoreConverter.ico -text
 ServiceBasedPlugins/tools/ScoreConverter/ScoreConverter.res -text
 ServiceBasedPlugins/tools/ScoreConverter/Umainform.dfm -text
+cmake/BuildBot.trigger -text
 cmake/COPYRIGHT.txt -text
 cmake/ChangeLog.GERMAN.txt -text
+cmake/DisplayChanges.patch -text
 cmake/RELEASEBLOCKERS.txt -text
 cmake/dists/bundle-startup.sh -text
 cmake/dists/cmake/Modules/AnalyzeDylibDeps.cmake -text
@@ -767,6 +769,7 @@ cmake/game/fonts/outline1/outline1.dat -text
 cmake/game/fonts/outline1/outline1.png -text
 cmake/game/fonts/outline2/outline2.dat -text
 cmake/game/fonts/outline2/outline2.png -text
+cmake/game/languages/Catalan.ini -text
 cmake/game/languages/Croatian.ini -text
 cmake/game/languages/Dutch.ini -text
 cmake/game/languages/Euskara.ini -text
@@ -904,6 +907,7 @@ cmake/game/themes/Classic/\[stat\]detailBG1.jpg -text
 cmake/game/themes/Classic/\[stat\]mainBG1.jpg -text
 cmake/game/themes/Classic/\[stat\]mainBG2.jpg -text
 cmake/game/themes/Classic/\[stat\]mainBG3.jpg -text
+cmake/game/themes/Deluxe/Ocean.ini -text
 cmake/game/themes/Deluxe/Ribbon.ini -text
 cmake/game/themes/Deluxe/\[bg-load\]blue.jpg -text
 cmake/game/themes/Deluxe/\[bg-load\]fall.jpg -text
@@ -1034,7 +1038,11 @@ cmake/game/themes/Deluxe/\[stat\]mainBG3.png -text
 cmake/game/themes/Deluxe/icon/song_menu.png -text
 cmake/game/themes/Deluxe/icon/song_search.png -text
 cmake/game/themes/Deluxe/icon/song_video.png -text
+cmake/game/themes/Deluxe/interface/cursor.png -text svneol=unset#image/png
+cmake/game/themes/Deluxe/interface/cursor_pressed.png -text svneol=unset#image/png
 cmake/game/themes/Deluxe/interface/dialog_background.png -text
+cmake/game/themes/Deluxe/interface/select_arrow_left.png -text svneol=unset#image/png
+cmake/game/themes/Deluxe/interface/select_arrow_right.png -text svneol=unset#image/png
 cmake/game/themes/Deluxe/interface/selectbg_search.png -text
 cmake/icons/readme.txt -text
 cmake/icons/ultrastardx-icon.res -text
@@ -1069,6 +1077,7 @@ cmake/plugins/Dont_Get_Worse/Hold_The_Line.lpi -text
 cmake/plugins/Dont_Get_Worse/dismissed.mp3 -text
 cmake/plugins/SDK/USDXStrUtils.pas -text
 cmake/src/base/TextGLFreetype.pas -text
+cmake/src/base/UBeatTimer.pas -text
 cmake/src/base/UNote.pas -text
 cmake/src/base/UPath.pas -text
 cmake/src/base/UTextEncoding.pas -text
@@ -1096,6 +1105,7 @@ cmake/src/menu/UMenuBackgroundFade.pas -text
 cmake/src/menu/UMenuBackgroundNone.pas -text
 cmake/src/menu/UMenuBackgroundTexture.pas -text
 cmake/src/menu/UMenuBackgroundVideo.pas -text
+cmake/test/test001.pas -text
 cmake/tools/ScoreConverter/ScoreConverter.ico -text
 cmake/tools/ScoreConverter/ScoreConverter.res -text
 cmake/tools/ScoreConverter/Umainform.dfm -text
