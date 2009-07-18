@@ -10,7 +10,6 @@ Lua/src/*.~pas
 Lua/src/base/*.dcu
 Lua/src/base/__history
 Lua/src/lib/ffmpeg/*.dylib
-Lua/src/lib/ffmpeg/src/MacOSX/ffmpeg
 Lua/src/macosx/build
 Lua/src/menu/*.dcu
 Lua/src/screens/*.dcu
