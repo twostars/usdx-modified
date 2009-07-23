@@ -1152,7 +1152,7 @@ unicode/game/fonts/FreeSans/FreeSansBold.ttf -text
 unicode/game/fonts/FreeSans/README -text
 unicode/game/fonts/fonts.ini -text
 unicode/game/languages/Finnish.ini -text
-unicode/game/languages/Slovenian.ini -text
+unicode/game/languages/Japanese.ini -text svneol=unset#unset
 unicode/game/resources/credits/credits_v5_bg.png -text
 unicode/game/resources/credits/credits_v5_overlay.png -text
 unicode/game/resources/credits/intro-l-01.png -text
@@ -1402,7 +1402,11 @@ unicode/game/themes/Deluxe/\[stat\]mainBG3.png -text
 unicode/game/themes/Deluxe/icon/song_menu.png -text
 unicode/game/themes/Deluxe/icon/song_search.png -text
 unicode/game/themes/Deluxe/icon/song_video.png -text
+unicode/game/themes/Deluxe/interface/cursor.png -text
+unicode/game/themes/Deluxe/interface/cursor_pressed.png -text
 unicode/game/themes/Deluxe/interface/dialog_background.png -text
+unicode/game/themes/Deluxe/interface/select_arrow_left.png -text
+unicode/game/themes/Deluxe/interface/select_arrow_right.png -text
 unicode/game/themes/Deluxe/interface/selectbg_search.png -text
 unicode/icons/readme.txt -text
 unicode/icons/ultrastardx-icon.res -text
@@ -1429,13 +1433,12 @@ unicode/installerdependencies/images/install.ico -text
 unicode/installerdependencies/images/side.bmp -text
 unicode/installerdependencies/images/uninstall.ico -text
 unicode/installerdependencies/plugins/NSISdl.dll -text
+unicode/installerdependencies/plugins/ZipDLL.dll -text
 unicode/installerdependencies/plugins/gdf.dll -text
 unicode/installerdependencies/plugins/nsProcess.dll -text
-unicode/installerdependencies/plugins/nsisunz.dll -text
 unicode/plugins/Don't_Get_Worse/dismissed.mp3 -text
 unicode/src/base/UNote.pas -text
 unicode/src/base/UPath.pas -text
-unicode/src/base/UPluginLoader.pas -text
 unicode/src/base/UTextEncoding.pas -text
 unicode/src/lib/JEDI-SDL/OpenGL-Set8087CW.patch -text
 unicode/src/lib/JEDI-SDL/jedi-sdl-64bit.patch -text
