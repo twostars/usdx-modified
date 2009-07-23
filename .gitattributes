@@ -1112,7 +1112,6 @@ cmake/tools/ScoreConverter/Umainform.dfm -text
 unicode/BuildBot.trigger -text
 unicode/COPYRIGHT.txt -text
 unicode/ChangeLog.GERMAN.txt -text
-unicode/DisplayChanges.patch -text
 unicode/configure -text
 unicode/dists/code.svnprops -text
 unicode/dists/delphi2005/readme.txt -text
@@ -1153,15 +1152,7 @@ unicode/game/fonts/FreeSans/FreeSansBold.ttf -text
 unicode/game/fonts/FreeSans/README -text
 unicode/game/fonts/fonts.ini -text
 unicode/game/languages/Finnish.ini -text
-unicode/game/languages/Greek.ini -text
 unicode/game/languages/Slovenian.ini -text
-unicode/game/languages/old/Danish.ini -text
-unicode/game/languages/old/French.ini -text
-unicode/game/languages/old/Norwegian.ini -text
-unicode/game/languages/old/Polish.ini -text
-unicode/game/languages/old/Serbian.ini -text
-unicode/game/languages/old/Slovak.ini -text
-unicode/game/languages/old/Slovenian.ini -text
 unicode/game/resources/credits/credits_v5_bg.png -text
 unicode/game/resources/credits/credits_v5_overlay.png -text
 unicode/game/resources/credits/intro-l-01.png -text
@@ -1411,11 +1402,7 @@ unicode/game/themes/Deluxe/\[stat\]mainBG3.png -text
 unicode/game/themes/Deluxe/icon/song_menu.png -text
 unicode/game/themes/Deluxe/icon/song_search.png -text
 unicode/game/themes/Deluxe/icon/song_video.png -text
-unicode/game/themes/Deluxe/interface/cursor.png -text svneol=unset#image/png
-unicode/game/themes/Deluxe/interface/cursor_pressed.png -text svneol=unset#image/png
 unicode/game/themes/Deluxe/interface/dialog_background.png -text
-unicode/game/themes/Deluxe/interface/select_arrow_left.png -text svneol=unset#image/png
-unicode/game/themes/Deluxe/interface/select_arrow_right.png -text svneol=unset#image/png
 unicode/game/themes/Deluxe/interface/selectbg_search.png -text
 unicode/icons/readme.txt -text
 unicode/icons/ultrastardx-icon.res -text
@@ -1442,13 +1429,10 @@ unicode/installerdependencies/images/install.ico -text
 unicode/installerdependencies/images/side.bmp -text
 unicode/installerdependencies/images/uninstall.ico -text
 unicode/installerdependencies/plugins/NSISdl.dll -text
-unicode/installerdependencies/plugins/ZipDLL.dll -text
 unicode/installerdependencies/plugins/gdf.dll -text
 unicode/installerdependencies/plugins/nsProcess.dll -text
 unicode/installerdependencies/plugins/nsisunz.dll -text
 unicode/plugins/Don't_Get_Worse/dismissed.mp3 -text
-unicode/plugins/Makefile.in -text
-unicode/src/base/UBeatTimer.pas -text
 unicode/src/base/UNote.pas -text
 unicode/src/base/UPath.pas -text
 unicode/src/base/UPluginLoader.pas -text
@@ -1479,7 +1463,6 @@ unicode/src/menu/UMenuBackgroundFade.pas -text
 unicode/src/menu/UMenuBackgroundNone.pas -text
 unicode/src/menu/UMenuBackgroundTexture.pas -text
 unicode/src/menu/UMenuBackgroundVideo.pas -text
-unicode/test/test001.pas -text
 unicode/tools/ScoreConverter/ScoreConverter.ico -text
 unicode/tools/ScoreConverter/ScoreConverter.res -text
 unicode/tools/ScoreConverter/Umainform.dfm -text

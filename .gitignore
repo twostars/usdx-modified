@@ -110,7 +110,6 @@ unicode/game/Error.log
 unicode/game/Ultrastar.db
 unicode/game/config.ini
 unicode/game/cover.db
-unicode/game/plugins/*.so
 unicode/game/songs
 unicode/game/ultrastardx
 unicode/link.res
