@@ -1438,7 +1438,6 @@ unicode/installerdependencies/plugins/gdf.dll -text
 unicode/installerdependencies/plugins/nsProcess.dll -text
 unicode/plugins/Don't_Get_Worse/dismissed.mp3 -text
 unicode/src/base/UNote.pas -text
-unicode/src/base/UPath.pas -text
 unicode/src/base/UTextEncoding.pas -text
 unicode/src/lib/JEDI-SDL/OpenGL-Set8087CW.patch -text
 unicode/src/lib/JEDI-SDL/jedi-sdl-64bit.patch -text
