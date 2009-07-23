@@ -1146,7 +1146,7 @@ unicode/game/fonts/FreeSans/FreeSansBold.ttf -text
 unicode/game/fonts/FreeSans/README -text
 unicode/game/fonts/fonts.ini -text
 unicode/game/languages/Finnish.ini -text
-unicode/game/languages/Japanese.ini -text svneol=unset#unset
+unicode/game/languages/Japanese.ini -text
 unicode/game/resources/credits/credits_v5_bg.png -text
 unicode/game/resources/credits/credits_v5_overlay.png -text
 unicode/game/resources/credits/intro-l-01.png -text
