@@ -730,15 +730,17 @@ cmake/COPYRIGHT.txt -text
 cmake/ChangeLog.GERMAN.txt -text
 cmake/DisplayChanges.patch -text
 cmake/RELEASEBLOCKERS.txt -text
+cmake/artwork/.PLACEHOLDER -text
 cmake/dists/bundle-startup.sh -text
 cmake/dists/cmake/Modules/AnalyzeDylibDeps.cmake -text
+cmake/dists/cmake/Modules/MacOSXBundle.cmake -text
 cmake/dists/code.svnprops -text
 cmake/dists/delphi2005/readme.txt -text
 cmake/dists/delphi2005/ultrastardx.bdsproj -text
 cmake/dists/delphi7/readme.txt -text
 cmake/dists/delphi7/ultrastardx.dof -text
 cmake/dists/gentoo/readme.txt -text
-cmake/dists/gentoo/ultrastardx-1.1_alpha.ebuild -text
+cmake/dists/gentoo/ultrastardx-1.1.0_alpha1.ebuild -text
 cmake/dists/gentoo/ultrastardx-9999.ebuild -text
 cmake/dists/lazarus/clean.bat -text
 cmake/dists/lazarus/readme.txt -text
@@ -789,6 +791,7 @@ cmake/game/languages/old/Serbian.ini -text
 cmake/game/languages/old/Slovak.ini -text
 cmake/game/languages/old/Slovenian.ini -text
 cmake/game/languages/old/readme.txt -text
+cmake/game/plugins/.PLACEHOLDER -text
 cmake/game/resources/credits/credits_v5_bg.png -text
 cmake/game/resources/credits/credits_v5_overlay.png -text
 cmake/game/resources/credits/intro-l-01.png -text
@@ -1044,6 +1047,7 @@ cmake/game/themes/Deluxe/interface/dialog_background.png -text
 cmake/game/themes/Deluxe/interface/select_arrow_left.png -text svneol=unset#image/png
 cmake/game/themes/Deluxe/interface/select_arrow_right.png -text svneol=unset#image/png
 cmake/game/themes/Deluxe/interface/selectbg_search.png -text
+cmake/game/visuals/.PLACEHOLDER -text
 cmake/icons/readme.txt -text
 cmake/icons/ultrastardx-icon.res -text
 cmake/icons/ultrastardx-icon.svg -text
