@@ -351,6 +351,7 @@ src/base/UPath.pas -text
 src/base/UPathUtils.pas -text
 src/base/UTextEncoding.pas -text
 src/base/UUnicodeUtils.pas -text
+src/encoding/Auto.inc -text
 src/encoding/CP1250.inc -text
 src/encoding/CP1252.inc -text
 src/encoding/Locale.inc -text
@@ -386,6 +387,7 @@ src/lib/midi/demo/MidiTest.dfm -text
 src/lib/midi/demo/Project1.res -text
 src/lib/midi/midiComp.dpk -text
 src/lib/midi/midiComp.res -text
+src/lib/pcre/pcre.pas -text
 src/lib/projectM/cwrapper/projectM-cwrapper.sln -text
 src/lib/projectM/cwrapper/projectM-cwrapper.vcproj -text
 src/macosx/Info.plist -text
