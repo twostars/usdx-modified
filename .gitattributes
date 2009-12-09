@@ -45,6 +45,7 @@ Lua/game/plugins/PluginDescription.odt -text
 Lua/game/plugins/blind.usdx -text
 Lua/game/plugins/duel.usdx -text
 Lua/game/plugins/hooks.txt -text
+Lua/game/plugins/teamduel.usdx -text
 Lua/game/resources/credits/credits_v5_bg.png -text
 Lua/game/resources/credits/credits_v5_overlay.png -text
 Lua/game/resources/credits/intro-l-01.png -text
