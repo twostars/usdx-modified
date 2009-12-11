@@ -1,3 +1,11 @@
+Lua/Makefile
+Lua/UltraStarDeluxe.app
+Lua/build/*
+Lua/config.log
+Lua/config.status
+Lua/game/plugins/*
+Lua/game/ultrastardx*
+Lua/link.res
 Lua/plugins/Blind/Blind.cfg
 Lua/plugins/Blind/Blind.dll
 Lua/plugins/Blind/Blind.dof
@@ -5,6 +13,8 @@ Lua/plugins/Blind/Blind.~dpr
 Lua/plugins/Duell/Duell.cfg
 Lua/plugins/Duell/Duell.dof
 Lua/plugins/Duell/Duell.~dpr
+Lua/plugins/Makefile
+Lua/ppaslink.sh
 Lua/src/*.dcu
 Lua/src/*.~pas
 Lua/src/base/*.dcu
