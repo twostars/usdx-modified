@@ -412,6 +412,7 @@ Lua/src/menu/UMenuBackgroundFade.pas -text
 Lua/src/menu/UMenuBackgroundNone.pas -text
 Lua/src/menu/UMenuBackgroundTexture.pas -text
 Lua/src/menu/UMenuBackgroundVideo.pas -text
+Lua/src/screens/UScreenPartyRounds.pas -text
 Lua/test/test001.pas -text
 Lua/tools/ScoreConverter/ScoreConverter.ico -text
 Lua/tools/ScoreConverter/ScoreConverter.res -text
