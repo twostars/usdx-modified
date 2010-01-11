@@ -63,7 +63,6 @@ Lua/game/languages/old/Slovak.ini -text
 Lua/game/languages/old/Slovenian.ini -text
 Lua/game/languages/old/readme.txt -text
 Lua/game/plugins/5000points.usdx -text
-Lua/game/plugins/LuaTest.usdx -text
 Lua/game/plugins/PluginDescription.odt -text
 Lua/game/plugins/blind.usdx -text
 Lua/game/plugins/duel.usdx -text
