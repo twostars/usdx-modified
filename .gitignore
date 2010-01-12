@@ -1,6 +1,7 @@
 /Makefile
 /UltraStarDeluxe.app
 build/*
+build/delphi-win/*.dcu
 /config.log
 /config.status
 game/ultrastardx*
