@@ -3,7 +3,6 @@
 build/*
 /config.log
 /config.status
-game/plugins/*
 game/ultrastardx*
 /link.res
 plugins/Blind/Blind.cfg
