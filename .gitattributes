@@ -62,6 +62,12 @@ game/languages/old/Serbian.ini -text
 game/languages/old/Slovak.ini -text
 game/languages/old/Slovenian.ini -text
 game/languages/old/readme.txt -text
+game/plugins/5000points.usdx -text
+game/plugins/PluginDescription.odt -text svneol=unset#unset
+game/plugins/blind.usdx -text
+game/plugins/duel.usdx -text
+game/plugins/hooks.txt -text svneol=native#unset
+game/plugins/teamduel.usdx -text
 game/resources/credits/credits_v5_bg.png -text
 game/resources/credits/credits_v5_overlay.png -text
 game/resources/credits/intro-l-01.png -text
