@@ -27,6 +27,7 @@ dists/xcode/UltraStarDX.xcodeproj/eddie.mode1v3 -text
 dists/xcode/UltraStarDX.xcodeproj/eddie.pbxuser -text
 dists/xcode/UltraStarDX.xcodeproj/project.pbxproj -text
 doc/Makefile -text
+game/LuaCommands.odt -text svneol=unset#unset
 game/covers/Covers.ini -text
 game/covers/NoCover.jpg -text
 game/fonts/DejaVu/AUTHORS -text
@@ -227,6 +228,7 @@ game/themes/Deluxe/\[menu\]songMenuSelectBg.png -text
 game/themes/Deluxe/\[party\]Joker.png -text
 game/themes/Deluxe/\[party\]playerButton.png -text
 game/themes/Deluxe/\[party\]playerTeamButton.png -text
+game/themes/Deluxe/\[party\]playerselectbg.png -text svneol=unset#image/png
 game/themes/Deluxe/\[party\]pointer.png -text
 game/themes/Deluxe/\[party\]roundBG1.png -text
 game/themes/Deluxe/\[party\]roundBG2.png -text
@@ -359,6 +361,7 @@ src/encoding/UTF8.inc -text
 src/lib/JEDI-SDL/OpenGL-Set8087CW.patch -text
 src/lib/JEDI-SDL/jedi-sdl-64bit.patch -text
 src/lib/JEDI-SDL/moduleloader-libc.patch -text
+src/lib/Lua/ULua.pas -text
 src/lib/SQLite/example/Sunset.jpg -text
 src/lib/SQLite/example/TestSqlite.res -text
 src/lib/SQLite/example/uTestSqlite.dfm -text
@@ -390,6 +393,16 @@ src/lib/midi/midiComp.res -text
 src/lib/pcre/pcre.pas -text
 src/lib/projectM/cwrapper/projectM-cwrapper.sln -text
 src/lib/projectM/cwrapper/projectM-cwrapper.vcproj -text
+src/lua/UHookableEvent.pas -text
+src/lua/ULuaCore.pas -text
+src/lua/ULuaGl.pas -text
+src/lua/ULuaLog.pas -text
+src/lua/ULuaParty.pas -text
+src/lua/ULuaScreenSing.pas -text
+src/lua/ULuaTextGL.pas -text
+src/lua/ULuaTexture.pas -text
+src/lua/ULuaUsdx.pas -text
+src/lua/ULuaUtils.pas -text
 src/macosx/Info.plist -text
 src/menu/UMenuBackground.pas -text
 src/menu/UMenuBackgroundColor.pas -text
@@ -397,6 +410,7 @@ src/menu/UMenuBackgroundFade.pas -text
 src/menu/UMenuBackgroundNone.pas -text
 src/menu/UMenuBackgroundTexture.pas -text
 src/menu/UMenuBackgroundVideo.pas -text
+src/screens/UScreenPartyRounds.pas -text
 test/test001.pas -text
 tools/ScoreConverter/ScoreConverter.ico -text
 tools/ScoreConverter/ScoreConverter.res -text
