@@ -6,14 +6,6 @@ build/delphi-win/*.dcu
 /config.status
 game/ultrastardx*
 /link.res
-plugins/Blind/Blind.cfg
-plugins/Blind/Blind.dll
-plugins/Blind/Blind.dof
-plugins/Blind/Blind.~dpr
-plugins/Duell/Duell.cfg
-plugins/Duell/Duell.dof
-plugins/Duell/Duell.~dpr
-plugins/Makefile
 /ppaslink.sh
 src/Makefile
 src/base/*.dcu
