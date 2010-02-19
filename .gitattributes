@@ -1,7 +1,6 @@
 * text=auto !eol
 Covers/Covers.ini -text
 Covers/NoCover.jpg -text
-Covers/Thumbs.db -text
 Game/Changelog.german.txt -text
 Game/Changelog.txt -text
 Game/Code/Classes/TextGL.pas -text
@@ -187,20 +186,16 @@ Game/Code/lib/zlportio/zlportio.pas -text
 Game/Code/rccompillieren.bat -text
 Game/Fonts/Bold/Font[!!-~]1024[!!-~]Bold[!!-~]16.png -text
 Game/Fonts/Bold/Font[!!-~]1024[!!-~]Bold.dat -text
-Game/Fonts/Bold/Thumbs.db -text
 Game/Fonts/Bold/eurostar_regular_bold.dat -text
 Game/Fonts/Bold/eurostar_regular_bold.png -text
 Game/Fonts/Normal/Font[!!-~]Normal[!!-~]16.png -text
 Game/Fonts/Normal/Font[!!-~]Normal.dat -text
-Game/Fonts/Normal/Thumbs.db -text
 Game/Fonts/Normal/eurostar_regular.dat -text
 Game/Fonts/Normal/eurostar_regular.png -text
 Game/Fonts/Outline[!!-~]1/Outline[!!-~]1.dat -text
 Game/Fonts/Outline[!!-~]1/Outline[!!-~]1.png -text
-Game/Fonts/Outline[!!-~]1/Thumbs.db -text
 Game/Fonts/Outline[!!-~]2/Outline[!!-~]2.dat -text
 Game/Fonts/Outline[!!-~]2/Outline[!!-~]2.png -text
-Game/Fonts/Outline[!!-~]2/Thumbs.db -text
 Game/Graphics/NoCover.jpg -text
 Game/Graphics/credits_v5_bg.png -text
 Game/Graphics/credits_v5_overlay.png -text
@@ -231,7 +226,6 @@ Game/Output/Changelog.german.txt -text
 Game/Output/Changelog.txt -text
 Game/Output/Covers/Covers.ini -text
 Game/Output/Covers/NoCover.jpg -text
-Game/Output/Covers/Thumbs.db -text
 Game/Output/Languages/English.ini -text
 Game/Output/Languages/German.ini -text
 Game/Output/Languages/Italian.ini -text
@@ -266,7 +260,6 @@ Game/Output/SDL.dll -text
 Game/Output/Skins/Deluxe/Blue.ini -text
 Game/Output/Skins/Deluxe/Fall.ini -text
 Game/Output/Skins/Deluxe/Summer.ini -text
-Game/Output/Skins/Deluxe/Thumbs.db -text
 Game/Output/Skins/Deluxe/Winter.ini -text
 Game/Output/Skins/Deluxe/\[bg-load\]blue.jpg -text
 Game/Output/Skins/Deluxe/\[bg-load\]fall.jpg -text
@@ -362,7 +355,6 @@ Game/Output/Skins/Deluxe/\[stat\]mainBG1.jpg -text
 Game/Output/Skins/Deluxe/\[stat\]mainBG2.jpg -text
 Game/Output/Skins/Deluxe/\[stat\]mainBG3.jpg -text
 Game/Output/Skins/TODOs/Blue[!!-~]Sensation/Simple.ini -text
-Game/Output/Skins/TODOs/Blue[!!-~]Sensation/Thumbs.db -text
 Game/Output/Skins/TODOs/Blue[!!-~]Sensation/\[bg-diff\]blue.jpg -text
 Game/Output/Skins/TODOs/Blue[!!-~]Sensation/\[bg-load\]blue.jpg -text
 Game/Output/Skins/TODOs/Blue[!!-~]Sensation/\[bg-main\]blue.jpg -text
@@ -459,7 +451,6 @@ Game/Output/Skins/TODOs/Blue[!!-~]Sensation/\[stat\]mainBG1.jpg -text
 Game/Output/Skins/TODOs/Blue[!!-~]Sensation/\[stat\]mainBG2.jpg -text
 Game/Output/Skins/TODOs/Blue[!!-~]Sensation/\[stat\]mainBG3.jpg -text
 Game/Output/Skins/TODOs/Classic/Star.ini -text
-Game/Output/Skins/TODOs/Classic/Thumbs.db -text
 Game/Output/Skins/TODOs/Classic/\[button\]13.jpg -text
 Game/Output/Skins/TODOs/Classic/\[button\]alt.jpg -text
 Game/Output/Skins/TODOs/Classic/\[button\]az.jpg -text
@@ -543,7 +534,6 @@ Game/Output/Skins/TODOs/Classic/\[stat\]mainBG1.jpg -text
 Game/Output/Skins/TODOs/Classic/\[stat\]mainBG2.jpg -text
 Game/Output/Skins/TODOs/Classic/\[stat\]mainBG3.jpg -text
 Game/Output/Skins/TODOs/Orange/Orange.ini -text
-Game/Output/Skins/TODOs/Orange/Thumbs.db -text
 Game/Output/Skins/TODOs/Orange/\[bg-load\].jpg -text
 Game/Output/Skins/TODOs/Orange/\[button\]13.jpg -text
 Game/Output/Skins/TODOs/Orange/\[button\]alt.jpg -text
@@ -637,7 +627,6 @@ Game/Output/Skins/TODOs/Orange/bg-main.jpg -text
 Game/Output/Skins/TODOs/Orange/bg-song.jpg -text
 Game/Output/Skins/TODOs/Streetlight/Streetlight[!!-~]lite.ini -text
 Game/Output/Skins/TODOs/Streetlight/Streetlight.ini -text
-Game/Output/Skins/TODOs/Streetlight/Thumbs.db -text
 Game/Output/Skins/TODOs/Streetlight/\[bg-load\].jpg -text
 Game/Output/Skins/TODOs/Streetlight/\[button\]13.jpg -text
 Game/Output/Skins/TODOs/Streetlight/\[button\]alt.jpg -text
@@ -724,7 +713,6 @@ Game/Output/Skins/TODOs/Streetlight/\[stat\]mainBG2.jpg -text
 Game/Output/Skins/TODOs/Streetlight/\[stat\]mainBG3.jpg -text
 Game/Output/Skins/TODOs/Streetlight/bg-main.jpg -text
 Game/Output/Skins/TODOs/Streetlight/bg-song.jpg -text
-Game/Output/Skins/TODOs/Vistar/Thumbs.db -text
 Game/Output/Skins/TODOs/Vistar/Vistar.ini -text
 Game/Output/Skins/TODOs/Vistar/\[button\]13.jpg -text
 Game/Output/Skins/TODOs/Vistar/\[button\]alt.jpg -text
@@ -816,7 +804,6 @@ Game/Output/Skins/TODOs/Vistar/bg-main.jpg -text
 Game/Output/Skins/TODOs/Vistar/bg-score.jpg -text
 Game/Output/Skins/TODOs/Vistar/bg-song.jpg -text
 Game/Output/Skins/TODOs/Vistar/main-buttons.jpg -text
-Game/Output/Skins/TODOs/White[!!-~]Sensation/Thumbs.db -text
 Game/Output/Skins/TODOs/White[!!-~]Sensation/\[bg-load\]sensation.jpg -text
 Game/Output/Skins/TODOs/White[!!-~]Sensation/\[bg-load\]simple.jpg -text
 Game/Output/Skins/TODOs/White[!!-~]Sensation/\[bg-main\]sensation.jpg -text
@@ -909,7 +896,6 @@ Game/Output/Skins/TODOs/White[!!-~]Sensation/\[stat\]mainBG2.jpg -text
 Game/Output/Skins/TODOs/White[!!-~]Sensation/\[stat\]mainBG3.jpg -text
 Game/Output/Skins/TODOs/White[!!-~]Sensation/sensation.ini -text
 Game/Output/Skins/TODOs/White[!!-~]Sensation/simple.ini -text
-Game/Output/Skins/TODOs/WiiStar/Thumbs.db -text
 Game/Output/Skins/TODOs/WiiStar/White.ini -text
 Game/Output/Skins/TODOs/WiiStar/\[bg-load\]white.jpg -text
 Game/Output/Skins/TODOs/WiiStar/\[bg-main\]white.JPG -text
@@ -1006,7 +992,6 @@ Game/Output/Skins/TODOs/WiiStar/\[stat\]mainBG1.jpg -text
 Game/Output/Skins/TODOs/WiiStar/\[stat\]mainBG2.jpg -text
 Game/Output/Skins/TODOs/WiiStar/\[stat\]mainBG3.jpg -text
 Game/Output/Skins/TODOs/iStar/Apple.ini -text
-Game/Output/Skins/TODOs/iStar/Thumbs.db -text
 Game/Output/Skins/TODOs/iStar/\[bg-load\]blue.jpg -text
 Game/Output/Skins/TODOs/iStar/\[bg-main\]blue.jpg -text
 Game/Output/Skins/TODOs/iStar/\[bg-menu\]blue.jpg -text
@@ -1219,7 +1204,6 @@ ScoreConverter/USongs.pas -text
 ScoreConverter/Umainform.dfm -text
 ScoreConverter/Umainform.pas -text
 Skins/Classic/Star.ini -text
-Skins/Classic/Thumbs.db -text
 Skins/Classic/\[button\]13.jpg -text
 Skins/Classic/\[button\]alt.jpg -text
 Skins/Classic/\[button\]az.jpg -text
@@ -1305,7 +1289,6 @@ Skins/Classic/\[stat\]mainBG3.jpg -text
 Skins/Deluxe/Blue.ini -text
 Skins/Deluxe/Fall.ini -text
 Skins/Deluxe/Summer.ini -text
-Skins/Deluxe/Thumbs.db -text
 Skins/Deluxe/Winter.ini -text
 Skins/Deluxe/\[bg-load\]blue.jpg -text
 Skins/Deluxe/\[bg-load\]fall.jpg -text
@@ -1404,7 +1387,6 @@ Skins/Deluxe/\[stat\]mainBG3.jpg -text
 Skins/Deluxe/x_\[party\]scoreDecoration.jpg -text
 Skins/Deluxe/x_\[party\]winDecoration1.jpg -text
 Skins/Orange/Orange.ini -text
-Skins/Orange/Thumbs.db -text
 Skins/Orange/\[bg-load\].jpg -text
 Skins/Orange/\[button\]13.jpg -text
 Skins/Orange/\[button\]alt.jpg -text
@@ -1498,7 +1480,6 @@ Skins/Orange/bg-main.jpg -text
 Skins/Orange/bg-song.jpg -text
 Skins/Streetlight/Streetlight[!!-~]lite.ini -text
 Skins/Streetlight/Streetlight.ini -text
-Skins/Streetlight/Thumbs.db -text
 Skins/Streetlight/\[bg-load\].jpg -text
 Skins/Streetlight/\[button\]13.jpg -text
 Skins/Streetlight/\[button\]alt.jpg -text
@@ -1585,7 +1566,6 @@ Skins/Streetlight/\[stat\]mainBG2.jpg -text
 Skins/Streetlight/\[stat\]mainBG3.jpg -text
 Skins/Streetlight/bg-main.jpg -text
 Skins/Streetlight/bg-song.jpg -text
-Skins/Vistar/Thumbs.db -text
 Skins/Vistar/Vistar.ini -text
 Skins/Vistar/\[button\]13.jpg -text
 Skins/Vistar/\[button\]alt.jpg -text
