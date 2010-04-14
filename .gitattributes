@@ -49,6 +49,7 @@ game/languages/Euskara.ini -text
 game/languages/Finnish.ini -text
 game/languages/French.ini -text
 game/languages/Greek.ini -text
+game/languages/Icelandic.ini -text
 game/languages/Japanese.ini -text svneol=unset#application/octet-stream
 game/languages/Luxembourgish.ini -text
 game/languages/Portuguese.ini -text
