@@ -326,7 +326,6 @@ game/themes/Deluxe/\[stat\]mainBG1.png -text
 game/themes/Deluxe/\[stat\]mainBG2.png -text
 game/themes/Deluxe/\[stat\]mainBG3.png -text
 icons/readme.txt -text
-icons/ultrastardx-icon.res -text
 icons/ultrastardx-icon.svg -text
 icons/ultrastardx-icon_32.png -text
 icons/ultrastardx-icon_512.png -text
@@ -356,6 +355,11 @@ installer/settings/settings-1033.ini -text
 installer/settings/settings-1038.ini -text
 installer/settings/variables.nsh -text
 installer/uninstall.ico -text
+res/rccompile-delphi.bat -text
+res/rccompile-fpc.bat -text
+res/ultrastardx.exe.manifest -text
+res/ultrastardx.rc -text
+res/ultrastardx.res -text
 src/base/UBeatTimer.pas -text
 src/base/UFilesystem.pas -text
 src/base/UNote.pas -text
