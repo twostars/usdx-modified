@@ -349,6 +349,7 @@ installer/languages/Hungarian.nsh -text
 installer/languages/translations.txt -text
 installer/settings/files_main_install.nsh -text
 installer/settings/files_main_uninstall.nsh -text
+installer/settings/files_opt_songs.nsh -text
 installer/settings/functions.nsh -text
 installer/settings/settings-1031.ini -text
 installer/settings/settings-1033.ini -text
