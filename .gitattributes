@@ -42,10 +42,11 @@ game/fonts/FreeSans/FreeSans.ttf -text
 game/fonts/FreeSans/FreeSansBold.ttf -text
 game/fonts/FreeSans/README -text
 game/fonts/fonts.ini -text
-game/fonts/wqy-zenhei/AUTHORS -text
-game/fonts/wqy-zenhei/COPYING -text
-game/fonts/wqy-zenhei/README -text
-game/fonts/wqy-zenhei/wqy-zenhei.ttc -text
+game/fonts/wqy-microhei/AUTHORS.txt -text
+game/fonts/wqy-microhei/LICENSE_Apache2.txt -text
+game/fonts/wqy-microhei/LICENSE_GPLv3.txt -text
+game/fonts/wqy-microhei/README.txt -text
+game/fonts/wqy-microhei/wqy-microhei.ttc -text
 game/languages/Catalan.ini -text
 game/languages/Croatian.ini -text
 game/languages/Dutch.ini -text
