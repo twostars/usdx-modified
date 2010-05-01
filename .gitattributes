@@ -226,6 +226,7 @@ Game/Output/Changelog.german.txt -text
 Game/Output/Changelog.txt -text
 Game/Output/Covers/Covers.ini -text
 Game/Output/Covers/NoCover.jpg -text
+Game/Output/Languages/Dutch.ini -text
 Game/Output/Languages/English.ini -text
 Game/Output/Languages/German.ini -text
 Game/Output/Languages/Italian.ini -text
