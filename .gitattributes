@@ -1198,7 +1198,7 @@ cmake/dists/delphi7/readme.txt -text
 cmake/dists/delphi7/ultrastardx.dof -text
 cmake/dists/gentoo/readme.txt -text
 cmake/dists/gentoo/ultrastardx-1.1.0_alpha1.ebuild -text
-cmake/dists/gentoo/ultrastardx-1.1_beta.ebuild -text
+cmake/dists/gentoo/ultrastardx-1.1.0_beta1.ebuild -text
 cmake/dists/gentoo/ultrastardx-9999.ebuild -text
 cmake/dists/lazarus/clean.bat -text
 cmake/dists/lazarus/readme.txt -text
