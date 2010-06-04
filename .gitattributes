@@ -309,6 +309,7 @@ Game/Output/Skins/Blue[!!-~]Sensation/\[icon\]party.jpg -text
 Game/Output/Skins/Blue[!!-~]Sensation/\[icon\]question.jpg -text
 Game/Output/Skins/Blue[!!-~]Sensation/\[icon\]score.jpg -text
 Game/Output/Skins/Blue[!!-~]Sensation/\[icon\]search.jpg -text
+Game/Output/Skins/Blue[!!-~]Sensation/\[icon\]song_duet.jpg -text
 Game/Output/Skins/Blue[!!-~]Sensation/\[icon\]songmenu.jpg -text
 Game/Output/Skins/Blue[!!-~]Sensation/\[icon\]stats.jpg -text
 Game/Output/Skins/Blue[!!-~]Sensation/\[icon\]video.jpg -text
@@ -382,7 +383,6 @@ Game/Output/Skins/Blue[!!-~]Sensation/\[stat\]detailBG1.jpg -text
 Game/Output/Skins/Blue[!!-~]Sensation/\[stat\]mainBG1.jpg -text
 Game/Output/Skins/Blue[!!-~]Sensation/\[stat\]mainBG2.jpg -text
 Game/Output/Skins/Blue[!!-~]Sensation/\[stat\]mainBG3.jpg -text
-Game/Output/Skins/Blue[!!-~]Sensation/blue[!!-~]sensation -text
 Game/Output/Skins/Blue[!!-~]Sensation/blue[!!-~]sensation.ini -text
 Game/Output/Skins/Blue[!!-~]Sensation/blue[!!-~]simple.ini -text
 Game/Output/Skins/Blue[!!-~]Sensation/city.ini -text
@@ -422,6 +422,7 @@ Game/Output/Skins/Deluxe/\[icon\]party.jpg -text
 Game/Output/Skins/Deluxe/\[icon\]question.jpg -text
 Game/Output/Skins/Deluxe/\[icon\]score.jpg -text
 Game/Output/Skins/Deluxe/\[icon\]search.jpg -text
+Game/Output/Skins/Deluxe/\[icon\]song_duet.jpg -text
 Game/Output/Skins/Deluxe/\[icon\]songmenu.jpg -text
 Game/Output/Skins/Deluxe/\[icon\]stats.jpg -text
 Game/Output/Skins/Deluxe/\[icon\]video.jpg -text
@@ -1055,6 +1056,7 @@ Game/Output/Skins/iStar/\[icon\]party.jpg -text
 Game/Output/Skins/iStar/\[icon\]question.jpg -text
 Game/Output/Skins/iStar/\[icon\]score.jpg -text
 Game/Output/Skins/iStar/\[icon\]search.jpg -text
+Game/Output/Skins/iStar/\[icon\]song_duet.jpg -text
 Game/Output/Skins/iStar/\[icon\]songmenu.jpg -text
 Game/Output/Skins/iStar/\[icon\]stats.jpg -text
 Game/Output/Skins/iStar/\[icon\]video.jpg -text
