@@ -68,7 +68,7 @@ game/languages/old/Polish.ini -text
 game/languages/old/Serbian.ini -text
 game/languages/old/Slovak.ini -text
 game/languages/old/Slovenian.ini -text
-game/languages/old/readme.txt -text
+game/languages/readme.txt -text
 game/plugins/5000points.usdx -text
 game/plugins/PluginDescription.odt -text svneol=unset#unset
 game/plugins/blind.usdx -text
