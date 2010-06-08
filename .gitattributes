@@ -11,6 +11,7 @@ dists/delphi2005/ultrastardx.bdsproj -text
 dists/delphi7/readme.txt -text
 dists/delphi7/ultrastardx.dof -text
 dists/gentoo/readme.txt -text
+dists/gentoo/ultrastardx-1.1.0.ebuild -text
 dists/gentoo/ultrastardx-1.1.0_beta1.ebuild -text
 dists/gentoo/ultrastardx-9999.ebuild -text
 dists/lazarus/clean.bat -text
