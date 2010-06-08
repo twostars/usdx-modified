@@ -393,6 +393,7 @@ icons/ultrastardx-icon_32.png -text
 icons/ultrastardx-icon_512.png -text
 icons/ultrastardx.icns -text
 icons/ultrastardx.ico -text
+installer/UAC.nsh -text
 installer/UltraStar[!!-~]Deluxe.nsi -text
 installer/Update.nsi -text
 installer/dependencies/dll/put[!!-~]game[!!-~]dlls[!!-~]here -text
@@ -402,6 +403,7 @@ installer/dependencies/images/header.bmp -text
 installer/dependencies/images/side.bmp -text
 installer/dependencies/loop.wav -text
 installer/dependencies/plugins/NSISdl.dll -text
+installer/dependencies/plugins/UAC.dll -text
 installer/dependencies/plugins/ZipDLL.dll -text
 installer/dependencies/plugins/nsProcess.dll -text
 installer/install.ico -text
