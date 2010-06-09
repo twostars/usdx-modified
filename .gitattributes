@@ -68,7 +68,6 @@ game/languages/Slovak.ini -text
 game/languages/Slovenian.ini -text
 game/languages/Spanish.ini -text
 game/languages/Swedish.ini -text
-game/languages/old/French.ini -text
 game/languages/readme.txt -text
 game/languages/update.py -text
 game/plugins/5000points.usdx -text
