@@ -1,7 +1,6 @@
 * text=auto !eol
 /BuildBot.trigger -text
 /COPYRIGHT.txt -text
-/ChangeLog.GERMAN.txt -text
 /DisplayChanges.patch -text
 /RELEASEBLOCKERS.txt -text
 /configure -text
