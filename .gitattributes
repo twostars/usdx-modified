@@ -15,10 +15,7 @@ Game/Code/Classes/UGraphic.pas -text
 Game/Code/Classes/UGraphicClasses.pas -text
 Game/Code/Classes/UHelp.pas -text
 Game/Code/Classes/UIni.pas -text
-Game/Code/Classes/UJoystick.pas -text
-Game/Code/Classes/ULCD.pas -text
 Game/Code/Classes/ULanguage.pas -text
-Game/Code/Classes/ULight.pas -text
 Game/Code/Classes/ULog.pas -text
 Game/Code/Classes/ULyrics.pas -text
 Game/Code/Classes/UMain.pas -text
@@ -44,7 +41,6 @@ Game/Code/Menu/UMenuSelect.pas -text
 Game/Code/Menu/UMenuSelectSlide.pas -text
 Game/Code/Menu/UMenuStatic.pas -text
 Game/Code/Menu/UMenuText.pas -text
-Game/Code/SMpeg/USmpeg.pas -text
 Game/Code/Screens/UScreenCredits.pas -text
 Game/Code/Screens/UScreenEdit.pas -text
 Game/Code/Screens/UScreenEditConvert.pas -text
