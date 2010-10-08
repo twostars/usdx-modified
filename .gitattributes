@@ -87,6 +87,8 @@ game/resources/graphics/NoCover.jpg -text
 game/resources/icons/ultrastardx-icon.png -text
 game/sounds/Common[!!-~]back.mp3 -text
 game/sounds/Common[!!-~]start.mp3 -text
+game/sounds/background[!!-~]track[!!-~]license.txt -text
+game/sounds/background[!!-~]track.mp3 -text
 game/sounds/credits-outro-tune.mp3 -text
 game/sounds/dismissed.mp3 -text
 game/sounds/menu[!!-~]swoosh.mp3 -text
