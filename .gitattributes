@@ -97,6 +97,7 @@ game/sounds/rimshot022b.mp3 -text
 game/sounds/select[!!-~]music[!!-~]change[!!-~]music[!!-~]50.mp3 -text
 game/sounds/select[!!-~]music[!!-~]change[!!-~]music.mp3 -text
 game/sounds/wome-credits-tune.mp3 -text
+game/themes/Candy.ini -text
 game/themes/Classic/\[bg-load\]star.jpg -text
 game/themes/Classic/\[bg-main\]star.jpg -text
 game/themes/Classic/\[button\]13.png -text
