@@ -2464,6 +2464,7 @@ medley_new/game/themes/Candy/\[sing.player5\]lyric_active.png -text
 medley_new/game/themes/Candy/\[sing.player5\]lyric_inactive.png -text
 medley_new/game/themes/Candy/\[sing.player6\]lyric_active.png -text
 medley_new/game/themes/Candy/\[sing.player6\]lyric_inactive.png -text
+medley_new/game/themes/Candy/\[sing\]SongName.png -text
 medley_new/game/themes/Candy/\[sing\]lyricsHelpBar.png -text
 medley_new/game/themes/Candy/\[sing\]notesBgLeft.png -text
 medley_new/game/themes/Candy/\[sing\]notesBgMid.png -text
@@ -2590,6 +2591,7 @@ medley_new/game/themes/Classic/\[sing.player5\]lyric_inactive.png -text
 medley_new/game/themes/Classic/\[sing.player6\]lyric_active.png -text
 medley_new/game/themes/Classic/\[sing.player6\]lyric_inactive.png -text
 medley_new/game/themes/Classic/\[sing\]LyricsBall.png -text
+medley_new/game/themes/Classic/\[sing\]SongName.png -text
 medley_new/game/themes/Classic/\[sing\]lineBonusPopUp.png -text
 medley_new/game/themes/Classic/\[sing\]lyricsHelpBar.png -text
 medley_new/game/themes/Classic/\[sing\]notesBgLeft.png -text
@@ -2733,6 +2735,7 @@ medley_new/game/themes/Deluxe/\[sing.player5\]lyric_inactive.png -text
 medley_new/game/themes/Deluxe/\[sing.player6\]lyric_active.png -text
 medley_new/game/themes/Deluxe/\[sing.player6\]lyric_inactive.png -text
 medley_new/game/themes/Deluxe/\[sing\]LyricsBall.png -text
+medley_new/game/themes/Deluxe/\[sing\]SongName.png -text
 medley_new/game/themes/Deluxe/\[sing\]lineBonusPopUp.png -text
 medley_new/game/themes/Deluxe/\[sing\]lyricsHelpBar.png -text
 medley_new/game/themes/Deluxe/\[sing\]notesBgLeft.png -text
@@ -2890,6 +2893,7 @@ medley_new/game/themes/Temptation/\[sing.player5\]lyric_inactive.png -text
 medley_new/game/themes/Temptation/\[sing.player6\]lyric_active.png -text
 medley_new/game/themes/Temptation/\[sing.player6\]lyric_inactive.png -text
 medley_new/game/themes/Temptation/\[sing\]LyricsBall.png -text
+medley_new/game/themes/Temptation/\[sing\]SongName.png -text
 medley_new/game/themes/Temptation/\[sing\]lineBonusPopUp.png -text
 medley_new/game/themes/Temptation/\[sing\]lyricsHelpBar.png -text
 medley_new/game/themes/Temptation/\[sing\]notesBgLeft.png -text
@@ -3037,6 +3041,7 @@ medley_new/game/themes/Verdure/\[sing.player5\]lyric_inactive.png -text
 medley_new/game/themes/Verdure/\[sing.player6\]lyric_active.png -text
 medley_new/game/themes/Verdure/\[sing.player6\]lyric_inactive.png -text
 medley_new/game/themes/Verdure/\[sing\]LyricsBall.png -text
+medley_new/game/themes/Verdure/\[sing\]SongName.png -text
 medley_new/game/themes/Verdure/\[sing\]lineBonusPopUp.png -text
 medley_new/game/themes/Verdure/\[sing\]lyricsHelpBar.png -text
 medley_new/game/themes/Verdure/\[sing\]notesBgLeft.png -text
