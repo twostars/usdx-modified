@@ -180,7 +180,6 @@ mediaplugin/ppaslink.sh
 mediaplugin/src/Makefile
 mediaplugin/src/base/*.dcu
 mediaplugin/src/base/__history
-mediaplugin/src/lib/ffmpeg/*.dylib
 mediaplugin/src/macosx/build
 mediaplugin/src/menu/*.dcu
 mediaplugin/src/paths.inc

@@ -3127,7 +3127,6 @@ mediaplugin/src/lib/TntUnicodeControls/TntWindows.pas -text
 mediaplugin/src/lib/bass/bass.chm -text
 mediaplugin/src/lib/bass/delphi/bass-macosx.patch -text
 mediaplugin/src/lib/ctypes/ctypes.pas -text
-mediaplugin/src/lib/ffmpeg/error.pas -text
 mediaplugin/src/lib/freetype/demo/engine-test.bdsproj -text
 mediaplugin/src/lib/freetype/demo/engine-test.lpi -text
 mediaplugin/src/lib/freetype/demo/nehe/lesson43.bdsproj -text
