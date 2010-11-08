@@ -3161,6 +3161,9 @@ mediaplugin/src/menu/UMenuBackgroundFade.pas -text
 mediaplugin/src/menu/UMenuBackgroundNone.pas -text
 mediaplugin/src/menu/UMenuBackgroundTexture.pas -text
 mediaplugin/src/menu/UMenuBackgroundVideo.pas -text
+mediaplugin/src/plugins/media/ffmpeg/Makefile.am -text
+mediaplugin/src/plugins/media/ffmpeg/autogen.sh -text
+mediaplugin/src/plugins/media/ffmpeg/configure.ac -text
 mediaplugin/src/screens/UScreenPartyRounds.pas -text
 mediaplugin/test/TestPortAudioDevice.pas -text
 mediaplugin/test/TestSignAlgorithm.pas -text
