@@ -2182,6 +2182,7 @@ mediaplugin/RELEASEBLOCKERS.txt -text
 mediaplugin/configure -text
 mediaplugin/dists/autogen/depcomp -text
 mediaplugin/dists/autogen/ltmain.sh -text
+mediaplugin/dists/autogen/m4/pkg.m4 -text
 mediaplugin/dists/autogen/missing -text
 mediaplugin/dists/code.svnprops -text
 mediaplugin/dists/delphi2005/readme.txt -text
