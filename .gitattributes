@@ -3146,6 +3146,7 @@ mediaplugin/src/lib/midi/demo/Project1.res -text
 mediaplugin/src/lib/midi/midiComp.dpk -text
 mediaplugin/src/lib/midi/midiComp.res -text
 mediaplugin/src/lib/pcre/pcre.pas -text
+mediaplugin/src/lib/projectM/cwrapper/Makefile.am -text
 mediaplugin/src/lib/projectM/cwrapper/projectM-cwrapper.sln -text
 mediaplugin/src/lib/projectM/cwrapper/projectM-cwrapper.vcproj -text
 mediaplugin/src/lua/UHookableEvent.pas -text
