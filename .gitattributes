@@ -189,7 +189,6 @@ Game/Code/lib/acinerella/acinerella.pas -text
 Game/Code/lib/acinerella/makefile -text
 Game/Code/lib/bass/bass.chm -text
 Game/Code/lib/bass/bass.txt -text
-Game/Code/lib/bass/delphi/bass.bpg -text
 Game/Code/lib/bass/delphi/bass.pas -text
 Game/Code/lib/midi/CIRCBUF.PAS -text
 Game/Code/lib/midi/DELPHMCB.PAS -text
