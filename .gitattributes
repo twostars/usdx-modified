@@ -952,6 +952,9 @@ src/lib/bass/bass.chm -text
 src/lib/bass/delphi/bass-macosx.patch -text
 src/lib/ctypes/ctypes.pas -text
 src/lib/ffmpeg/error.pas -text
+src/lib/ffmpeg7/error.pas -text
+src/lib/ffmpeg7/mathematics.pas -text
+src/lib/ffmpeg7/rational.pas -text
 src/lib/freetype/demo/engine-test.bdsproj -text
 src/lib/freetype/demo/engine-test.lpi -text
 src/lib/freetype/demo/nehe/lesson43.bdsproj -text
