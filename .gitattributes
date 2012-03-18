@@ -951,6 +951,7 @@ src/lib/TntUnicodeControls/TntWindows.pas -text
 src/lib/bass/bass.chm -text
 src/lib/bass/delphi/bass-macosx.patch -text
 src/lib/ctypes/ctypes.pas -text
+src/lib/ffmpeg/How[!!-~]to[!!-~]update[!!-~]the[!!-~]ffmpeg[!!-~]files.txt -text
 src/lib/ffmpeg/error.pas -text
 src/lib/freetype/demo/engine-test.bdsproj -text
 src/lib/freetype/demo/engine-test.lpi -text
