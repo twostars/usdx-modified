@@ -968,6 +968,7 @@ src/lib/ffmpeg7/libavutil/opt.pas -text
 src/lib/ffmpeg7/libavutil/pixfmt.pas -text
 src/lib/ffmpeg7/libavutil/samplefmt.pas -text
 src/lib/ffmpeg7/rational.pas -text
+src/lib/ffmpeg7/swscale.pas -text
 src/lib/freetype/demo/engine-test.bdsproj -text
 src/lib/freetype/demo/engine-test.lpi -text
 src/lib/freetype/demo/nehe/lesson43.bdsproj -text
