@@ -4,6 +4,7 @@
 /DisplayChanges.patch -text
 /RELEASEBLOCKERS.txt -text
 /configure -text
+dists/autogen/m4/ffmpeg_version.m4 -text
 dists/code.svnprops -text
 dists/delphi2005/readme.txt -text
 dists/delphi2005/ultrastardx.bdsproj -text
