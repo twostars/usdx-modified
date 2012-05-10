@@ -1045,8 +1045,10 @@ src/menu/UMenuBackgroundNone.pas -text
 src/menu/UMenuBackgroundTexture.pas -text
 src/menu/UMenuBackgroundVideo.pas -text
 src/screens/UScreenPartyRounds.pas -text
+test/FFmpeg_Test6.pas -text
 test/TestPortAudioDevice.pas -text
 test/TestSignAlgorithm.pas -text
+test/menuswoosh.mp3 -text
 test/test001.pas -text
 tools/ScoreConverter/ScoreConverter.ico -text
 tools/ScoreConverter/ScoreConverter.res -text
