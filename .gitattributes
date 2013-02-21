@@ -255,7 +255,6 @@ game/themes/Candy/\[party\]roundBG3.png -text
 game/themes/Candy/\[party\]roundBG4.png -text
 game/themes/Candy/\[party\]roundTeamButton.png -text
 game/themes/Candy/\[party\]winDecoration.png -text
-game/themes/Candy/\[score\]Line.png -text
 game/themes/Candy/\[score\]bar_box_dark.png -text
 game/themes/Candy/\[score\]bar_box_light.png -text
 game/themes/Candy/\[score\]bar_box_lightest.png -text
@@ -269,6 +268,7 @@ game/themes/Candy/\[score\]level_light.png -text
 game/themes/Candy/\[score\]level_light_round.png -text
 game/themes/Candy/\[score\]level_lightest.png -text
 game/themes/Candy/\[score\]level_lightest_round.png -text
+game/themes/Candy/\[score\]line.png -text
 game/themes/Candy/\[score\]pipe.png -text
 game/themes/Candy/\[score\]rating_0.png -text
 game/themes/Candy/\[score\]rating_1.png -text
@@ -374,7 +374,6 @@ game/themes/Classic/\[party\]winDecoration.png -text
 game/themes/Classic/\[party\]winTeamButton1.png -text
 game/themes/Classic/\[party\]winTeamButton2.png -text
 game/themes/Classic/\[party\]winTeamButton3.png -text
-game/themes/Classic/\[score\]Line.png -text
 game/themes/Classic/\[score\]bar_box_dark.png -text
 game/themes/Classic/\[score\]bar_box_light.png -text
 game/themes/Classic/\[score\]bar_box_lightest.png -text
@@ -389,6 +388,7 @@ game/themes/Classic/\[score\]level_light.png -text
 game/themes/Classic/\[score\]level_light_round.png -text
 game/themes/Classic/\[score\]level_lightest.png -text
 game/themes/Classic/\[score\]level_lightest_round.png -text
+game/themes/Classic/\[score\]line.png -text
 game/themes/Classic/\[score\]rating_0.png -text
 game/themes/Classic/\[score\]rating_1.png -text
 game/themes/Classic/\[score\]rating_2.png -text
@@ -515,7 +515,6 @@ game/themes/Deluxe/\[party\]winDecoration.png -text
 game/themes/Deluxe/\[party\]winTeamButton1.png -text
 game/themes/Deluxe/\[party\]winTeamButton2.png -text
 game/themes/Deluxe/\[party\]winTeamButton3.png -text
-game/themes/Deluxe/\[score\]Line.png -text
 game/themes/Deluxe/\[score\]bar_box_dark.png -text
 game/themes/Deluxe/\[score\]bar_box_light.png -text
 game/themes/Deluxe/\[score\]bar_box_lightest.png -text
@@ -530,6 +529,7 @@ game/themes/Deluxe/\[score\]level_light.png -text
 game/themes/Deluxe/\[score\]level_light_round.png -text
 game/themes/Deluxe/\[score\]level_lightest.png -text
 game/themes/Deluxe/\[score\]level_lightest_round.png -text
+game/themes/Deluxe/\[score\]line.png -text
 game/themes/Deluxe/\[score\]rating_0.png -text
 game/themes/Deluxe/\[score\]rating_1.png -text
 game/themes/Deluxe/\[score\]rating_2.png -text
@@ -670,7 +670,6 @@ game/themes/Temptation/\[party\]winDecoration.png -text
 game/themes/Temptation/\[party\]winTeamButton1.png -text
 game/themes/Temptation/\[party\]winTeamButton2.png -text
 game/themes/Temptation/\[party\]winTeamButton3.png -text
-game/themes/Temptation/\[score\]Line.png -text
 game/themes/Temptation/\[score\]bar_box_dark.png -text
 game/themes/Temptation/\[score\]bar_box_light.png -text
 game/themes/Temptation/\[score\]bar_box_lightest.png -text
@@ -685,6 +684,7 @@ game/themes/Temptation/\[score\]level_light.png -text
 game/themes/Temptation/\[score\]level_light_round.png -text
 game/themes/Temptation/\[score\]level_lightest.png -text
 game/themes/Temptation/\[score\]level_lightest_round.png -text
+game/themes/Temptation/\[score\]line.png -text
 game/themes/Temptation/\[score\]rating_0.png -text
 game/themes/Temptation/\[score\]rating_1.png -text
 game/themes/Temptation/\[score\]rating_2.png -text
@@ -814,7 +814,6 @@ game/themes/Verdure/\[party\]winDecoration.png -text
 game/themes/Verdure/\[party\]winTeamButton1.png -text
 game/themes/Verdure/\[party\]winTeamButton2.png -text
 game/themes/Verdure/\[party\]winTeamButton3.png -text
-game/themes/Verdure/\[score\]Line.png -text
 game/themes/Verdure/\[score\]bar_box_dark.png -text
 game/themes/Verdure/\[score\]bar_box_light.png -text
 game/themes/Verdure/\[score\]bar_box_lightest.png -text
@@ -830,6 +829,7 @@ game/themes/Verdure/\[score\]level_light.png -text
 game/themes/Verdure/\[score\]level_light_round.png -text
 game/themes/Verdure/\[score\]level_lightest.png -text
 game/themes/Verdure/\[score\]level_lightest_round.png -text
+game/themes/Verdure/\[score\]line.png -text
 game/themes/Verdure/\[score\]rating_0.png -text
 game/themes/Verdure/\[score\]rating_1.png -text
 game/themes/Verdure/\[score\]rating_2.png -text
