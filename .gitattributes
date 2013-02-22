@@ -190,6 +190,7 @@ game/resources/credits/outro-esc.png -text
 game/resources/credits/outro-exit-dark.png -text
 game/resources/graphics/NoCover.jpg -text
 game/resources/icons/ultrastardx-icon.png -text
+game/sounds/Applause.mp3 -text
 game/sounds/Common[!!-~]back.mp3 -text
 game/sounds/Common[!!-~]start.mp3 -text
 game/sounds/background[!!-~]track[!!-~]license.txt -text
