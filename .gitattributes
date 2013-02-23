@@ -230,7 +230,9 @@ game/themes/Candy/\[effect\]goldenNoteStar.png -text
 game/themes/Candy/\[effect\]perfectNoteStar.png -text
 game/themes/Candy/\[icon\]logo.png -text
 game/themes/Candy/\[icon\]options.png -text
+game/themes/Candy/\[icon\]song_calcmedley.png -text
 game/themes/Candy/\[icon\]song_duett.png -text
+game/themes/Candy/\[icon\]song_medley.png -text
 game/themes/Candy/\[icon\]song_video.png -text
 game/themes/Candy/\[interface\]cursor.png -text
 game/themes/Candy/\[interface\]cursor_pressed.png -text
@@ -287,6 +289,7 @@ game/themes/Candy/\[sing.player5\]lyric_active.png -text
 game/themes/Candy/\[sing.player5\]lyric_inactive.png -text
 game/themes/Candy/\[sing.player6\]lyric_active.png -text
 game/themes/Candy/\[sing.player6\]lyric_inactive.png -text
+game/themes/Candy/\[sing\]SongName.png -text
 game/themes/Candy/\[sing\]lyricsHelpBar.png -text
 game/themes/Candy/\[sing\]notesBgLeft.png -text
 game/themes/Candy/\[sing\]notesBgMid.png -text
@@ -330,6 +333,8 @@ game/themes/Classic/\[icon\]options.png -text
 game/themes/Classic/\[icon\]party.png -text
 game/themes/Classic/\[icon\]question.png -text
 game/themes/Classic/\[icon\]score.png -text
+game/themes/Classic/\[icon\]song_calcmedley.png -text
+game/themes/Classic/\[icon\]song_medley.png -text
 game/themes/Classic/\[icon\]song_menu.png -text
 game/themes/Classic/\[icon\]song_search.png -text
 game/themes/Classic/\[icon\]song_video.png -text
@@ -411,6 +416,7 @@ game/themes/Classic/\[sing.player5\]lyric_inactive.png -text
 game/themes/Classic/\[sing.player6\]lyric_active.png -text
 game/themes/Classic/\[sing.player6\]lyric_inactive.png -text
 game/themes/Classic/\[sing\]LyricsBall.png -text
+game/themes/Classic/\[sing\]SongName.png -text
 game/themes/Classic/\[sing\]lineBonusPopUp.png -text
 game/themes/Classic/\[sing\]lyricsHelpBar.png -text
 game/themes/Classic/\[sing\]notesBgLeft.png -text
@@ -475,6 +481,8 @@ game/themes/Deluxe/\[icon\]options.png -text
 game/themes/Deluxe/\[icon\]party.png -text
 game/themes/Deluxe/\[icon\]question.png -text
 game/themes/Deluxe/\[icon\]score.png -text
+game/themes/Deluxe/\[icon\]song_calcmedley.png -text
+game/themes/Deluxe/\[icon\]song_medley.png -text
 game/themes/Deluxe/\[icon\]song_menu.png -text
 game/themes/Deluxe/\[icon\]song_search.png -text
 game/themes/Deluxe/\[icon\]song_video.png -text
@@ -552,6 +560,7 @@ game/themes/Deluxe/\[sing.player5\]lyric_inactive.png -text
 game/themes/Deluxe/\[sing.player6\]lyric_active.png -text
 game/themes/Deluxe/\[sing.player6\]lyric_inactive.png -text
 game/themes/Deluxe/\[sing\]LyricsBall.png -text
+game/themes/Deluxe/\[sing\]SongName.png -text
 game/themes/Deluxe/\[sing\]lineBonusPopUp.png -text
 game/themes/Deluxe/\[sing\]lyricsHelpBar.png -text
 game/themes/Deluxe/\[sing\]notesBgLeft.png -text
@@ -623,6 +632,8 @@ game/themes/Temptation/\[icon\]options.png -text
 game/themes/Temptation/\[icon\]party.png -text
 game/themes/Temptation/\[icon\]question.png -text
 game/themes/Temptation/\[icon\]score.png -text
+game/themes/Temptation/\[icon\]song_calcmedley.png -text
+game/themes/Temptation/\[icon\]song_medley.png -text
 game/themes/Temptation/\[icon\]song_menu.png -text
 game/themes/Temptation/\[icon\]song_search.png -text
 game/themes/Temptation/\[icon\]song_video.png -text
@@ -707,6 +718,7 @@ game/themes/Temptation/\[sing.player5\]lyric_inactive.png -text
 game/themes/Temptation/\[sing.player6\]lyric_active.png -text
 game/themes/Temptation/\[sing.player6\]lyric_inactive.png -text
 game/themes/Temptation/\[sing\]LyricsBall.png -text
+game/themes/Temptation/\[sing\]SongName.png -text
 game/themes/Temptation/\[sing\]lineBonusPopUp.png -text
 game/themes/Temptation/\[sing\]lyricsHelpBar.png -text
 game/themes/Temptation/\[sing\]notesBgLeft.png -text
@@ -769,6 +781,8 @@ game/themes/Verdure/\[icon\]options.png -text
 game/themes/Verdure/\[icon\]party.png -text
 game/themes/Verdure/\[icon\]question.png -text
 game/themes/Verdure/\[icon\]score.png -text
+game/themes/Verdure/\[icon\]song_calcmedley.png -text
+game/themes/Verdure/\[icon\]song_medley.png -text
 game/themes/Verdure/\[icon\]song_menu.png -text
 game/themes/Verdure/\[icon\]song_search.png -text
 game/themes/Verdure/\[icon\]song_video.png -text
@@ -852,6 +866,7 @@ game/themes/Verdure/\[sing.player5\]lyric_inactive.png -text
 game/themes/Verdure/\[sing.player6\]lyric_active.png -text
 game/themes/Verdure/\[sing.player6\]lyric_inactive.png -text
 game/themes/Verdure/\[sing\]LyricsBall.png -text
+game/themes/Verdure/\[sing\]SongName.png -text
 game/themes/Verdure/\[sing\]lineBonusPopUp.png -text
 game/themes/Verdure/\[sing\]lyricsHelpBar.png -text
 game/themes/Verdure/\[sing\]notesBgLeft.png -text
