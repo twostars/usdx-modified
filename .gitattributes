@@ -1062,6 +1062,8 @@ src/lib/ffmpeg-0.9/libavutil/pixfmt.pas -text
 src/lib/ffmpeg-0.9/libavutil/samplefmt.pas -text
 src/lib/ffmpeg-0.9/rational.pas -text
 src/lib/ffmpeg-0.9/swscale.pas -text
+src/lib/ffmpeg-1.0/rational.pas -text
+src/lib/ffmpeg-1.1/rational.pas -text
 src/lib/ffmpeg/error.pas -text
 src/lib/freetype/demo/engine-test.bdsproj -text
 src/lib/freetype/demo/engine-test.lpi -text
