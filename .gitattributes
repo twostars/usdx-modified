@@ -1063,6 +1063,7 @@ src/lib/ffmpeg-0.9/libavutil/samplefmt.pas -text
 src/lib/ffmpeg-0.9/rational.pas -text
 src/lib/ffmpeg-0.9/swscale.pas -text
 src/lib/ffmpeg-1.0/avutil.pas -text
+src/lib/ffmpeg-1.0/libavcodec/audioconvert.pas -text
 src/lib/ffmpeg-1.0/libavutil/cpu.pas -text
 src/lib/ffmpeg-1.0/libavutil/dict.pas -text
 src/lib/ffmpeg-1.0/libavutil/error.pas -text
@@ -1074,6 +1075,7 @@ src/lib/ffmpeg-1.0/libavutil/pixfmt.pas -text
 src/lib/ffmpeg-1.0/libavutil/samplefmt.pas -text
 src/lib/ffmpeg-1.0/rational.pas -text
 src/lib/ffmpeg-1.1/avutil.pas -text
+src/lib/ffmpeg-1.1/libavcodec/audioconvert.pas -text
 src/lib/ffmpeg-1.1/libavutil/cpu.pas -text
 src/lib/ffmpeg-1.1/libavutil/dict.pas -text
 src/lib/ffmpeg-1.1/libavutil/error.pas -text
