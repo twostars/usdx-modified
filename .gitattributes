@@ -1062,6 +1062,8 @@ src/lib/ffmpeg-0.9/libavutil/pixfmt.pas -text
 src/lib/ffmpeg-0.9/libavutil/samplefmt.pas -text
 src/lib/ffmpeg-0.9/rational.pas -text
 src/lib/ffmpeg-0.9/swscale.pas -text
+src/lib/ffmpeg-1.0/How[!!-~]to[!!-~]update[!!-~]the[!!-~]ffmpeg[!!-~]files.txt -text
+src/lib/ffmpeg-1.0/ToDo.txt -text
 src/lib/ffmpeg-1.0/avcodec.pas -text
 src/lib/ffmpeg-1.0/avformat.pas -text
 src/lib/ffmpeg-1.0/avio.pas -text
@@ -1078,6 +1080,8 @@ src/lib/ffmpeg-1.0/libavutil/pixfmt.pas -text
 src/lib/ffmpeg-1.0/libavutil/samplefmt.pas -text
 src/lib/ffmpeg-1.0/rational.pas -text
 src/lib/ffmpeg-1.0/swscale.pas -text
+src/lib/ffmpeg-1.1/How[!!-~]to[!!-~]update[!!-~]the[!!-~]ffmpeg[!!-~]files.txt -text
+src/lib/ffmpeg-1.1/ToDo.txt -text
 src/lib/ffmpeg-1.1/avcodec.pas -text
 src/lib/ffmpeg-1.1/avformat.pas -text
 src/lib/ffmpeg-1.1/avio.pas -text
