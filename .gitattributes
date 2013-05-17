@@ -1054,11 +1054,11 @@ src/lib/ffmpeg-0.9/libavcodec/audioconvert.pas -text
 src/lib/ffmpeg-0.9/libavutil/cpu.pas -text
 src/lib/ffmpeg-0.9/libavutil/dict.pas -text
 src/lib/ffmpeg-0.9/libavutil/error.pas -text
-src/lib/ffmpeg-0.9/libavutil/log1.pas -text
-src/lib/ffmpeg-0.9/libavutil/log2.pas -text
+src/lib/ffmpeg-0.9/libavutil/log.pas -text
 src/lib/ffmpeg-0.9/libavutil/mathematics.pas -text
 src/lib/ffmpeg-0.9/libavutil/mem.pas -text
-src/lib/ffmpeg-0.9/libavutil/opt.pas -text
+src/lib/ffmpeg-0.9/libavutil/opt1.pas -text
+src/lib/ffmpeg-0.9/libavutil/opt2.pas -text
 src/lib/ffmpeg-0.9/libavutil/pixfmt.pas -text
 src/lib/ffmpeg-0.9/libavutil/samplefmt.pas -text
 src/lib/ffmpeg-0.9/rational.pas -text
