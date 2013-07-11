@@ -1138,6 +1138,9 @@ src/screens/UScreenPartyRounds.pas -text
 test/FFmpeg_Test6.pas -text
 test/TestPortAudioDevice.pas -text
 test/TestSignAlgorithm.pas -text
+test/ffmpeg_structs/Makefile -text
+test/ffmpeg_structs/README -text
+test/ffmpeg_structs/find_avtypes -text
 test/menuswoosh.mp3 -text
 test/test001.pas -text
 tools/DoTags/DoTags.exe -text
