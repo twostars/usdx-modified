@@ -1099,6 +1099,7 @@ src/lib/ffmpeg-1.1/libavutil/pixfmt.pas -text
 src/lib/ffmpeg-1.1/libavutil/samplefmt.pas -text
 src/lib/ffmpeg-1.1/rational.pas -text
 src/lib/ffmpeg-1.1/swscale.pas -text
+src/lib/ffmpeg-1.2/avutil.pas -text
 src/lib/ffmpeg-1.2/libavutil/cpu.pas -text
 src/lib/ffmpeg-1.2/libavutil/dict.pas -text
 src/lib/ffmpeg-1.2/libavutil/error.pas -text
@@ -1108,6 +1109,8 @@ src/lib/ffmpeg-1.2/libavutil/mem.pas -text
 src/lib/ffmpeg-1.2/libavutil/opt.pas -text
 src/lib/ffmpeg-1.2/libavutil/pixfmt.pas -text
 src/lib/ffmpeg-1.2/libavutil/samplefmt.pas -text
+src/lib/ffmpeg-1.2/rational.pas -text
+src/lib/ffmpeg-2.0/avutil.pas -text
 src/lib/ffmpeg-2.0/libavutil/cpu.pas -text
 src/lib/ffmpeg-2.0/libavutil/dict.pas -text
 src/lib/ffmpeg-2.0/libavutil/error.pas -text
@@ -1117,6 +1120,7 @@ src/lib/ffmpeg-2.0/libavutil/mem.pas -text
 src/lib/ffmpeg-2.0/libavutil/opt.pas -text
 src/lib/ffmpeg-2.0/libavutil/pixfmt.pas -text
 src/lib/ffmpeg-2.0/libavutil/samplefmt.pas -text
+src/lib/ffmpeg-2.0/rational.pas -text
 src/lib/ffmpeg/error.pas -text
 src/lib/freetype/demo/engine-test.bdsproj -text
 src/lib/freetype/demo/engine-test.lpi -text
