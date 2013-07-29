@@ -1100,6 +1100,7 @@ src/lib/ffmpeg-1.1/libavutil/samplefmt.pas -text
 src/lib/ffmpeg-1.1/rational.pas -text
 src/lib/ffmpeg-1.1/swscale.pas -text
 src/lib/ffmpeg-1.2/avcodec.pas -text
+src/lib/ffmpeg-1.2/avformat.pas -text
 src/lib/ffmpeg-1.2/avio.pas -text
 src/lib/ffmpeg-1.2/avutil.pas -text
 src/lib/ffmpeg-1.2/libavcodec/audioconvert.pas -text
@@ -1115,6 +1116,7 @@ src/lib/ffmpeg-1.2/libavutil/samplefmt.pas -text
 src/lib/ffmpeg-1.2/rational.pas -text
 src/lib/ffmpeg-1.2/swscale.pas -text
 src/lib/ffmpeg-2.0/avcodec.pas -text
+src/lib/ffmpeg-2.0/avformat.pas -text
 src/lib/ffmpeg-2.0/avio.pas -text
 src/lib/ffmpeg-2.0/avutil.pas -text
 src/lib/ffmpeg-2.0/libavcodec/audioconvert.pas -text
