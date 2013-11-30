@@ -1142,10 +1142,10 @@ src/lib/freetype/ftoutln.inc -text
 src/lib/freetype/ftstroke.inc -text
 src/lib/freetype/fttypes.inc -text
 src/lib/lib-info.txt -text
+src/lib/midi/MidiComp.dpk -text
+src/lib/midi/MidiComp.res -text
 src/lib/midi/demo/MidiTest.dfm -text
 src/lib/midi/demo/Project1.res -text
-src/lib/midi/midiComp.dpk -text
-src/lib/midi/midiComp.res -text
 src/lib/pcre/pcre.pas -text
 src/lib/projectM/cwrapper/projectM-cwrapper.sln -text
 src/lib/projectM/cwrapper/projectM-cwrapper.vcproj -text
