@@ -1146,6 +1146,7 @@ src/lib/ffmpeg-2.1/libavutil/opt.pas -text
 src/lib/ffmpeg-2.1/libavutil/pixfmt.pas -text
 src/lib/ffmpeg-2.1/libavutil/samplefmt.pas -text
 src/lib/ffmpeg-2.1/rational.pas -text
+src/lib/ffmpeg-2.1/swresample.pas -text
 src/lib/ffmpeg-2.1/swscale.pas -text
 src/lib/ffmpeg/error.pas -text
 src/lib/freetype/demo/engine-test.bdsproj -text
