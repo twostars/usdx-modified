@@ -1136,6 +1136,7 @@ src/lib/ffmpeg-2.1/avformat.pas -text
 src/lib/ffmpeg-2.1/avio.pas -text
 src/lib/ffmpeg-2.1/avutil.pas -text
 src/lib/ffmpeg-2.1/libavcodec/audioconvert.pas -text
+src/lib/ffmpeg-2.1/libavutil/buffer.pas -text
 src/lib/ffmpeg-2.1/libavutil/cpu.pas -text
 src/lib/ffmpeg-2.1/libavutil/dict.pas -text
 src/lib/ffmpeg-2.1/libavutil/error.pas -text
