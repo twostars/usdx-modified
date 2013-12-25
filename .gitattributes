@@ -1140,6 +1140,7 @@ src/lib/ffmpeg-2.1/libavutil/buffer.pas -text
 src/lib/ffmpeg-2.1/libavutil/cpu.pas -text
 src/lib/ffmpeg-2.1/libavutil/dict.pas -text
 src/lib/ffmpeg-2.1/libavutil/error.pas -text
+src/lib/ffmpeg-2.1/libavutil/frame.pas -text
 src/lib/ffmpeg-2.1/libavutil/log.pas -text
 src/lib/ffmpeg-2.1/libavutil/mathematics.pas -text
 src/lib/ffmpeg-2.1/libavutil/mem.pas -text
