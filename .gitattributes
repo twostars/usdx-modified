@@ -325,7 +325,6 @@ game/themes/Classic/\[effect\]goldenNoteStar.png -text
 game/themes/Classic/\[effect\]perfectNoteStar.png -text
 game/themes/Classic/\[helper\]buttonFade.png -text
 game/themes/Classic/\[helper\]rectangle.jpg -text
-game/themes/Classic/\[icon\]Star.png -text
 game/themes/Classic/\[icon\]cd.png -text
 game/themes/Classic/\[icon\]error.png -text
 game/themes/Classic/\[icon\]main.png -text
@@ -338,6 +337,7 @@ game/themes/Classic/\[icon\]song_medley.png -text
 game/themes/Classic/\[icon\]song_menu.png -text
 game/themes/Classic/\[icon\]song_search.png -text
 game/themes/Classic/\[icon\]song_video.png -text
+game/themes/Classic/\[icon\]star.png -text
 game/themes/Classic/\[icon\]stats.png -text
 game/themes/Classic/\[icon\]video.png -text
 game/themes/Classic/\[interface\]cursor.png -text
