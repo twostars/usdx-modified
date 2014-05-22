@@ -1103,8 +1103,8 @@ const
   FF_PROFILE_MPEG2_SNR_SCALABLE = 3;
   FF_PROFILE_MPEG2_MAIN  =  4;
   FF_PROFILE_MPEG2_SIMPLE=  5;
-  FF_PROFILE_H264_CONSTRAINED  = (1<<9);  // 8+1; constraint_set1_flag
-  FF_PROFILE_H264_INTRA        = (1<<11); // 8+3; constraint_set3_flag
+  FF_PROFILE_H264_CONSTRAINED  = (1 Shl 9);  // 8+1; constraint_set1_flag
+  FF_PROFILE_H264_INTRA        = (1 Shl 11); // 8+3; constraint_set3_flag
   FF_PROFILE_H264_BASELINE             = 66;
   FF_PROFILE_H264_CONSTRAINED_BASELINE = (66 or FF_PROFILE_H264_CONSTRAINED);
   FF_PROFILE_H264_MAIN                 = 77;

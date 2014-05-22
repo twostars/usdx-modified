@@ -129,7 +129,7 @@ const
       url_seek:  FFmpegStreamSeek;
       url_close: FFmpegStreamClose;
   );
-{$ENDIF}
+{$IFEND}
 
 var
   Instance: TMediaCore_FFmpeg;
@@ -371,7 +371,7 @@ end;
 function FFmpegStreamOpen(Out h: Pointer; filename: PAnsiChar; flags: Integer): Integer;
 {$ELSE}
 function FFmpegStreamOpen(h: PURLContext; filename: PAnsiChar; flags: cint): cint; cdecl;
-{$ENDIF}
+{$IFEND}
 var
   Stream: TStream;
   Mode: word;
@@ -402,7 +402,7 @@ begin
     h := Stream;
     {$ELSE}
     h.priv_data := Stream;
-    {$ENDIF}
+    {$IFEND}
   except
 {$IF LIBAVUTIL_VERSION < 50043000} // < 50.43.0
     Result := AVERROR_NOENT;
@@ -416,7 +416,7 @@ end;
 function FFmpegStreamRead(h: Pointer; buf: PByteArray; size: cint): cint; cdecl;
 {$ELSE}
 function FFmpegStreamRead(h: PURLContext; buf: PByteArray; size: cint): cint; cdecl;
-{$ENDIF}
+{$IFEND}
 var
   Stream: TStream;
 begin
@@ -424,7 +424,7 @@ begin
   Stream := TStream(h);
   {$ELSE}
   Stream := TStream(h.priv_data);
-  {$ENDIF}
+  {$IFEND}
   if (Stream = nil) then
     raise EInvalidContainer.Create('FFmpegStreamRead on nil');
   try
@@ -438,7 +438,7 @@ end;
 function FFmpegStreamWrite(h: Pointer; buf: PByteArray; size: cint): cint; cdecl;
 {$ELSE}
 function FFmpegStreamWrite(h: PURLContext; buf: PByteArray; size: cint): cint; cdecl;
-{$ENDIF}
+{$IFEND}
 var
   Stream: TStream;
 begin
@@ -446,7 +446,7 @@ begin
   Stream := TStream(h);
   {$ELSE}
   Stream := TStream(h.priv_data);
-  {$ENDIF}
+  {$IFEND}
   if (Stream = nil) then
     raise EInvalidContainer.Create('FFmpegStreamWrite on nil');
   try
@@ -460,7 +460,7 @@ end;
 function FFmpegStreamSeek(h: Pointer; pos: cint64; whence: cint): cint64; cdecl;
 {$ELSE}
 function FFmpegStreamSeek(h: PURLContext; pos: cint64; whence: cint): cint64; cdecl;
-{$ENDIF}
+{$IFEND}
 var
   Stream : TStream;
   Origin : TSeekOrigin;
@@ -469,7 +469,7 @@ begin
   Stream := TStream(h);
   {$ELSE}
   Stream := TStream(h.priv_data);
-  {$ENDIF}
+  {$IFEND}
   if (Stream = nil) then
     raise EInvalidContainer.Create('FFmpegStreamSeek on nil');
   case whence of
@@ -490,7 +490,7 @@ end;
 function FFmpegStreamClose(h: Pointer): Integer;
 {$ELSE}
 function FFmpegStreamClose(h: PURLContext): cint; cdecl;
-{$ENDIF}
+{$IFEND}
 var
   Stream : TStream;
 begin
@@ -498,7 +498,7 @@ begin
   Stream := TStream(h);
   {$ELSE}
   Stream := TStream(h.priv_data);
-  {$ENDIF}
+  {$IFEND}
   Stream.Free;
   Result := 0;
 end;
@@ -516,7 +516,7 @@ begin
   Result := avformat_open_input(ps, filename, nil, nil);
   {$ELSE}
   Result := 0;
-  {$ENDIF}
+  {$IFEND}
 end;
 
 procedure TMediaCore_FFmpeg.AVFormatCloseInput(ps: PPAVFormatContext);
@@ -527,7 +527,7 @@ begin
   { avformat_close_input frees AVIOContext pb, no avio_close needed }
   { avformat_close_input frees AVFormatContext, no additional avformat_free_context needed }
   avformat_close_input(ps);
-  {$ENDIF}
+  {$IFEND}
 end;
 
 { TPacketQueue }
@@ -636,7 +636,7 @@ begin
   TempPacket^.flags := StatusFlag;
 {$IF FFMPEG_VERSION_INT < 2000000}
   TempPacket^.priv  := StatusInfo;
-{$ENDIF}
+{$IFEND}
   // put a copy of the package into the queue
   Result := Put(TempPacket);
   // data has been copied -> delete temp. package
@@ -648,14 +648,14 @@ begin
 {$IF FFMPEG_VERSION_INT < 2000000}
   if (Packet.priv <> nil) then
     FreeMem(Packet.priv);
-{$ENDIF}
+{$IFEND}
 end;
 
 function TPacketQueue.GetStatusInfo(var Packet: TAVPacket): Pointer;
 begin
 {$IF FFMPEG_VERSION_INT < 2000000}
   Result := Packet.priv;
-{$ENDIF}
+{$IFEND}
 end;
 
 function TPacketQueue.Get(var Packet: TAVPacket; Blocking: boolean): integer;

@@ -84,7 +84,7 @@ const
   AUDIO_BUFFER_SIZE = (192000 * 3) div 2;
 {$ELSE}
   AUDIO_BUFFER_SIZE = (AVCODEC_MAX_AUDIO_FRAME_SIZE * 3) div 2;
-{$ENDIF}
+{$IFEND}
 
 type
   TFFmpegDecodeStream = class(TAudioDecodeStream)
@@ -706,7 +706,7 @@ var
   ByteIOCtx: PByteIOContext;
   {$ELSE}
   ByteIOCtx: PAVIOContext;
-  {$ENDIF}
+  {$IFEND}
   ErrorCode: integer;
   StartSilence: double;       // duration of silence at start of stream
   StartSilencePtr: PDouble;  // pointer for the EMPTY status packet 

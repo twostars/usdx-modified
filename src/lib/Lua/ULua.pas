@@ -30,7 +30,7 @@ const
   {$IFNDEF lua_VERSION_RELEASE}
   LUA_VERSION_RELEASE = '4';
   {$ENDIF}
-  LUA_VERSION_INT = 1000000*(ord(LUA_VERSION_MAJOR) - ord('0')) + 1000*(ord(LUA_VERSION_MINOR) - ord('0')) + lua_VERSION_RELEASE;
+  LUA_VERSION_INT = 1000000*(ord(LUA_VERSION_MAJOR) - ord('0')) + 1000*(ord(LUA_VERSION_MINOR) - ord('0')) + (ord(LUA_VERSION_RELEASE) - ord('0'));
 {$ENDIF}
 
 const
@@ -168,7 +168,7 @@ const
   LUAI_BITSINT = 32;
 {$ELSE}
   {$INFO You must define LUA_BITSINT with number of bits in an integer}
-{$ENDIF}
+{$IFEND}
 
 (*
 @@ LUA_INT32 is an signed integer with exactly 32 bits.
@@ -190,7 +190,7 @@ type
   LUA_INT32 = long;
   LUAI_UMEM = unsigned long;
   LUAI_MEM  = long;
-{$ENDIF}
+{$IFEND}
 
 (*
 @@ LUAI_MAXSTACK limits the size of the Lua stack.
@@ -203,7 +203,7 @@ const
   LUAI_MAXSTACK = 1000000;
 {$ELSE}
   LUAI_MAXSTACK = 15000;
-{$ENDIF}
+{$IFEND}
 
 (* reserve some space for error handling *)
   LUAI_FIRSTPSEUDOIDX = -LUAI_MAXSTACK - 1000;

@@ -85,7 +85,7 @@ const
   PIXEL_FMT_FFMPEG = PIX_FMT_BGR24;
   {$ELSE}
   PIXEL_FMT_FFMPEG = AV_PIX_FMT_BGR24;
-  {$ENDIF}
+  {$IFEND}
   PIXEL_FMT_SIZE   = 3;
 
   // looks strange on linux:
@@ -99,7 +99,7 @@ const
   PIXEL_FMT_FFMPEG = PIX_FMT_BGR24;
   {$ELSE}
   PIXEL_FMT_FFMPEG = AV_PIX_FMT_BGR24;
-  {$ENDIF}
+  {$IFEND}
   PIXEL_FMT_SIZE   = 3;
 {$ENDIF}
 
@@ -646,7 +646,7 @@ var
   pbIOCtx: PByteIOContext;
   {$ELSE}
   pbIOCtx: PAVIOContext;
-  {$ENDIF}
+  {$IFEND}
   errnum: integer;
   AVPacket: TAVPacket;
   pts: double;
