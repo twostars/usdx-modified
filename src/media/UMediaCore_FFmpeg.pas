@@ -73,7 +73,7 @@ type
   end;
 
 const
-  STATUS_PACKET: PChar = 'STATUS_PACKET';
+  STATUS_PACKET: PAnsiChar = 'STATUS_PACKET';
 const
   PKT_STATUS_FLAG_EOF     = 1; // signal end-of-file
   PKT_STATUS_FLAG_FLUSH   = 2; // request the decoder to flush its avcodec decode buffers
@@ -89,7 +89,7 @@ type
       destructor Destroy(); override;
       class function GetInstance(): TMediaCore_FFmpeg;
 
-      function GetErrorString(ErrorNum: integer): string;
+      function GetErrorString(ErrorNum: integer): AnsiString;
       function FindStreamIDs(FormatCtx: PAVFormatContext; out FirstVideoStream, FirstAudioStream: integer ): boolean;
       function FindAudioStreamIndex(FormatCtx: PAVFormatContext): integer;
       function ConvertFFmpegToAudioFormat(FFmpegFormat: TAVSampleFormat; out Format: TAudioSampleFormat): boolean;
@@ -144,7 +144,7 @@ var
   libVersion: cuint;
   headerVersion: cuint;
 
-  function hexVerToStr(Version: cuint): string;
+  function hexVerToStr(Version: cuint): AnsiString;
   var
     Major, Minor, Release: cardinal;
   begin
@@ -244,7 +244,7 @@ begin
   SDL_mutexV(AVCodecLock);
 end;
 
-function TMediaCore_FFmpeg.GetErrorString(ErrorNum: integer): string;
+function TMediaCore_FFmpeg.GetErrorString(ErrorNum: integer): AnsiString;
 begin
 {$IF LIBAVUTIL_VERSION < 50043000} // < 50.43.0
   case ErrorNum of
@@ -375,12 +375,12 @@ function FFmpegStreamOpen(h: PURLContext; filename: PAnsiChar; flags: cint): cin
 var
   Stream: TStream;
   Mode: word;
-  ProtPrefix: string;
+  ProtPrefix: AnsiString;
   FilePath: IPath;
 begin
   // check for protocol prefix ('ufile:') and strip it
   ProtPrefix := Format('%s:', ['ufile']);
-  if (StrLComp(filename, PChar(ProtPrefix), Length(ProtPrefix)) = 0) then
+  if (StrLComp(filename, PAnsiChar(ProtPrefix), Length(ProtPrefix)) = 0) then
   begin
     Inc(filename, Length(ProtPrefix));
   end;
@@ -579,7 +579,7 @@ begin
   if (Packet = nil) then
     Exit;
 
-  if (PChar(Packet^.data) <> STATUS_PACKET) then
+  if (PAnsiChar(Packet^.data) <> STATUS_PACKET) then
   begin
     if (av_dup_packet(Packet) < 0) then
       Exit;
@@ -727,7 +727,7 @@ begin
   begin
     TempListEntry := CurrentListEntry^.next;
     // free status data
-    if (PChar(CurrentListEntry^.pkt.data) = STATUS_PACKET) then
+    if (PAnsiChar(CurrentListEntry^.pkt.data) = STATUS_PACKET) then
       FreeStatusInfo(CurrentListEntry^.pkt);
     // free packet data
     av_free_packet(@CurrentListEntry^.pkt);

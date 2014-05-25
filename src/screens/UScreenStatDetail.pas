@@ -207,7 +207,7 @@ procedure TScreenStatDetail.SetPage(NewPage: cardinal);
 var
   StatList: TList;
   I: integer;
-  FormatStr: string;
+  FormatStr: AnsiString;
   PerPage: byte;
 begin
   // fetch statistics

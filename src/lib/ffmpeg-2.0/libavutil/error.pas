@@ -142,14 +142,14 @@ function av_strerror(errnum: cint; errbuf: PAnsiChar; errbuf_size: size_t): cint
  * @return the buffer in input, filled with the error description
  * @see av_strerror()
  *)
-function av_make_error_string(errbuf: Pchar; errbuf_size: size_t; errnum: cint): Pchar; {$IFDEF HasInline}inline;{$ENDIF}
+function av_make_error_string(errbuf: PAnsiChar; errbuf_size: size_t; errnum: cint): PAnsiChar; {$IFDEF HasInline}inline;{$ENDIF}
 // Note: defined in avutil.pas
 
 (**
  * Convenience macro, the return value should be used only directly in
  * function arguments but never stand-alone.
  *)
-function av_err2str(errnum: cint): pchar; {$IFDEF HasInline}inline;{$ENDIF}
+function av_err2str(errnum: cint): PAnsiChar; {$IFDEF HasInline}inline;{$ENDIF}
 // Note: defined in avutil.pas
 
 (**

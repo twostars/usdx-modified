@@ -70,7 +70,7 @@ unit glx;
 
 interface
 
-{$I jedi-sdl.inc}
+{$I ../../SDL/Pas/jedi-sdl.inc}
 
 {$IFDEF UNIX}
   uses
@@ -196,9 +196,9 @@ var
   glXUseXFont: procedure(font: XFont; first, count, list: Integer); cdecl;
 
   // GLX 1.1 and later
-  glXQueryExtensionsString: function(dpy: PDisplay; screen: Integer): PChar; cdecl;
-  glXQueryServerString: function(dpy: PDisplay; screen, name: Integer): PChar; cdecl;
-  glXGetClientString: function(dpy: PDisplay; name: Integer): PChar; cdecl;
+  glXQueryExtensionsString: function(dpy: PDisplay; screen: Integer): PAnsiChar; cdecl;
+  glXQueryServerString: function(dpy: PDisplay; screen, name: Integer): PAnsiChar; cdecl;
+  glXGetClientString: function(dpy: PDisplay; name: Integer): PAnsiChar; cdecl;
 
   // Mesa GLX Extensions
   glXCreateGLXPixmapMESA: function(dpy: PDisplay; visual: PXVisualInfo; pixmap: XPixmap; cmap: XColormap): GLXPixmap; cdecl;
@@ -225,7 +225,7 @@ uses
 var
   libGLX: TModuleHandle;
 
-function InitGLXFromLibrary( dll : PChar ): Boolean;
+function InitGLXFromLibrary( dll : PAnsiChar ): Boolean;
 begin
   Result := False;
 

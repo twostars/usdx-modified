@@ -107,8 +107,8 @@ type
    png_uint_16p = Ppng_uint_16;
    ppng_uint_16p = ^png_uint_16p;
    png_int_16p = Ppng_int_16;
-   png_const_charp = {const} Pchar;
-   png_charp = Pchar;
+   png_const_charp = {const} PAnsiChar;
+   png_charp = PAnsiChar;
    ppng_charp = ^png_charp;
    png_fixed_point_p = Ppng_fixed_point;
    png_FILE_p = Pointer;
@@ -118,18 +118,18 @@ type
    png_int_32pp = PPpng_int_32;
    png_uint_16pp = PPpng_uint_16;
    png_int_16pp = PPpng_int_16;
-   png_const_charpp = {const} PPchar;
-   png_charpp = PPchar;
+   png_const_charpp = {const} PPAnsiChar;
+   png_charpp = PPAnsiChar;
    ppng_charpp = ^png_charpp;
    png_fixed_point_pp = PPpng_fixed_point;
    PPCdouble = ^PCdouble;
    png_doublepp = PPCdouble;
-   PPPChar = ^PPChar;
-   png_charppp = PPPChar;
-   PCharf = PChar;
-   PPCharf = ^PCharf;
-   png_zcharp = PCharf;
-   png_zcharpp = PPCharf;
+   PPPAnsiChar = ^PPAnsiChar;
+   png_charppp = PPPAnsiChar;
+   PAnsiCharf = PAnsiChar;
+   PPAnsiCharf = ^PAnsiCharf;
+   png_zcharp = PAnsiCharf;
+   png_zcharpp = PPAnsiCharf;
    png_zstreamp = Pzstream;
 
 const

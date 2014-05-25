@@ -86,21 +86,21 @@ type
   TLogger = class
   private
     FFileHandle : TextFile;
-    FApplicationName : string;
-    FApplicationPath : string;
+    FApplicationName : AnsiString;
+    FApplicationPath : AnsiString;
   protected
 
   public
     constructor Create;
     destructor Destroy; override;
-    function GetApplicationName: string;
-    function GetApplicationPath: string;
-    procedure LogError( ErrorMessage : string; Location : string );
-    procedure LogWarning( WarningMessage : string; Location : string );
-    procedure LogStatus( StatusMessage : string; Location : string );
+    function GetApplicationName: AnsiString;
+    function GetApplicationPath: AnsiString;
+    procedure LogError( ErrorMessage : AnsiString; Location : AnsiString );
+    procedure LogWarning( WarningMessage : AnsiString; Location : AnsiString );
+    procedure LogStatus( StatusMessage : AnsiString; Location : AnsiString );
   published
-    property ApplicationName : string read GetApplicationName;
-    property ApplicationPath : string read GetApplicationPath;
+    property ApplicationName : AnsiString read GetApplicationName;
+    property ApplicationPath : AnsiString read GetApplicationPath;
   end;
 
 var
@@ -111,7 +111,7 @@ implementation
 { TLogger }
 constructor TLogger.Create;
 var
-  FileName : string;
+  FileName : AnsiString;
   FileNo : integer;
 begin
   FApplicationName := ExtractFileName( ParamStr(0) );
@@ -135,37 +135,37 @@ begin
   inherited;
 end;
 
-function TLogger.GetApplicationName: string;
+function TLogger.GetApplicationName: AnsiString;
 begin
   result := FApplicationName;
 end;
 
-function TLogger.GetApplicationPath: string;
+function TLogger.GetApplicationPath: AnsiString;
 begin
   result := FApplicationPath;
 end;
 
-procedure TLogger.LogError(ErrorMessage, Location: string);
+procedure TLogger.LogError(ErrorMessage, Location: AnsiString);
 var
-  S : string;
+  S : AnsiString;
 begin
   S := '*** ERROR *** : @ ' + TimeToStr(Time) + ' MSG : ' + ErrorMessage + ' IN : ' + Location + #13#10;
   WriteLn( FFileHandle,  S );
   Flush( FFileHandle );
 end;
 
-procedure TLogger.LogStatus(StatusMessage, Location: string);
+procedure TLogger.LogStatus(StatusMessage, Location: AnsiString);
 var
-  S : string;
+  S : AnsiString;
 begin
   S := 'STATUS INFO : @ ' + TimeToStr(Time) + ' MSG : ' + StatusMessage + ' IN : ' + Location + #13#10;
   WriteLn( FFileHandle,  S );
   Flush( FFileHandle );
 end;
 
-procedure TLogger.LogWarning(WarningMessage, Location: string);
+procedure TLogger.LogWarning(WarningMessage, Location: AnsiString);
 var
-  S : string;
+  S : AnsiString;
 begin
   S := '=== WARNING === : @ ' + TimeToStr(Time) + ' MSG : ' + WarningMessage + ' IN : ' + Location + #13#10;
   WriteLn( FFileHandle,  S );

@@ -36,7 +36,7 @@ uses
 
 // ................ ANSI TYPES ................
 {TNT-WARN Char}
-{TNT-WARN PChar}
+{TNT-WARN PAnsiChar}
 {TNT-WARN String}
 
 {TNT-WARN CP_ACP} // <-- use DefaultSystemCodePage
@@ -63,8 +63,11 @@ const
   UNICODE_BOM_SWAPPED = WideChar($FFFE);
   UTF8_BOM = AnsiString(#$EF#$BB#$BF);
 
+
 function WideStringToUTF8(const S: WideString): AnsiString;
+{$ifndef COMPILER_19_UP}
 function UTF8ToWideString(const S: AnsiString): WideString;
+{$endif}
 
 function WideStringToUTF7(const W: WideString): AnsiString;
 function UTF7ToWideString(const S: AnsiString): WideString;
@@ -76,7 +79,9 @@ function UCS2ToWideString(const Value: AnsiString): WideString;
 function WideStringToUCS2(const Value: WideString): AnsiString;
 
 function CharSetToCodePage(ciCharset: UINT): Cardinal;
+{$ifndef COMPILER_19_UP}
 function LCIDToCodePage(ALcid: LCID): Cardinal;
+{$endif}
 function KeyboardCodePage: Cardinal;
 function KeyUnicode(CharCode: Word): WideChar;
 
@@ -272,10 +277,12 @@ begin
   Result := UTF8Encode(S);
 end;
 
+{$ifndef COMPILER_19_UP}
 function UTF8ToWideString(const S: AnsiString): WideString;
 begin
   Result := UTF8Decode(S);
 end;
+{$endif}
 
   { ======================================================================= }
   { Original File:   ConvertUTF7.c                                          }
@@ -798,6 +805,7 @@ begin
   Result := C.ciACP
 end;
 
+{$ifndef COMPILER_19_UP}
 function LCIDToCodePage(ALcid: LCID): Cardinal;
 var
   Buf: array[0..6] of AnsiChar;
@@ -805,6 +813,7 @@ begin
   GetLocaleInfo(ALcid, LOCALE_IDefaultAnsiCodePage, Buf, 6);
   Result := StrToIntDef(Buf, GetACP);
 end;
+{$endif}
 
 function KeyboardCodePage: Cardinal;
 begin
@@ -845,7 +854,7 @@ end;
 //    is only a temporary value, and that it will be immediately
 //     assigned to a WideString or a Variant, then we will save the
 //      Unicode result as well as a reference to the original Ansi string.
-//       WStrFromPCharLen() or VarFromLStr() will return this saved
+//       WStrFromPAnsiCharLen() or VarFromLStr() will return this saved
 //        Unicode string if it appears to receive the most recent result
 //         of LoadResString.
 //--------------------------------------------------------------------
@@ -973,14 +982,14 @@ begin
 end;
 
 //--------------------------------------------------------------------
-//                WStrFromPCharLen()
+//                WStrFromPAnsiCharLen()
 //
 //  This system function is used to assign an AnsiString to a WideString.
 //   It has been modified to assign Unicode results from LoadResString.
 //     Another purpose of this function is to specify the code page.
 //--------------------------------------------------------------------
 
-procedure Custom_System_WStrFromPCharLen(var Dest: WideString; Source: PAnsiChar; Length: Integer);
+procedure Custom_System_WStrFromPAnsiCharLen(var Dest: WideString; Source: PAnsiChar; Length: Integer);
 var
   DestLen: Integer;
   Buffer: array[0..2047] of WideChar;
@@ -1267,9 +1276,9 @@ begin
   Result := @System.LoadResString{TNT-ALLOW LoadResString};
 end;
 
-function Addr_System_WStrFromPCharLen: Pointer;
+function Addr_System_WStrFromPAnsiCharLen: Pointer;
 asm
-  mov eax, offset System.@WStrFromPCharLen;
+  mov eax, offset System.@WStrFromPAnsiCharLen;
 end;
 
 {$IFNDEF COMPILER_9_UP}
@@ -1297,7 +1306,7 @@ end;
 var
   System_EndThread_Code,
   System_LoadResString_Code,
-  System_WStrFromPCharLen_Code,
+  System_WStrFromPAnsiCharLen_Code,
   {$IFNDEF COMPILER_9_UP}
   System_LStrFromPWCharLen_Code,
   System_WStrToString_Code,
@@ -1317,7 +1326,7 @@ end;
 
 procedure InstallStringConversionOverrides;
 begin
-  OverwriteProcedure(Addr_System_WStrFromPCharLen,  @Custom_System_WStrFromPCharLen,  @System_WStrFromPCharLen_Code);
+  OverwriteProcedure(Addr_System_WStrFromPAnsiCharLen,  @Custom_System_WStrFromPAnsiCharLen,  @System_WStrFromPAnsiCharLen_Code);
   {$IFNDEF COMPILER_9_UP}
   OverwriteProcedure(Addr_System_LStrFromPWCharLen, @Custom_System_LStrFromPWCharLen, @System_LStrFromPWCharLen_Code);
   OverwriteProcedure(Addr_System_WStrToString,      @Custom_System_WStrToString,      @System_WStrToString_Code);
@@ -1373,7 +1382,7 @@ procedure UninstallSystemOverrides;
 begin
   RestoreProcedure(Addr_System_EndThread,  System_EndThread_Code);
   // String Conversion
-  RestoreProcedure(Addr_System_WStrFromPCharLen,  System_WStrFromPCharLen_Code);
+  RestoreProcedure(Addr_System_WStrFromPAnsiCharLen,  System_WStrFromPAnsiCharLen_Code);
   {$IFNDEF COMPILER_9_UP}
   RestoreProcedure(Addr_System_LStrFromPWCharLen, System_LStrFromPWCharLen_Code);
   RestoreProcedure(Addr_System_WStrToString,      System_WStrToString_Code);

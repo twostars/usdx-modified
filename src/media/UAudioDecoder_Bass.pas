@@ -72,7 +72,7 @@ type
 type
   TAudioDecoder_Bass = class( TInterfacedObject, IAudioDecoder )
     public
-      function GetName: string;
+      function GetName: AnsiString;
 
       function InitializeDecoder(): boolean;
       function FinalizeDecoder(): boolean;
@@ -207,7 +207,7 @@ end;
 
 { TAudioDecoder_Bass }
 
-function TAudioDecoder_Bass.GetName: String;
+function TAudioDecoder_Bass.GetName: AnsiString;
 begin
   result := 'BASS_Decoder';
 end;
@@ -230,7 +230,7 @@ function TAudioDecoder_Bass.Open(const Filename: IPath): TAudioDecodeStream;
 var
   Stream: HSTREAM;
   ChannelInfo: BASS_CHANNELINFO;
-  FileExt: string;
+  FileExt: AnsiString;
 begin
   Result := nil;
 

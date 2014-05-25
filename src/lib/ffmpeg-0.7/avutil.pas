@@ -178,7 +178,7 @@ type
  * @param[in] pict_type the picture type @return a single character
  * representing the picture type, '?' if pict_type is unknown
  *)
-function av_get_picture_type_char(pict_type: TAVPictureType): Pchar;
+function av_get_picture_type_char(pict_type: TAVPictureType): PAnsiChar;
   cdecl; external av__util;
 
 implementation

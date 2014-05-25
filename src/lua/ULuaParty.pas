@@ -39,18 +39,18 @@ uses ULua;
 
 { Party.Register - register party mode at party manager
   arguments: info: table
-                   Name: String;          //< Name used as identifier (language strings, etc.). Has to be set.
+                   Name: AnsiString;          //< Name used as identifier (language strings, etc.). Has to be set.
                    CanNonParty: Boolean   //< mode is playable when not in party mode. defaulted to false if not set
                    CanParty: Boolean      //< mode is playable in party mode. defaulted to false if not set
                    PlayerCount: Table     //< playable with one, two, three etc. players per team. defaulted to no restrictions if not set. (use table constructor e.g. {1, 2, 3) means playable w/ 1, 2 or three players)
                    TeamCount: Table       //< playable with one, two, three etc. different teams. defaulted to no restrictions if not set. (use table constructor e.g. {1, 2, 3) means playable w/ 1, 2 or three players)
 
-                   BeforeSongSelect: String   //< name of global that will be called before song select screen is shown (if nil, not callable or returns true, default action will be executed)
-                   AfterSongSelect: String    //< name of global that will be called after song is selected (if nil, not callable or returns true, default action will be executed)
+                   BeforeSongSelect: AnsiString   //< name of global that will be called before song select screen is shown (if nil, not callable or returns true, default action will be executed)
+                   AfterSongSelect: AnsiString    //< name of global that will be called after song is selected (if nil, not callable or returns true, default action will be executed)
 
-                   BeforeSing: String         //< name of global that will be called before song select screen is shown (if nil, not callable or returns true, default action will be executed)
-                   OnSing: String             //< name of global that will be called before song select screen is shown (if nil, not callable or returns true, default action will be executed)
-                   AfterSing: String          //< name of global that will be called before song select screen is shown (if nil, not callable or returns true, default action will be executed)}
+                   BeforeSing: AnsiString         //< name of global that will be called before song select screen is shown (if nil, not callable or returns true, default action will be executed)
+                   OnSing: AnsiString             //< name of global that will be called before song select screen is shown (if nil, not callable or returns true, default action will be executed)
+                   AfterSing: AnsiString          //< name of global that will be called before song select screen is shown (if nil, not callable or returns true, default action will be executed)}
 function ULuaParty_Register(L: Plua_State): Integer; cdecl;
 
 { Party.GameFinished - returns true if no party game is running or all rounds
@@ -92,22 +92,22 @@ uses ULuaCore, ULuaUtils, UParty, SysUtils;
 
 { Party.Register - register party mode at party manager
   arguments: info: table
-                   Name: String;          //< Name used as identifier (language strings, etc.). Has to be set.
+                   Name: AnsiString;          //< Name used as identifier (language strings, etc.). Has to be set.
                    CanNonParty: Boolean   //< mode is playable when not in party mode. defaulted to false if not set
                    CanParty: Boolean      //< mode is playable in party mode. defaulted to false if not set
                    PlayerCount: Table     //< playable with one, two, three etc. players per team. defaulted to no restrictions if not set. (use table constructor e.g. {1, 2, 3) means playable w/ 1, 2 or three players)
                    TeamCount: Table       //< playable with one, two, three etc. different teams. defaulted to no restrictions if not set. (use table constructor e.g. {1, 2, 3) means playable w/ 1, 2 or three players)
 
-                   BeforeSongSelect: String   //< name of global that will be called before song select screen is shown (if nil, not callable or returns true, default action will be executed)
-                   AfterSongSelect: String    //< name of global that will be called after song is selected (if nil, not callable or returns true, default action will be executed)
+                   BeforeSongSelect: AnsiString   //< name of global that will be called before song select screen is shown (if nil, not callable or returns true, default action will be executed)
+                   AfterSongSelect: AnsiString    //< name of global that will be called after song is selected (if nil, not callable or returns true, default action will be executed)
 
-                   BeforeSing: String         //< name of global that will be called before song select screen is shown (if nil, not callable or returns true, default action will be executed)
-                   OnSing: String             //< name of global that will be called before song select screen is shown (if nil, not callable or returns true, default action will be executed)
-                   AfterSing: String          //< name of global that will be called before song select screen is shown (if nil, not callable or returns true, default action will be executed)}
+                   BeforeSing: AnsiString         //< name of global that will be called before song select screen is shown (if nil, not callable or returns true, default action will be executed)
+                   OnSing: AnsiString             //< name of global that will be called before song select screen is shown (if nil, not callable or returns true, default action will be executed)
+                   AfterSing: AnsiString          //< name of global that will be called before song select screen is shown (if nil, not callable or returns true, default action will be executed)}
 function ULuaParty_Register(L: Plua_State): Integer; cdecl;
   var
     Info: TParty_ModeInfo;
-    Key: String;
+    Key: AnsiString;
     P: TLuaPlugin;
 begin
   Result := 0;
@@ -161,7 +161,7 @@ begin
   lua_pop(L, lua_gettop(L));
 
   if not Party.RegisterMode(Info) then
-    luaL_error(L, PChar('can''t register party mode at party manager in Party.Register. Is Info.Name defined or is there another mode with this name?'));
+    luaL_error(L, PAnsiChar('can''t register party mode at party manager in Party.Register. Is Info.Name defined or is there another mode with this name?'));
 end;
 
 { Party.GameFinished - returns true if no party game is running or all rounds
@@ -217,7 +217,7 @@ begin
   lua_pop(L, 1);
 
   if (not Party.SetRanking(R)) then
-    luaL_error(L, PChar('cann''t set party round ranking. Is party started and not finished yet?'));
+    luaL_error(L, PAnsiChar('cann''t set party round ranking. Is party started and not finished yet?'));
 end;
 
 { Party.GetTeams - returns a table with all information and structure as
@@ -246,7 +246,7 @@ begin
     lua_createtable(L, 0, 5);
 
     // team name
-    lua_pushString(L, PChar(Party.Teams[Team].Name));
+    lua_pushString(L, PAnsiChar(Party.Teams[Team].Name));
     lua_setField(L, -2, 'Name');
 
     // team score
@@ -274,7 +274,7 @@ begin
       lua_createTable(L, 0, 2);
 
       // player name
-      lua_PushString(L, PChar(Party.Teams[Team].Players[Player].Name));
+      lua_PushString(L, PAnsiChar(Party.Teams[Team].Players[Player].Name));
       lua_SetField(L, -2, 'Name');
 
       // players times played
@@ -301,7 +301,7 @@ function ULuaParty_SetTeams(L: Plua_State): Integer; cdecl;
 
   procedure Do_Player(Team, Player: Integer);
     var
-      Key: String;
+      Key: AnsiString;
   begin
     if (Player >= 0) and (Player <= High(Party.Teams[Team].Players)) then
     begin
@@ -339,7 +339,7 @@ function ULuaParty_SetTeams(L: Plua_State): Integer; cdecl;
 
   procedure Do_Team(Team: Integer);
     var
-      Key: String;
+      Key: AnsiString;
   begin
     if (Team >= 0) and (Team <= High(Party.Teams)) then
     begin

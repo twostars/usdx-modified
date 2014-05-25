@@ -123,8 +123,8 @@ type
     FBitDepth: integer;
     FWidth: integer;
     FInputManager: TSDLInputManager;
-    FCaptionText : PChar;
-    FIconName : PChar;
+    FCaptionText : PAnsiChar;
+    FIconName : PAnsiChar;
     FOnActive: TSDLActiveEvent;
     FOnQuit: TSDLNotifyEvent;
     FOnExpose: TSDLNotifyEvent;
@@ -167,8 +167,8 @@ type
     property Height : integer read FHeight;
     property BitDepth : integer read FBitDepth;
     property Rendering : Boolean read FRendering write FRendering;
-    procedure SetCaption( const aCaptionText : string; const aIconName : string );
-    procedure GetCaption( var aCaptionText : string; var aIconName : string );
+    procedure SetCaption( const aCaptionText : AnsiString; const aIconName : AnsiString );
+    procedure GetCaption( var aCaptionText : AnsiString; var aIconName : AnsiString );
     procedure SetIcon( aIcon : PSDL_Surface; aMask: UInt8 );
     procedure ActivateVideoMode;
     constructor Create( aWidth : integer; aHeight : integer; aBitDepth : integer; aVideoFlags : Uint32 ); virtual;
@@ -368,7 +368,7 @@ begin
   result := 0;
 end;
 
-procedure TSDLBaseWindow.GetCaption( var aCaptionText : string; var aIconName : string );
+procedure TSDLBaseWindow.GetCaption( var aCaptionText : AnsiString; var aIconName : AnsiString );
 begin
   aCaptionText := string( FCaptionText );
   aIconName := string( FIconName );
@@ -400,12 +400,12 @@ begin
   FLoaded := false;
 end;
 
-procedure TSDLBaseWindow.SetCaption( const aCaptionText : string; const aIconName : string );
+procedure TSDLBaseWindow.SetCaption( const aCaptionText : AnsiString; const aIconName : AnsiString );
 begin
   if FCaptionText <> aCaptionText then
   begin
-    FCaptionText := PChar( aCaptionText );
-    FIconName := PChar( aIconName );
+    FCaptionText := PAnsiChar( aCaptionText );
+    FIconName := PAnsiChar( aIconName );
     SDL_WM_SetCaption( FCaptionText, FIconName );
   end;
 end;

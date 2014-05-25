@@ -50,7 +50,7 @@ type
       procedure DetectLocalExecution();
     public
       procedure Init; override;
-      function TerminateIfAlreadyRunning(var WndTitle: String): Boolean; override;
+      function TerminateIfAlreadyRunning(var WndTitle: AnsiString): Boolean; override;
 
       function GetLogPath: IPath; override;
       function GetGameSharedPath: IPath; override;
@@ -74,23 +74,23 @@ end;
 //------------------------------
 //Start more than One Time Prevention
 //------------------------------
-function TPlatformWindows.TerminateIfAlreadyRunning(var WndTitle: String): Boolean;
+function TPlatformWindows.TerminateIfAlreadyRunning(var WndTitle: AnsiString): Boolean;
 var
   hWnd: THandle;
   I: Integer;
 begin
     Result := false;
-    hWnd:= FindWindow(nil, PChar(WndTitle));
+    hWnd:= FindWindowA(nil, PAnsiChar(WndTitle));
     //Programm already started
     if (hWnd <> 0) then
     begin
-      I := Messagebox(0, PChar('Another Instance of Ultrastar is already running. Continue ?'), PChar(WndTitle), MB_ICONWARNING or MB_YESNO);
+      I := MessageBoxA(0, 'Another Instance of Ultrastar is already running. Continue ?', PAnsiChar(WndTitle), MB_ICONWARNING or MB_YESNO);
       if (I = IDYes) then
       begin
         I := 1;
         repeat
           Inc(I);
-          hWnd := FindWindow(nil, PChar(WndTitle + ' Instance ' + InttoStr(I)));
+          hWnd := FindWindowA(nil, PAnsiChar(WndTitle + ' Instance ' + InttoStr(I)));
         until (hWnd = 0);
         WndTitle := WndTitle + ' Instance ' + InttoStr(I);
       end

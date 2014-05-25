@@ -30,7 +30,7 @@ type
     Data2: byte;            { MIDI message data 2 byte }
     Time: dword;            { Time in ms since midiInOpen }
     SysexLength: word;      { Length of sysex data (0 if none) }
-    Sysex: Pchar;           { Pointer to sysex data buffer }
+    Sysex: PAnsiChar;           { Pointer to sysex data buffer }
     destructor Destroy; override;   { Frees sysex data buffer if nec. }
   end;
   PMyMidiEvent = ^TMyMidiEvent;

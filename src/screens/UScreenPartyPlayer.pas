@@ -130,10 +130,10 @@ begin
   {//Save PlayerNames
   for I := 0 to PartySession.Teams.NumTeams-1 do
   begin
-    PartySession.Teams.Teaminfo[I].Name := PChar(Button[I*5].Text[0].Text);
+    PartySession.Teams.Teaminfo[I].Name := PAnsiChar(Button[I*5].Text[0].Text);
     for J := 0 to PartySession.Teams.Teaminfo[I].NumPlayers-1 do
     begin
-      PartySession.Teams.Teaminfo[I].Playerinfo[J].Name := PChar(Button[I*5 + J+1].Text[0].Text);
+      PartySession.Teams.Teaminfo[I].Playerinfo[J].Name := PAnsiChar(Button[I*5 + J+1].Text[0].Text);
       PartySession.Teams.Teaminfo[I].Playerinfo[J].TimesPlayed := 0;
     end;
   end; }

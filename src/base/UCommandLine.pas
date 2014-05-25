@@ -45,7 +45,7 @@ type
   TCMDParams = class
     private
       fLanguage:   string;
-      fResolution: string;
+      fResolution: AnsiString;
 
       procedure ShowHelp();
 
@@ -109,7 +109,7 @@ end;
 
 procedure TCMDParams.ShowHelp();
 
-  function Fmt(aString : string) : string;
+  function Fmt(aString : AnsiString) : AnsiString;
   begin
     Result := Format('%-15s', [aString]);
   end;

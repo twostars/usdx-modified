@@ -92,9 +92,9 @@ type
     function GetDefaultFloat( const Index : Integer ) : single; virtual; abstract;
     function GetFloat( const Index : Integer ) : single; virtual; abstract;
     procedure SetFloat( const Index : Integer; const Value : single ); virtual;
-    function GetDefaultString( const Index : Integer ) : string; virtual; abstract;
-    function GetString( const Index : Integer ) : string; virtual; abstract;
-    procedure SetString( const Index : Integer; const Value : string ); virtual;
+    function GetDefaultString( const Index : Integer ) : AnsiString; virtual; abstract;
+    function GetString( const Index : Integer ) : AnsiString; virtual; abstract;
+    procedure SetString( const Index : Integer; const Value : AnsiString ); virtual;
     function GetDefaultBinaryStream( const Index : Integer ) : TStream; virtual; abstract;
     function GetBinaryStream( const Index : Integer ) : TStream; virtual; abstract;
     procedure SetBinaryStream( const Index : Integer; const Value : TStream ); virtual;
@@ -151,7 +151,7 @@ begin
   CheckAutoSave;
 end;
 
-procedure TUserPreferences.SetString(const Index: Integer; const Value: string);
+procedure TUserPreferences.SetString(const Index: Integer; const Value: AnsiString);
 begin
   CheckAutoSave;
 end;

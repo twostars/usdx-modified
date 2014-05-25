@@ -688,7 +688,7 @@ var
   x1, y1, x2, y2: single;
   i: integer;
   ToneBoxWidth: real;
-  ToneString: string;
+  ToneString: AnsiString;
   ToneStringWidth, ToneStringHeight: real;
   ToneStringMaxWidth: real;
   ToneStringCenterXOffset: real;

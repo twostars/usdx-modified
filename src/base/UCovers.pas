@@ -357,7 +357,7 @@ function TCoverDatabase.LoadCover(CoverID: int64): TTexture;
 var
   Width, Height: integer;
   PixelFmt: TImagePixelFmt;
-  Data: PChar;
+  Data: PAnsiChar;
   DataSize: integer;
   Filename: IPath;
   Table: TSQLiteUniTable;

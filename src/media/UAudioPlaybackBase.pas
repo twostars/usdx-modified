@@ -54,7 +54,7 @@ type
       function OpenStreamBuffer(Buffer: TStream; Format: TAudioFormatInfo): TAudioPlaybackStream;
       function OpenDecodeStream(const Filename: IPath): TAudioDecodeStream;
     public
-      function GetName: string; virtual; abstract;
+      function GetName: AnsiString; virtual; abstract;
 
       function Open(const Filename: IPath): boolean; // true if succeed
       procedure Close;

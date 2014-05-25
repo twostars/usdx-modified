@@ -1,6 +1,6 @@
 program DoTags;
 var
-  four_letters: string;
+  four_letters: AnsiString;
   tag: int32;
 begin
   writeln ('Program for the calculation of 4 letter tags, little and big endian.');

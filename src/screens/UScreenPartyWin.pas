@@ -136,7 +136,7 @@ var
 
   Function GetTeamColor(Team: integer): cardinal;
   var
-    NameString: string;
+    NameString: AnsiString;
   begin
     NameString := 'P' + InttoStr(Team+1) + 'Dark';
 

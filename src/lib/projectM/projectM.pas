@@ -161,9 +161,9 @@ type
     textureSize: cint;
     windowWidth: cint;
     windowHeight: cint;
-    presetURL: PChar;
-    titleFontURL: PChar;
-    menuFontURL: PChar;
+    presetURL: PAnsiChar;
+    titleFontURL: PAnsiChar;
+    menuFontURL: PAnsiChar;
     smoothPresetDuration: cint;
     presetDuration: cint;
     beatSensitivity: cfloat;
@@ -181,16 +181,16 @@ type
       {$IF PROJECTM_VERSION < 1000000} // 0.9x
       constructor Create(gx, gy: integer; fps: integer;
         texsize: integer; width, height: integer;
-        const presetsDir, fontsDir: string;
-        const titleFont: string = 'Vera.ttf';
-        const menuFont: string = 'Vera.ttf'); overload;
+        const presetsDir, fontsDir: AnsiString;
+        const titleFont: AnsiString = 'Vera.ttf';
+        const menuFont: AnsiString = 'Vera.ttf'); overload;
       {$IFEND}
       {$IF PROJECTM_VERSION >= 1000000}
-      constructor Create(const configFile: string); overload;
+      constructor Create(const configFile: AnsiString); overload;
       {$IFEND}
 
       procedure ResetGL(width, height: Integer);
-      procedure SetTitle(const title: string);
+      procedure SetTitle(const title: AnsiString);
       procedure RenderFrame();
 
       procedure AddPCMfloat(pcmData: PSingle; samples: integer);

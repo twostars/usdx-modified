@@ -85,8 +85,8 @@ type
   private
 
   protected
-    function GetSection( const Index : Integer ) : string; virtual; abstract;
-    function GetIdentifier( const Index : Integer ) : string; virtual; abstract;
+    function GetSection( const Index : Integer ) : AnsiString; virtual; abstract;
+    function GetIdentifier( const Index : Integer ) : AnsiString; virtual; abstract;
     function GetDefaultBoolean( const Index : Integer ) : Boolean; override;
     function GetBoolean( const Index : Integer ) : Boolean; override;
     procedure SetBoolean( const Index : Integer; const Value : Boolean ); override;
@@ -99,12 +99,12 @@ type
     function GetDefaultFloat( const Index : Integer ) : single; override;
     function GetFloat( const Index : Integer ) : single; override;
     procedure SetFloat( const Index : Integer; const Value : single ); override;
-    function GetDefaultString( const Index : Integer ) : string; override;
-    function GetString( const Index : Integer ) : string; override;
-    procedure SetString( const Index : Integer; const Value : string ); override;
+    function GetDefaultString( const Index : Integer ) : AnsiString; override;
+    function GetString( const Index : Integer ) : AnsiString; override;
+    procedure SetString( const Index : Integer; const Value : AnsiString ); override;
   public
     Registry : {$IFDEF REG}TRegIniFile{$ELSE}TIniFile{$ENDIF};
-    constructor Create( const FileName : string = '' ); reintroduce;
+    constructor Create( const FileName : AnsiString = '' ); reintroduce;
     destructor Destroy; override;
     procedure Update; override;
   end;
@@ -115,9 +115,9 @@ uses
   SysUtils;
 
 { TRegistryUserPreferences }
-constructor TRegistryUserPreferences.Create( const FileName : string );
+constructor TRegistryUserPreferences.Create( const FileName : AnsiString );
 var
-  defFileName : string;
+  defFileName : AnsiString;
 begin
   inherited Create;
 
@@ -167,7 +167,7 @@ begin
   result := 0;
 end;
 
-function TRegistryUserPreferences.GetDefaultString( const Index : Integer ) : string;
+function TRegistryUserPreferences.GetDefaultString( const Index : Integer ) : AnsiString;
 begin
   result := '';
 end;
@@ -182,7 +182,7 @@ begin
   Result := Registry.ReadInteger( GetSection( Index ), GetIdentifier( Index ), GetDefaultInteger( Index )  );
 end;
 
-function TRegistryUserPreferences.GetString( const Index : Integer ): string;
+function TRegistryUserPreferences.GetString( const Index : Integer ): AnsiString;
 begin
   Result := Registry.ReadString( GetSection( Index ), GetIdentifier( Index ), GetDefaultString( Index ) );
 end;
@@ -211,7 +211,7 @@ begin
   inherited;
 end;
 
-procedure TRegistryUserPreferences.SetString( const Index : Integer; const Value : string );
+procedure TRegistryUserPreferences.SetString( const Index : Integer; const Value : AnsiString );
 begin
   Registry.WriteString( GetSection( Index ), GetIdentifier( Index ), Value );
   inherited;

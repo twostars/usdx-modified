@@ -53,7 +53,7 @@ type
       fAnalysisBufferLock: PSDL_Mutex;
       fAudioFormat: TAudioFormatInfo;
 
-      function GetToneString: string; // converts a tone to its string represenatation;
+      function GetToneString: AnsiString; // converts a tone to its string represenatation;
 
       procedure BoostBuffer(Buffer: PByteArray; Size: integer);
       procedure ProcessNewBuffer(Buffer: PByteArray; BufferSize: integer);
@@ -89,7 +89,7 @@ type
       procedure UnlockAnalysisBuffer(); {$IFDEF HasInline}inline;{$ENDIF}
 
       function MaxSampleVolume: single;
-      property ToneString: string READ GetToneString;
+      property ToneString: AnsiString READ GetToneString;
       property AudioFormat: TAudioFormatInfo READ fAudioFormat;
   end;
 
@@ -178,7 +178,7 @@ type
     protected
       function UnifyDeviceName(const name: UTF8String; deviceIndex: integer): UTF8String;
     public
-      function GetName: String;           virtual; abstract;
+      function GetName: AnsiString;           virtual; abstract;
       function InitializeRecord: boolean; virtual; abstract;
       function FinalizeRecord: boolean;   virtual;
 
@@ -470,7 +470,7 @@ const
     'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'
   );
 
-function TCaptureBuffer.GetToneString: string;
+function TCaptureBuffer.GetToneString: AnsiString;
 begin
   if (ToneValid) then
     Result := ToneStrings[Tone] + IntToStr(ToneAbs div 12 + 2)

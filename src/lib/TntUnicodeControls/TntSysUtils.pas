@@ -20,7 +20,7 @@ unit TntSysUtils;
 interface
 
 { TODO: Consider: more filename functions from SysUtils }
-{ TODO: Consider: string functions from StrUtils. }
+{ TODO: Consider: AnsiString functions from StrUtils. }
 
 uses
   Types, SysUtils, Windows, TntWindows;
@@ -1399,7 +1399,7 @@ end;
 //=============================================================================================
 
 {$IFDEF FPC}
-function GetLocaleStr(Locale, LocaleType: Integer; const Default: string): string;
+function GetLocaleStr(Locale, LocaleType: Integer; const Default: AnsiString): AnsiString;
 var
   L: Integer;
   Buffer: array[0..255] of Char;

@@ -57,7 +57,7 @@ type
       function FinalizeAudioPlaybackEngine(): boolean;   override;
       function GetLatency(): double;                     override;
     public
-      function GetName: String;                          override;
+      function GetName: AnsiString;                          override;
       procedure MixBuffers(dst, src: PByteArray; size: Cardinal; volume: Single); override;
   end;
 
@@ -72,7 +72,7 @@ begin
   Engine.AudioCallback(stream, len);
 end;
 
-function TAudioPlayback_SDL.GetName: String;
+function TAudioPlayback_SDL.GetName: AnsiString;
 begin
   Result := 'SDL_Playback';
 end;

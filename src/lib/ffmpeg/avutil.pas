@@ -488,7 +488,7 @@ void av_log_default_callback(void* ptr, int level, const char* fmt, va_list vl);
 **}
 
 {$IF LIBAVUTIL_VERSION >= 50015003} // 50.15.3
-function av_default_item_name (ctx: pointer): Pchar;
+function av_default_item_name (ctx: pointer): PAnsiChar;
   cdecl; external av__util;
 {$IFEND}
 

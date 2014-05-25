@@ -61,7 +61,7 @@ unit glut;
 
 interface
 
-{$I jedi-sdl.inc}
+{$I ../../SDL/Pas/jedi-sdl.inc}
 
 uses
 {$IFDEF __GPC__}
@@ -78,7 +78,7 @@ uses
 type
   {$IFNDEF __GPC__}
   PInteger = ^Integer;
-  PPChar = ^PChar;
+  PPAnsiChar = ^PAnsiChar;
   {$ENDIF}
   TGlutVoidCallback = procedure; {$IFNDEF __GPC__}{$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}{$ENDIF}
   TGlut1IntCallback = procedure(value: Integer); {$IFNDEF __GPC__}{$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}{$ENDIF}
@@ -307,15 +307,15 @@ const
 
 var
 // GLUT initialization sub-API.
-  glutInit: procedure(argcp: PInteger; argv: PPChar); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  glutInit: procedure(argcp: PInteger; argv: PPAnsiChar); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutInitDisplayMode: procedure(mode: Word); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
-  glutInitDisplayString: procedure(const str: PChar); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  glutInitDisplayString: procedure(const str: PAnsiChar); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutInitWindowPosition: procedure(x, y: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutInitWindowSize: procedure(width, height: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutMainLoop: procedure; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
 
 // GLUT window sub-API.
-  glutCreateWindow: function(const title: PChar): Integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  glutCreateWindow: function(const title: PAnsiChar): Integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutCreateSubWindow: function(win, x, y, width, height: Integer): Integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutDestroyWindow: procedure(win: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutPostRedisplay: procedure; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
@@ -323,8 +323,8 @@ var
   glutSwapBuffers: procedure; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutGetWindow: function: Integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutSetWindow: procedure(win: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
-  glutSetWindowTitle: procedure(const title: PChar); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
-  glutSetIconTitle: procedure(const title: PChar); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  glutSetWindowTitle: procedure(const title: PAnsiChar); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  glutSetIconTitle: procedure(const title: PAnsiChar); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutPositionWindow: procedure(x, y: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutReshapeWindow: procedure(width, height: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutPopWindow: procedure; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
@@ -350,10 +350,10 @@ var
   glutDestroyMenu: procedure(menu: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutGetMenu: function: Integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutSetMenu: procedure(menu: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
-  glutAddMenuEntry: procedure(const caption: PChar; value: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
-  glutAddSubMenu: procedure(const caption: PChar; submenu: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
-  glutChangeToMenuEntry: procedure(item: Integer; const caption: PChar; value: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
-  glutChangeToSubMenu: procedure(item: Integer; const caption: PChar; submenu: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  glutAddMenuEntry: procedure(const caption: PAnsiChar; value: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  glutAddSubMenu: procedure(const caption: PAnsiChar; submenu: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  glutChangeToMenuEntry: procedure(item: Integer; const caption: PAnsiChar; value: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  glutChangeToSubMenu: procedure(item: Integer; const caption: PAnsiChar; submenu: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutRemoveMenuItem: procedure(item: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutAttachMenu: procedure(button: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutDetachMenu: procedure(button: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
@@ -392,17 +392,17 @@ var
   glutDeviceGet: function(t: GLenum): Integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
 
 // GLUT extension support sub-API
-  glutExtensionSupported: function(const name: PChar): Integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  glutExtensionSupported: function(const name: PAnsiChar): Integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutGetModifiers: function: Integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutLayerGet: function(t: GLenum): Integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
 
 // GLUT font sub-API
-  glutBitmapCharacter: procedure(font : pointer; character: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  glutBitmaPAnsiCharacter: procedure(font : pointer; character: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutBitmapWidth: function(font : pointer; character: Integer): Integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutStrokeCharacter: procedure(font : pointer; character: Integer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutStrokeWidth: function(font : pointer; character: Integer): Integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
-  glutBitmapLength: function(font: pointer; const str: PChar): Integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
-  glutStrokeLength: function(font: pointer; const str: PChar): Integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  glutBitmapLength: function(font: pointer; const str: PAnsiChar): Integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  glutStrokeLength: function(font: pointer; const str: PAnsiChar): Integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
 
 // GLUT pre-built models sub-API
   glutWireSphere: procedure(radius: GLdouble; slices, stacks: GLint); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
@@ -436,12 +436,12 @@ var
 
 var
   //example glutGameModeString('1280x1024:32@75');
-  glutGameModeString : procedure (const AString : PChar); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  glutGameModeString : procedure (const AString : PAnsiChar); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutEnterGameMode : function : integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutLeaveGameMode : procedure; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glutGameModeGet : function (mode : GLenum) : integer; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF} 
 
-procedure LoadGlut(const dll: PChar);
+procedure LoadGlut(const dll: PAnsiChar);
 procedure FreeGlut;
 
 implementation
@@ -528,7 +528,7 @@ begin
   @glutExtensionSupported := nil;
   @glutGetModifiers := nil;
   @glutLayerGet := nil;
-  @glutBitmapCharacter := nil;
+  @glutBitmaPAnsiCharacter := nil;
   @glutBitmapWidth := nil;
   @glutStrokeCharacter := nil;
   @glutStrokeWidth := nil;
@@ -561,7 +561,7 @@ begin
 
 end;
 
-procedure LoadGlut(const dll: PChar);
+procedure LoadGlut(const dll: PAnsiChar);
 begin
 
   FreeGlut;
@@ -642,7 +642,7 @@ begin
     @glutExtensionSupported := GetModuleSymbol(LibGLUT, 'glutExtensionSupported');
     @glutGetModifiers := GetModuleSymbol(LibGLUT, 'glutGetModifiers');
     @glutLayerGet := GetModuleSymbol(LibGLUT, 'glutLayerGet');
-    @glutBitmapCharacter := GetModuleSymbol(LibGLUT, 'glutBitmapCharacter');
+    @glutBitmaPAnsiCharacter := GetModuleSymbol(LibGLUT, 'glutBitmaPAnsiCharacter');
     @glutBitmapWidth := GetModuleSymbol(LibGLUT, 'glutBitmapWidth');
     @glutStrokeCharacter := GetModuleSymbol(LibGLUT, 'glutStrokeCharacter');
     @glutStrokeWidth := GetModuleSymbol(LibGLUT, 'glutStrokeWidth');

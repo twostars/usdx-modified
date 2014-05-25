@@ -89,7 +89,7 @@ type
 
   TStats = record
     Player:     array of TPlayer;
-    SongArtist: string;
+    SongArtist: AnsiString;
     SongTitle:  string;
   end;
 

@@ -106,7 +106,7 @@ type
   TVideo_ProjectM = class( TInterfacedObject, IVideo )
     private
       fPm: TProjectM;
-      fProjectMPath : string;
+      fProjectMPath : AnsiString;
 
       fState: TProjectMState;
 
@@ -182,7 +182,7 @@ type
       fInitialized: boolean;
 
     public
-      function GetName: String;
+      function GetName: AnsiString;
 
       function Init(): boolean;
       function Finalize(): boolean;
@@ -193,7 +193,7 @@ type
 
 { TVideoPlayback_ProjectM }
 
-function  TVideoPlayback_ProjectM.GetName: String;
+function  TVideoPlayback_ProjectM.GetName: AnsiString;
 begin
   Result := 'ProjectM';
 end;

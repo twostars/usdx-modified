@@ -116,7 +116,7 @@ type
       procedure DrawStatics;
       procedure DrawInfoBar(x, y, w, h: integer);
       //Note Name Mod
-      function GetNoteName(Note: integer): string;
+      function GetNoteName(Note: integer): AnsiString;
     public
       Tex_Background:     TTexture;
       FadeOut:            boolean;
@@ -1765,7 +1765,7 @@ begin
   //Music.SetVolume(1.0);
 end;
 
-function TScreenEditSub.GetNoteName(Note: integer): string;
+function TScreenEditSub.GetNoteName(Note: integer): AnsiString;
 var
   N1, N2: integer;
 begin

@@ -46,7 +46,7 @@ function ULuaUsdx_Time(L: Plua_State): Integer; cdecl;
 function ULuaUsdx_Version(L: Plua_State): Integer; cdecl;
 
 { Usdx.Hook - returns an hook table with name and Unhook function
-              arguments: event_name: string }
+              arguments: event_name: AnsiString }
 function ULuaUsdx_Hook(L: Plua_State): Integer; cdecl;
 
 { Usdx.ShutMeDown - no results, no arguments
@@ -93,16 +93,16 @@ begin
     lua_pop(L, top);
 
   //push result
-  lua_pushstring(L, PChar(USDXVersionStr()));
+  lua_pushstring(L, PAnsiChar(USDXVersionStr()));
   Result := 1; //one result
 end;
 
 { Usdx.Hook - returns an hook table with name and Unhook function
-              arguments: event_name: string; function_name: string }
+              arguments: event_name: AnsiString; function_name: AnsiString }
 function ULuaUsdx_Hook(L: Plua_State): Integer; cdecl;
 var
-  EventName: String;
-  FunctionName: String;
+  EventName: AnsiString;
+  FunctionName: AnsiString;
   P: TLuaPlugin;
   Event: THookableEvent;
 begin
@@ -121,7 +121,7 @@ begin
     Event.Hook(L, P.Id, FunctionName);
   end
   else
-    luaL_error(L, PChar('event does not exist: ' + EventName));
+    luaL_error(L, PAnsiChar('event does not exist: ' + EventName));
 end;
 
 function ULuaUsdx_ShutMeDown(L: Plua_State): Integer; cdecl;

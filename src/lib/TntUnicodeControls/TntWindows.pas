@@ -353,7 +353,7 @@ function Tnt_CharLowerBuffW(lpsz: PWideChar; cchLength: DWORD): DWORD;
 {TNT-WARN GetStringTypeExA}
 {TNT-WARN GetStringTypeExW}
 function Tnt_GetStringTypeExW(Locale: LCID; dwInfoType: DWORD;
-  lpSrcStr: PWideChar; cchSrc: Integer; var lpCharType): BOOL;
+  lpSrcStr: PWideChar; cchSrc: Integer; var lPAnsiCharType): BOOL;
 
 {TNT-WARN LoadString}
 {TNT-WARN LoadStringA}
@@ -1150,16 +1150,16 @@ begin
 end;
 
 function Tnt_GetStringTypeExW(Locale: LCID; dwInfoType: DWORD;
-  lpSrcStr: PWideChar; cchSrc: Integer; var lpCharType): BOOL; 
+  lpSrcStr: PWideChar; cchSrc: Integer; var lPAnsiCharType): BOOL; 
 var
   AStr: AnsiString;
 begin
   if Win32PlatformIsUnicode then
-    Result := GetStringTypeExW{TNT-ALLOW GetStringTypeExW}(Locale, dwInfoType, lpSrcStr, cchSrc, lpCharType)
+    Result := GetStringTypeExW{TNT-ALLOW GetStringTypeExW}(Locale, dwInfoType, lpSrcStr, cchSrc, lPAnsiCharType)
   else begin
     AStr := _WStr(lpSrcStr, cchSrc);
     Result := GetStringTypeExA{TNT-ALLOW GetStringTypeExA}(Locale, dwInfoType,
-      PAnsiChar(AStr), -1, lpCharType);
+      PAnsiChar(AStr), -1, lPAnsiCharType);
   end;
 end;
 
@@ -1335,7 +1335,7 @@ begin
     Result := Safe_SHFileOperationW(lpFileOp);
   end else begin
     AnsiFileOp := TSHFileOpStructA(lpFileOp);
-    // convert PChar -> PWideChar
+    // convert PAnsiChar -> PWideChar
     if lpFileOp.pFrom = nil then
       AnsiFileOp.pFrom := nil
     else

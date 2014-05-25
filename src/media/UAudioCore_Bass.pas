@@ -45,12 +45,12 @@ type
       constructor Create();
       class function GetInstance(): TAudioCore_Bass;
       function CheckVersion(): boolean;
-      function ErrorGetString(): string; overload;
-      function ErrorGetString(errCode: integer): string; overload;
+      function ErrorGetString(): AnsiString; overload;
+      function ErrorGetString(errCode: integer): AnsiString; overload;
       function ConvertAudioFormatToBASSFlags(Format: TAudioSampleFormat; out Flags: DWORD): boolean;
       function ConvertBASSFlagsToAudioFormat(Flags: DWORD; out Format: TAudioSampleFormat): boolean;
     private
-      function DecodeVersion(VersionHex: integer): string;
+      function DecodeVersion(VersionHex: integer): AnsiString;
   end;
 
 implementation
@@ -79,7 +79,7 @@ begin
   Result := Instance;
 end;
 
-function TAudioCore_Bass.DecodeVersion(VersionHex: integer): string;
+function TAudioCore_Bass.DecodeVersion(VersionHex: integer): AnsiString;
 var
   Version: array [0..3] of integer;
 begin
@@ -100,12 +100,12 @@ begin
   end;
 end;
 
-function TAudioCore_Bass.ErrorGetString(): string;
+function TAudioCore_Bass.ErrorGetString(): AnsiString;
 begin
   Result := ErrorGetString(BASS_ErrorGetCode());
 end;
 
-function TAudioCore_Bass.ErrorGetString(errCode: integer): string;
+function TAudioCore_Bass.ErrorGetString(errCode: integer): AnsiString;
 begin
   case errCode of
     BASS_OK:             result := 'No error';

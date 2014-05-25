@@ -47,7 +47,7 @@ type
     procedure cmbInputChange(Sender: TObject);
     procedure MidiFile1UpdateEvent(Sender: TObject);
     procedure Button2Click(Sender: TObject);
-    procedure edtBpmKeyPress(Sender: TObject; var Key: char);
+    procedure edtBpmKeyPress(Sender: TObject; var Key: AnsiChar);
     procedure TracksGridSelectCell(Sender: TObject; Col, Row: integer;
       var CanSelect: boolean);
     procedure FormShow(Sender: TObject);
@@ -196,7 +196,7 @@ begin
   MidiFile1.ContinuePlaying;
 end;
 
-procedure TMidiPlayer.edtBpmKeyPress(Sender: TObject; var Key: char);
+procedure TMidiPlayer.edtBpmKeyPress(Sender: TObject; var Key: AnsiChar);
 begin
  if Key = char(13) then
  begin

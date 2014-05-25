@@ -84,8 +84,8 @@ const
     'Colorized'
   );
 
-function TextureTypeToStr(TexType: TTextureType): string;
-function ParseTextureType(const TypeStr: string; Default: TTextureType): TTextureType;
+function TextureTypeToStr(TexType: TTextureType): AnsiString;
+function ParseTextureType(const TypeStr: AnsiString; Default: TTextureType): TTextureType;
 
 procedure AdjustPixelFormat(var TexSurface: PSDL_Surface; Typ: TTextureType);
 
@@ -122,7 +122,7 @@ type
       function LoadTexture(FromRegistry: boolean; const Identifier: IPath; Typ: TTextureType; Col: LongWord): TTexture; overload;
       function LoadTexture(const Identifier: IPath; Typ: TTextureType; Col: LongWord): TTexture; overload;
       function LoadTexture(const Identifier: IPath): TTexture; overload;
-      function CreateTexture(Data: PChar; const Name: IPath; Width, Height: word; BitsPerPixel: byte): TTexture;
+      function CreateTexture(Data: PAnsiChar; const Name: IPath; Width, Height: word; BitsPerPixel: byte): TTexture;
       procedure UnloadTexture(const Name: IPath; Typ: TTextureType; FromCache: boolean); overload;
       procedure UnloadTexture(const Name: IPath; Typ: TTextureType; Col: cardinal; FromCache: boolean); overload;
       //procedure FlushTextureDatabase();
@@ -414,7 +414,7 @@ begin
   Result := TextureDatabase.Texture[TextureIndex].Texture;
 end;
 
-function TTextureUnit.CreateTexture(Data: PChar; const Name: IPath; Width, Height: word; BitsPerPixel: byte): TTexture;
+function TTextureUnit.CreateTexture(Data: PAnsiChar; const Name: IPath; Width, Height: word; BitsPerPixel: byte): TTexture;
 var
   //Error:     integer;
   ActTex:    GLuint;
@@ -521,15 +521,15 @@ begin
 end;
 *)
 
-function TextureTypeToStr(TexType: TTextureType): string;
+function TextureTypeToStr(TexType: TTextureType): AnsiString;
 begin
   Result := TextureTypeStr[TexType];
 end;
 
-function ParseTextureType(const TypeStr: string; Default: TTextureType): TTextureType;
+function ParseTextureType(const TypeStr: AnsiString; Default: TTextureType): TTextureType;
 var
   TextureType:   TTextureType;
-  UpCaseStr: string;
+  UpCaseStr: AnsiString;
 begin
   UpCaseStr := UpperCase(TypeStr);
   for TextureType := Low(TextureTypeStr) to High(TextureTypeStr) do

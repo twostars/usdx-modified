@@ -78,12 +78,12 @@ type
     // level of messages written to the log-file
     LogFileLevel: integer;
 
-    procedure LogToFile(const Text: string);
+    procedure LogToFile(const Text: AnsiString);
   public
     BenchmarkTimeStart:   array[0..31] of real;
     BenchmarkTimeLength:  array[0..31] of real;//TDateTime;
 
-    Title: String; //Application Title
+    Title: AnsiString; //Application Title
 
     // Write log message to log-file
     FileOutputEnabled: Boolean;
@@ -96,22 +96,22 @@ type
     // benchmark
     procedure BenchmarkStart(Number: integer);
     procedure BenchmarkEnd(Number: integer);
-    procedure LogBenchmark(const Text: string; Number: integer);
+    procedure LogBenchmark(const Text: AnsiString; Number: integer);
 
     procedure SetLogLevel(Level: integer);
     function GetLogLevel(): integer;
 
-    procedure LogMsg(const Text: string; Level: integer); overload;
-    procedure LogMsg(const Msg, Context: string; Level: integer); overload; {$IFDEF HasInline}inline;{$ENDIF}
-    procedure LogDebug(const Msg, Context: string); {$IFDEF HasInline}inline;{$ENDIF}
-    procedure LogInfo(const Msg, Context: string); {$IFDEF HasInline}inline;{$ENDIF}
-    procedure LogStatus(const Msg, Context: string); {$IFDEF HasInline}inline;{$ENDIF}
-    procedure LogWarn(const Msg, Context: string); {$IFDEF HasInline}inline;{$ENDIF}
-    procedure LogError(const Text: string); overload; {$IFDEF HasInline}inline;{$ENDIF}
-    procedure LogError(const Msg, Context: string); overload; {$IFDEF HasInline}inline;{$ENDIF}
+    procedure LogMsg(const Text: AnsiString; Level: integer); overload;
+    procedure LogMsg(const Msg, Context: AnsiString; Level: integer); overload; {$IFDEF HasInline}inline;{$ENDIF}
+    procedure LogDebug(const Msg, Context: AnsiString); {$IFDEF HasInline}inline;{$ENDIF}
+    procedure LogInfo(const Msg, Context: AnsiString); {$IFDEF HasInline}inline;{$ENDIF}
+    procedure LogStatus(const Msg, Context: AnsiString); {$IFDEF HasInline}inline;{$ENDIF}
+    procedure LogWarn(const Msg, Context: AnsiString); {$IFDEF HasInline}inline;{$ENDIF}
+    procedure LogError(const Text: AnsiString); overload; {$IFDEF HasInline}inline;{$ENDIF}
+    procedure LogError(const Msg, Context: AnsiString); overload; {$IFDEF HasInline}inline;{$ENDIF}
     //Critical Error (Halt + MessageBox)
-    procedure LogCritical(const Msg, Context: string); {$IFDEF HasInline}inline;{$ENDIF}
-    procedure CriticalError(const Text: string); {$IFDEF HasInline}inline;{$ENDIF}
+    procedure LogCritical(const Msg, Context: AnsiString); {$IFDEF HasInline}inline;{$ENDIF}
+    procedure CriticalError(const Text: AnsiString); {$IFDEF HasInline}inline;{$ENDIF}
 
     // voice
     procedure LogVoice(SoundNr: integer);
@@ -119,7 +119,7 @@ type
     procedure LogBuffer(const buf : Pointer; const bufLength : Integer; const filename : IPath);
   end;
 
-procedure DebugWriteln(const aString: String);
+procedure DebugWriteln(const aString: AnsiString);
 
 var
   Log:    TLog;
@@ -141,7 +141,7 @@ uses
  * Write to console if in debug mode (Thread-safe).
  * If debug-mode is disabled nothing is done. 
  *)
-procedure DebugWriteln(const aString: string);
+procedure DebugWriteln(const aString: AnsiString);
 begin
   {$IFNDEF DEBUG}
   if Params.Debug then
@@ -183,7 +183,7 @@ begin
   BenchmarkTimeLength[Number] := USTime.GetTime {Time} - BenchmarkTimeStart[Number];
 end;
 
-procedure TLog.LogBenchmark(const Text: string; Number: integer);
+procedure TLog.LogBenchmark(const Text: AnsiString; Number: integer);
 var
   Minutes:      integer;
   Seconds:      integer;
@@ -191,7 +191,7 @@ var
 
   MinutesS:     string;
   SecondsS:     string;
-  MilisecondsS: string;
+  MilisecondsS: AnsiString;
 
   ValueText:    string;
 begin
@@ -268,7 +268,7 @@ begin
   end;
 end;
 
-procedure TLog.LogToFile(const Text: string);
+procedure TLog.LogToFile(const Text: AnsiString);
 begin
   if (FileOutputEnabled and not LogFileOpened) then
   begin
@@ -311,9 +311,9 @@ begin
   Result := LogLevel;
 end;
 
-procedure TLog.LogMsg(const Text: string; Level: integer);
+procedure TLog.LogMsg(const Text: AnsiString; Level: integer);
 var
-  LogMsg: string;
+  LogMsg: AnsiString;
 begin
   // TODO: what if (LogFileLevel < LogLevel)? Log to file without printing to
   //  console or do not log at all? At the moment nothing is logged.
@@ -354,47 +354,47 @@ begin
   end;
 end;
 
-procedure TLog.LogMsg(const Msg, Context: string; Level: integer);
+procedure TLog.LogMsg(const Msg, Context: AnsiString; Level: integer);
 begin
   LogMsg(Msg + ' ['+Context+']', Level);
 end;
 
-procedure TLog.LogDebug(const Msg, Context: string);
+procedure TLog.LogDebug(const Msg, Context: AnsiString);
 begin
   LogMsg(Msg, Context, LOG_LEVEL_DEBUG);
 end;
 
-procedure TLog.LogInfo(const Msg, Context: string);
+procedure TLog.LogInfo(const Msg, Context: AnsiString);
 begin
   LogMsg(Msg, Context, LOG_LEVEL_INFO);
 end;
 
-procedure TLog.LogStatus(const Msg, Context: string);
+procedure TLog.LogStatus(const Msg, Context: AnsiString);
 begin
   LogMsg(Msg, Context, LOG_LEVEL_STATUS);
 end;
 
-procedure TLog.LogWarn(const Msg, Context: string);
+procedure TLog.LogWarn(const Msg, Context: AnsiString);
 begin
   LogMsg(Msg, Context, LOG_LEVEL_WARN);
 end;
 
-procedure TLog.LogError(const Msg, Context: string);
+procedure TLog.LogError(const Msg, Context: AnsiString);
 begin
   LogMsg(Msg, Context, LOG_LEVEL_ERROR);
 end;
 
-procedure TLog.LogError(const Text: string);
+procedure TLog.LogError(const Text: AnsiString);
 begin
   LogMsg(Text, LOG_LEVEL_ERROR);
 end;
 
-procedure TLog.CriticalError(const Text: string);
+procedure TLog.CriticalError(const Text: AnsiString);
 begin
   LogMsg(Text, LOG_LEVEL_CRITICAL);
 end;
 
-procedure TLog.LogCritical(const Msg, Context: string);
+procedure TLog.LogCritical(const Msg, Context: AnsiString);
 begin
   LogMsg(Msg, Context, LOG_LEVEL_CRITICAL);
 end;
@@ -425,7 +425,7 @@ type
 procedure TLog.LogVoice(SoundNr: integer);
 var
   Stream: TBinaryFileStream;
-  Prefix: string;
+  Prefix: AnsiString;
   FileName: IPath;
   Num: integer;
   CaptureBuffer: TCaptureBuffer;
@@ -435,7 +435,7 @@ var
   WaveFmt: TWaveFmtChunk;
   DataChunk: TRiffChunk;
   UseWavFile: boolean;
-  FileExt: string;
+  FileExt: AnsiString;
 const
   Channels = 1;
   SampleRate = 44100;

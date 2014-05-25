@@ -1524,7 +1524,7 @@ begin
   fSize := Size;
 
   // load font information
-  if (FT_New_Face(TFreeType.GetLibrary(), PChar(Filename.ToNative), 0, fFace) <> 0) then
+  if (FT_New_Face(TFreeType.GetLibrary(), PAnsiChar(Filename.ToNative), 0, fFace) <> 0) then
     raise EFontError.Create('FT_New_Face: Could not load font '''  + Filename.ToNative + '''');
 
   // support scalable fonts only

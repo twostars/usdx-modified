@@ -39,7 +39,7 @@ uses
   ULua;
 
 function luaopen_gl (L: Plua_State): Integer; cdecl;
-function ULuaGl_StringToEnum(Str: String): GLenum;
+function ULuaGl_StringToEnum(Str: AnsiString): GLenum;
 
 { lua lib functions }
 function ULuaGl_Begin(L: Plua_State): Integer; cdecl;
@@ -762,7 +762,7 @@ end;
   glGetPixelMapusv: procedure(map: GLenum; values: PGLushort); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glGetPointerv: procedure(pname: GLenum; params: Pointer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glGetPolygonStipple: procedure(mask: PGLubyte); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
-/  glGetString: function(name: GLenum): PChar; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+/  glGetString: function(name: GLenum): PAnsiChar; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glGetTexEnvfv: procedure(target, pname: GLenum; params: PGLfloat); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glGetTexEnviv: procedure(target, pname: GLenum; params: PGLint); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glGetTexGendv: procedure(coord, pname: GLenum; params: PGLdouble); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
@@ -1467,8 +1467,8 @@ end;
     (Text: 'GL_COLOR_INDEX16_EXT'; Value: GL_COLOR_INDEX16_EXT)
    );
 
-function ULuaGl_StringToEnum(Str: String): GLenum;
-  function GetEnum(const Str: String): GLenum;
+function ULuaGl_StringToEnum(Str: AnsiString): GLenum;
+  function GetEnum(const Str: AnsiString): GLenum;
   var
     i : Integer;
   begin

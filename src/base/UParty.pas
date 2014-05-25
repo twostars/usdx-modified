@@ -65,7 +65,7 @@ type
   end;
 
   TParty_ModeInfo = record
-    Name: String; // name of this mode
+    Name: AnsiString; // name of this mode
     Parent: Integer;   // Id of owning plugin
 
     CanNonParty: Boolean; //< is playable when not in party mode
@@ -80,18 +80,18 @@ type
 
 
     Functions: record // lua functions that will be called at specific events
-      BeforeSongSelect: String; // default actions are executed if functions = nil
-      AfterSongSelect: String;
+      BeforeSongSelect: AnsiString; // default actions are executed if functions = nil
+      AfterSongSelect: AnsiString;
 
-      BeforeSing: String;
-      OnSing: String;
-      AfterSing: String;
+      BeforeSing: AnsiString;
+      OnSing: AnsiString;
+      AfterSing: AnsiString;
     end;
   end;
 
   { used by TPartyGame to store player specific data }
   TParty_PlayerInfo = record
-    Name: String;         //< Playername
+    Name: AnsiString;         //< Playername
     TimesPlayed: Integer; //< How often this Player has Sung
   end;
 
@@ -122,7 +122,7 @@ type
     { returns true if a mode is playable with current playerconfig }
     function ModePlayable(I: integer): boolean;
 
-    function CallLua(Parent: Integer; Func: String):Boolean;
+    function CallLua(Parent: Integer; Func: AnsiString):Boolean;
 
     procedure SetRankingByScore;
   public
@@ -158,11 +158,11 @@ type
 
     { adds a team to the team array, returning its id
       can only be called when game is not already started }
-    function AddTeam(Name: String): Integer;
+    function AddTeam(Name: AnsiString): Integer;
 
     { adds a player to the player array, returning its id
       can only be called when game is not already started }
-    function AddPlayer(Team: Integer; Name: String): Integer;
+    function AddPlayer(Team: Integer; Name: AnsiString): Integer;
 
     { starts a new PartyGame, returns true on success
       before a call of this function teams and players
@@ -430,7 +430,7 @@ end;
 function TPartyGame.RegisterMode(Info: TParty_ModeInfo): Boolean;
   var
     Len: integer;
-    LowerName: String;
+    LowerName: AnsiString;
     I: integer;
 begin
   Result := false;
@@ -527,7 +527,7 @@ end;
 
 { adds a team to the team array, returning its id
   can only be called when game is not already started }
-function TPartyGame.AddTeam(Name: String): Integer;
+function TPartyGame.AddTeam(Name: AnsiString): Integer;
 begin
   Result := -1;
   if (not bPartyStarted) and (Length(Name) > 0) and (Length(Teams) < Party_Teams_Max) then
@@ -544,7 +544,7 @@ end;
 
 { adds a player to the player array, returning its id
   can only be called when game is not already started }
-function TPartyGame.AddPlayer(Team: Integer; Name: String): Integer;
+function TPartyGame.AddPlayer(Team: Integer; Name: AnsiString): Integer;
 begin
   Result := -1;
 
@@ -784,7 +784,7 @@ end;
            return true if default function should be called
            (function or plugin does not exist, or function returns
            true) }
-function TPartyGame.CallLua(Parent: Integer; Func: String):Boolean;
+function TPartyGame.CallLua(Parent: Integer; Func: AnsiString):Boolean;
   var
     P: TLuaPlugin;
 begin

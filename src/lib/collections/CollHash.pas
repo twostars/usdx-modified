@@ -164,8 +164,8 @@ type
         procedure SetTableSize(Value: Integer); virtual;
         procedure ChangeCapacity(Value: TListArray); virtual;
         procedure CheckLoadFactor(AlwaysChangeCapacity: Boolean); virtual;
-        function GetHash(const Key: String): Integer; virtual;
-        function GetKeyPosition(const Key: String): TCollectionPosition; override;
+        function GetHash(const Key: AnsiString): Integer; virtual;
+        function GetKeyPosition(const Key: AnsiString): TCollectionPosition; override;
         procedure Rehash;
         procedure TrueClear; override;
         function TrueGet(Position: TCollectionPosition): IStringAssociation; override;
@@ -1053,7 +1053,7 @@ begin
         ChangeCapacity(FArray);
 end;
 
-function THashStringMap.GetHash(const Key: String): Integer;
+function THashStringMap.GetHash(const Key: AnsiString): Integer;
 var
     HashCode: Cardinal;
     I: Integer;
@@ -1064,7 +1064,7 @@ begin
     Result := Trunc(Frac(HashCode * HashFactor) * TableSize);
 end;
 
-function THashStringMap.GetKeyPosition(const Key: String): TCollectionPosition;
+function THashStringMap.GetKeyPosition(const Key: AnsiString): TCollectionPosition;
 var
     Chain: TList;
     I: Integer;

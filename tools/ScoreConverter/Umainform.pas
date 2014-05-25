@@ -23,9 +23,9 @@ type
     lStatus: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure bDLoadClick(Sender: TObject);
-    function BrowseDialog (const Title: string; const Flag: integer): string;
+    function BrowseDialog (const Title: AnsiString; const Flag: integer): AnsiString;
     procedure bFLoadClick(Sender: TObject);
-    procedure UpdateLoadedSongs(Path: String; Count: integer);
+    procedure UpdateLoadedSongs(Path: AnsiString; Count: integer);
     procedure bToDBClick(Sender: TObject);
     procedure bFromDBClick(Sender: TObject);
   private
@@ -47,7 +47,7 @@ uses UScores;
 {$R *.dfm}
 
 function Tmainform.BrowseDialog
- (const Title: string; const Flag: integer): string;
+ (const Title: AnsiString; const Flag: integer): AnsiString;
 var
   lpItemID : PItemIDList;
   BrowseInfo : TBrowseInfo;
@@ -59,7 +59,7 @@ begin
   with BrowseInfo do begin
     hwndOwner := Application.Handle;
     pszDisplayName := @DisplayName;
-    lpszTitle := PChar(Title);
+    lpszTitle := PAnsiChar(Title);
     ulFlags := Flag;
   end;
   lpItemID := SHBrowseForFolder(BrowseInfo);
@@ -102,7 +102,7 @@ end;
 
 procedure Tmainform.bFLoadClick(Sender: TObject);
 var
-  Path: String;
+  Path: AnsiString;
 begin
   Path := BrowseDialog('Select UltraStar SongFolder', BIF_RETURNONLYFSDIRS);
 
@@ -125,7 +125,7 @@ begin
   bFromDB.Enabled := bToDB.Enabled;
 end;
 
-procedure Tmainform.UpdateLoadedSongs(Path: String; Count: integer);
+procedure Tmainform.UpdateLoadedSongs(Path: AnsiString; Count: integer);
 begin
   lFolder2.Caption := Inttostr(Count) + ' Songs loaded';
   lFolder.Caption := Path;
@@ -137,7 +137,7 @@ var
   I, J, K: Integer;
   LastI: integer;
 begin
-  if (Messagebox(0, PChar('If the same directory is added more than one time the Score-File will be useless. Contìnue ?'), PChar(Mainform.Caption), MB_ICONWARNING or MB_YESNO) = IDYes) then
+  if (Messagebox(0, PAnsiChar('If the same directory is added more than one time the Score-File will be useless. Contìnue ?'), PAnsiChar(Mainform.Caption), MB_ICONWARNING or MB_YESNO) = IDYes) then
   begin
     pProgress.Max := high(Songs.Song);
     pProgress.Position := 0;
@@ -185,7 +185,7 @@ var
   LastI: integer;
   anyScoreinthere: boolean;
 begin
-  if (Messagebox(0, PChar('All Score Entrys in the Song Directory having an equivalent will be Overwritten. Contìnue ?'), PChar(Mainform.Caption), MB_ICONWARNING or MB_YESNO) = IDYes) then
+  if (Messagebox(0, PAnsiChar('All Score Entrys in the Song Directory having an equivalent will be Overwritten. Contìnue ?'), PAnsiChar(Mainform.Caption), MB_ICONWARNING or MB_YESNO) = IDYes) then
   begin
     pProgress.Max := high(Songs.Song);
     pProgress.Position := 0;

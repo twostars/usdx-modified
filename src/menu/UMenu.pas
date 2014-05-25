@@ -78,8 +78,8 @@ type
 
       destructor Destroy; override;
       constructor Create; overload; virtual;
-      //constructor Create(Back: string); overload; virtual; // Back is a JPG resource name for background
-      //constructor Create(Back: string; W, H: integer); overload; virtual; // W and H are the number of overlaps
+      //constructor Create(Back: AnsiString); overload; virtual; // Back is a JPG resource name for background
+      //constructor Create(Back: AnsiString; W, H: integer); overload; virtual; // W and H are the number of overlaps
 
       // interaction
       procedure AddInteraction(Typ, Num: integer);
@@ -243,7 +243,7 @@ begin
   RightMbESC := true;
 end;
 {
-constructor TMenu.Create(Back: string);
+constructor TMenu.Create(Back: AnsiString);
 begin
   inherited Create;
 
@@ -263,7 +263,7 @@ begin
    ButtonPos := -1;
 end;
 
-constructor TMenu.Create(Back: string; W, H: integer);
+constructor TMenu.Create(Back: AnsiString; W, H: integer);
 begin
   Create(Back);
   BackImg.W := BackImg.W / W;
@@ -358,9 +358,9 @@ end;
 
 procedure TMenu.AddBackground(ThemedSettings: TThemeBackground);
   var
-    FileExt: string;
+    FileExt: AnsiString;
 
-  function IsInArray(const Piece: string; const A: array of string): boolean;
+  function IsInArray(const Piece: AnsiString; const A: array of string): boolean;
   var
     I: integer;
   begin

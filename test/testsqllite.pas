@@ -12,7 +12,7 @@ type
   TTest_SqlLite= class(TTestCase)
   private
     fSQLLite  : TSQLiteDatabase;
-    fFileName : string;
+    fFileName : AnsiString;
   protected
     procedure SetUp; override;
     procedure TearDown; override; 
@@ -35,7 +35,7 @@ end;
 
 procedure TTest_SqlLite.Test_Delete_NonExistant_Table;
 var
-  lSQL : String;
+  lSQL : AnsiString;
 begin
   deletefile( fFileName );
   fSQLLite  := TSQLiteDatabase.Create( fFileName );
@@ -51,7 +51,7 @@ end;
 
 procedure TTest_SqlLite.Test_TableExists_On_0Length_File;
 var
-  lSQL : String;
+  lSQL : AnsiString;
 begin
   deletefile( fFileName );
   shell('cat /dev/null > '+fFileName);

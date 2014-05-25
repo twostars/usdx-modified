@@ -163,7 +163,7 @@ type
         len: cuint;      //** length so far */
         size: cuint;     //** allocated memory */
         size_max: cuint; //** maximum allocated memory */
-        reserved_internal_buffer: Pchar;	
+        reserved_internal_buffer: PAnsiChar;	
 	end;
   end;
 

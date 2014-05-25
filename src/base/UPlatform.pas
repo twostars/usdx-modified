@@ -47,7 +47,7 @@ type
     function GetExecutionDir(): IPath;
     procedure Init; virtual;
 
-    function TerminateIfAlreadyRunning(var WndTitle: string): boolean; virtual;
+    function TerminateIfAlreadyRunning(var WndTitle: AnsiString): boolean; virtual;
     procedure Halt; virtual;
 
     function GetLogPath:        IPath; virtual; abstract;
@@ -116,7 +116,7 @@ end;
 (**
  * Default TerminateIfAlreadyRunning() implementation
  *)
-function TPlatform.TerminateIfAlreadyRunning(var WndTitle: string): boolean;
+function TPlatform.TerminateIfAlreadyRunning(var WndTitle: AnsiString): boolean;
 begin
   Result := false;
 end;

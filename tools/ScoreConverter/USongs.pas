@@ -24,7 +24,7 @@ type
     Song:       array of TSong; // array of songs
 
     function  ReadHeader(var rSong: TSong): boolean;
-    procedure BrowseDir(Dir: string); // Browse a dir + subdirs for songfiles
+    procedure BrowseDir(Dir: AnsiString); // Browse a dir + subdirs for songfiles
   end;
 
   var Songs: TSongs;
@@ -34,7 +34,7 @@ uses Sysutils, UMainForm, Dialogs;
 
 function TSongs.ReadHeader(var rSong: TSong): boolean;
 var
-  Line, Identifier, Value: String;
+  Line, Identifier, Value: AnsiString;
   Temp: word;
   Done: byte;
   SongFile: Textfile;
@@ -122,7 +122,7 @@ begin
   CloseFile(SongFile);
 end;
 
-procedure TSongs.BrowseDir(Dir: string);
+procedure TSongs.BrowseDir(Dir: AnsiString);
 var
   SR:     TSearchRec;   // for parsing Songs Directory
   SLen:   integer;

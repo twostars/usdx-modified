@@ -81,10 +81,10 @@ type
   TBackgroundMusicOption = (bmoOff, bmoOn);
   TIni = class
     private
-      function ExtractKeyIndex(const Key, Prefix, Suffix: string): integer;
-      function GetMaxKeyIndex(Keys: TStringList; const Prefix, Suffix: string): integer;
+      function ExtractKeyIndex(const Key, Prefix, Suffix: AnsiString): integer;
+      function GetMaxKeyIndex(Keys: TStringList; const Prefix, Suffix: AnsiString): integer;
       function ReadArrayIndex(const SearchArray: array of UTF8String; IniFile: TCustomIniFile;
-          IniSection: string; IniProperty: string; Default: integer): integer;
+          IniSection: AnsiString; IniProperty: AnsiString; Default: integer): integer;
 
       procedure TranslateOptionValues;
       procedure LoadInputDeviceCfg(IniFile: TMemIniFile);
@@ -567,9 +567,9 @@ end;
  * Extracts an index of a key that is surrounded by a Prefix/Suffix pair.
  * Example: ExtractKeyIndex('MyKey[1]', '[', ']') will return 1.
  *)
-function TIni.ExtractKeyIndex(const Key, Prefix, Suffix: string): integer;
+function TIni.ExtractKeyIndex(const Key, Prefix, Suffix: AnsiString): integer;
 var
-  Value: string;
+  Value: AnsiString;
   Start: integer;
   PrefixPos, SuffixPos: integer;
 begin
@@ -594,7 +594,7 @@ end;
  * The indexes of the list are surrounded by Prefix/Suffix,
  * e.g. MyKey[1] (Prefix='[', Suffix=']')
  *)
-function TIni.GetMaxKeyIndex(Keys: TStringList; const Prefix, Suffix: string): integer;
+function TIni.GetMaxKeyIndex(Keys: TStringList; const Prefix, Suffix: AnsiString): integer;
 var
   i:        integer;
   KeyIndex: integer;
@@ -616,9 +616,9 @@ end;
  * returned.
  *)
 function TIni.ReadArrayIndex(const SearchArray: array of UTF8String; IniFile: TCustomIniFile;
-    IniSection: string; IniProperty: string; Default: integer): integer;
+    IniSection: AnsiString; IniProperty: AnsiString; Default: integer): integer;
 var
-  StrValue: string;
+  StrValue: AnsiString;
 begin
   StrValue := IniFile.ReadString(IniSection, IniProperty, SearchArray[Default]);
   Result := GetArrayIndex(SearchArray, StrValue);
@@ -772,7 +772,7 @@ procedure TIni.LoadScreenModes(IniFile: TCustomIniFile);
   // swap two strings
   procedure swap(var s1, s2: UTF8String);
   var
-    s3: string;
+    s3: AnsiString;
   begin
     s3 := s1;
     s1 := s2;

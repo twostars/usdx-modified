@@ -343,7 +343,7 @@ type
 type
   IGenericPlayback = Interface
   ['{63A5EBC3-3F4D-4F23-8DFB-B5165FCE33DD}']
-      function GetName: String;
+      function GetName: AnsiString;
   end;
 
   IVideo = interface
@@ -471,10 +471,10 @@ type
 
   IGenericDecoder = Interface
   ['{557B0E9A-604D-47E4-B826-13769F3E10B7}']
-      function GetName(): string;
+      function GetName(): AnsiString;
       function InitializeDecoder(): boolean;
       function FinalizeDecoder(): boolean;
-      //function IsSupported(const Filename: string): boolean;
+      //function IsSupported(const Filename: AnsiString): boolean;
   end;
 
   (*
@@ -499,7 +499,7 @@ type
 
   IAudioInput = Interface
   ['{A5C8DA92-2A0C-4AB2-849B-2F7448C6003A}']
-      function GetName: String;
+      function GetName: AnsiString;
       function InitializeRecord: boolean;
       function FinalizeRecord(): boolean;
 

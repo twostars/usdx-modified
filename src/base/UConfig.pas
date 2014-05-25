@@ -203,22 +203,22 @@ const
                           (LIBSAMPLERATE_VERSION_RELEASE * VERSION_RELEASE);
   {$ENDIF}
 
-function USDXVersionStr(): string;
-function USDXShortVersionStr(): string;
+function USDXVersionStr(): AnsiString;
+function USDXShortVersionStr(): AnsiString;
 
 implementation
 
 uses
   StrUtils, Math;
 
-function USDXShortVersionStr(): string;
+function USDXShortVersionStr(): AnsiString;
 begin
   Result :=
     USDX_STRING +
     IfThen(USDX_VERSION_STATE <> '', ' '+USDX_VERSION_STATE);
 end;
 
-function USDXVersionStr(): string;
+function USDXVersionStr(): AnsiString;
 begin
   Result :=
     USDX_STRING + ' V ' +

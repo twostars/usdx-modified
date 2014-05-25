@@ -48,12 +48,12 @@ type
     fWindowHandle: THandle;
     fWatchThread: TWatchThread;
     fWatchSubDirs: boolean;
-    fDirectory: string;
+    fDirectory: AnsiString;
     fActive: boolean;
     fNotifyFilters: TNotifyFilters; //see FindFirstChangeNotification in winAPI
     fOnChangeEvent: TNotifyEvent;
     procedure SetActive(aActive: boolean);
-    procedure SetDirectory(aDir: string);
+    procedure SetDirectory(aDir: AnsiString);
     procedure SetWatchSubDirs(aWatchSubDirs: boolean);
     procedure SetNotifyFilters(aNotifyFilters: TNotifyFilters);
     procedure WndProc(var aMsg: TMessage);
@@ -61,7 +61,7 @@ type
     constructor Create(aOwner: TComponent); override;
     destructor Destroy; override;
   published
-    property Directory: string read fDirectory write SetDirectory;
+    property Directory: AnsiString read fDirectory write SetDirectory;
     property NotifyFilters: TNotifyFilters
       read fNotifyFilters write SetNotifyFilters;
     property WatchSubDirs: boolean read fWatchSubDirs write SetWatchSubDirs;
@@ -76,20 +76,20 @@ type
                              //the watched directory                           .
     fBreakEvent: THandle;    //Signals when either the Directory property      .
                              //changes or when the thread terminates           .
-    fDirectory: string;
+    fDirectory: AnsiString;
     fWatchSubDirs: longbool;
     fNotifyFilters: dword;
     fFinished: boolean;    
   protected
-    procedure SetDirectory(const Value: string);
+    procedure SetDirectory(const Value: AnsiString);
     procedure ProcessFilenameChanges;
     procedure Execute; override;
   public
     constructor Create( OwnerHdl: THandle;
-      const InitialDir: string; WatchSubDirs: boolean; NotifyFilters: dword);
+      const InitialDir: AnsiString; WatchSubDirs: boolean; NotifyFilters: dword);
     destructor Destroy; override;
     procedure Terminate;
-    property Directory: string write SetDirectory;
+    property Directory: AnsiString write SetDirectory;
   end;
 
 procedure Register;
@@ -112,11 +112,11 @@ begin
 end;
 //----------------------------------------------------------------------------
 
-function DirectoryExists(const Name: string): Boolean;
+function DirectoryExists(const Name: AnsiString): Boolean;
 var
   Code: Integer;
 begin
-  Code := GetFileAttributes(PChar(Name));
+  Code := GetFileAttributesA(PAnsiChar(Name));
   Result := (Code <> -1) and (FILE_ATTRIBUTE_DIRECTORY and Code <> 0);
 end;
 
@@ -181,7 +181,7 @@ begin
 end;
 //------------------------------------------------------------------------------
 
-procedure TDirectoryWatch.SetDirectory(aDir: string);
+procedure TDirectoryWatch.SetDirectory(aDir: AnsiString);
 begin
   if aDir = '' then
   begin
@@ -240,7 +240,7 @@ end;
 //----------------------------------------------------------------------------
 
 constructor TWatchThread.Create(OwnerHdl: THandle;
-  const InitialDir: string; WatchSubDirs: boolean; NotifyFilters: dword);
+  const InitialDir: AnsiString; WatchSubDirs: boolean; NotifyFilters: dword);
 begin
   inherited Create(True);       
   fOwnerHdl := OwnerHdl;
@@ -264,7 +264,7 @@ begin
 end;
 //------------------------------------------------------------------------------
 
-procedure TWatchThread.SetDirectory(const Value: string);
+procedure TWatchThread.SetDirectory(const Value: AnsiString);
 begin
   if (Value = FDirectory) then exit;
   FDirectory := Value;
@@ -286,7 +286,7 @@ begin
   //OUTER LOOP - manages Directory property reassignments
   while (not Terminated) do
   begin
-    fChangeNotify := FindFirstChangeNotification(pchar(fDirectory),
+    fChangeNotify := FindFirstChangeNotificationA(PAnsiChar(fDirectory),
       fWatchSubDirs, fNotifyFilters);
     if (fChangeNotify = INVALID_HANDLE_VALUE) then
       //Can't monitor the specified directory so we'll just wait for

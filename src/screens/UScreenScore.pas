@@ -339,7 +339,7 @@ procedure TScreenScore.LoadSwapTextures;
   var
     P, I: integer;
     PlayerNum, PlayerNum2: integer;
-    Color: string;
+    Color: AnsiString;
     R, G, B: real;
     StaticNum: integer;
     ThemeStatic: TThemeStatic;
@@ -389,7 +389,7 @@ begin
         begin
           // get the color
           Color := Theme.Score.PlayerStatic[P, I].Color;
-          Color[2] := IntToStr(PlayerNum2)[1];
+          Color[2] := AnsiString(IntToStr(PlayerNum2))[1];
           LoadColor(R, G, B, Color);
 
           with Theme.Score.PlayerStatic[P, I] do
@@ -457,7 +457,7 @@ begin
         begin
           // get the color
           Color := ThemeStatic.Color;
-          Color[2] := IntToStr(PlayerNum2)[1];
+          Color[2] := AnsiString(IntToStr(PlayerNum2))[1];
           LoadColor(R, G, B, Color);
 
           with ThemeStatic do

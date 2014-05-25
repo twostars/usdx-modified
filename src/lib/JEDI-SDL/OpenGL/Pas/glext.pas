@@ -55,7 +55,7 @@ unit glext;
 
 interface
 
-{$I jedi-sdl.inc}
+{$I ../../SDL/Pas/jedi-sdl.inc}
 
 uses
   SysUtils,
@@ -70,10 +70,10 @@ uses
   gl;
 
 // Test if the given extension name is present in the given extension string.
-function glext_ExtensionSupported(const extension: PChar; const searchIn: PChar): Boolean;
+function glext_ExtensionSupported(const extension: PAnsiChar; const searchIn: PAnsiChar): Boolean;
 
 // Load a Specific Extension
-function glext_LoadExtension(ext: String): Boolean;
+function glext_LoadExtension(ext: AnsiString): Boolean;
 // Some types that were introduced by extensions:
 type
   GLintptrARB = Integer;
@@ -527,7 +527,7 @@ function Load_GL_ARB_texture_env_add: Boolean;
 {$IFDEF WINDOWS}
 //***** WGL_ARB_extensions_string *****//
 var
-  wglGetExtensionsStringARB: function(hdc: HDC): Pchar; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  wglGetExtensionsStringARB: function(hdc: HDC): PAnsiChar; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
 
 function Load_WGL_ARB_extensions_string: Boolean;
 
@@ -2937,7 +2937,7 @@ function Load_WGL_ARB_render_texture: Boolean;
 
 //***** WGL_EXT_extensions_string *****//
 var
-  wglGetExtensionsStringEXT: function(): Pchar; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  wglGetExtensionsStringEXT: function(): PAnsiChar; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
 
 function Load_WGL_EXT_extensions_string: Boolean;
 
@@ -4273,11 +4273,11 @@ implementation
 uses
   sdl;
 
-function glext_ExtensionSupported(const extension: PChar; const searchIn: PChar): Boolean;
+function glext_ExtensionSupported(const extension: PAnsiChar; const searchIn: PAnsiChar): Boolean;
 var
-  extensions: PChar;
-  start: PChar;
-  where, terminator: PChar;
+  extensions: PAnsiChar;
+  start: PAnsiChar;
+  where, terminator: PAnsiChar;
 begin
 
   if (Pos(' ', extension) <> 0) or (extension = '') then
@@ -4314,7 +4314,7 @@ end;
 
 function Load_GL_version_1_2: Boolean;
 {var
-  extstring : PChar;}
+  extstring : PAnsiChar;}
 begin
 
   Result := FALSE;
@@ -4335,7 +4335,7 @@ end;
 
 function Load_GL_ARB_imaging: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4418,7 +4418,7 @@ end;
 
 function Load_GL_version_1_3: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4522,7 +4522,7 @@ end;
 
 function Load_GL_ARB_multitexture: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4605,7 +4605,7 @@ end;
 
 function Load_GL_ARB_transpose_matrix: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4628,7 +4628,7 @@ end;
 
 function Load_GL_ARB_multisample: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4645,7 +4645,7 @@ end;
 
 function Load_GL_ARB_texture_env_add: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4661,7 +4661,7 @@ end;
 {$IFDEF WINDOWS}
 function Load_WGL_ARB_extensions_string: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4680,7 +4680,7 @@ end;
 
 function Load_WGL_ARB_buffer_region: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4706,7 +4706,7 @@ end;
 
 function Load_GL_ARB_texture_cube_map: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4721,7 +4721,7 @@ end;
 
 function Load_GL_ARB_depth_texture: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4736,7 +4736,7 @@ end;
 
 function Load_GL_ARB_point_parameters: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4755,7 +4755,7 @@ end;
 
 function Load_GL_ARB_shadow: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4770,7 +4770,7 @@ end;
 
 function Load_GL_ARB_shadow_ambient: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4785,7 +4785,7 @@ end;
 
 function Load_GL_ARB_texture_border_clamp: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4800,7 +4800,7 @@ end;
 
 function Load_GL_ARB_texture_compression: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4829,7 +4829,7 @@ end;
 
 function Load_GL_ARB_texture_env_combine: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4844,7 +4844,7 @@ end;
 
 function Load_GL_ARB_texture_env_crossbar: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4859,7 +4859,7 @@ end;
 
 function Load_GL_ARB_texture_env_dot3: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4874,7 +4874,7 @@ end;
 
 function Load_GL_ARB_texture_mirrored_repeat: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4889,7 +4889,7 @@ end;
 
 function Load_GL_ARB_vertex_blend: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -4926,7 +4926,7 @@ end;
 
 function Load_GL_ARB_vertex_program: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5065,7 +5065,7 @@ end;
 
 function Load_GL_ARB_window_pos: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5112,7 +5112,7 @@ end;
 
 function Load_GL_EXT_422_pixels: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5127,7 +5127,7 @@ end;
 
 function Load_GL_EXT_abgr: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5142,7 +5142,7 @@ end;
 
 function Load_GL_EXT_bgra: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5157,7 +5157,7 @@ end;
 
 function Load_GL_EXT_blend_color: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5174,7 +5174,7 @@ end;
 
 function Load_GL_EXT_blend_func_separate: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5191,7 +5191,7 @@ end;
 
 function Load_GL_EXT_blend_logic_op: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5206,7 +5206,7 @@ end;
 
 function Load_GL_EXT_blend_minmax: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5223,7 +5223,7 @@ end;
 
 function Load_GL_EXT_blend_subtract: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5238,7 +5238,7 @@ end;
 
 function Load_GL_EXT_clip_volume_hint: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5253,7 +5253,7 @@ end;
 
 function Load_GL_EXT_color_subtable: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5272,7 +5272,7 @@ end;
 
 function Load_GL_EXT_compiled_vertex_array: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5291,7 +5291,7 @@ end;
 
 function Load_GL_EXT_convolution: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5332,7 +5332,7 @@ end;
 
 function Load_GL_EXT_histogram: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5367,7 +5367,7 @@ end;
 
 function Load_GL_EXT_multi_draw_arrays: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5386,7 +5386,7 @@ end;
 
 function Load_GL_EXT_packed_pixels: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5401,7 +5401,7 @@ end;
 
 function Load_GL_EXT_paletted_texture: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5426,7 +5426,7 @@ end;
 
 function Load_GL_EXT_point_parameters: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5445,7 +5445,7 @@ end;
 
 function Load_GL_EXT_polygon_offset: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5462,7 +5462,7 @@ end;
 
 function Load_GL_EXT_separate_specular_color: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5477,7 +5477,7 @@ end;
 
 function Load_GL_EXT_shadow_funcs: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5492,7 +5492,7 @@ end;
 
 function Load_GL_EXT_shared_texture_palette: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5507,7 +5507,7 @@ end;
 
 function Load_GL_EXT_stencil_two_side: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5524,7 +5524,7 @@ end;
 
 function Load_GL_EXT_stencil_wrap: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5539,7 +5539,7 @@ end;
 
 function Load_GL_EXT_subtexture: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5560,7 +5560,7 @@ end;
 
 function Load_GL_EXT_texture3D: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5577,7 +5577,7 @@ end;
 
 function Load_GL_EXT_texture_compression_s3tc: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5592,7 +5592,7 @@ end;
 
 function Load_GL_EXT_texture_env_add: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5607,7 +5607,7 @@ end;
 
 function Load_GL_EXT_texture_env_combine: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5622,7 +5622,7 @@ end;
 
 function Load_GL_EXT_texture_env_dot3: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5637,7 +5637,7 @@ end;
 
 function Load_GL_EXT_texture_filter_anisotropic: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5652,7 +5652,7 @@ end;
 
 function Load_GL_EXT_texture_lod_bias: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5667,7 +5667,7 @@ end;
 
 function Load_GL_EXT_texture_object: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5694,7 +5694,7 @@ end;
 
 function Load_GL_EXT_vertex_array: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5727,7 +5727,7 @@ end;
 
 function Load_GL_EXT_vertex_shader: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5826,7 +5826,7 @@ end;
 
 function Load_GL_EXT_vertex_weighting: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5847,7 +5847,7 @@ end;
 
 function Load_GL_HP_occlusion_test: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5862,7 +5862,7 @@ end;
 
 function Load_GL_NV_blend_square: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5877,7 +5877,7 @@ end;
 
 function Load_GL_NV_copy_depth_to_color: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5892,7 +5892,7 @@ end;
 
 function Load_GL_NV_depth_clamp: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5907,7 +5907,7 @@ end;
 
 function Load_GL_NV_evaluators: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5940,7 +5940,7 @@ end;
 
 function Load_GL_NV_fence: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5969,7 +5969,7 @@ end;
 
 function Load_GL_NV_fog_distance: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5984,7 +5984,7 @@ end;
 
 function Load_GL_NV_light_max_exponent: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -5999,7 +5999,7 @@ end;
 
 function Load_GL_NV_multisample_filter_hint: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6014,7 +6014,7 @@ end;
 
 function Load_GL_NV_occlusion_query: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6043,7 +6043,7 @@ end;
 
 function Load_GL_NV_packed_depth_stencil: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6058,7 +6058,7 @@ end;
 
 function Load_GL_NV_point_sprite: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6077,7 +6077,7 @@ end;
 
 function Load_GL_NV_register_combiners: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6118,7 +6118,7 @@ end;
 
 function Load_GL_NV_register_combiners2: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6137,7 +6137,7 @@ end;
 
 function Load_GL_NV_texgen_emboss: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6152,7 +6152,7 @@ end;
 
 function Load_GL_NV_texgen_reflection: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6167,7 +6167,7 @@ end;
 
 function Load_GL_NV_texture_compression_vtc: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6182,7 +6182,7 @@ end;
 
 function Load_GL_NV_texture_env_combine4: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6197,7 +6197,7 @@ end;
 
 function Load_GL_NV_texture_rectangle: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6212,7 +6212,7 @@ end;
 
 function Load_GL_NV_texture_shader: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6227,7 +6227,7 @@ end;
 
 function Load_GL_NV_texture_shader2: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6242,7 +6242,7 @@ end;
 
 function Load_GL_NV_texture_shader3: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6257,7 +6257,7 @@ end;
 
 function Load_GL_NV_vertex_array_range: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6282,7 +6282,7 @@ end;
 
 function Load_GL_NV_vertex_array_range2: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6297,7 +6297,7 @@ end;
 
 function Load_GL_NV_vertex_program: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6436,7 +6436,7 @@ end;
 
 function Load_GL_NV_vertex_program1_1: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6451,7 +6451,7 @@ end;
 
 function Load_GL_ATI_element_array: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6472,7 +6472,7 @@ end;
 
 function Load_GL_ATI_envmap_bumpmap: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6495,7 +6495,7 @@ end;
 
 function Load_GL_ATI_fragment_shader: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6538,7 +6538,7 @@ end;
 
 function Load_GL_ATI_pn_triangles: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6557,7 +6557,7 @@ end;
 
 function Load_GL_ATI_texture_mirror_once: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6572,7 +6572,7 @@ end;
 
 function Load_GL_ATI_vertex_array_object: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6611,7 +6611,7 @@ end;
 
 function Load_GL_ATI_vertex_streams: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6717,7 +6717,7 @@ end;
 {$IFDEF WINDOWS}
 function Load_WGL_I3D_image_buffer: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6742,7 +6742,7 @@ end;
 
 function Load_WGL_I3D_swap_frame_lock: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6767,7 +6767,7 @@ end;
 
 function Load_WGL_I3D_swap_frame_usage: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6793,7 +6793,7 @@ end;
 
 function Load_GL_3DFX_texture_compression_FXT1: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6808,7 +6808,7 @@ end;
 
 function Load_GL_IBM_cull_vertex: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6823,7 +6823,7 @@ end;
 
 function Load_GL_IBM_multimode_draw_arrays: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6842,7 +6842,7 @@ end;
 
 function Load_GL_IBM_raster_pos_clip: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6857,7 +6857,7 @@ end;
 
 function Load_GL_IBM_texture_mirrored_repeat: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6872,7 +6872,7 @@ end;
 
 function Load_GL_IBM_vertex_array_lists: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6901,7 +6901,7 @@ end;
 
 function Load_GL_MESA_resize_buffers: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6918,7 +6918,7 @@ end;
 
 function Load_GL_MESA_window_pos: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6981,7 +6981,7 @@ end;
 
 function Load_GL_OML_interlace: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -6996,7 +6996,7 @@ end;
 
 function Load_GL_OML_resample: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7011,7 +7011,7 @@ end;
 
 function Load_GL_OML_subsample: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7026,7 +7026,7 @@ end;
 
 function Load_GL_SGIS_generate_mipmap: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7041,7 +7041,7 @@ end;
 
 function Load_GL_SGIS_multisample: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7060,7 +7060,7 @@ end;
 
 function Load_GL_SGIS_pixel_texture: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7083,7 +7083,7 @@ end;
 
 function Load_GL_SGIS_texture_border_clamp: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7098,7 +7098,7 @@ end;
 
 function Load_GL_SGIS_texture_color_mask: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7115,7 +7115,7 @@ end;
 
 function Load_GL_SGIS_texture_edge_clamp: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7130,7 +7130,7 @@ end;
 
 function Load_GL_SGIS_texture_lod: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7145,7 +7145,7 @@ end;
 
 function Load_GL_SGIS_depth_texture: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7160,7 +7160,7 @@ end;
 
 function Load_GL_SGIX_fog_offset: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7175,7 +7175,7 @@ end;
 
 function Load_GL_SGIX_interlace: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7190,7 +7190,7 @@ end;
 
 function Load_GL_SGIX_shadow_ambient: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7205,7 +7205,7 @@ end;
 
 function Load_GL_SGI_color_matrix: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7220,7 +7220,7 @@ end;
 
 function Load_GL_SGI_color_table: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7249,7 +7249,7 @@ end;
 
 function Load_GL_SGI_texture_color_table: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7264,7 +7264,7 @@ end;
 
 function Load_GL_SUN_vertex: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7359,7 +7359,7 @@ end;
 
 function Load_GL_ARB_fragment_program: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7412,7 +7412,7 @@ end;
 
 function Load_GL_ATI_text_fragment_shader: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7427,7 +7427,7 @@ end;
 
 function Load_GL_APPLE_client_storage: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7442,7 +7442,7 @@ end;
 
 function Load_GL_APPLE_element_array: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7467,7 +7467,7 @@ end;
 
 function Load_GL_APPLE_fence: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7498,7 +7498,7 @@ end;
 
 function Load_GL_APPLE_vertex_array_object: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7521,7 +7521,7 @@ end;
 
 function Load_GL_APPLE_vertex_array_range: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7543,7 +7543,7 @@ end;
 {$IFDEF WINDOWS}
 function Load_WGL_ARB_pixel_format: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7566,7 +7566,7 @@ end;
 
 function Load_WGL_ARB_make_current_read: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7587,7 +7587,7 @@ end;
 
 function Load_WGL_ARB_pbuffer: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7614,7 +7614,7 @@ end;
 
 function Load_WGL_EXT_swap_control: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7635,7 +7635,7 @@ end;
 
 function Load_WGL_ARB_render_texture: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7658,7 +7658,7 @@ end;
 
 function Load_WGL_EXT_extensions_string: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7677,7 +7677,7 @@ end;
 
 function Load_WGL_EXT_make_current_read: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7698,7 +7698,7 @@ end;
 
 function Load_WGL_EXT_pbuffer: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7725,7 +7725,7 @@ end;
 
 function Load_WGL_EXT_pixel_format: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7748,7 +7748,7 @@ end;
 
 function Load_WGL_I3D_digital_video_control: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7769,7 +7769,7 @@ end;
 
 function Load_WGL_I3D_gamma: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7794,7 +7794,7 @@ end;
 
 function Load_WGL_I3D_genlock: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7836,7 +7836,7 @@ end;
 
 function Load_GL_ARB_matrix_palette: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7861,7 +7861,7 @@ end;
 
 function Load_GL_NV_element_array: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7886,7 +7886,7 @@ end;
 
 function Load_GL_NV_float_buffer: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7901,7 +7901,7 @@ end;
 
 function Load_GL_NV_fragment_program: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7936,7 +7936,7 @@ end;
 
 function Load_GL_NV_primitive_restart: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7955,7 +7955,7 @@ end;
 
 function Load_GL_NV_vertex_program2: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7971,7 +7971,7 @@ end;
 {$IFDEF WINDOWS}
 function Load_WGL_NV_render_texture_rectangle: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -7989,7 +7989,7 @@ end;
 
 function Load_GL_NV_pixel_data_range: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8014,7 +8014,7 @@ end;
 
 function Load_GL_EXT_texture_rectangle: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8029,7 +8029,7 @@ end;
 
 function Load_GL_S3_s3tc: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8044,7 +8044,7 @@ end;
 
 function Load_GL_ATI_draw_buffers: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8062,7 +8062,7 @@ end;
 {$IFDEF WINDOWS}
 function Load_WGL_ATI_pixel_format_float: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8080,7 +8080,7 @@ end;
 
 function Load_GL_ATI_texture_env_combine3: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8095,7 +8095,7 @@ end;
 
 function Load_GL_ATI_texture_float: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8110,7 +8110,7 @@ end;
 
 function Load_GL_NV_texture_expand_normal: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8125,7 +8125,7 @@ end;
 
 function Load_GL_NV_half_float: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8232,7 +8232,7 @@ end;
 
 function Load_GL_ATI_map_object_buffer: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8251,7 +8251,7 @@ end;
 
 function Load_GL_ATI_separate_stencil: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8270,7 +8270,7 @@ end;
 
 function Load_GL_ATI_vertex_attrib_array_object: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8291,7 +8291,7 @@ end;
 
 function Load_GL_ARB_vertex_buffer_object: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8328,7 +8328,7 @@ end;
 
 function Load_GL_ARB_occlusion_query: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8359,7 +8359,7 @@ end;
 
 function Load_GL_ARB_shader_objects: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8452,7 +8452,7 @@ end;
 
 function Load_GL_ARB_vertex_shader: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8559,7 +8559,7 @@ end;
 
 function Load_GL_ARB_fragment_shader: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8574,7 +8574,7 @@ end;
 
 function Load_GL_ARB_shading_language_100: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8589,7 +8589,7 @@ end;
 
 function Load_GL_ARB_texture_non_power_of_two: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8604,7 +8604,7 @@ end;
 
 function Load_GL_ARB_point_sprite: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8619,7 +8619,7 @@ end;
 
 function Load_GL_EXT_depth_bounds_test: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8636,7 +8636,7 @@ end;
 
 function Load_GL_EXT_secondary_color: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8685,7 +8685,7 @@ end;
 
 function Load_GL_EXT_texture_mirror_clamp: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8700,7 +8700,7 @@ end;
 
 function Load_GL_EXT_blend_equation_separate: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8717,7 +8717,7 @@ end;
 
 function Load_GL_MESA_pack_invert: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8732,7 +8732,7 @@ end;
 
 function Load_GL_MESA_ycbcr_texture: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8747,7 +8747,7 @@ end;
 
 function Load_GL_ARB_fragment_program_shadow: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8762,7 +8762,7 @@ end;
 
 function Load_GL_EXT_fog_coord: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8787,7 +8787,7 @@ end;
 
 function Load_GL_NV_fragment_program_option: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8802,7 +8802,7 @@ end;
 
 function Load_GL_EXT_pixel_buffer_object: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8817,7 +8817,7 @@ end;
 
 function Load_GL_NV_fragment_program2: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8832,7 +8832,7 @@ end;
 
 function Load_GL_NV_vertex_program2_option: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8847,7 +8847,7 @@ end;
 
 function Load_GL_NV_vertex_program3: Boolean;
 var
-  extstring : PChar;
+  extstring : PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8862,7 +8862,7 @@ end;
 
 function Load_GL_ARB_draw_buffers: Boolean;
 var
-  extstring: PChar;
+  extstring: PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8879,7 +8879,7 @@ end;
 
 function Load_GL_ARB_texture_rectangle: Boolean;
 var
-  extstring: PChar;
+  extstring: PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8894,7 +8894,7 @@ end;
 
 function Load_GL_ARB_color_buffer_float: Boolean;
 var
-  extstring: PChar;
+  extstring: PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8911,7 +8911,7 @@ end;
 
 function Load_GL_ARB_half_float_pixel: Boolean;
 var
-  extstring: PChar;
+  extstring: PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8926,7 +8926,7 @@ end;
 
 function Load_GL_ARB_texture_float: Boolean;
 var
-  extstring: PChar;
+  extstring: PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8941,7 +8941,7 @@ end;
 
 function Load_GL_EXT_texture_compression_dxt1: Boolean;
 var
-  extstring: PChar;
+  extstring: PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8956,7 +8956,7 @@ end;
 
 function Load_GL_ARB_pixel_buffer_object: Boolean;
 var
-  extstring: PChar;
+  extstring: PAnsiChar;
 begin
 
   Result := FALSE;
@@ -8971,7 +8971,7 @@ end;
 
 function Load_GL_EXT_framebuffer_object: Boolean;
 var
-  extstring: PChar;
+  extstring: PAnsiChar;
 begin
 
   Result := FALSE;
@@ -9020,11 +9020,11 @@ end;
 
 function Load_GL_version_1_4: Boolean;
 var
-  extstring: String;
+  extstring: AnsiString;
 begin
 
   Result := FALSE;
-  extstring := String(PChar(glGetString(GL_EXTENSIONS)));
+  extstring := String(PAnsiChar(glGetString(GL_EXTENSIONS)));
 
     glBlendFuncSeparate := SDL_GL_GetProcAddress('glBlendFuncSeparate');
     if not Assigned(glBlendFuncSeparate) then Exit;
@@ -9122,11 +9122,11 @@ end;
 
 function Load_GL_version_1_5: Boolean;
 var
-  extstring: String;
+  extstring: AnsiString;
 begin
 
   Result := FALSE;
-  extstring := String(PChar(glGetString(GL_EXTENSIONS)));
+  extstring := String(PAnsiChar(glGetString(GL_EXTENSIONS)));
 
     glGenQueries := SDL_GL_GetProcAddress('glGenQueries');
     if not Assigned(glGenQueries) then Exit;
@@ -9172,11 +9172,11 @@ end;
 
 function Load_GL_version_2_0: Boolean;
 var
-  extstring: String;
+  extstring: AnsiString;
 begin
 
   Result := FALSE;
-  extstring := String(PChar(glGetString(GL_EXTENSIONS)));
+  extstring := String(PAnsiChar(glGetString(GL_EXTENSIONS)));
 
     glBlendEquationSeparate := SDL_GL_GetProcAddress('glBlendEquationSeparate');
     if not Assigned(glBlendEquationSeparate) then Exit;
@@ -9368,11 +9368,8 @@ begin
 
 end;
 
-function glext_LoadExtension(ext: String): Boolean;
+function glext_LoadExtension(ext: AnsiString): Boolean;
 begin
-
-  Result := FALSE;
-
   if ext = 'GL_version_1_2' then Result := Load_GL_version_1_2
   else if ext = 'GL_ARB_imaging' then Result := Load_GL_ARB_imaging
   else if ext = 'GL_version_1_3' then Result := Load_GL_version_1_3
@@ -9573,7 +9570,7 @@ begin
   else if ext = 'GL_version_1_4' then Result := Load_GL_version_1_4
   else if ext = 'GL_version_1_5' then Result := Load_GL_version_1_5
   else if ext = 'GL_version_2_0' then Result := Load_GL_version_2_0
-
+  else Result := False;
 end;
 
 end.

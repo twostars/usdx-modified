@@ -6,7 +6,7 @@ uses USongs;
 
 procedure ReadScore(var Song: TSong);
 procedure WriteScore(var Song: TSong);
-procedure AddScore(var Song: TSong; Level: integer; Name: string; Score: integer);
+procedure AddScore(var Song: TSong; Level: integer; Name: AnsiString; Score: integer);
 
 implementation
 
@@ -18,7 +18,7 @@ var
   S:    string;
   P:    integer;
   Lev:  integer;
-  LevS: string;
+  LevS: AnsiString;
 begin
   F := TIniFile.Create(Song.Path + ChangeFileExt(Song.FileName, '.sco'));
 
@@ -42,7 +42,7 @@ begin
   end;
 end;
 
-procedure AddScore(var Song: TSong; Level: integer; Name: string; Score: integer);
+procedure AddScore(var Song: TSong; Level: integer; Name: AnsiString; Score: integer);
 var
   S:    integer;
   S2:   integer;
@@ -75,7 +75,7 @@ var
   S:    integer;
   Lev:      integer;
   LevS:     string;
-  FileName: string;
+  FileName: AnsiString;
 begin
   FileName := Song.Path + ChangeFileExt(Song.FileName, '.sco');
   if (not FileExists(FileName)) or (FileExists(FileName) and  DeleteFile(FileName)) then begin

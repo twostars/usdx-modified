@@ -51,7 +51,7 @@ begin
   Result := true;
   SetLength(OutStr, Length(InStr)+1);
   I := 0;
-  StrPtr := PChar(InStr);
+  StrPtr := PAnsiChar(InStr);
   while (StrPtr^ <> #0) do
   begin
     if (not NextCharUTF8(StrPtr, OutStr[I])) then

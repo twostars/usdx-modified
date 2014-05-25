@@ -43,9 +43,9 @@ uses
 type
     TMiscCollectionLibrary = class
     public
-        class function ClassNameToClassType(ClassName: String): TAbstractCollectionClass;
+        class function ClassNameToClassType(ClassName: AnsiString): TAbstractCollectionClass;
         class function EqualIID(const IID1, IID2: TGUID): Boolean;
-        class function HashCode(Value: String): Integer;
+        class function HashCode(Value: AnsiString): Integer;
         class procedure ShuffleArray(var ItemArray: array of ICollectable);
         class procedure ShuffleList(const List: IList);
     end;
@@ -53,7 +53,7 @@ type
 implementation
 
 { TMiscCollectionLibrary }
-class function TMiscCollectionLibrary.ClassNameToClassType(ClassName: String): TAbstractCollectionClass;
+class function TMiscCollectionLibrary.ClassNameToClassType(ClassName: AnsiString): TAbstractCollectionClass;
 begin
     if ClassName = 'TArray' then
         Result := TArray
@@ -90,7 +90,7 @@ begin
         (IID1.D4[6] = IID2.D4[6]) and (IID1.D4[7] = IID2.D4[7]);
 end;
 
-class function TMiscCollectionLibrary.HashCode(Value: String): Integer;
+class function TMiscCollectionLibrary.HashCode(Value: AnsiString): Integer;
 var
     I: Integer;
 begin

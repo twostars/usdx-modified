@@ -227,7 +227,7 @@ type
     fInitialized: boolean;
 
   public
-    function GetName: String;
+    function GetName: AnsiString;
 
     function Init(): boolean;
     function Finalize: boolean;
@@ -270,7 +270,7 @@ end;
  * TVideoPlayback_ffmpeg
  *------------------------------------------------------------------------------}
 
-function  TVideoPlayback_FFmpeg.GetName: String;
+function  TVideoPlayback_FFmpeg.GetName: AnsiString;
 begin
   result := 'FFmpeg_Video';
 end;

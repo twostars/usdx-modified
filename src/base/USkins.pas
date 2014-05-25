@@ -62,12 +62,12 @@ type
     procedure LoadList;
     procedure ParseDir(Dir: IPath);
     procedure LoadHeader(FileName: IPath);
-    procedure LoadSkin(Name: string);
-    function GetTextureFileName(TextureName: string): IPath;
-    function GetSkinNumber(Name: string): integer;
+    procedure LoadSkin(Name: AnsiString);
+    function GetTextureFileName(TextureName: AnsiString): IPath;
+    function GetSkinNumber(Name: AnsiString): integer;
     function GetDefaultColor(SkinNo: integer): integer;
 
-    procedure GetSkinsByTheme(Theme: string; out Skins: TUTF8StringDynArray);
+    procedure GetSkinsByTheme(Theme: AnsiString; out Skins: TUTF8StringDynArray);
 
     procedure onThemeChange;
   end;
@@ -143,7 +143,7 @@ begin
   SkinIni.Free;
 end;
 
-procedure TSkin.LoadSkin(Name: string);
+procedure TSkin.LoadSkin(Name: AnsiString);
 var
   SkinIni: TMemIniFile;
   SL:      TStringList;
@@ -169,7 +169,7 @@ begin
   SkinIni.Free;
 end;
 
-function TSkin.GetTextureFileName(TextureName: string): IPath;
+function TSkin.GetTextureFileName(TextureName: AnsiString): IPath;
 var
   T: integer;
 begin
@@ -191,7 +191,7 @@ begin
   end;
 end;
 
-function TSkin.GetSkinNumber(Name: string): integer;
+function TSkin.GetSkinNumber(Name: AnsiString): integer;
 var
   S: integer;
 begin
@@ -201,7 +201,7 @@ begin
       Result := S;
 end;
 
-procedure TSkin.GetSkinsByTheme(Theme: string; out Skins: TUTF8StringDynArray);
+procedure TSkin.GetSkinsByTheme(Theme: AnsiString; out Skins: TUTF8StringDynArray);
   var
     I: Integer;
     Len: integer;

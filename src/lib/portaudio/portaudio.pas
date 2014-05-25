@@ -76,7 +76,7 @@ function Pa_GetVersion(): cint; cdecl; external LibName;
 {** Retrieve a textual description of the current PortAudio build,
  eg "PortAudio V19-devel 13 October 2002".
 *}
-function Pa_GetVersionText(): PChar; cdecl; external LibName;
+function Pa_GetVersionText(): PAnsiChar; cdecl; external LibName;
 
 
 {** Error codes returned by PortAudio functions.
@@ -123,7 +123,7 @@ type TPaErrorCode = {enum}cint; const
 {** Translate the supplied PortAudio error code into a human readable
  message.
 *}
-function Pa_GetErrorText( errorCode: TPaError ): PChar; cdecl; external LibName;
+function Pa_GetErrorText( errorCode: TPaError ): PAnsiChar; cdecl; external LibName;
 
 
 {** Library initialization function - call this before using PortAudio.
@@ -264,7 +264,7 @@ type
       {** The well known unique identifier of this host API @see PaHostApiTypeId *}
       _type: TPaHostApiTypeId;
       {** A textual description of the host API for display on user interfaces. *}
-      name: PChar;
+      name: PAnsiChar;
 
       {**  The number of devices belonging to this host API. This field may be
        used in conjunction with Pa_HostApiDeviceIndexToDeviceIndex() to enumerate
@@ -354,7 +354,7 @@ type
   TPaHostErrorInfo = record
       hostApiType: TPaHostApiTypeId;    {**< the host API which returned the error code *}
       errorCode: clong;                 {**< the error code returned *}
-      errorText: PChar;                 {**< a textual description of the error if available, otherwise a zero-length string *}
+      errorText: PAnsiChar;                 {**< a textual description of the error if available, otherwise a zero-length string *}
   end;
 
 
@@ -460,7 +460,7 @@ type
   PPaDeviceInfo = ^TPaDeviceInfo;
   TPaDeviceInfo = record
       structVersion: cint;  {* this is struct version 2 *}
-      name: PChar;
+      name: PAnsiChar;
       hostApi: TPaHostApiIndex; {* note this is a host API index, not a type id*}
 
       maxInputChannels: cint;

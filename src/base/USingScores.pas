@@ -950,7 +950,7 @@ end;
 procedure TSingScores.DrawScore(const Index: integer);
 var
   Position: PScorePosition;
-  ScoreStr: String;
+  ScoreStr: AnsiString;
 begin
   // only draw if player has a position
   if Players[Index].Position <> High(byte) then

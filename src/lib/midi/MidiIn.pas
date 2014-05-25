@@ -138,7 +138,7 @@ type
 
  { Stuff from MIDIINCAPS }
     FDriverVersion: MMVERSION;
-    FProductName: string;
+    FProductName: AnsiString;
     FMID: word; { Manufacturer ID }
     FPID: word; { Product ID }
 
@@ -164,12 +164,12 @@ type
     procedure UnprepareHeaders;
     procedure AddBuffers;
     procedure SetDeviceID(DeviceID: word);
-    procedure SetProductName(NewProductName: string);
+    procedure SetProductName(NewProductName: AnsiString);
     function GetEventCount: word;
     procedure SetSysexBufferSize(BufferSize: word);
     procedure SetSysexBufferCount(BufferCount: word);
     procedure SetSysexOnly(bSysexOnly: boolean);
-    function MidiInErrorString(WError: word): string;
+    function MidiInErrorString(WError: word): AnsiString;
 
   public
     constructor Create(AOwner: TComponent); override;
@@ -199,7 +199,7 @@ type
   published
 
  { TODO: Property editor with dropdown list of product names }
-    property ProductName: string read FProductName write SetProductName;
+    property ProductName: AnsiString read FProductName write SetProductName;
 
     property DeviceID: word read FDeviceID write SetDeviceID default 0;
     property Capacity: word read FCapacity write FCapacity default 1024;
@@ -299,9 +299,9 @@ end;
   (e.g. "an invalid parameter was passed to a system function") so
   sort out some proper error strings. }
 
-function TMidiInput.MidiInErrorString(WError: word): string;
+function TMidiInput.MidiInErrorString(WError: word): AnsiString;
 var
-  errorDesc: Pchar;
+  errorDesc: PAnsiChar;
 begin
   errorDesc := nil;
   try
@@ -389,11 +389,11 @@ end;
   Exception if input device with matching name not found,
   or if input device is open }
 
-procedure TMidiInput.SetProductName(NewProductName: string);
+procedure TMidiInput.SetProductName(NewProductName: AnsiString);
 var
   MidiInCaps: TMidiInCaps;
   testDeviceID: word;
-  testProductName: string;
+  testProductName: AnsiString;
 begin
   if FState = misOpen then
     raise EMidiInputError.Create('Change to ProductName while device was open')

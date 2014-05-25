@@ -23,7 +23,7 @@ type
 
     // The init function will create a font of
     // of the height h from the file fname.
-    constructor Create(const fname: string; h: cardinal);
+    constructor Create(const fname: AnsiString; h: cardinal);
 
     // Free all the resources assosiated with the font.
     destructor Destroy(); override;
@@ -34,7 +34,7 @@ type
       // The flagship function of the library - this thing will print
       // out text at window coordinates x,y, using the font ft_font.
       // The current modelview matrix will also be applied to the text.
-      class procedure print(ft_font: TFontData; x, y: single; const str: string);
+      class procedure print(ft_font: TFontData; x, y: single; const str: AnsiString);
   end;
 
 
@@ -178,7 +178,7 @@ begin
 end;
 
 
-constructor TFontData.Create(const fname: string; h: cardinal);
+constructor TFontData.Create(const fname: AnsiString; h: cardinal);
 var
   library_: FT_Library;
   //The object in which Freetype holds information on a given
@@ -198,7 +198,7 @@ begin
   //This is where we load in the font information from the file.
   //Of all the places where the code might die, this is the most likely,
   //as FT_New_Face will die if the font file does not exist or is somehow broken.
-  if (FT_New_Face( library_, PChar(fname), 0, face ) <> 0) then
+  if (FT_New_Face( library_, PAnsiChar(fname), 0, face ) <> 0) then
     raise Exception.create('FT_New_Face failed (there is probably a problem with your font file)');
 
   //For some twisted reason, Freetype measures font size
@@ -260,7 +260,7 @@ end;
 
 ///Much like Nehe's glPrint function, but modified to work
 ///with freetype fonts.
-class procedure TFreeType.print(ft_font: TFontData; x, y: single; const str: string);
+class procedure TFreeType.print(ft_font: TFontData; x, y: single; const str: AnsiString);
 var
   font: GLuint;
   h: single;
@@ -275,7 +275,7 @@ begin
   h := ft_font.h / 0.63;      //We make the height about 1.5* that of
 
   lines := TStringList.Create();
-  ExtractStrings([#13], [], PChar(str), lines);
+  ExtractStrings([#13], [], PAnsiChar(str), lines);
 
   glPushAttrib(GL_LIST_BIT or GL_CURRENT_BIT  or GL_ENABLE_BIT or GL_TRANSFORM_BIT);
   glMatrixMode(GL_MODELVIEW);
@@ -308,7 +308,7 @@ begin
     //  If you decide to use it make sure to also uncomment the glBitmap command
     //  in make_dlist().
     //glRasterPos2f(0,0);
-    glCallLists(Length(lines[i]), GL_UNSIGNED_BYTE, PChar(lines[i]));
+    glCallLists(Length(lines[i]), GL_UNSIGNED_BYTE, PAnsiChar(lines[i]));
     //float rpos[4];
     //glGetFloatv(GL_CURRENT_RASTER_POSITION ,rpos);
     //float len=x-rpos[0];

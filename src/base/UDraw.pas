@@ -983,7 +983,7 @@ end;
 //end Singbar Mod
 
 //PhrasenBonus - Line Bonus Pop Up
-procedure SingDrawLineBonus(const X, Y: Single; Color: TRGB; Alpha: Single; Text: string; Age: integer);
+procedure SingDrawLineBonus(const X, Y: Single; Color: TRGB; Alpha: Single; Text: AnsiString; Age: integer);
 var
   Length, X2: real; //Length of Text
   Size: integer;    //Size of Popup

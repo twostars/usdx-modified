@@ -136,7 +136,7 @@ procedure TLanguage.LoadList;
 var
   Iter: IFileIterator;
   IniInfo: TFileInfo;
-  LangName: string;
+  LangName: AnsiString;
 begin
   SetLength(List, 0);
   SetLength(ILanguage, 0);

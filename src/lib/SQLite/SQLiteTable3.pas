@@ -84,17 +84,17 @@ type
 
   TSQliteParam = class
   public
-    name: string;
+    name: AnsiString;
     valuetype: integer;
     valueinteger: int64;
     valuefloat: double;
-    valuedata: string;
+    valuedata: AnsiString;
   end;
 
-  THookQuery = procedure(Sender: TObject; SQL: String) of object;
+  THookQuery = procedure(Sender: TObject; SQL: AnsiString) of object;
 
   TSQLiteQuery = record
-    SQL: String;
+    SQL: AnsiString;
     Statement: TSQLiteStmt;
   end;
 
@@ -108,15 +108,15 @@ type
     fSync: boolean;
     fParams: TList;
     FOnQuery: THookQuery;
-    procedure RaiseError(s: string; SQL: string);
+    procedure RaiseError(s: AnsiString; SQL: AnsiString);
     procedure SetParams(Stmt: TSQLiteStmt);
     procedure BindData(Stmt: TSQLiteStmt; const Bindings: array of const);
     function GetRowsChanged: integer;
   protected
     procedure SetSynchronised(Value: boolean);
-    procedure DoQuery(value: string); 
+    procedure DoQuery(value: AnsiString); 
   public
-    constructor Create(const FileName: string);
+    constructor Create(const FileName: AnsiString);
     destructor Destroy; override;
     function GetTable(const SQL: Ansistring): TSQLiteTable; overload;
     function GetTable(const SQL: Ansistring; const Bindings: array of const): TSQLiteTable; overload;
@@ -125,33 +125,33 @@ type
     procedure ExecSQL(Query: TSQLiteQuery); overload;
     function PrepareSQL(const SQL: Ansistring): TSQLiteQuery;
     procedure BindSQL(Query: TSQLiteQuery; const Index: Integer; const Value: Integer); overload;
-    procedure BindSQL(Query: TSQLiteQuery; const Index: Integer; const Value: String); overload;
+    procedure BindSQL(Query: TSQLiteQuery; const Index: Integer; const Value: AnsiString); overload;
     procedure ReleaseSQL(Query: TSQLiteQuery);
     function GetUniTable(const SQL: Ansistring): TSQLiteUniTable; overload;
     function GetUniTable(const SQL: Ansistring; const Bindings: array of const): TSQLiteUniTable; overload;
     function GetTableValue(const SQL: Ansistring): int64; overload;
     function GetTableValue(const SQL: Ansistring; const Bindings: array of const): int64; overload;
-    function GetTableString(const SQL: Ansistring): string; overload;
-    function GetTableString(const SQL: Ansistring; const Bindings: array of const): string; overload;
+    function GetTableString(const SQL: Ansistring): AnsiString; overload;
+    function GetTableString(const SQL: Ansistring; const Bindings: array of const): AnsiString; overload;
     procedure GetTableStrings(const SQL: Ansistring; const Value: TStrings);
     procedure UpdateBlob(const SQL: Ansistring; BlobData: TStream);
     procedure BeginTransaction;
     procedure Commit;
     procedure Rollback;
-    function TableExists(TableName: string): boolean;
-    function ContainsColumn(Table: String; Column: String) : boolean;
+    function TableExists(TableName: AnsiString): boolean;
+    function ContainsColumn(Table: AnsiString; Column: AnsiString) : boolean;
     function GetLastInsertRowID: int64;
     function GetLastChangedRows: int64;
     procedure SetTimeout(Value: integer);
-    function Version: string;
-    procedure AddCustomCollate(name: string; xCompare: TCollateXCompare);
+    function Version: AnsiString;
+    procedure AddCustomCollate(name: AnsiString; xCompare: TCollateXCompare);
     //adds collate named SYSTEM for correct data sorting by user's locale
     Procedure AddSystemCollate;
     procedure ParamsClear;
-    procedure AddParamInt(name: string; value: int64);
-    procedure AddParamFloat(name: string; value: double);
-    procedure AddParamText(name: string; value: string);
-    procedure AddParamNull(name: string);
+    procedure AddParamInt(name: AnsiString; value: int64);
+    procedure AddParamFloat(name: AnsiString; value: double);
+    procedure AddParamText(name: AnsiString; value: AnsiString);
+    procedure AddParamNull(name: AnsiString);
     property DB: TSQLiteDB read fDB;
   published
     property IsTransactionOpen: boolean read fInTrans;
@@ -169,12 +169,12 @@ type
     fCols: TStringList;
     fColTypes: TList;
     fRow: cardinal;
-    function GetFields(I: cardinal): string;
+    function GetFields(I: cardinal): AnsiString;
     function GetEOF: boolean;
     function GetBOF: boolean;
-    function GetColumns(I: integer): string;
-    function GetFieldByName(FieldName: string): string;
-    function GetFieldIndex(FieldName: string): integer;
+    function GetColumns(I: integer): AnsiString;
+    function GetFieldByName(FieldName: AnsiString): AnsiString;
+    function GetFieldIndex(FieldName: AnsiString): integer;
     function GetCount: integer;
     function GetCountResult: integer;
   public
@@ -183,18 +183,18 @@ type
     destructor Destroy; override;
     function FieldAsInteger(I: cardinal): int64;
     function FieldAsBlob(I: cardinal): TMemoryStream;
-    function FieldAsBlobText(I: cardinal): string;
+    function FieldAsBlobText(I: cardinal): AnsiString;
     function FieldIsNull(I: cardinal): boolean;
-    function FieldAsString(I: cardinal): string;
+    function FieldAsString(I: cardinal): AnsiString;
     function FieldAsDouble(I: cardinal): double;
     function Next: boolean;
     function Previous: boolean;
     property EOF: boolean read GetEOF;
     property BOF: boolean read GetBOF;
-    property Fields[I: cardinal]: string read GetFields;
-    property FieldByName[FieldName: string]: string read GetFieldByName;
-    property FieldIndex[FieldName: string]: integer read GetFieldIndex;
-    property Columns[I: integer]: string read GetColumns;
+    property Fields[I: cardinal]: AnsiString read GetFields;
+    property FieldByName[FieldName: AnsiString]: AnsiString read GetFieldByName;
+    property FieldIndex[FieldName: AnsiString]: integer read GetFieldIndex;
+    property Columns[I: integer]: AnsiString read GetColumns;
     property ColCount: cardinal read fColCount;
     property RowCount: cardinal read fRowCount;
     property Row: cardinal read fRow;
@@ -216,11 +216,11 @@ type
     fEOF: boolean;
     fStmt: TSQLiteStmt;
     fDB: TSQLiteDatabase;
-    fSQL: string;
-    function GetFields(I: cardinal): string;
-    function GetColumns(I: integer): string;
-    function GetFieldByName(FieldName: string): string;
-    function GetFieldIndex(FieldName: string): integer;
+    fSQL: AnsiString;
+    function GetFields(I: cardinal): AnsiString;
+    function GetColumns(I: integer): AnsiString;
+    function GetFieldByName(FieldName: AnsiString): AnsiString;
+    function GetFieldIndex(FieldName: AnsiString): integer;
   public
     constructor Create(DB: TSQLiteDatabase; const SQL: Ansistring); overload;
     constructor Create(DB: TSQLiteDatabase; const SQL: Ansistring; const Bindings: array of const); overload;
@@ -228,16 +228,16 @@ type
     function FieldAsInteger(I: cardinal): int64;
     function FieldAsBlob(I: cardinal): TMemoryStream;
     function FieldAsBlobPtr(I: cardinal; out iNumBytes: integer): Pointer;
-    function FieldAsBlobText(I: cardinal): string;
+    function FieldAsBlobText(I: cardinal): AnsiString;
     function FieldIsNull(I: cardinal): boolean;
-    function FieldAsString(I: cardinal): string;
+    function FieldAsString(I: cardinal): AnsiString;
     function FieldAsDouble(I: cardinal): double;
     function Next: boolean;
     property EOF: boolean read FEOF;
-    property Fields[I: cardinal]: string read GetFields;
-    property FieldByName[FieldName: string]: string read GetFieldByName;
-    property FieldIndex[FieldName: string]: integer read GetFieldIndex;
-    property Columns[I: integer]: string read GetColumns;
+    property Fields[I: cardinal]: AnsiString read GetFields;
+    property FieldByName[FieldName: AnsiString]: AnsiString read GetFieldByName;
+    property FieldIndex[FieldName: AnsiString]: integer read GetFieldIndex;
+    property Columns[I: integer]: AnsiString read GetColumns;
     property ColCount: cardinal read fColCount;
     property Row: cardinal read fRow;
   end;
@@ -270,7 +270,7 @@ end;
 // TSQLiteDatabase
 //------------------------------------------------------------------------------
 
-constructor TSQLiteDatabase.Create(const FileName: string);
+constructor TSQLiteDatabase.Create(const FileName: AnsiString);
 var
   Msg: PAnsiChar;
   iResult: integer;
@@ -336,7 +336,7 @@ end;
 
 //..............................................................................
 
-procedure TSQLiteDatabase.RaiseError(s: string; SQL: string);
+procedure TSQLiteDatabase.RaiseError(s: AnsiString; SQL: AnsiString);
 //look up last error and raise an exception with an appropriate message
 var
   Msg: PAnsiChar;
@@ -563,7 +563,7 @@ begin
     RaiseError('Could not bind integer to prepared SQL statement', Query.SQL);
 end;
 
-procedure TSQLiteDatabase.BindSQL(Query: TSQLiteQuery; const Index: Integer; const Value: String);
+procedure TSQLiteDatabase.BindSQL(Query: TSQLiteQuery; const Index: Integer; const Value: AnsiString);
 begin
   if Assigned(Query.Statement) then
     Sqlite3_Bind_Text(Query.Statement, Index, PAnsiChar(Value), Length(Value), Pointer(SQLITE_STATIC))
@@ -684,12 +684,12 @@ begin
   end;
 end;
 
-function TSQLiteDatabase.GetTableString(const SQL: Ansistring): String;
+function TSQLiteDatabase.GetTableString(const SQL: Ansistring): AnsiString;
 begin
   Result := GetTableString(SQL, []);
 end;
 
-function TSQLiteDatabase.GetTableString(const SQL: Ansistring; const Bindings: array of const): String;
+function TSQLiteDatabase.GetTableString(const SQL: Ansistring; const Bindings: array of const): AnsiString;
 var
   Table: TSQLiteUniTable;
 begin
@@ -744,9 +744,9 @@ begin
   self.fInTrans := False;
 end;
 
-function TSQLiteDatabase.TableExists(TableName: string): boolean;
+function TSQLiteDatabase.TableExists(TableName: AnsiString): boolean;
 var
-  sql: string;
+  sql: AnsiString;
   ds: TSqliteTable;
 begin
   //returns true if table exists in the database
@@ -760,9 +760,9 @@ begin
   end;
 end;
 
-function TSQLiteDatabase.ContainsColumn(Table: String; Column: String) : boolean;
+function TSQLiteDatabase.ContainsColumn(Table: AnsiString; Column: AnsiString) : boolean;
 var
-  sql: string;
+  sql: AnsiString;
   ds: TSqliteTable;
   i : integer;
 begin
@@ -785,12 +785,12 @@ begin
   SQLite3_BusyTimeout(self.fDB, Value);
 end;
 
-function TSQLiteDatabase.Version: string;
+function TSQLiteDatabase.Version: AnsiString;
 begin
   Result := SQLite3_Version;
 end;
 
-procedure TSQLiteDatabase.AddCustomCollate(name: string;
+procedure TSQLiteDatabase.AddCustomCollate(name: AnsiString;
   xCompare: TCollateXCompare);
 begin
   sqlite3_create_collation(fdb, PAnsiChar(name), SQLITE_UTF8, nil, xCompare);
@@ -812,7 +812,7 @@ begin
   fParams.Clear;
 end;
 
-procedure TSQLiteDatabase.AddParamInt(name: string; value: int64);
+procedure TSQLiteDatabase.AddParamInt(name: AnsiString; value: int64);
 var
   par: TSQliteParam;
 begin
@@ -823,7 +823,7 @@ begin
   fParams.Add(par);
 end;
 
-procedure TSQLiteDatabase.AddParamFloat(name: string; value: double);
+procedure TSQLiteDatabase.AddParamFloat(name: AnsiString; value: double);
 var
   par: TSQliteParam;
 begin
@@ -834,7 +834,7 @@ begin
   fParams.Add(par);
 end;
 
-procedure TSQLiteDatabase.AddParamText(name: string; value: string);
+procedure TSQLiteDatabase.AddParamText(name: AnsiString; value: AnsiString);
 var
   par: TSQliteParam;
 begin
@@ -845,7 +845,7 @@ begin
   fParams.Add(par);
 end;
 
-procedure TSQLiteDatabase.AddParamNull(name: string);
+procedure TSQLiteDatabase.AddParamNull(name: AnsiString);
 var
   par: TSQliteParam;
 begin
@@ -892,7 +892,7 @@ begin
  Result := SQLite3_Changes(self.fDB);
 end;
 
-procedure TSQLiteDatabase.DoQuery(value: string);
+procedure TSQLiteDatabase.DoQuery(value: AnsiString);
 begin
   if assigned(OnQuery) then
     OnQuery(Self, Value);
@@ -1080,7 +1080,7 @@ end;
 
 //..............................................................................
 
-function TSQLiteTable.GetColumns(I: integer): string;
+function TSQLiteTable.GetColumns(I: integer): AnsiString;
 begin
   Result := fCols[I];
 end;
@@ -1114,12 +1114,12 @@ end;
 
 //..............................................................................
 
-function TSQLiteTable.GetFieldByName(FieldName: string): string;
+function TSQLiteTable.GetFieldByName(FieldName: AnsiString): AnsiString;
 begin
   Result := GetFields(self.GetFieldIndex(FieldName));
 end;
 
-function TSQLiteTable.GetFieldIndex(FieldName: string): integer;
+function TSQLiteTable.GetFieldIndex(FieldName: AnsiString): integer;
 begin
   if (fCols = nil) then
   begin
@@ -1143,7 +1143,7 @@ end;
 
 //..............................................................................
 
-function TSQLiteTable.GetFields(I: cardinal): string;
+function TSQLiteTable.GetFields(I: cardinal): AnsiString;
 var
   thisvalue: pstring;
   thistype: integer;
@@ -1189,7 +1189,7 @@ begin
       raise ESqliteException.Create('Not a Blob field');
 end;
 
-function TSqliteTable.FieldAsBlobText(I: cardinal): string;
+function TSqliteTable.FieldAsBlobText(I: cardinal): AnsiString;
 var
   MemStream: TMemoryStream;
   Buffer: PAnsiChar;
@@ -1248,7 +1248,7 @@ begin
         raise ESqliteException.Create('Not an integer or numeric field');
 end;
 
-function TSqliteTable.FieldAsString(I: cardinal): string;
+function TSqliteTable.FieldAsString(I: cardinal): AnsiString;
 begin
   if EOF then
     raise ESqliteException.Create('Table is at End of File');
@@ -1387,7 +1387,7 @@ begin
   Result := Sqlite3_ColumnBlob(fstmt, i);
 end;
 
-function TSQLiteUniTable.FieldAsBlobText(I: cardinal): string;
+function TSQLiteUniTable.FieldAsBlobText(I: cardinal): AnsiString;
 var
   MemStream: TMemoryStream;
   Buffer: PAnsiChar;
@@ -1424,7 +1424,7 @@ begin
   Result := Sqlite3_ColumnInt64(fstmt, i);
 end;
 
-function TSQLiteUniTable.FieldAsString(I: cardinal): string;
+function TSQLiteUniTable.FieldAsString(I: cardinal): AnsiString;
 begin
   Result := self.GetFields(I);
 end;
@@ -1434,17 +1434,17 @@ begin
   Result := Sqlite3_ColumnText(fstmt, i) = nil;
 end;
 
-function TSQLiteUniTable.GetColumns(I: integer): string;
+function TSQLiteUniTable.GetColumns(I: integer): AnsiString;
 begin
   Result := fCols[I];
 end;
 
-function TSQLiteUniTable.GetFieldByName(FieldName: string): string;
+function TSQLiteUniTable.GetFieldByName(FieldName: AnsiString): AnsiString;
 begin
   Result := GetFields(self.GetFieldIndex(FieldName));
 end;
 
-function TSQLiteUniTable.GetFieldIndex(FieldName: string): integer;
+function TSQLiteUniTable.GetFieldIndex(FieldName: AnsiString): integer;
 begin
   if (fCols = nil) then
   begin
@@ -1466,7 +1466,7 @@ begin
   end;
 end;
 
-function TSQLiteUniTable.GetFields(I: cardinal): string;
+function TSQLiteUniTable.GetFields(I: cardinal): AnsiString;
 begin
   Result := Sqlite3_ColumnText(fstmt, i);
 end;

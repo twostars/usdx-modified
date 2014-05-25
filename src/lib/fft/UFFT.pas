@@ -129,7 +129,7 @@ procedure WindowFunc(whichFunction: TFFTWindowFunc; NumSamples: Integer; in_: PS
 (*
  * Returns the name of the windowing function (for UI display)
  *)
-function WindowFuncName(whichFunction: TFFTWindowFunc): string;
+function WindowFuncName(whichFunction: TFFTWindowFunc): AnsiString;
 
 (*
  * Returns the number of windowing functions supported
@@ -498,7 +498,7 @@ begin
   Result := Length(FFTWindowName);
 end;
 
-function WindowFuncName(whichFunction: TFFTWindowFunc): string;
+function WindowFuncName(whichFunction: TFFTWindowFunc): AnsiString;
 begin
   Result := FFTWindowName[whichFunction];
 end;

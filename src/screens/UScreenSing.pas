@@ -1471,10 +1471,10 @@ begin
     SetFontItalic(false);
     SetFontSize(h);
     CountDownText := IntToStr(round(timeDiff - t));
-    w := glTextWidth(PChar(CountDownText));
+    w := glTextWidth(PAnsiChar(CountDownText));
 
     SetFontPos (RenderW / 2 - w / 2, RenderH / 2 - h / 2);
-    glPrint(PChar(CountDownText));
+    glPrint(PAnsiChar(CountDownText));
   end
   else
   begin

@@ -4929,7 +4929,7 @@ const
  * message which tells the user how to report samples to the development
  * mailing list.
  *)
-procedure av_log_missing_feature(avc: Pointer; feature: {const} Pchar; want_sample: cint);
+procedure av_log_missing_feature(avc: Pointer; feature: {const} PAnsiChar; want_sample: cint);
   cdecl; external av__codec;
 
 (**
@@ -4940,7 +4940,7 @@ procedure av_log_missing_feature(avc: Pointer; feature: {const} Pchar; want_samp
  * a pointer to an AVClass struct
  * @param[in] msg string containing an optional message, or NULL if no message
  *)
-procedure av_log_ask_for_sample(avc: Pointer; msg: {const} Pchar);
+procedure av_log_ask_for_sample(avc: Pointer; msg: {const} PAnsiChar);
   cdecl; external av__codec;
 {$IFEND}
 

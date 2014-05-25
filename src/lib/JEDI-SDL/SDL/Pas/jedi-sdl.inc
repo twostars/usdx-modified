@@ -284,6 +284,22 @@
    {$DEFINE HAS_TYPES}
 {$ENDIF ver180}
 
+{$IFDEF VER260}
+   {$DEFINE Delphi}      {Delphi XE5}
+   {$DEFINE Delphi32}
+   {$DEFINE Delphi4UP}
+   {$DEFINE Delphi5UP}
+   {$DEFINE Delphi6UP}
+   {$DEFINE Delphi7UP}
+   {$DEFINE Delphi8UP}
+   {$DEFINE Delphi9UP}
+   {$DEFINE Delphi10UP}
+   {$DEFINE Delphi19UP}
+   {$WARN UNSAFE_TYPE OFF} {Disable warning for unsafe types in Delphi 7}
+   {$DEFINE Has_Int64}
+   {$DEFINE HAS_TYPES}
+{$ENDIF VER260}
+
 {$IFDEF UNIX}
   {$ifdef VER140}    // Kylix 1 & 2
     {$DEFINE KYLIX}
@@ -393,12 +409,12 @@
    {$DEFINE __OS_DOS__}
    {$DEFINE UseWin}
    {$DEFINE MSWINDOWS}
-{$ENDIF Delphi}
+{$ENDIF Windows}
 
 {$IFDEF OS2}
    {$DEFINE __OS_DOS__}
    {$DEFINE Can_Use_DLL}
-{$ENDIF Delphi}
+{$ENDIF OS2}
 
 {$IFDEF UseWin}
    {$DEFINE Can_Use_DLL}

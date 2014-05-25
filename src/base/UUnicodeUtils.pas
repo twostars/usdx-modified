@@ -25,6 +25,8 @@
 
 unit UUnicodeUtils;
 
+{$I switches.inc}
+
 interface
 
 {$IFDEF FPC}
@@ -36,6 +38,9 @@ uses
   Windows,
 {$ENDIF}
   StrUtils,
+{$IFDEF DELPHI_19_UP}
+  WideStrUtils,
+{$ENDIF}
   SysUtils;
 
 type
@@ -193,7 +198,7 @@ implementation
 const
   LC_CTYPE = 0;
 
-function setlocale(category: integer; locale: PChar): PChar; cdecl; external 'c';
+function setlocale(category: integer; locale: PAnsiChar): PAnsiChar; cdecl; external 'c';
 {$ENDIF}
 {$ENDIF}
 
@@ -204,7 +209,7 @@ procedure InitUnicodeUtils();
 {$IFDEF UNIX}
 {$IFNDEF DARWIN}
 var
-  localeName: PChar;
+  localeName: PAnsiChar;
 {$ENDIF}
 {$ENDIF}
 begin
@@ -408,12 +413,13 @@ begin
 end;
 
 function IsUTF8String(const str: RawByteString): boolean;
+{$ifndef DELPHI_19_UP}
 var
   Ch: UCS4Char;
   StrPtr: PAnsiChar;
 begin
   Result := true;
-  StrPtr := PChar(str);
+  StrPtr := PAnsiChar(str);
   while (StrPtr^ <> #0) do
   begin
     if (not NextCharUTF8(StrPtr, Ch)) then
@@ -423,6 +429,11 @@ begin
     end;
   end;
 end;
+{$else}
+begin
+  Result := WideStrUtils.IsUTF8String(str);
+end;
+{$endif}
 
 function IsASCIIString(const str: RawByteString): boolean;
 var

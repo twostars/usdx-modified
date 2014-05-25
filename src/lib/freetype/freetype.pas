@@ -1479,7 +1479,7 @@ type
   (*    when invoking this function.  Most drivers simply do not implement *)
   (*    file attachments.                                                  *)
   (*                                                                       *)
-  function  FT_Attach_File(face : FT_Face; filepathname : PChar ) : FT_Error;
+  function  FT_Attach_File(face : FT_Face; filepathname : PAnsiChar ) : FT_Error;
     cdecl; external ft_lib name 'FT_Attach_File';
 
   (*************************************************************************)
@@ -1572,7 +1572,7 @@ type
   (*                                                                       *)
   function  FT_New_Face(
             library_ : FT_Library;
-            filepathname : PChar;
+            filepathname : PAnsiChar;
             face_index : FT_Long;
             out aface : FT_Face ) : FT_Error;
     cdecl; external ft_lib name 'FT_New_Face';

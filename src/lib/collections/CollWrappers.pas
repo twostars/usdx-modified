@@ -75,8 +75,8 @@ type
 
     IChar = interface
         ['{73AD00E0-64F2-11D7-8120-0002E3165EF8}']
-        function GetValue: Char;
-        property Value: Char read GetValue;
+        function GetValue: AnsiChar;
+        property Value: AnsiChar read GetValue;
     end;
 
     IClass = interface
@@ -124,18 +124,18 @@ type
 
     IString = interface
         ['{A420DF80-64F2-11D7-8120-0002E3165EF8}']
-        function GetValue: String;
-        property Value: String read GetValue;
+        function GetValue: AnsiString;
+        property Value: AnsiString read GetValue;
     end;
 
     IStringAssociationWrapper = interface
         ['{AB98CCA0-64F2-11D7-8120-0002E3165EF8}']
         function GetAutoDestroy: Boolean;
         procedure SetAutoDestroy(Value: Boolean);
-        function GetKey: String;
+        function GetKey: AnsiString;
         function GetValue: TObject;
         property AutoDestroy: Boolean read GetAutoDestroy write SetAutoDestroy;
-        property Key: String read GetKey;
+        property Key: AnsiString read GetKey;
         property Value: TObject read GetValue;
     end;
 
@@ -169,13 +169,13 @@ type
 
     TAbstractStringMappable = class(TAbstractItem, IEquatable, IStringMappable)
     private
-        FKey: String;
+        FKey: AnsiString;
     protected
-        function MakeKey: String; virtual; abstract;
+        function MakeKey: AnsiString; virtual; abstract;
     public
         procedure AfterConstruction; override;
         function Equals(const Item: ICollectable): Boolean; virtual;
-        function GetKey: String; virtual;
+        function GetKey: AnsiString; virtual;
     end;
 
     TAssociationWrapper = class(TAbstractItem, IEquatable, IMappable, IAssociationWrapper)
@@ -186,7 +186,7 @@ type
     public
         constructor Create(const Key: ICollectable; Value: TObject); overload;
         constructor Create(Key: Integer; Value: TObject); overload;
-        constructor Create(Key: String; Value: TObject); overload;
+        constructor Create(Key: AnsiString; Value: TObject); overload;
         constructor Create(Key, Value: TObject; AutoDestroyKey: Boolean = true); overload;
         destructor Destroy; override;
         function GetAutoDestroy: Boolean;
@@ -225,14 +225,14 @@ type
 
     TCharWrapper = class(TAbstractItem, IEquatable, IHashable, IComparable, IChar)
     private
-        FValue: Char;
+        FValue: AnsiChar;
     public
-        constructor Create(Value: Char);
-        function GetValue: Char;
+        constructor Create(Value: AnsiChar);
+        function GetValue: AnsiChar;
         function Equals(const Item: ICollectable): Boolean;
         function HashCode: Integer;
         function CompareTo(const Item: ICollectable): Integer;
-        property Value: Char read GetValue;
+        property Value: AnsiChar read GetValue;
     end;
 
     TClassWrapper = class(TAbstractItem, IEquatable, IHashable, IClass)
@@ -319,31 +319,31 @@ type
 
     TStringWrapper = class(TAbstractItem, IEquatable, IHashable, IComparable, IString)
     private
-        FValue: String;
+        FValue: AnsiString;
     public
-        constructor Create(Value: String);
-        function GetValue: String;
+        constructor Create(Value: AnsiString);
+        function GetValue: AnsiString;
         function Equals(const Item: ICollectable): Boolean;
         function HashCode: Integer;
         function CompareTo(const Item: ICollectable): Integer;
-        property Value: String read FValue;
+        property Value: AnsiString read FValue;
     end;
 
     TStringAssociationWrapper = class(TAbstractItem, IEquatable, IStringMappable, IStringAssociationWrapper)
     private
         FAutoDestroy: Boolean;
-        FKey: String;
+        FKey: AnsiString;
         FValue: TObject;
     public
-        constructor Create(const Key: String; Value: TObject); overload;
+        constructor Create(const Key: AnsiString; Value: TObject); overload;
         destructor Destroy; override;
         function GetAutoDestroy: Boolean;
         procedure SetAutoDestroy(Value: Boolean);
-        function GetKey: String;
+        function GetKey: AnsiString;
         function GetValue: TObject;
         function Equals(const Item: ICollectable): Boolean;
         property AutoDestroy: Boolean read GetAutoDestroy write SetAutoDestroy;
-        property Key: String read GetKey;
+        property Key: AnsiString read GetKey;
         property Value: TObject read GetValue;
     end;
 
@@ -408,7 +408,7 @@ begin
     Result := (Self = Item.GetInstance);
 end;
 
-function TAbstractStringMappable.GetKey: String;
+function TAbstractStringMappable.GetKey: AnsiString;
 begin
     Result := FKey;
 end;
@@ -427,7 +427,7 @@ begin
     Create(TIntegerWrapper.Create(Key) as ICollectable, Value);
 end;
 
-constructor TAssociationWrapper.Create(Key: String; Value: TObject);
+constructor TAssociationWrapper.Create(Key: AnsiString; Value: TObject);
 begin
     Create(TStringWrapper.Create(Key) as ICollectable, Value);
 end;
@@ -545,13 +545,13 @@ begin
 end;
 
 { TCharWrapper }
-constructor TCharWrapper.Create(Value: Char);
+constructor TCharWrapper.Create(Value: AnsiChar);
 begin
     inherited Create;
     FValue := Value;
 end;
 
-function TCharWrapper.GetValue: Char;
+function TCharWrapper.GetValue: AnsiChar;
 begin
     Result := FValue;
 end;
@@ -568,7 +568,7 @@ end;
 
 function TCharWrapper.CompareTo(const Item: ICollectable): Integer;
 var
-    Value2: Char;
+    Value2: AnsiChar;
 begin
     Value2 := (Item.GetInstance as TCharWrapper).Value;
     if Value < Value2 then
@@ -716,7 +716,7 @@ begin
 end;
 
 { TStringAssociationWrapper }
-constructor TStringAssociationWrapper.Create(const Key: String; Value: TObject);
+constructor TStringAssociationWrapper.Create(const Key: AnsiString; Value: TObject);
 begin
     inherited Create;
     FAutoDestroy := true;
@@ -751,7 +751,7 @@ begin
     Result := (Self.Value = (Item.GetInstance as TStringAssociationWrapper).Value)
 end;
 
-function TStringAssociationWrapper.GetKey: String;
+function TStringAssociationWrapper.GetKey: AnsiString;
 begin
     Result := FKey;
 end;
@@ -842,13 +842,13 @@ begin
 end;
 
 { TStringWrapper }
-constructor TStringWrapper.Create(Value: String);
+constructor TStringWrapper.Create(Value: AnsiString);
 begin
     inherited Create;
     FValue := Value;
 end;
 
-function TStringWrapper.GetValue: String;
+function TStringWrapper.GetValue: AnsiString;
 begin
     Result := FValue;
 end;

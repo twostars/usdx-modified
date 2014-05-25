@@ -153,7 +153,7 @@ type
 
       function CreatePlaybackStream(): TAudioPlaybackStream; override;
     public
-      function GetName: string; override; abstract;
+      function GetName: AnsiString; override; abstract;
       function InitializePlayback(): boolean; override;
       function FinalizePlayback: boolean; override;
 

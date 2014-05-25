@@ -110,13 +110,13 @@ begin
     glVertex2f(0, 0);
 
     glTexCoord2f(Tex.TexX1*Tex.TexW, Tex.TexY2*Tex.TexH);
-    glVertex2f(0, 600);
+    glVertex2f(0, RenderH);
 
     glTexCoord2f(Tex.TexX2*Tex.TexW, Tex.TexY2*Tex.TexH);
-    glVertex2f(800, 600);
+    glVertex2f(RenderW, RenderH);
 
     glTexCoord2f(Tex.TexX2*Tex.TexW, Tex.TexY1*Tex.TexH);
-    glVertex2f(800, 0);
+    glVertex2f(RenderW, 0);
   glEnd;
 
   glDisable(GL_BLEND);

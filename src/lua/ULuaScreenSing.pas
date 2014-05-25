@@ -87,14 +87,14 @@ function ULuaScreenSing_SetSettings(L: Plua_State): Integer; cdecl;
     array [1.."count of lines"]
      \
      | Start: integer - beat the line is displayed at (on top of lyrics display)
-     | Lyric: string  - full lyric of the line
+     | Lyric: AnsiString  - full lyric of the line
      | Notes: array [1.."count notes of this line"]
      \
       | Start: integer    - beat the note starts at
       | Length: integer   - length in beats
       | Tone: integer     - pitch that has to be sung, full range
       | NoteType: integer - 0 for freestyle, 1 for normal, 2 for golden
-      | Text: string      - text of this fragment }
+      | Text: AnsiString      - text of this fragment }
 function ULuaScreenSing_GetSongLines(L: Plua_State): Integer; cdecl;
 
 const
@@ -364,7 +364,7 @@ end;
   unequal to nil in Table }
 function ULuaScreenSing_SetSettings(L: Plua_State): Integer; cdecl;
   var
-    Key: String;
+    Key: AnsiString;
 begin
   Result := 0;
 
@@ -401,14 +401,14 @@ end;
     array [1.."count of lines"]
      \
      | Start: integer - beat the line is displayed at (on top of lyrics display)
-     | Lyric: string  - full lyric of the line
+     | Lyric: AnsiString  - full lyric of the line
      | Notes: array [1.."count notes of this line"]
      \
       | Start: integer    - beat the note starts at
       | Length: integer   - length in beats
       | Tone: integer     - pitch that has to be sung, full range
       | NoteType: integer - 0 for freestyle, 1 for normal, 2 for golden
-      | Text: string      - text of this fragment }
+      | Text: AnsiString      - text of this fragment }
 function ULuaScreenSing_GetSongLines(L: Plua_State): Integer; cdecl;
   var
     I, J: Integer;
@@ -419,7 +419,7 @@ begin
     lua_ClearStack(L);
 
     if not lua_CheckStack(L, 7) then
-      luaL_Error(L, PChar('can''t allocate enough stack space in ULuaScreenSing_GetSongLines'));
+      luaL_Error(L, PAnsiChar('can''t allocate enough stack space in ULuaScreenSing_GetSongLines'));
 
     // lines array table
     lua_CreateTable(L, Length(Lines[0].Line), 0);
@@ -434,11 +434,11 @@ begin
 
       // line start
       lua_PushInteger(L, Start);
-      lua_SetField(L, -2, PChar('Start'));
+      lua_SetField(L, -2, PAnsiChar('Start'));
 
       // line lyric
-      lua_PushString(L, PChar(Lyric));
-      lua_SetField(L, -2, PChar('Lyric'));
+      lua_PushString(L, PAnsiChar(Lyric));
+      lua_SetField(L, -2, PAnsiChar('Lyric'));
 
       //line notes array table
       lua_CreateTable(L, Length(Note), 0);
@@ -452,28 +452,28 @@ begin
 
         // Notes[J+1].Start
         lua_PushInteger(L, Note[J].Start);
-        lua_SetField(L, -2, PChar('Start'));
+        lua_SetField(L, -2, PAnsiChar('Start'));
 
         // Notes[J+1].Length
         lua_PushInteger(L, Note[J].Length);
-        lua_SetField(L, -2, PChar('Length'));
+        lua_SetField(L, -2, PAnsiChar('Length'));
 
         // Notes[J+1].Tone
         lua_PushInteger(L, Note[J].Tone);
-        lua_SetField(L, -2, PChar('Tone'));
+        lua_SetField(L, -2, PAnsiChar('Tone'));
 
         // Notes[J+1].NoteType
         lua_PushInteger(L, Integer(Note[J].NoteType));
-        lua_SetField(L, -2, PChar('NoteType'));
+        lua_SetField(L, -2, PAnsiChar('NoteType'));
 
         // Notes[J+1].Text
-        lua_PushString(L, PChar(Note[J].Text));
-        lua_SetField(L, -2, PChar('Text'));
+        lua_PushString(L, PAnsiChar(Note[J].Text));
+        lua_SetField(L, -2, PAnsiChar('Text'));
 
         lua_SetTable(L, -3);
       end;
 
-      lua_SetField(L, -2, PChar('Notes'));
+      lua_SetField(L, -2, PAnsiChar('Notes'));
 
       // save line to array table
       lua_setTable(L, -3);

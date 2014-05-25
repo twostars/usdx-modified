@@ -60,7 +60,7 @@ type
       AudioCore: TAudioCore_Portaudio;
       function EnumDevices(): boolean;
     public
-      function GetName: string; override;
+      function GetName: AnsiString; override;
       function InitializeRecord: boolean; override;
       function FinalizeRecord: boolean; override;
   end;
@@ -309,7 +309,7 @@ end;
 
 { TAudioInput_Portaudio }
 
-function TAudioInput_Portaudio.GetName: String;
+function TAudioInput_Portaudio.GetName: AnsiString;
 begin
   result := 'Portaudio';
 end;

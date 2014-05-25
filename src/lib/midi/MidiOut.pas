@@ -156,7 +156,7 @@ type
 
  { Stuff from midioutCAPS }
     FDriverVersion: MMVERSION; { Driver version from midioutGetDevCaps }
-    FProductName: string; { product name }
+    FProductName: AnsiString; { product name }
     FTechnology: OutPortTech; { Type of MIDI output device }
     FVoices: word; { Number of voices (internal synth) }
     FNotes: word; { Number of notes (internal synth) }
@@ -171,7 +171,7 @@ type
 
     procedure MidiOutput(var Message: TMessage);
     procedure SetDeviceID(DeviceID: cardinal);
-    procedure SetProductName(NewProductName: string);
+    procedure SetProductName(NewProductName: AnsiString);
     procedure SetTechnology(NewTechnology: OutPortTech);
     function midioutErrorString(WError: word): string;
 
@@ -209,7 +209,7 @@ type
 
   published
  { TODO: Property editor with dropdown list of product names }
-    property ProductName: string read FProductName write SetProductName;
+    property ProductName: AnsiString read FProductName write SetProductName;
 
     property DeviceID: cardinal read FDeviceID write SetDeviceID default 0;
  { TODO: midiOutGetVolume? Or two properties for Left and Right volume?
@@ -279,7 +279,7 @@ end;
 
 function Tmidioutput.midioutErrorString(WError: word): string;
 var
-  errorDesc: Pchar;
+  errorDesc: PChar;
 begin
   errorDesc := nil;
   try
@@ -339,11 +339,11 @@ end;
   Exception if output device with matching name not found,
   or if output device is open }
 
-procedure Tmidioutput.SetProductName(NewProductName: string);
+procedure Tmidioutput.SetProductName(NewProductName: AnsiString);
 var
   midioutCaps: TmidioutCaps;
   testDeviceID: integer;
-  testProductName: string;
+  testProductName: AnsiString;
 begin
   if FState = mosOpen then
     raise EmidioutputError.Create('Change to ProductName while device was open')
@@ -492,9 +492,9 @@ begin
   MyMidiHdr := TMyMidiHdr.Create(msgLength);
 
  { Copy the data over to the MidiHdr buffer
-   We can't just use the caller's Pchar because the buffer memory
+   We can't just use the caller's PAnsiChar because the buffer memory
    has to be global, shareable, and locked. }
-  StrMove(MyMidiHdr.SysexPointer, TheSysex, msgLength);
+  StrMove(PAnsiChar(MyMidiHdr.SysexPointer), PAnsiChar(TheSysex), msgLength);
 
  { Store the MyMidiHdr address in the header so we can find it again quickly
       (see the MidiOutput proc) }

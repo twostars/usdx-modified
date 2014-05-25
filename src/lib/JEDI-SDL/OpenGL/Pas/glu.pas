@@ -122,7 +122,7 @@ Abstract:
 
 interface
 
-{$I jedi-sdl.inc}
+{$I ../../SDL/Pas/jedi-sdl.inc}
 
 uses
 {$IFDEF __GPC__}
@@ -156,9 +156,9 @@ type
 {$ENDIF}
 
 var
-  gluErrorString : function( errCode : GLenum ) : PChar; {$IFDEF WINDOWS}stdcall; {$ELSE}cdecl; {$ENDIF}
+  gluErrorString : function( errCode : GLenum ) : PAnsiChar; {$IFDEF WINDOWS}stdcall; {$ELSE}cdecl; {$ENDIF}
   gluErrorUnicodeStringEXT : function( errCode : GLenum ) : PWideChar; {$IFDEF WINDOWS}stdcall; {$ELSE}cdecl; {$ENDIF}
-  gluGetString : function( name : GLenum ) : PChar; {$IFDEF WINDOWS}stdcall; {$ELSE}cdecl; {$ENDIF}
+  gluGetString : function( name : GLenum ) : PAnsiChar; {$IFDEF WINDOWS}stdcall; {$ELSE}cdecl; {$ENDIF}
   gluOrtho2D   : procedure( left, right, bottom, top : GLdouble ); {$IFDEF WINDOWS}stdcall; {$ELSE}cdecl; {$ENDIF}
   gluPerspective : procedure( fovy, aspect, zNear, zFar : GLdouble ); {$IFDEF WINDOWS}stdcall; {$ELSE}cdecl; {$ENDIF}
   gluPickMatrix : procedure( x, y, width, height : GLdouble; var viewport : TViewPortArray ); {$IFDEF WINDOWS}stdcall; {$ELSE}cdecl; {$ENDIF}
@@ -439,7 +439,7 @@ const
   GLU_ERROR    = GLU_TESS_ERROR;
   GLU_EDGE_FLAG = GLU_TESS_EDGE_FLAG;
 
-procedure LoadGLu( const dll : PChar );
+procedure LoadGLu( const dll : PAnsiChar );
 procedure FreeGLu;
 
 implementation
@@ -507,7 +507,7 @@ begin
 
 end;
 
-procedure LoadGLu( const dll : PChar );
+procedure LoadGLu( const dll : PAnsiChar );
 begin
 
   FreeGLu;

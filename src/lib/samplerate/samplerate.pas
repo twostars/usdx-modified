@@ -136,9 +136,9 @@ function src_simple(data: PSRC_DATA; converter_type: cint; channels: cint): cint
 ** sample rate converter or NULL if no sample rate converter exists for
 ** the given value. The converters are sequentially numbered from 0 to N.
 *}
-function src_get_name(converter_type: cint): {const} Pchar; cdecl; external LibName;
-function src_get_description(converter_type: cint): {const} Pchar; cdecl; external LibName;
-function src_get_version(): {const} Pchar; cdecl; external LibName;
+function src_get_name(converter_type: cint): {const} PAnsiChar; cdecl; external LibName;
+function src_get_description(converter_type: cint): {const} PAnsiChar; cdecl; external LibName;
+function src_get_version(): {const} PAnsiChar; cdecl; external LibName;
 
 {*
 ** Set a new SRC ratio. This allows step responses
@@ -169,7 +169,7 @@ function src_error(state: PSRC_STATE): cint; cdecl; external LibName;
 {*
 ** Convert the error number into a string.
 *}
-function src_strerror(error: cint): {const} Pchar; cdecl; external LibName;
+function src_strerror(error: cint): {const} PAnsiChar; cdecl; external LibName;
 
 {*
 ** The following enums can be used to set the interpolator type

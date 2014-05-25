@@ -374,7 +374,7 @@ type
  * - Same applies to Unix with LC_CTYPE set to UTF8 encoding (default on newer systems)
  *}
 function Path(const PathName: RawByteString; DelimOption: TPathDelimOption = pdKeep): IPath; overload;
-function Path(PathName: PChar; DelimOption: TPathDelimOption = pdKeep): IPath; overload;
+function Path(PathName: PAnsiChar; DelimOption: TPathDelimOption = pdKeep): IPath; overload;
 
 {**
  * Creates a new path with the given UTF-16 pathname.
@@ -569,7 +569,7 @@ begin
     Result := TPathImpl.Create(AnsiToUtf8(PathName), DelimOption);
 end;
 
-function Path(PathName: PChar; DelimOption: TPathDelimOption): IPath;
+function Path(PathName: PAnsiChar; DelimOption: TPathDelimOption): IPath;
 begin
   Result := Path(RawByteString(PathName));
 end;
@@ -1366,7 +1366,7 @@ begin
       List := TStringList.Create;
       Stream := TBinaryFileStream.Create(FileName, fmOpenRead);
       if (Stream.Read(BOMBuf[0], SizeOf(BOMBuf)) = 3) and
-         (CompareMem(PChar(UTF8_BOM), @BomBuf, Length(UTF8_BOM))) then
+         (CompareMem(PAnsiChar(UTF8_BOM), @BomBuf, Length(UTF8_BOM))) then
       begin
         // truncate BOM
         FUTF8Encoded := true;

@@ -63,7 +63,7 @@ type
       function FinalizeAudioPlaybackEngine(): boolean;   override;
       function GetLatency(): double;                     override;
     public
-      function GetName: String;                          override;
+      function GetName: AnsiString;                          override;
   end;
 
   TPortaudioOutputDevice = class(TAudioOutputDevice)
@@ -88,7 +88,7 @@ begin
   Result := paContinue;
 end;
 
-function TAudioPlayback_Portaudio.GetName: String;
+function TAudioPlayback_Portaudio.GetName: AnsiString;
 begin
   Result := 'Portaudio_Playback';
 end;

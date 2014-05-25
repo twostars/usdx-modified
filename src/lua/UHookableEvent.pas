@@ -42,7 +42,7 @@ type
     Handle: Integer; //< Handle to identify the hook, e.g. for unhooking by plugin
     Parent: Integer; //< Lua Core Handle this hook belongs to
 
-    Func: String;   //< Name of the global that holds the function
+    Func: AnsiString;   //< Name of the global that holds the function
 
     Next: PHook; //< Next Hook in list (nil for the first)
   end;
@@ -58,7 +58,7 @@ type
       LastHook: PHook;  //< last hook in hook list, first to be called
       NextHookHandle: Integer;  //< handle to identify next hook
 
-      sName: String;    //< the events name
+      sName: AnsiString;    //< the events name
 
       PrepareStack: PrepareStackProc; //< prepare stack procedure passed to constructor
       CallinProcess: boolean; //< true if a chain call is in process, to prepare unhooking during calls
@@ -66,12 +66,12 @@ type
 
       procedure RemoveWaitingHooks;
     public
-      constructor Create(Name: String; const Proc: PrepareStackProc = nil);
+      constructor Create(Name: AnsiString; const Proc: PrepareStackProc = nil);
 
-      property Name: String read sName;             //< returns the events name
+      property Name: AnsiString read sName;             //< returns the events name
       property Handle: Integer read iHandle;        //< returns the events name
 
-      procedure Hook(L: Plua_State; Parent: Integer; Func: String); //< pushes hook object/table to the lua stack
+      procedure Hook(L: Plua_State; Parent: Integer; Func: AnsiString); //< pushes hook object/table to the lua stack
       procedure UnHook(L: Plua_State; hHook: Integer);              //< unhook by plugin. push true or error string to lua stack
 
       procedure UnHookByParent(Parent: Integer);     //< deletes all hooks by a specified parent (unhook by core)
@@ -90,7 +90,7 @@ function LuaHook_UnHook(L: Plua_State): Integer; cdecl;
 implementation
 uses ULuaCore;
 
-constructor THookableEvent.Create(Name: String; const Proc: PrepareStackProc);
+constructor THookableEvent.Create(Name: AnsiString; const Proc: PrepareStackProc);
 begin
   inherited Create;
   
@@ -130,7 +130,7 @@ begin
 end;
 
 { adds hook to events list and pushes hook object/table to the lua stack }
-procedure  THookableEvent.Hook(L: PLua_State; Parent: Integer; Func: String);
+procedure  THookableEvent.Hook(L: PLua_State; Parent: Integer; Func: AnsiString);
   var
     Item: PHook;
     P: TLuaPlugin;
@@ -346,7 +346,7 @@ end;
 { function in resulting hook table. it calls the unhook command of the event on plugins demand }
 function LuaHook_UnHook(L: Plua_State): Integer; cdecl;
   var
-    Name: string;
+    Name: AnsiString;
     Event: THookableEvent;
     hHook: integer;
 begin
@@ -369,7 +369,7 @@ begin
   Lua_pop(L, Lua_GetTop(L));
 
   if (Event = nil) then
-    LuaL_Error(L, PAnsiChar('event ' + Name + ' does not exist (anymore?) in LuaHook_Unhook'));
+    lual_error(L, PAnsiChar('event ' + Name + ' does not exist (anymore?) in LuaHook_Unhook'));
 
   // get the hookid
   hHook := lua_ToInteger(L, lua_upvalueindex(1));

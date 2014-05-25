@@ -12,21 +12,21 @@ uses
   glext        in '../src/lib/JEDI-SDL/OpenGL/Pas/glext.pas';
 
 const
-  s1:  pchar = '';
-  s2:  pchar = 'ext';
-  s3:  pchar = ' ext';
-  s4:  pchar = ' ext ';
-  s5:  pchar = 'kkshf kjsfh ext';
-  s6:  pchar = 'fakh sajhf ext jskdhf';
-  s7:  pchar = 'ext jshf';
-  s8:  pchar = 'sdkjfh ksjhext sjdha';
-  s9:  pchar = 'sdkjfh ksjh extsjdha';
-  s10: pchar = 'sdkjfh ksjhextsjdha';
-  s11: pchar = 'sd kjf jdha';
+  s1:  PAnsiChar = '';
+  s2:  PAnsiChar = 'ext';
+  s3:  PAnsiChar = ' ext';
+  s4:  PAnsiChar = ' ext ';
+  s5:  PAnsiChar = 'kkshf kjsfh ext';
+  s6:  PAnsiChar = 'fakh sajhf ext jskdhf';
+  s7:  PAnsiChar = 'ext jshf';
+  s8:  PAnsiChar = 'sdkjfh ksjhext sjdha';
+  s9:  PAnsiChar = 'sdkjfh ksjh extsjdha';
+  s10: PAnsiChar = 'sdkjfh ksjhextsjdha';
+  s11: PAnsiChar = 'sd kjf jdha';
 
-  e1: pchar = '';
-  e2: pchar = 'ext';
-  e3: pchar = 'GL_ARB_window_pos';
+  e1: PAnsiChar = '';
+  e2: PAnsiChar = 'ext';
+  e3: PAnsiChar = 'GL_ARB_window_pos';
 
   SCREEN_WIDTH  = 640;
   SCREEN_HEIGHT = 480;

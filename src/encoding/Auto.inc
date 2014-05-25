@@ -119,7 +119,7 @@ var
 begin
   if (self.Regex <> Nil) then
   begin
-    RegexResults := pcre_exec(Regex, RegexExtra, PChar(InStr), Length(InStr), 0, 0, Nil, 0);
+    RegexResults := pcre_exec(Regex, RegexExtra, PAnsiChar(InStr), Length(InStr), 0, 0, Nil, 0);
 
     if RegexResults >= 0 then
     begin

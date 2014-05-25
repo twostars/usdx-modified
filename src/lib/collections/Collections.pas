@@ -119,7 +119,7 @@ type
 
     IStringMappable = interface(IEquatable)
         ['{3CC61F40-5F92-11D7-8120-0002E3165EF8}']
-        function GetKey: String;
+        function GetKey: AnsiString;
     end;
 
     IIntegerMappable = interface(IEquatable)
@@ -162,7 +162,7 @@ type
 
     IStringMapIterator = interface(IIterator)
         ['{1345ED20-5F93-11D7-8120-0002E3165EF8}']
-        function CurrentKey: String;
+        function CurrentKey: AnsiString;
     end;
 
     IAssociation = interface(ICollectable)
@@ -179,7 +179,7 @@ type
 
     IStringAssociation = interface(ICollectable)
         ['{FB87D2A0-5F94-11D7-8120-0002E3165EF8}']
-        function GetKey: String;
+        function GetKey: AnsiString;
         function GetValue: ICollectable;
     end;
 
@@ -357,24 +357,24 @@ type
 
     IStringMap = interface(ICollection)
         ['{20531A20-5F92-11D7-8120-0002E3165EF8}']
-        function GetItem(const Key: String): ICollectable;
-        procedure SetItem(const Key: String; const Item: ICollectable);
+        function GetItem(const Key: AnsiString): ICollectable;
+        procedure SetItem(const Key: AnsiString; const Item: ICollectable);
         function GetKeys: ISet;
         function GetMapIterator: IStringMapIterator;
         function GetValues: ICollection;
         function CloneAsStringMap: IStringMap;
-        function ContainsKey(const Key: String): Boolean; overload;
+        function ContainsKey(const Key: AnsiString): Boolean; overload;
         function ContainsKey(const KeyArray: array of String): Boolean; overload;
-        function Get(const Key: String): ICollectable;
+        function Get(const Key: AnsiString): ICollectable;
         function Put(const Item: ICollectable): ICollectable; overload;
-        function Put(const Key: String; const Item: ICollectable): ICollectable; overload;
+        function Put(const Key: AnsiString; const Item: ICollectable): ICollectable; overload;
         function Put(const ItemArray: array of ICollectable): ICollection; overload;
         function Put(const Collection: ICollection): ICollection; overload;
         function Put(const Map: IStringMap): ICollection; overload;
-        function RemoveKey(const Key: String): ICollectable; overload;
+        function RemoveKey(const Key: AnsiString): ICollectable; overload;
         function RemoveKey(const KeyArray: array of String): ICollection; overload;
         function RetainKey(const KeyArray: array of String): ICollection; overload;
-        property Items[const Key: String]: ICollectable read GetItem write SetItem; default;
+        property Items[const Key: AnsiString]: ICollectable read GetItem write SetItem; default;
     end;
 
     TCollectionPosition = class
@@ -446,13 +446,13 @@ type
 
     TStringAssociation = class(TInterfacedObject, ICollectable, IStringAssociation)
     private
-        FKey: String;
+        FKey: AnsiString;
         FValue: ICollectable;
     public
-        constructor Create(const Key: String; const Value: ICollectable); virtual;
+        constructor Create(const Key: AnsiString; const Value: ICollectable); virtual;
         destructor Destroy; override;
         function GetInstance: TObject; virtual;
-        function GetKey: String;
+        function GetKey: AnsiString;
         function GetValue: ICollectable;
     end;
 
@@ -773,7 +773,7 @@ type
         FAssociationComparator: IStringAssociationComparator;
     protected
         function GetAssociationIterator: IStringMapIterator; virtual; abstract;
-        function GetKeyPosition(const Key: String): TCollectionPosition; virtual; abstract;
+        function GetKeyPosition(const Key: AnsiString): TCollectionPosition; virtual; abstract;
         function TrueAdd(const Item: ICollectable): Boolean; override;
         function TrueContains(const Item: ICollectable): Boolean; override;
         function TrueGet(Position: TCollectionPosition): IStringAssociation; virtual; abstract;
@@ -790,8 +790,8 @@ type
         constructor Create(const KeyArray: array of String; const ItemArray: array of ICollectable; NaturalItemsOnly: Boolean); overload; virtual;
         constructor Create(const Map: IStringMap); overload; virtual;
         destructor Destroy; override;
-        function GetItem(const Key: String): ICollectable; virtual;
-        procedure SetItem(const Key: String; const Item: ICollectable); virtual;
+        function GetItem(const Key: AnsiString): ICollectable; virtual;
+        procedure SetItem(const Key: AnsiString; const Item: ICollectable); virtual;
         function GetIterator: IIterator; override;
         function GetKeys: ISet; virtual;
         function GetMapIterator: IStringMapIterator; virtual;
@@ -800,19 +800,19 @@ type
         function GetValues: ICollection; virtual;
         function Clone: ICollection; override;
         function CloneAsStringMap: IStringMap; virtual;
-        function ContainsKey(const Key: String): Boolean; overload; virtual;
+        function ContainsKey(const Key: AnsiString): Boolean; overload; virtual;
         function ContainsKey(const KeyArray: array of String): Boolean; overload; virtual;
-        function Get(const Key: String): ICollectable; virtual;
+        function Get(const Key: AnsiString): ICollectable; virtual;
         function IsNilAllowed: Boolean; override;
         function Put(const Item: ICollectable): ICollectable; overload; virtual;
-        function Put(const Key: String; const Item: ICollectable): ICollectable; overload; virtual;
+        function Put(const Key: AnsiString; const Item: ICollectable): ICollectable; overload; virtual;
         function Put(const ItemArray: array of ICollectable): ICollection; overload; virtual;
         function Put(const Collection: ICollection): ICollection; overload; virtual;
         function Put(const Map: IStringMap): ICollection; overload; virtual;
-        function RemoveKey(const Key: String): ICollectable; overload; virtual;
+        function RemoveKey(const Key: AnsiString): ICollectable; overload; virtual;
         function RemoveKey(const KeyArray: array of String): ICollection; overload; virtual;
         function RetainKey(const KeyArray: array of String): ICollection; overload; virtual;
-        property Items[const Key: String]: ICollectable read GetItem write SetItem; default;
+        property Items[const Key: AnsiString]: ICollectable read GetItem write SetItem; default;
     end;
 
     TAbstractCollectionClass = class of TAbstractCollection;
@@ -917,7 +917,7 @@ type
     public
         procedure AfterConstruction; override;
         function GetAllowRemoval: Boolean; virtual;
-        function CurrentKey: String; virtual;
+        function CurrentKey: AnsiString; virtual;
         function CurrentItem: ICollectable; virtual;
         function EOF: Boolean; virtual;
         function First: ICollectable; virtual;
@@ -1017,7 +1017,7 @@ type
         FCollection: ICollection;
         FErrorType: TCollectionError;
     public
-        constructor Create(const Msg: String; const Collection: ICollection; ErrorType: TCollectionError);
+        constructor Create(const Msg: AnsiString; const Collection: ICollection; ErrorType: TCollectionError);
         property Collection: ICollection read FCollection;
         property ErrorType: TCollectionError read FErrorType;
     end;
@@ -1216,7 +1216,7 @@ end;
 
 
 { TStringAssociation }
-constructor TStringAssociation.Create(const Key: String; const Value: ICollectable);
+constructor TStringAssociation.Create(const Key: AnsiString; const Value: ICollectable);
 begin
     FKey := Key;
     FValue := Value;
@@ -1233,7 +1233,7 @@ begin
     Result := Self;
 end;
 
-function TStringAssociation.GetKey: String;
+function TStringAssociation.GetKey: AnsiString;
 begin
     Result := FKey;
 end;
@@ -1492,7 +1492,7 @@ begin
     Result := FAllowRemoval;
 end;
 
-function TAbstractStringAssociationIterator.CurrentKey: String;
+function TAbstractStringAssociationIterator.CurrentKey: AnsiString;
 begin
     if FAssociation <> nil then
         Result := FAssociation.GetKey
@@ -1696,7 +1696,7 @@ end;
 
 function TStringAssociationComparator.Compare(const Item1, Item2: ICollectable): Integer;
 var
-    Key1, Key2: String;
+    Key1, Key2: AnsiString;
 begin
     Key1 := (Item1 as IStringAssociation).GetKey;
     Key2 := (Item2 as IStringAssociation).GetKey;
@@ -2017,7 +2017,7 @@ end;
 
 procedure TAbstractCollection.CollectionError(ErrorType: TCollectionError);
 var
-    Msg: String;
+    Msg: AnsiString;
 begin
     if not (ErrorType in FIgnoreErrors) then
     begin
@@ -4908,12 +4908,12 @@ begin
     Result := ResultCollection;
 end;
 
-function TAbstractStringMap.GetItem(const Key: String): ICollectable;
+function TAbstractStringMap.GetItem(const Key: AnsiString): ICollectable;
 begin
     Result := Get(Key);
 end;
 
-procedure TAbstractStringMap.SetItem(const Key: String; const Item: ICollectable);
+procedure TAbstractStringMap.SetItem(const Key: AnsiString; const Item: ICollectable);
 begin
     Put(Key, Item);
 end;
@@ -4980,7 +4980,7 @@ begin
     Result := (TAbstractStringMapClass(ClassType)).Create(Self);
 end;
 
-function TAbstractStringMap.ContainsKey(const Key: String): Boolean;
+function TAbstractStringMap.ContainsKey(const Key: AnsiString): Boolean;
 var
     Position: TCollectionPosition;
 begin
@@ -5007,7 +5007,7 @@ begin
     Result := Success;
 end;
 
-function TAbstractStringMap.Get(const Key: String): ICollectable;
+function TAbstractStringMap.Get(const Key: AnsiString): ICollectable;
 var
     Position: TCollectionPosition;
 begin
@@ -5055,7 +5055,7 @@ begin
     end;
 end;
 
-function TAbstractStringMap.Put(const Key: String; const Item: ICollectable): ICollectable;
+function TAbstractStringMap.Put(const Key: AnsiString; const Item: ICollectable): ICollectable;
 var
     OldAssociation, NewAssociation: IStringAssociation;
     ItemError: TCollectionError;
@@ -5161,7 +5161,7 @@ var
     Position: TCollectionPosition;
     MapIterator: IStringMapIterator;
     Item: ICollectable;
-    Key: String;
+    Key: AnsiString;
 begin
     ResultCollection := TPArrayBag.Create(NaturalItemsOnly);
     MapIterator := Map.GetMapIterator;
@@ -5192,7 +5192,7 @@ begin
     Result := ResultCollection;
 end;
 
-function TAbstractStringMap.RemoveKey(const Key: String): ICollectable;
+function TAbstractStringMap.RemoveKey(const Key: AnsiString): ICollectable;
 var
     Position: TCollectionPosition;
     OldAssociation: IStringAssociation;
@@ -5216,7 +5216,7 @@ var
     ResultCollection: ICollection;
     OldAssociation: IStringAssociation;
     Position: TCollectionPosition;
-    Key: String;
+    Key: AnsiString;
     I: Integer;
 begin
     ResultCollection := TPArrayBag.Create(NaturalItemsOnly);
@@ -5276,7 +5276,7 @@ end;
 
 
 { ECollectionError }
-constructor ECollectionError.Create(const Msg: String; const Collection: ICollection; ErrorType: TCollectionError);
+constructor ECollectionError.Create(const Msg: AnsiString; const Collection: ICollection; ErrorType: TCollectionError);
 begin
     inherited Create(Msg);
     FCollection := Collection;

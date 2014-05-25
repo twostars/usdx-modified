@@ -487,7 +487,7 @@ type
     origres: DWORD;     // original resolution
     plugin: HPLUGIN;    // plugin
     sample: HSAMPLE;    // sample
-    filename: PChar;    // filename
+    filename: PAnsiChar;    // filename
   end;
 
   BASS_PLUGINFORM = record
@@ -768,7 +768,7 @@ function BASS_Pause: BOOL; {$IFDEF DLL_STDCALL}stdcall;{$ENDIF}{$IFDEF DLL_CDECL
 function BASS_SetVolume(volume: FLOAT): BOOL; {$IFDEF DLL_STDCALL}stdcall;{$ENDIF}{$IFDEF DLL_CDECL}cdecl;{$ENDIF} external bassdll;
 function BASS_GetVolume: FLOAT; {$IFDEF DLL_STDCALL}stdcall;{$ENDIF}{$IFDEF DLL_CDECL}cdecl;{$ENDIF} external bassdll;
 
-function BASS_PluginLoad(filename: PChar; flags: DWORD): HPLUGIN; {$IFDEF DLL_STDCALL}stdcall;{$ENDIF}{$IFDEF DLL_CDECL}cdecl;{$ENDIF} external bassdll;
+function BASS_PluginLoad(filename: PAnsiChar; flags: DWORD): HPLUGIN; {$IFDEF DLL_STDCALL}stdcall;{$ENDIF}{$IFDEF DLL_CDECL}cdecl;{$ENDIF} external bassdll;
 function BASS_PluginFree(handle: HPLUGIN): BOOL; {$IFDEF DLL_STDCALL}stdcall;{$ENDIF}{$IFDEF DLL_CDECL}cdecl;{$ENDIF} external bassdll;
 function BASS_PluginGetInfo(handle: HPLUGIN): PBASS_PLUGININFO; {$IFDEF DLL_STDCALL}stdcall;{$ENDIF}{$IFDEF DLL_CDECL}cdecl;{$ENDIF} external bassdll;
 

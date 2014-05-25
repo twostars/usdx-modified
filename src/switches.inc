@@ -16,8 +16,13 @@
   {$DEFINE Delphi}
 
   // Delphi version numbers (ignore Delphi < 7 and Delphi 8 (VER160))
-
-  {$IF Defined(VER180)} // Delphi 2006 (=10)
+  {$IF Defined(VER260)} // Delphi XE5 (=19)
+    {$DEFINE DELPHI_19}
+    {$DEFINE DELPHI_7_UP}
+    {$DEFINE DELPHI_9_UP}
+    {$DEFINE DELPHI_10_UP}
+    {$DEFINE DELPHI_19_UP}
+  {$ELSEIF Defined(VER180)} // Delphi 2006 (=10)
     {$DEFINE DELPHI_10}
     {$DEFINE DELPHI_7_UP}
     {$DEFINE DELPHI_9_UP}
@@ -46,7 +51,7 @@
   {$I config-win.inc}
 
   // enable debug-mode. For development only!
-  {.$DEFINE DEBUG}
+  {$DEFINE DEBUG}
   {$IFDEF DEBUG}
     // windows apps are either GUI- or console-apps. Console-apps will open
     // an additional console-window for output. For development only!

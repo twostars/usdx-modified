@@ -264,7 +264,7 @@ const
   Skin_P2_ScoreT = 50;
   Skin_P2_ScoreL = 640;
 
-procedure Initialize3D (Title: string);
+procedure Initialize3D (Title: AnsiString);
 procedure Finalize3D;
 procedure Reinitialize3D;
 procedure SwapBuffers;
@@ -483,7 +483,7 @@ end;
 const
   WINDOW_ICON = 'icons/ultrastardx-icon.png';
 
-procedure Initialize3D (Title: string);
+procedure Initialize3D (Title: AnsiString);
 var
   Icon: PSDL_Surface;
 begin
@@ -498,7 +498,7 @@ begin
   if (Icon <> nil) then
     SDL_WM_SetIcon(Icon, nil);
 
-  SDL_WM_SetCaption(PChar(Title), nil);
+  SDL_WM_SetCaption(PAnsiChar(Title), nil);
 
   { center window }
   SDL_putenv('SDL_VIDEO_WINDOW_POS=center');

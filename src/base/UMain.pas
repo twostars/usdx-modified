@@ -97,7 +97,7 @@ uses
 
 procedure Main;
 var
-  WindowTitle: string;
+  WindowTitle: AnsiString;
   BadPlayer: integer;
 begin
   {$IFNDEF Debug}
@@ -117,8 +117,13 @@ begin
 
     // setup separators for parsing
     // Note: ThousandSeparator must be set because of a bug in TIniFile.ReadFloat
-    ThousandSeparator := ',';
-    DecimalSeparator := '.';
+    {$IFDEF DELPHI_19_UP}
+      FormatSettings.ThousandSeparator := '.';
+      FormatSettings.DecimalSeparator := '.';
+    {$ELSE}
+      ThousandSeparator := ',';
+      DecimalSeparator := '.';
+    {$ENDIF}
 
     //------------------------------
     // StartUp - create classes and load files

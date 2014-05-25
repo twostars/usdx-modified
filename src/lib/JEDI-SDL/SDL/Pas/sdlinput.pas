@@ -134,7 +134,7 @@ type
     procedure DoHatMove( Event : TSDL_Event );
     procedure DoButtonDown( Event : TSDL_Event );
     procedure DoButtonUp( Event : TSDL_Event );
-    function GetName: PChar;
+    function GetName: PAnsiChar;
     function GetNumAxes: integer;
     function GetNumBalls: integer;
     function GetNumButtons: integer;
@@ -145,7 +145,7 @@ type
     procedure Open;
     procedure Close;
     function UpdateInput( Event: TSDL_EVENT ) : Boolean; override;
-    property Name : PChar read GetName;
+    property Name : PAnsiChar read GetName;
     property NumAxes : integer read GetNumAxes;
     property NumBalls : integer read GetNumBalls;
     property NumButtons : integer read GetNumButtons;
@@ -195,16 +195,16 @@ type
 
   TSDLCustomCursor = class( TObject )
   private
-    FFileName : string;
+    FFileName : AnsiString;
     FHotPoint: TPoint;
-    procedure SetFileName(const aValue: string );
-    function ScanForChar( str : string; ch : Char; startPos : Integer; lookFor : Boolean ) : Integer;
+    procedure SetFileName(const aValue: AnsiString );
+    function ScanForChar( str : AnsiString; ch : AnsiChar; startPos : Integer; lookFor : Boolean ) : Integer;
   public
-    constructor Create( const aFileName : string; aHotPoint: TPoint );
-    procedure LoadFromFile( const aFileName : string ); virtual; abstract;
+    constructor Create( const aFileName : AnsiString; aHotPoint: TPoint );
+    procedure LoadFromFile( const aFileName : AnsiString ); virtual; abstract;
     procedure LoadFromStream( aStream : TStream ); virtual; abstract;
     procedure Show; virtual; abstract;
-    property FileName : string read FFileName write SetFileName;
+    property FileName : AnsiString read FFileName write SetFileName;
     property HotPoint : TPoint read FHotPoint write FHotPoint;
   end;
 
@@ -214,7 +214,7 @@ type
     procedure FreeCursor;
   public
     destructor Destroy; override;
-    procedure LoadFromFile( const aFileName : string ); override;
+    procedure LoadFromFile( const aFileName : AnsiString ); override;
     procedure LoadFromStream( aStream : TStream ); override;
     procedure Show; override;
   end;
@@ -225,7 +225,7 @@ type
     procedure PutObject( aIndex : Integer; AObject : TSDLCustomCursor); reintroduce;
   public
     constructor Create;
-   function AddCursor(const aName : string; aObject : TSDLCustomCursor): Integer; virtual;
+   function AddCursor(const aName : AnsiString; aObject : TSDLCustomCursor): Integer; virtual;
   end;
 
   TSDLMouse = class( TSDLCustomInput )
@@ -665,7 +665,7 @@ begin
   end;
 end;
 
-function TSDLJoyStick.GetName: PChar;
+function TSDLJoyStick.GetName: PAnsiChar;
 begin
   result := FJoystick.name;
 end;
@@ -732,14 +732,14 @@ end;
 
 { TSDLCustomCursor }
 
-constructor TSDLCustomCursor.Create(const aFileName: string;  aHotPoint: TPoint);
+constructor TSDLCustomCursor.Create(const aFileName: AnsiString;  aHotPoint: TPoint);
 begin
   inherited Create;
   FHotPoint := aHotPoint;
   LoadFromFile( aFileName );
 end;
 
-function TSDLCustomCursor.ScanForChar(str: string; ch: Char;
+function TSDLCustomCursor.ScanForChar(str: AnsiString; ch: AnsiChar;
   startPos: Integer; lookFor: Boolean): Integer;
 begin
   Result := -1;
@@ -749,7 +749,7 @@ begin
     Result := startPos;
 end;
 
-procedure TSDLCustomCursor.SetFileName(const aValue: string);
+procedure TSDLCustomCursor.SetFileName(const aValue: AnsiString);
 begin
   LoadFromFile( aValue );
 end;
@@ -771,17 +771,17 @@ begin
   end;
 end;
 
-procedure TSDLXPMCursor.LoadFromFile(const aFileName: string);
+procedure TSDLXPMCursor.LoadFromFile(const aFileName: AnsiString);
 var
   xpmFile : Textfile;
   step : Integer;
   holdPos : Integer;
   counter : Integer;
   dimensions : array[ 1..3 ] of Integer;
-  clr, clrNone, clrBlack, clrWhite : Char;
+  clr, clrNone, clrBlack, clrWhite : AnsiChar;
   data, mask : array of UInt8;
   i, col : Integer;
-  LineString : string;
+  LineString : AnsiString;
 begin
   FreeCursor;
   AssignFile( xpmFile, aFileName );
@@ -899,7 +899,7 @@ begin
 end;
 
 { TSDLCursorList }
-function TSDLCursorList.AddCursor(const aName : string; aObject : TSDLCustomCursor): Integer;
+function TSDLCursorList.AddCursor(const aName : AnsiString; aObject : TSDLCustomCursor): Integer;
 begin
   result := inherited AddObject( aName, aObject );
 end;

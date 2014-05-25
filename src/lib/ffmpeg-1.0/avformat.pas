@@ -2117,7 +2117,7 @@ function av_sdp_create(ac: pointer; n_files: cint; buf: PAnsiChar; size: cint): 
  *
  * @param extensions a comma-separated list of filename extensions
  *)
-function av_match_ext(filename: {const} Pchar; extensions: {const} Pchar): cint;
+function av_match_ext(filename: {const} PAnsiChar; extensions: {const} PAnsiChar): cint;
   cdecl; external av__format;
 
 (**

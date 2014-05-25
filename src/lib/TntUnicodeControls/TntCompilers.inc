@@ -65,6 +65,12 @@
 
 {$ifdef MSWINDOWS}
 
+  {$ifdef VER260}
+    {$define COMPILER_19}
+    {$define DELPHI}
+    {$define DELPHI_19}
+  {$endif}
+
   {$ifdef VER180}
     {$define COMPILER_10}
     {$define DELPHI}
@@ -150,7 +156,7 @@
   {$ifdef FPC}
     {.$define DELPHI}
   {$endif}
-    
+
   {$ifdef DELPHI_2}
     {$define DELPHI_2_UP}
   {$endif}
@@ -209,6 +215,18 @@
     {$define DELPHI_7_UP}
     {$define DELPHI_9_UP}
     {$define DELPHI_10_UP}
+  {$endif}
+
+  {$ifdef DELPHI_19}
+    {$define DELPHI_2_UP}
+    {$define DELPHI_3_UP}
+    {$define DELPHI_4_UP}
+    {$define DELPHI_5_UP}
+    {$define DELPHI_6_UP}
+    {$define DELPHI_7_UP}
+    {$define DELPHI_9_UP}
+    {$define DELPHI_10_UP}
+    {$define DELPHI_19_UP}
   {$endif}
 
   {$ifdef CPPB_3}
@@ -338,6 +356,19 @@
   {$define COMPILER_7_UP}
   {$define COMPILER_9_UP}
   {$define COMPILER_10_UP}
+{$endif}
+
+{$ifdef COMPILER_19}
+  {$define COMPILER_1_UP}
+  {$define COMPILER_2_UP}
+  {$define COMPILER_3_UP}
+  {$define COMPILER_4_UP}
+  {$define COMPILER_5_UP}
+  {$define COMPILER_6_UP}
+  {$define COMPILER_7_UP}
+  {$define COMPILER_9_UP}
+  {$define COMPILER_10_UP}
+  {$define COMPILER_19_UP}
 {$endif}
 
 //----------------------------------------------------------------------------------------------------------------------

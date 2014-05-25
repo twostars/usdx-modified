@@ -137,9 +137,9 @@ const
 ** CHANGE them if you want to improve this functionality (e.g., by using
 ** GNU readline and history facilities).
 *)
-function  lua_readline(L : Plua_State; var b : PChar; p : PChar): Boolean;
+function  lua_readline(L : Plua_State; var b : PAnsiChar; p : PAnsiChar): Boolean;
 procedure lua_saveline(L : Plua_State; idx : Integer);
-procedure lua_freeline(L : Plua_State; b : PChar);
+procedure lua_freeline(L : Plua_State; b : PAnsiChar);
 
 (*
 @@ lua_stdin_is_tty detects whether the standard input is a 'tty' (that
@@ -267,7 +267,7 @@ type
 ** functions that read/write blocks when loading/dumping Lua chunks
 *)
   lua_Reader = function (L : Plua_State; ud : Pointer;
-                         sz : Psize_t) : PChar; cdecl;
+                         sz : Psize_t) : PAnsiChar; cdecl;
   lua_Writer = function (L : Plua_State; const p : Pointer; sz : size_t;
                          ud : Pointer) : Integer; cdecl;
 
@@ -376,7 +376,7 @@ function lua_isuserdata(L : Plua_State; idx : Integer) : LongBool;
   cdecl; external LUA_LIB_NAME;
 function lua_type(L : Plua_State; idx : Integer) : Integer;
   cdecl; external LUA_LIB_NAME;
-function lua_typename(L : Plua_State; tp : Integer) : PChar;
+function lua_typename(L : Plua_State; tp : Integer) : PAnsiChar;
   cdecl; external LUA_LIB_NAME;
 
 {$IF LUA_VERSION_NUM = 501}
@@ -401,7 +401,7 @@ function lua_tounsignedx(L : Plua_State; idx : Integer; isnum : PInteger) : lua_
 function lua_toboolean(L : Plua_State; idx : Integer) : LongBool;
   cdecl; external LUA_LIB_NAME;
 function lua_tolstring(L : Plua_State; idx : Integer;
-                       len : Psize_t) : PChar;
+                       len : Psize_t) : PAnsiChar;
   cdecl; external LUA_LIB_NAME;
 {$IF LUA_VERSION_NUM = 501}
 function lua_objlen(L : Plua_State; idx : Integer) : size_t;
@@ -458,21 +458,21 @@ procedure lua_pushnumber(L : Plua_State; n : lua_Number);
 procedure lua_pushinteger(L : Plua_State; n : lua_Integer);
   cdecl; external LUA_LIB_NAME;
 {$IF LUA_VERSION_NUM = 501}
-procedure lua_pushlstring(L : Plua_State; const s : PChar; ls : size_t);
+procedure lua_pushlstring(L : Plua_State; const s : PAnsiChar; ls : size_t);
   cdecl; external LUA_LIB_NAME;
-procedure lua_pushstring(L : Plua_State; const s : PChar);
+procedure lua_pushstring(L : Plua_State; const s : PAnsiChar);
   cdecl; external LUA_LIB_NAME;
 {$ELSEIF LUA_VERSION_NUM >= 502}
 procedure lua_pushunsigned(L : Plua_State; n : lua_Unsigned);
   cdecl; external LUA_LIB_NAME;
-procedure lua_pushlstring(L : Plua_State; const s : PChar; ls : size_t);
+procedure lua_pushlstring(L : Plua_State; const s : PAnsiChar; ls : size_t);
   cdecl; external LUA_LIB_NAME;
-procedure lua_pushstring(L : Plua_State; const s : PChar);
+procedure lua_pushstring(L : Plua_State; const s : PAnsiChar);
   cdecl; external LUA_LIB_NAME;
 {$IFEND}
-function  lua_pushvfstring(L : Plua_State; const fmt : PChar; argp : Pointer) : PChar;
+function  lua_pushvfstring(L : Plua_State; const fmt : PAnsiChar; argp : Pointer) : PAnsiChar;
   cdecl; external LUA_LIB_NAME;
-function  lua_pushfstring(L : Plua_State; const fmt : PChar) : PChar; varargs;
+function  lua_pushfstring(L : Plua_State; const fmt : PAnsiChar) : PAnsiChar; varargs;
   cdecl; external LUA_LIB_NAME;
 procedure lua_pushcclosure(L : Plua_State; fn : lua_CFunction; n : Integer);
   cdecl; external LUA_LIB_NAME;
@@ -487,12 +487,12 @@ function  lua_pushthread(L : Plua_state) : Cardinal;
 ** get functions (Lua -> stack)
 *)
 {$IF LUA_VERSION_NUM >= 502}
-procedure lua_getglobal(L : Plua_State; var_: PChar);
+procedure lua_getglobal(L : Plua_State; var_: PAnsiChar);
   cdecl; external LUA_LIB_NAME;
 {$IFEND}
 procedure lua_gettable(L : Plua_State; idx : Integer);
   cdecl; external LUA_LIB_NAME;
-procedure lua_getfield(L : Plua_State; idx : Integer; k : PChar);
+procedure lua_getfield(L : Plua_State; idx : Integer; k : PAnsiChar);
   cdecl; external LUA_LIB_NAME;
 procedure lua_rawget(L : Plua_State; idx : Integer);
   cdecl; external LUA_LIB_NAME;
@@ -520,12 +520,12 @@ procedure lua_getuservalue(L : Plua_State; idx : Integer);
 ** set functions (stack -> Lua)
 *)
 {$IF LUA_VERSION_NUM >= 502}
-procedure lua_setglobal(L : Plua_State; var_: PChar);
+procedure lua_setglobal(L : Plua_State; var_: PAnsiChar);
   cdecl; external LUA_LIB_NAME;
 {$IFEND}
 procedure lua_settable(L : Plua_State; idx : Integer);
   cdecl; external LUA_LIB_NAME;
-procedure lua_setfield(L : Plua_State; idx : Integer; const k : PChar);
+procedure lua_setfield(L : Plua_State; idx : Integer; const k : PAnsiChar);
   cdecl; external LUA_LIB_NAME;
 procedure lua_rawset(L : Plua_State; idx : Integer);
   cdecl; external LUA_LIB_NAME;
@@ -555,7 +555,7 @@ function  lua_pcall(L : Plua_State; nargs, nresults, errfunc : Integer) : Intege
   cdecl; external LUA_LIB_NAME;
 function  lua_cpcall(L : Plua_State; func : lua_CFunction; ud : Pointer) : Integer;
   cdecl; external LUA_LIB_NAME;
-function  lua_load(L : Plua_State; reader : lua_Reader; dt : Pointer; const chunkname : PChar) : Integer;
+function  lua_load(L : Plua_State; reader : lua_Reader; dt : Pointer; const chunkname : PAnsiChar) : Integer;
   cdecl; external LUA_LIB_NAME;
 {$ELSEIF LUA_VERSION_NUM >= 502}
 procedure lua_callk(L : Plua_State; nargs, nresults, ctx : Integer; k : lua_CFunction);
@@ -571,8 +571,8 @@ function  lua_pcallk(L : Plua_State; nargs, nresults, errfunc : Integer;
 function  lua_pcall(L : Plua_State; nargs, nresults, errfunc : Integer) : Integer;
 
 function  lua_load(L : Plua_State; reader : lua_Reader; dt : Pointer; 
-                   const chunkname : PChar;
-		   const mode : PChar) : Integer;
+                   const chunkname : PAnsiChar;
+		   const mode : PAnsiChar) : Integer;
   cdecl; external LUA_LIB_NAME;
 {$IFEND}
 
@@ -654,7 +654,7 @@ procedure lua_pop(L : Plua_State; n : Integer);
 
 procedure lua_newtable(L : Plua_State);
 
-procedure lua_register(L : Plua_State; n : PChar; f : lua_CFunction);
+procedure lua_register(L : Plua_State; n : PAnsiChar; f : lua_CFunction);
 
 procedure lua_pushcfunction(L : Plua_State; f : lua_CFunction);
 
@@ -671,14 +671,14 @@ function lua_isthread(L : Plua_State; n : Integer) : Boolean;
 function lua_isnone(L : Plua_State; n : Integer) : Boolean;
 function lua_isnoneornil(L : Plua_State; n : Integer) : Boolean;
 
-procedure lua_pushliteral(L : Plua_State; s : PChar);
+procedure lua_pushliteral(L : Plua_State; s : PAnsiChar);
 
 {$IF LUA_VERSION_NUM = 501}
-procedure lua_setglobal(L : Plua_State; s : PChar);
-procedure lua_getglobal(L : Plua_State; s : PChar);
+procedure lua_setglobal(L : Plua_State; s : PAnsiChar);
+procedure lua_getglobal(L : Plua_State; s : PAnsiChar);
 {$IFEND}
 
-function lua_tostring(L : Plua_State; idx : Integer) : PChar;
+function lua_tostring(L : Plua_State; idx : Integer) : PAnsiChar;
 
 
 {$IF LUA_VERSION_NUM = 501}
@@ -739,10 +739,10 @@ type
   
   lua_Debug = packed record
     event : Integer;
-    name : PChar;              (* (n) *)
-    namewhat : PChar;          (* (n) `global', `local', `field', `method' *)
-    what : PChar;              (* (S) `Lua', `C', `main', `tail' *)
-    source : PChar;            (* (S) *)
+    name : PAnsiChar;              (* (n) *)
+    namewhat : PAnsiChar;          (* (n) `global', `local', `field', `method' *)
+    what : PAnsiChar;              (* (S) `Lua', `C', `main', `tail' *)
+    source : PAnsiChar;            (* (S) *)
     currentline : Integer;     (* (l) *)
 {$IF LUA_VERSION_NUM = 501}
     nups : Integer;            (* (u) number of upvalues *)
@@ -756,8 +756,8 @@ type
     lastlinedefined : Integer; (* (S) *)
 	nups : Byte;               (* (u) number of upvalues *)
 	nparams : Byte;            (* (u) number of parameters *)
-	isvararg : Char;           (* (u) *)
-	istailcall: Char;          (* (t) *)
+	isvararg : AnsiChar;           (* (u) *)
+	istailcall: AnsiChar;          (* (t) *)
     short_src : array [0..LUA_IDSIZE-1] of Char; (* (S) *)
 	(* private part *)
 	i_ci : PCallInfo           (* active function *)
@@ -770,15 +770,15 @@ type
 
 function lua_getstack(L : Plua_State; level : Integer; ar : Plua_Debug) : Integer;
   cdecl; external LUA_LIB_NAME;
-function lua_getinfo(L : Plua_State; const what : PChar; ar: Plua_Debug): Integer;
+function lua_getinfo(L : Plua_State; const what : PAnsiChar; ar: Plua_Debug): Integer;
   cdecl; external LUA_LIB_NAME;
-function lua_getlocal(L : Plua_State; ar : Plua_Debug; n : Integer) : PChar;
+function lua_getlocal(L : Plua_State; ar : Plua_Debug; n : Integer) : PAnsiChar;
   cdecl; external LUA_LIB_NAME;
-function lua_setlocal(L : Plua_State; ar : Plua_Debug; n : Integer) : PChar;
+function lua_setlocal(L : Plua_State; ar : Plua_Debug; n : Integer) : PAnsiChar;
   cdecl; external LUA_LIB_NAME;
-function lua_getupvalue(L : Plua_State; funcindex, n : Integer) : PChar;
+function lua_getupvalue(L : Plua_State; funcindex, n : Integer) : PAnsiChar;
   cdecl; external LUA_LIB_NAME;
-function lua_setupvalue(L : Plua_State; funcindex, n : Integer) : PChar;
+function lua_setupvalue(L : Plua_State; funcindex, n : Integer) : PAnsiChar;
   cdecl; external LUA_LIB_NAME;
 
 {$IF LUA_VERSION_NUM >= 502}
@@ -880,21 +880,21 @@ const
 
 type
   luaL_Reg = packed record
-    name : PChar;
+    name : PAnsiChar;
     func : lua_CFunction;
   end;
   PluaL_Reg = ^luaL_Reg;
 
 {$IF LUA_VERSION_NUM = 501}
-procedure luaL_openlib(L : Plua_State; const libname : PChar;
+procedure luaL_openlib(L : Plua_State; const libname : PAnsiChar;
                        const lr : PluaL_Reg; nup : Integer);
   cdecl; external LUA_LIB_NAME;
-procedure luaL_register(L : Plua_State; const libname : PChar;
+procedure luaL_register(L : Plua_State; const libname : PAnsiChar;
                         const lr : PluaL_Reg);
   cdecl; external LUA_LIB_NAME;
 {$ELSEIF LUA_VERSION_NUM >= 502}
 // Added for simplicity --KMS
-procedure luaL_register(L : Plua_State; const libname : PChar;
+procedure luaL_register(L : Plua_State; const libname : PAnsiChar;
                         const lr : PluaL_Reg);
 
 procedure luaL_checkversion(L : Plua_State);
@@ -903,28 +903,28 @@ procedure luaL_checkversion_(L : Plua_State; ver : lua_Number);
 {$IFEND}
 
 function luaL_getmetafield(L : Plua_State; obj : Integer;
-                           const e : PChar) : Integer;
+                           const e : PAnsiChar) : Integer;
   cdecl; external LUA_LIB_NAME;
 function luaL_callmeta(L : Plua_State; obj : Integer;
-                       const e : PChar) : Integer;
+                       const e : PAnsiChar) : Integer;
   cdecl; external LUA_LIB_NAME;
 {$IF LUA_VERSION_NUM = 501}
 function luaL_typerror(L : Plua_State; narg : Integer;
-                       const tname : PChar) : Integer;
+                       const tname : PAnsiChar) : Integer;
   cdecl; external LUA_LIB_NAME;
 {$ELSEIF LUA_VERSION_NUM >= 502}
 function luaL_tolstring(L : Plua_State; idx : Integer;
-                        len : Psize_t) : PChar;
+                        len : Psize_t) : PAnsiChar;
   cdecl; external LUA_LIB_NAME;
 {$IFEND}
 function luaL_argerror(L : Plua_State; numarg : Integer;
-                       const extramsg : PChar) : Integer;
+                       const extramsg : PAnsiChar) : Integer;
   cdecl; external LUA_LIB_NAME;
 function luaL_checklstring(L : Plua_State; numArg : Integer;
-                           ls : Psize_t) : PChar;
+                           ls : Psize_t) : PAnsiChar;
   cdecl; external LUA_LIB_NAME;
 function luaL_optlstring(L : Plua_State; numArg : Integer;
-                         const def: PChar; ls: Psize_t) : PChar;
+                         const def: PAnsiChar; ls: Psize_t) : PAnsiChar;
   cdecl; external LUA_LIB_NAME;
 function luaL_checknumber(L : Plua_State; numArg : Integer) : lua_Number;
   cdecl; external LUA_LIB_NAME;
@@ -945,38 +945,38 @@ function luaL_optunsigned(L : Plua_State; numArg : Integer;
   cdecl; external LUA_LIB_NAME;
 {$IFEND}
 
-procedure luaL_checkstack(L : Plua_State; sz : Integer; const msg : PChar);
+procedure luaL_checkstack(L : Plua_State; sz : Integer; const msg : PAnsiChar);
   cdecl; external LUA_LIB_NAME;
 procedure luaL_checktype(L : Plua_State; narg, t : Integer);
   cdecl; external LUA_LIB_NAME;
 procedure luaL_checkany(L : Plua_State; narg : Integer);
   cdecl; external LUA_LIB_NAME;
 
-function luaL_newmetatable(L : Plua_State; const tname : PChar) : Integer;
+function luaL_newmetatable(L : Plua_State; const tname : PAnsiChar) : Integer;
   cdecl; external LUA_LIB_NAME;
 {$IF LUA_VERSION_NUM >= 502}
-procedure luaL_setmetatable(L : Plua_State; const tname : PChar);
+procedure luaL_setmetatable(L : Plua_State; const tname : PAnsiChar);
   cdecl; external LUA_LIB_NAME;
 function luaL_testudata(L : Plua_State; ud : Integer;
-                        const tname : PChar) : Pointer;
+                        const tname : PAnsiChar) : Pointer;
   cdecl; external LUA_LIB_NAME;
 {$IFEND}
 function luaL_checkudata(L : Plua_State; ud : Integer;
-                         const tname : PChar) : Pointer;
+                         const tname : PAnsiChar) : Pointer;
   cdecl; external LUA_LIB_NAME;
 
 procedure luaL_where(L : Plua_State; lvl : Integer);
   cdecl; external LUA_LIB_NAME;
-function  luaL_error(L : Plua_State; const fmt : PChar) : Integer; varargs;
+function  luaL_error(L : Plua_State; const fmt : PAnsiChar) : Integer; varargs;
   cdecl; external LUA_LIB_NAME;
 
-function luaL_checkoption(L : Plua_State; narg : Integer; const def : PChar;
-                          const lst : array of PChar) : Integer;
+function luaL_checkoption(L : Plua_State; narg : Integer; const def : PAnsiChar;
+                          const lst : array of PAnsiChar) : Integer;
   cdecl; external LUA_LIB_NAME;
 
 {$IF LUA_VERSION_NUM >= 502}
 function  luaL_fileresult(L : Plua_State; stat : Integer; 
-                          const fname : PChar) : Integer;
+                          const fname : PAnsiChar) : Integer;
   cdecl; external LUA_LIB_NAME;
 function  luaL_execresult(L : Plua_State; stat : Integer) : Integer;
   cdecl; external LUA_LIB_NAME;
@@ -992,25 +992,25 @@ function  luaL_ref(L : Plua_State; t : Integer) : Integer;
 procedure luaL_unref(L : Plua_State; t, ref : Integer);
   cdecl; external LUA_LIB_NAME;
 
-function luaL_loadfile(L : Plua_State; const filename : PChar) : Integer;
+function luaL_loadfile(L : Plua_State; const filename : PAnsiChar) : Integer;
 {$IF LUA_VERSION_NUM = 501}
   cdecl; external LUA_LIB_NAME;
 {$ELSEIF LUA_VERSION_NUM >= 502}
-function luaL_loadfilex(L: Plua_State; const filename, mode: PChar): Integer;
+function luaL_loadfilex(L: Plua_State; const filename, mode: PAnsiChar): Integer;
   cdecl; external LUA_LIB_NAME;
 {$IFEND}
 
-function luaL_loadbuffer(L : Plua_State; const buff : PChar;
-                         sz : size_t; const name: PChar) : Integer;
+function luaL_loadbuffer(L : Plua_State; const buff : PAnsiChar;
+                         sz : size_t; const name: PAnsiChar) : Integer;
 {$IF LUA_VERSION_NUM = 501}
   cdecl; external LUA_LIB_NAME;
 {$ELSEIF LUA_VERSION_NUM >= 502}
-function luaL_loadbufferx(L : Plua_State; const buff : PChar;
-                          sz : size_t; const name: PChar; const mode: PChar) : Integer;
+function luaL_loadbufferx(L : Plua_State; const buff : PAnsiChar;
+                          sz : size_t; const name: PAnsiChar; const mode: PAnsiChar) : Integer;
   cdecl; external LUA_LIB_NAME;
 {$IFEND}
 
-function luaL_loadstring(L : Plua_State; const s : Pchar) : Integer;
+function luaL_loadstring(L : Plua_State; const s : PAnsiChar) : Integer;
   cdecl; external LUA_LIB_NAME;
 
 function luaL_newstate : Plua_State;
@@ -1021,12 +1021,12 @@ function luaL_len(L : Plua_State; idx : Integer) : Integer;
   cdecl; external LUA_LIB_NAME;
 {$IFEND}
 
-function luaL_gsub(L : Plua_State; const s, p, r : PChar) : PChar;
+function luaL_gsub(L : Plua_State; const s, p, r : PAnsiChar) : PAnsiChar;
   cdecl; external LUA_LIB_NAME;
 
 {$IF LUA_VERSION_NUM = 501}
 function luaL_findtable(L : Plua_State; idx : Integer;
-                        const fname : PChar; szhint : Integer) : PChar;
+                        const fname : PAnsiChar; szhint : Integer) : PAnsiChar;
   cdecl; external LUA_LIB_NAME;
 procedure luaL_setfuncs (L : Plua_State; const lr : PluaL_Reg; nup : Integer);
 {$ELSEIF LUA_VERSION_NUM >= 502}
@@ -1036,12 +1036,12 @@ procedure luaL_setfuncs(L : Plua_State; const lr : PluaL_Reg;
 procedure luaL_setfuncs(L : Plua_State; const lr : array of luaL_Reg;
                         nup : Integer); overload;
 function luaL_getsubtable(L : Plua_State; idx : Integer;
-                          const fname : PChar) : Integer;
+                          const fname : PAnsiChar) : Integer;
   cdecl; external LUA_LIB_NAME;
 procedure luaL_traceback(L : Plua_State; L1 : Plua_State;
-                         const msg : PChar; level : Integer);
+                         const msg : PAnsiChar; level : Integer);
   cdecl; external LUA_LIB_NAME;
-procedure luaL_requiref(L : Plua_State; const modname : PChar;
+procedure luaL_requiref(L : Plua_State; const modname : PAnsiChar;
                         openf : lua_CFunction; glb : Integer);
   cdecl; external LUA_LIB_NAME;
 {$IFEND}
@@ -1059,21 +1059,21 @@ procedure luaL_newlib(L : Plua_State; lr : array of luaL_Reg); overload;
 procedure luaL_newlib(L : Plua_State; lr : PluaL_Reg); overload;
 {$IFEND}
 function luaL_argcheck(L : Plua_State; cond : Boolean; numarg : Integer;
-                       extramsg : PChar): Integer;
-function luaL_checkstring(L : Plua_State; n : Integer) : PChar;
-function luaL_optstring(L : Plua_State; n : Integer; d : PChar) : PChar;
+                       extramsg : PAnsiChar): Integer;
+function luaL_checkstring(L : Plua_State; n : Integer) : PAnsiChar;
+function luaL_optstring(L : Plua_State; n : Integer; d : PAnsiChar) : PAnsiChar;
 function luaL_checkint(L : Plua_State; n : Integer) : Integer;
 function luaL_optint(L : Plua_State; n, d : Integer): Integer;
 function luaL_checklong(L : Plua_State; n : LongInt) : LongInt;
 function luaL_optlong(L : Plua_State; n : Integer; d : LongInt) : LongInt;
 
-function luaL_typename(L : Plua_State; idx : Integer) : PChar;
+function luaL_typename(L : Plua_State; idx : Integer) : PAnsiChar;
 
-function luaL_dofile(L : Plua_State; fn : PChar) : Integer;
+function luaL_dofile(L : Plua_State; fn : PAnsiChar) : Integer;
 
-function luaL_dostring(L : Plua_State; s : PChar) : Integer;
+function luaL_dostring(L : Plua_State; s : PAnsiChar) : Integer;
 
-procedure luaL_getmetatable(L : Plua_State; n : PChar);
+procedure luaL_getmetatable(L : Plua_State; n : PAnsiChar);
 
 (* not implemented yet
 #define luaL_opt(L,f,n,d) (lua_isnoneornil(L,(n)) ? (d) : f(L,(n)))
@@ -1088,12 +1088,12 @@ procedure luaL_getmetatable(L : Plua_State; n : PChar);
 type
   luaL_Buffer = packed record
 {$IF LUA_VERSION_NUM = 501}
-    p      : PChar;      (* current position in buffer *)
+    p      : PAnsiChar;      (* current position in buffer *)
     lvl    : Integer;    (* number of strings in the stack (level) *)
     L      : Plua_State;
     buffer : array [0..LUAL_BUFFERSIZE-1] of Char;
 {$ELSEIF LUA_VERSION_NUM >= 502}
-    b     : PChar;      (* buffer address *)
+    b     : PAnsiChar;      (* buffer address *)
     size  : size_t;     (* buffer size *)
     n     : size_t;     (* number of characters in buffer *)
     L     : Plua_State;
@@ -1104,21 +1104,21 @@ type
 
 {$IF LUA_VERSION_NUM = 501}
 (* compatibility only *)
-procedure luaL_addchar(B : PluaL_Buffer; c : Char);
+procedure luaL_addchar(B : PluaL_Buffer; c : AnsiChar);
 
 (* compatibility only *)
-procedure luaL_putchar(B : PluaL_Buffer; c : Char);
+procedure luaL_putchar(B : PluaL_Buffer; c : AnsiChar);
 {$IFEND}
 
 procedure luaL_addsize(B : PluaL_Buffer; n : Integer);
 
 procedure luaL_buffinit(L : Plua_State; B : PluaL_Buffer);
   cdecl; external LUA_LIB_NAME;
-function  luaL_prepbuffer(B : PluaL_Buffer) : PChar;
+function  luaL_prepbuffer(B : PluaL_Buffer) : PAnsiChar;
   cdecl; external LUA_LIB_NAME;
-procedure luaL_addlstring(B : PluaL_Buffer; const s : PChar; ls : size_t);
+procedure luaL_addlstring(B : PluaL_Buffer; const s : PAnsiChar; ls : size_t);
   cdecl; external LUA_LIB_NAME;
-procedure luaL_addstring(B : PluaL_Buffer; const s : PChar);
+procedure luaL_addstring(B : PluaL_Buffer; const s : PAnsiChar);
   cdecl; external LUA_LIB_NAME;
 procedure luaL_addvalue(B : PluaL_Buffer);
   cdecl; external LUA_LIB_NAME;
@@ -1128,7 +1128,7 @@ procedure luaL_pushresult(B : PluaL_Buffer);
 {$IF LUA_VERSION_NUM >= 502}
 procedure luaL_pushresultsize(B : PluaL_Buffer; sz : size_t);
   cdecl; external LUA_LIB_NAME;
-function  luaL_buffinitsize(L : Plua_State; B : PluaL_Buffer; sz : size_t) : PChar;
+function  luaL_buffinitsize(L : Plua_State; B : PluaL_Buffer; sz : size_t) : PAnsiChar;
   cdecl; external LUA_LIB_NAME;
 {$IFEND}
 
@@ -1186,13 +1186,13 @@ uses
 (*                            luaconfig.h                                    *)
 (*****************************************************************************)
 
-function  lua_readline(L : Plua_State; var b : PChar; p : PChar): Boolean;
+function  lua_readline(L : Plua_State; var b : PAnsiChar; p : PAnsiChar): Boolean;
 var
   s : AnsiString;
 begin
   Write(p);                        // show prompt
   ReadLn(s);                       // get line
-  b := PChar(s);                   // and return it
+  b := PAnsiChar(s);                   // and return it
   lua_readline := (b[0] <> #4);    // test for ctrl-D
 end;
 
@@ -1200,7 +1200,7 @@ procedure lua_saveline(L : Plua_State; idx : Integer);
 begin
 end;
 
-procedure lua_freeline(L : Plua_State; b : PChar);
+procedure lua_freeline(L : Plua_State; b : PAnsiChar);
 begin
 end;
 
@@ -1265,7 +1265,7 @@ begin
   lua_createtable(L, 0, 0);
 end;
 
-procedure lua_register(L : Plua_State; n : PChar; f : lua_CFunction);
+procedure lua_register(L : Plua_State; n : PAnsiChar; f : lua_CFunction);
 begin
   lua_pushcfunction(L, f);
   lua_setglobal(L, n);
@@ -1323,24 +1323,24 @@ begin
   lua_isnoneornil := lua_type(L, n) <= 0;
 end;
 
-procedure lua_pushliteral(L : Plua_State; s : PChar);
+procedure lua_pushliteral(L : Plua_State; s : PAnsiChar);
 begin
   lua_pushlstring(L, s, StrLen(s));
 end;
 
 {$IF LUA_VERSION_NUM = 501}
-procedure lua_setglobal(L : Plua_State; s : PChar);
+procedure lua_setglobal(L : Plua_State; s : PAnsiChar);
 begin
   lua_setfield(L, LUA_GLOBALSINDEX, s);
 end;
 
-procedure lua_getglobal(L: Plua_State; s: PChar);
+procedure lua_getglobal(L: Plua_State; s: PAnsiChar);
 begin
   lua_getfield(L, LUA_GLOBALSINDEX, s);
 end;
 {$IFEND}
 
-function lua_tostring(L : Plua_State; idx : Integer) : PChar;
+function lua_tostring(L : Plua_State; idx : Integer) : PAnsiChar;
 begin
   lua_tostring := lua_tolstring(L, idx, nil);
 end;
@@ -1386,7 +1386,7 @@ begin
 end;
 
 {$ELSEIF LUA_VERSION_NUM >= 502}
-procedure luaL_register(L : Plua_State; const libname : PChar;
+procedure luaL_register(L : Plua_State; const libname : PAnsiChar;
                         const lr : PluaL_Reg);
 begin
   lua_newtable(L); 
@@ -1402,15 +1402,15 @@ end;
 {$IFEND}
 
 {$IF LUA_VERSION_NUM >= 502}
-function luaL_loadfile(L : Plua_State; const filename: PChar): Integer;
+function luaL_loadfile(L : Plua_State; const filename: PAnsiChar): Integer;
 begin
    Result := luaL_loadfilex(L, filename, nil);
 end;
 {$IFEND}
 
 {$IF LUA_VERSION_NUM >= 502}
-function luaL_loadbuffer(L : Plua_State; const buff : PChar;
-                         sz : size_t; const name: PChar) : Integer;
+function luaL_loadbuffer(L : Plua_State; const buff : PAnsiChar;
+                         sz : size_t; const name: PAnsiChar) : Integer;
 begin
    Result := luaL_loadbufferx(L, buff, sz, name, nil);
 end;
@@ -1477,7 +1477,7 @@ begin
 end;
 
 function luaL_argcheck(L : Plua_State; cond : Boolean; numarg : Integer;
-                       extramsg : PChar): Integer;
+                       extramsg : PAnsiChar): Integer;
 begin
   if not cond then
     luaL_argcheck := luaL_argerror(L, numarg, extramsg)
@@ -1485,12 +1485,12 @@ begin
     luaL_argcheck := 0;
 end;
 
-function luaL_checkstring(L : Plua_State; n : Integer) : PChar;
+function luaL_checkstring(L : Plua_State; n : Integer) : PAnsiChar;
 begin
   luaL_checkstring := luaL_checklstring(L, n, nil);
 end;
 
-function luaL_optstring(L : Plua_State; n : Integer; d : PChar) : PChar;
+function luaL_optstring(L : Plua_State; n : Integer; d : PAnsiChar) : PAnsiChar;
 begin
   luaL_optstring := luaL_optlstring(L, n, d, nil);
 end;
@@ -1515,12 +1515,12 @@ begin
   luaL_optlong := luaL_optinteger(L, n, d);
 end;
 
-function luaL_typename(L : Plua_State; idx : Integer) : PChar;
+function luaL_typename(L : Plua_State; idx : Integer) : PAnsiChar;
 begin
   luaL_typename := lua_typename( L, lua_type(L, idx) );
 end;
 
-function luaL_dofile(L : Plua_State; fn : PChar) : Integer;
+function luaL_dofile(L : Plua_State; fn : PAnsiChar) : Integer;
 Var
   Res : Integer;
 begin
@@ -1531,7 +1531,7 @@ begin
   Result := Res;
 end;
 
-function luaL_dostring(L : Plua_State; s : PChar) : Integer;
+function luaL_dostring(L : Plua_State; s : PAnsiChar) : Integer;
 Var
   Res : Integer;
 begin
@@ -1542,13 +1542,13 @@ begin
   Result := Res;
 end;
 
-procedure luaL_getmetatable(L : Plua_State; n : PChar);
+procedure luaL_getmetatable(L : Plua_State; n : PAnsiChar);
 begin
   lua_getfield(L, LUA_REGISTRYINDEX, n);
 end;
 
 {$IF LUA_VERSION_NUM = 501}
-procedure luaL_addchar(B : PluaL_Buffer; c : Char);
+procedure luaL_addchar(B : PluaL_Buffer; c : AnsiChar);
 begin
   if not(B^.p < B^.buffer + LUAL_BUFFERSIZE) then
     luaL_prepbuffer(B);
@@ -1556,7 +1556,7 @@ begin
   Inc(B^.p);
 end;
 
-procedure luaL_putchar(B : PluaL_Buffer; c : Char);
+procedure luaL_putchar(B : PluaL_Buffer; c : AnsiChar);
 begin
   luaL_addchar(B, c);
 end;

@@ -79,9 +79,9 @@ unit sdl_cpuinfo;
       SDL_GL_MULTISAMPLESAMPLES
 
   Add DLL/Shared object functions
-  function SDL_LoadObject( const sofile : PChar ) : Pointer;
+  function SDL_LoadObject( const sofile : PAnsiChar ) : Pointer;
 
-  function SDL_LoadFunction( handle : Pointer; const name : PChar ) : Pointer;
+  function SDL_LoadFunction( handle : Pointer; const name : PAnsiChar ) : Pointer;
 
   procedure SDL_UnloadObject( handle : Pointer );
 

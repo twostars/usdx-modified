@@ -110,6 +110,6 @@ const
  * cannot be found
  *)
 
-function av_strerror(errnum: cint; errbuf: Pchar; errbuf_size: cint): cint;
+function av_strerror(errnum: cint; errbuf: PAnsiChar; errbuf_size: cint): cint;
   cdecl; external av__util;
 {$IFEND}

@@ -121,7 +121,7 @@ type
       function GetLatency(): double; override;
       function CreatePlaybackStream(): TAudioPlaybackStream; override;
     public
-      function GetName: String; override;
+      function GetName: AnsiString; override;
       function InitializePlayback(): boolean; override;
       function FinalizePlayback: boolean; override;
       procedure SetAppVolume(Volume: single); override;
@@ -656,7 +656,7 @@ end;
 
 { TAudioPlayback_Bass }
 
-function TAudioPlayback_Bass.GetName: String;
+function TAudioPlayback_Bass.GetName: AnsiString;
 begin
   Result := 'BASS_Playback';
 end;

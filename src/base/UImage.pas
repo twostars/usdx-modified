@@ -167,8 +167,8 @@ uses
   {$ENDIF}
   {$IFDEF HaveJPG}
     {$IFDEF Delphi}
-    Graphics,
-    jpeg,
+      Graphics,
+      jpeg,
     {$ELSE}
     jpeglib,
     jerror,
@@ -396,7 +396,7 @@ begin
     begin
       // set rowData-elements to beginning of each image row
       // Note: the byte-count of a row is pitch (which is not width*bitsPerPixel if the image is aligned)
-      rowData[row] := @PChar(Surface.pixels)[(Surface.h-row-1) * Surface.pitch];
+      rowData[row] := @PAnsiChar(Surface.pixels)[(Surface.h-row-1) * Surface.pitch];
     end;
 
     if (SDL_MUSTLOCK(Surface)) then
@@ -573,7 +573,7 @@ begin
       //   will be copied to the padding area (last bytes of a row),
       //   but we do not care because the content of padding data is ignored anyhow.
       for Row := 0 to Surface.h do
-        bmpFile.Write(PChar(Surface.pixels)[Row * Surface.pitch], RowSize);
+        bmpFile.Write(PAnsiChar(Surface.pixels)[Row * Surface.pitch], RowSize);
     end;
 
     if (SDL_MUSTLOCK(Surface)) then
@@ -663,7 +663,7 @@ begin
       //   but we do not care because the content of padding data is ignored anyhow.
       for row := 0 to Surface.h do
       begin
-        SetDIBits(0, Bitmap.Handle, row, 1, @PChar(Surface.pixels)[row * Surface.pitch],
+        SetDIBits(0, Bitmap.Handle, row, 1, @PAnsiChar(Surface.pixels)[row * Surface.pitch],
           BitmapInfo, DIB_RGB_COLORS);
       end;
     end;
@@ -748,7 +748,7 @@ begin
     while (cinfo.next_scanline < cinfo.image_height) do
     begin
       // Note: the byte-count of a row is pitch (which is not width*bitsPerPixel if the image is aligned)
-      rowPtr[0] := JSAMPROW(@PChar(Surface.pixels)[(Surface.h-cinfo.next_scanline-1) * Surface.pitch]);
+      rowPtr[0] := JSAMPROW(@PAnsiChar(Surface.pixels)[(Surface.h-cinfo.next_scanline-1) * Surface.pitch]);
       jpeg_write_scanlines(@cinfo, JSAMPARRAY(@rowPtr), 1);
     end;
 

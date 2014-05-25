@@ -79,7 +79,7 @@ type
   TScore = record
     Name:   UTF8String;
     Score:  integer;
-    Length: string;
+    Length: AnsiString;
   end;
 
   TPathDynArray = array of IPath;

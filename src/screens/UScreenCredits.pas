@@ -144,7 +144,7 @@ type
    end;
 
 const
-  Funky_Text: string =
+  Funky_Text: AnsiString =
     'Grandma Deluxe has arrived! Thanks to Corvus5 for the massive work on UltraStar, Wome for the nice tune you are hearing, '+
     'all the people who put massive effort and work in new songs (do not forget UltraStar w/o songs would be nothing), ppl from '+
     'irc helping us - eBandit and Gabari, scene ppl who really helped instead of compiling and running away. Greetings to DennisTheMenace for betatesting, '+
@@ -186,7 +186,7 @@ const
 type
   TFadeEffect = procedure (const Tex: TTexture; Progress: double);
   TCRTZ_Developer = record
-    Name: string;           // developer name for texture loading (names_"devel".png)
+    Name: AnsiString;           // developer name for texture loading (names_"devel".png)
     Twinkle: boolean;       // should there be twinkles on show
     FadeIn:   TFadeEffect;  // fade in effect
     Draw:     TFadeEffect;  // effect during draw
@@ -513,9 +513,9 @@ begin
     glEnable(GL_BLEND);
     glBegin(GL_QUADS);
       glVertex2f(  0,   0);
-      glVertex2f(  0, 600);
-      glVertex2f(800, 600);
-      glVertex2f(800,   0);
+      glVertex2f(  0, RenderH);
+      glVertex2f(RenderW, RenderH);
+      glVertex2f(RenderW,   0);
     glEnd;
     glDisable(GL_BLEND);
   end;
@@ -684,7 +684,7 @@ procedure TScreenCredits.DrawFunkyText;
 var
   S:           integer;
   X, Y, A:     real;
-  visibleText: string;
+  visibleText: AnsiString;
 begin
   SetFontSize(30);
 

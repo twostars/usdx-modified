@@ -38,11 +38,11 @@ implementation
 
 procedure TForm1.btnTestClick(Sender: TObject);
 var
-slDBpath: string;
+slDBpath: AnsiString;
 sldb: TSQLiteDatabase;
 sltb: TSQLIteTable;
-sSQL: String;
-Notes: String;
+sSQL: AnsiString;
+Notes: AnsiString;
 
 begin
 
@@ -107,7 +107,7 @@ end;
 
 procedure TForm1.btnLoadImageClick(Sender: TObject);
 var
-slDBpath: string;
+slDBpath: AnsiString;
 sldb: TSQLiteDatabase;
 sltb: TSQLIteTable;
 iID: integer;
@@ -162,7 +162,7 @@ end;
 
 procedure TForm1.btnDisplayImageClick(Sender: TObject);
 var
-slDBpath: string;
+slDBpath: AnsiString;
 sldb: TSQLiteDatabase;
 sltb: TSQLIteTable;
 iID: integer;

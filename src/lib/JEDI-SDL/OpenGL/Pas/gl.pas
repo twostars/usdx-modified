@@ -86,7 +86,7 @@ Abstract:
 
 interface
 
-{$I jedi-sdl.inc}
+{$I ../../SDL/Pas/jedi-sdl.inc}
 
 uses
 {$IFDEF __GPC__}
@@ -94,7 +94,7 @@ uses
   gpc,
 {$ENDIF}
 
-{$IFDEF WINDOWS}
+{$IFDEF Windows}
   Windows,
 {$ENDIF}
   moduleloader;
@@ -651,9 +651,9 @@ const
   GL_SELECTION_BUFFER_SIZE          = $0DF4;
   //      GL_TEXTURE_BINDING_1D
   //      GL_TEXTURE_BINDING_2D 
-  //      GL_VERTEX_ARRAY 
+  //      GL_VERTEX_ARRAY
   //      GL_NORMAL_ARRAY 
-  //      GL_COLOR_ARRAY 
+  //      GL_COLOR_ARRAY
   //      GL_INDEX_ARRAY 
   //      GL_TEXTURE_COORD_ARRAY 
   //      GL_EDGE_FLAG_ARRAY
@@ -1327,7 +1327,7 @@ var
   glGetPixelMapusv: procedure(map: GLenum; values: PGLushort); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glGetPointerv: procedure(pname: GLenum; params: Pointer); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glGetPolygonStipple: procedure(mask: PGLubyte); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
-  glGetString: function(name: GLenum): PChar; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
+  glGetString: function(name: GLenum): PAnsiChar; {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glGetTexEnvfv: procedure(target, pname: GLenum; params: PGLfloat); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glGetTexEnviv: procedure(target, pname: GLenum; params: PGLint); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   glGetTexGendv: procedure(coord, pname: GLenum; params: PGLdouble); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
@@ -1582,7 +1582,7 @@ type
   PFNGLGETCOLORTABLEPARAMETERIVEXTPROC = procedure(target, pname: GLenum; params: PGLint); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
   PFNGLGETCOLORTABLEPARAMETERFVEXTPROC = procedure(target, pname: GLenum; params: PGLfloat); {$IFDEF WINDOWS}stdcall;{$ELSE}cdecl;{$ENDIF}
 
-procedure LoadOpenGL( const dll: PChar );
+procedure LoadOpenGL( const dll: PAnsiChar );
 procedure FreeOpenGL;
 
 implementation
@@ -1934,7 +1934,7 @@ begin
 
 end;
 
-procedure LoadOpenGL(const dll: PChar);
+procedure LoadOpenGL(const dll: PAnsiChar);
 begin
 
   FreeOpenGL;

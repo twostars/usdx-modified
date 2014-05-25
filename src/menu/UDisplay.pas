@@ -66,7 +66,7 @@ type
       LastFPS:       cardinal;
       NextFPSSwap:   cardinal;
 
-      OSD_LastError: string;
+      OSD_LastError: AnsiString;
 
       { software cursor data }
       Cursor_X:              double;
@@ -644,7 +644,7 @@ var
   Num:        integer;
   FileName:   IPath;
   Prefix:     UTF8String;
-  ScreenData: PChar;
+  ScreenData: PAnsiChar;
   Surface:    PSDL_Surface;
   Success:    boolean;
   Align:      integer;

@@ -132,7 +132,7 @@ type
     ColG:   real;
     ColB:   real;
     Int:    real;
-    DColor: string;
+    DColor: AnsiString;
     DColR:  real;
     DColG:  real;
     DColB:  real;
@@ -171,7 +171,7 @@ type
   TThemeSelectSlide = record
     Tex:    string;
     Typ:    TTextureType;
-    TexSBG: string;
+    TexSBG: AnsiString;
     TypSBG: TTextureType;
     X:      integer;
     Y:      integer;
@@ -732,10 +732,10 @@ type
   end;
 
   TThemeEntry = record
-    Name: string;
+    Name: AnsiString;
     Filename: IPath;
     DefaultSkin: integer;
-    Creator: string;
+    Creator: AnsiString;
   end;
 
   TTheme = class
@@ -800,26 +800,26 @@ type
 
     procedure LoadColors;
 
-    procedure ThemeLoadBasic(Theme: TThemeBasic; const Name: string);
-    procedure ThemeLoadBackground(var ThemeBackground: TThemeBackground; const Name: string);
-    procedure ThemeLoadText(var ThemeText: TThemeText; const Name: string);
-    procedure ThemeLoadTexts(var ThemeText: AThemeText; const Name: string);
-    procedure ThemeLoadStatic(var ThemeStatic: TThemeStatic; const Name: string);
-    procedure ThemeLoadStatics(var ThemeStatic: AThemeStatic; const Name: string);
-    procedure ThemeLoadButton(var ThemeButton: TThemeButton; const Name: string; Collections: PAThemeButtonCollection = nil);
-    procedure ThemeLoadButtonCollection(var Collection: TThemeButtonCollection; const Name: string);
-    procedure ThemeLoadButtonCollections(var Collections: AThemeButtonCollection; const Name: string);
-    procedure ThemeLoadSelectSlide(var ThemeSelectS: TThemeSelectSlide; const Name: string);
-    procedure ThemeLoadEqualizer(var ThemeEqualizer: TThemeEqualizer; const Name: string);
+    procedure ThemeLoadBasic(Theme: TThemeBasic; const Name: AnsiString);
+    procedure ThemeLoadBackground(var ThemeBackground: TThemeBackground; const Name: AnsiString);
+    procedure ThemeLoadText(var ThemeText: TThemeText; const Name: AnsiString);
+    procedure ThemeLoadTexts(var ThemeText: AThemeText; const Name: AnsiString);
+    procedure ThemeLoadStatic(var ThemeStatic: TThemeStatic; const Name: AnsiString);
+    procedure ThemeLoadStatics(var ThemeStatic: AThemeStatic; const Name: AnsiString);
+    procedure ThemeLoadButton(var ThemeButton: TThemeButton; const Name: AnsiString; Collections: PAThemeButtonCollection = nil);
+    procedure ThemeLoadButtonCollection(var Collection: TThemeButtonCollection; const Name: AnsiString);
+    procedure ThemeLoadButtonCollections(var Collections: AThemeButtonCollection; const Name: AnsiString);
+    procedure ThemeLoadSelectSlide(var ThemeSelectS: TThemeSelectSlide; const Name: AnsiString);
+    procedure ThemeLoadEqualizer(var ThemeEqualizer: TThemeEqualizer; const Name: AnsiString);
 
-    procedure ThemeSave(const FileName: string);
-    procedure ThemeSaveBasic(Theme: TThemeBasic; const Name: string);
-    procedure ThemeSaveBackground(ThemeBackground: TThemeBackground; const Name: string);
-    procedure ThemeSaveStatic(ThemeStatic: TThemeStatic; const Name: string);
-    procedure ThemeSaveStatics(ThemeStatic: AThemeStatic; const Name: string);
-    procedure ThemeSaveText(ThemeText: TThemeText; const Name: string);
-    procedure ThemeSaveTexts(ThemeText: AThemeText; const Name: string);
-    procedure ThemeSaveButton(ThemeButton: TThemeButton; const Name: string);
+    procedure ThemeSave(const FileName: AnsiString);
+    procedure ThemeSaveBasic(Theme: TThemeBasic; const Name: AnsiString);
+    procedure ThemeSaveBackground(ThemeBackground: TThemeBackground; const Name: AnsiString);
+    procedure ThemeSaveStatic(ThemeStatic: TThemeStatic; const Name: AnsiString);
+    procedure ThemeSaveStatics(ThemeStatic: AThemeStatic; const Name: AnsiString);
+    procedure ThemeSaveText(ThemeText: TThemeText; const Name: AnsiString);
+    procedure ThemeSaveTexts(ThemeText: AThemeText; const Name: AnsiString);
+    procedure ThemeSaveButton(ThemeButton: TThemeButton; const Name: AnsiString);
   end;
 
   TColor = record
@@ -832,8 +832,8 @@ procedure glColorRGB(Color: TRGB; Alpha: real);  overload;
 procedure glColorRGB(Color: TRGBA); overload;
 procedure glColorRGB(Color: TRGBA; Alpha: real); overload;
 
-function ColorExists(Name: string): integer;
-procedure LoadColor(var R, G, B: real; ColorName: string);
+function ColorExists(Name: AnsiString): integer;
+procedure LoadColor(var R, G, B: real; ColorName: AnsiString);
 function GetSystemColor(Color: integer): TRGB;
 function ColorSqrt(RGB: TRGB): TRGB;
 
@@ -928,9 +928,9 @@ procedure TTheme.LoadHeader(FileName: IPath);
   var
     Entry: TThemeEntry;
     Ini: TMemIniFile;
-    SkinName: string;
+    SkinName: AnsiString;
     SkinsFound: boolean;
-    ThemeVersion: string;
+    ThemeVersion: AnsiString;
     I: integer;
     Len: integer;
     Skins: TUTF8StringDynArray;
@@ -1640,7 +1640,7 @@ begin
   end;
 end;
 
-procedure TTheme.ThemeLoadBasic(Theme: TThemeBasic; const Name: string);
+procedure TTheme.ThemeLoadBasic(Theme: TThemeBasic; const Name: AnsiString);
 begin
   ThemeLoadBackground(Theme.Background, Name);
   ThemeLoadTexts(Theme.Text, Name + 'Text');
@@ -1650,9 +1650,9 @@ begin
   LastThemeBasic := Theme;
 end;
 
-procedure TTheme.ThemeLoadBackground(var ThemeBackground: TThemeBackground; const Name: string);
+procedure TTheme.ThemeLoadBackground(var ThemeBackground: TThemeBackground; const Name: AnsiString);
 var
-  BGType: string;
+  BGType: AnsiString;
   I: TBackgroundType;
 begin
   BGType := LowerCase(ThemeIni.ReadString(Name + 'Background', 'Type', 'auto'));
@@ -1674,7 +1674,7 @@ begin
   ThemeBackground.Alpha   := ThemeIni.ReadFloat(Name + 'Background', 'Alpha', 1);
 end;
 
-procedure TTheme.ThemeLoadText(var ThemeText: TThemeText; const Name: string);
+procedure TTheme.ThemeLoadText(var ThemeText: TThemeText; const Name: AnsiString);
 var
   C: integer;
 begin
@@ -1708,7 +1708,7 @@ begin
   end;
 end;
 
-procedure TTheme.ThemeLoadTexts(var ThemeText: AThemeText; const Name: string);
+procedure TTheme.ThemeLoadTexts(var ThemeText: AThemeText; const Name: AnsiString);
 var
   T: integer;
 begin
@@ -1721,7 +1721,7 @@ begin
   end;
 end;
 
-procedure TTheme.ThemeLoadStatic(var ThemeStatic: TThemeStatic; const Name: string);
+procedure TTheme.ThemeLoadStatic(var ThemeStatic: TThemeStatic; const Name: AnsiString);
 var
   C: integer;
 begin
@@ -1754,7 +1754,7 @@ begin
   ThemeStatic.ReflectionSpacing := ThemeIni.ReadFloat(Name, 'ReflectionSpacing', 15);
 end;
 
-procedure TTheme.ThemeLoadStatics(var ThemeStatic: AThemeStatic; const Name: string);
+procedure TTheme.ThemeLoadStatics(var ThemeStatic: AThemeStatic; const Name: AnsiString);
 var
   S: integer;
 begin
@@ -1768,7 +1768,7 @@ begin
 end;
 
 //Button Collection Mod
-procedure TTheme.ThemeLoadButtonCollection(var Collection: TThemeButtonCollection; const Name: string);
+procedure TTheme.ThemeLoadButtonCollection(var Collection: TThemeButtonCollection; const Name: AnsiString);
 var T: integer;
 begin
   //Load Collection Style
@@ -1782,7 +1782,7 @@ begin
     Collection.FirstChild := 0;
 end;
 
-procedure TTheme.ThemeLoadButtonCollections(var Collections: AThemeButtonCollection; const Name: string);
+procedure TTheme.ThemeLoadButtonCollections(var Collections: AThemeButtonCollection; const Name: AnsiString);
 var
   I: integer;
 begin
@@ -1796,7 +1796,7 @@ begin
 end;
 //End Button Collection Mod
 
-procedure TTheme.ThemeLoadButton(var ThemeButton: TThemeButton; const Name: string; Collections: PAThemeButtonCollection);
+procedure TTheme.ThemeLoadButton(var ThemeButton: TThemeButton; const Name: AnsiString; Collections: PAThemeButtonCollection);
 var
   C:    integer;
   TLen: integer;
@@ -1888,7 +1888,7 @@ begin
     ThemeLoadText(ThemeButton.Text[T-1], Name + 'Text' + IntToStr(T));
 end;
 
-procedure TTheme.ThemeLoadSelectSlide(var ThemeSelectS: TThemeSelectSlide; const Name: string);
+procedure TTheme.ThemeLoadSelectSlide(var ThemeSelectS: TThemeSelectSlide; const Name: AnsiString);
 begin
   ThemeSelectS.Text := Language.Translate(ThemeIni.ReadString(Name, 'Text', ''));
 
@@ -1934,7 +1934,7 @@ begin
   ThemeSelectS.oneItemOnly := (ThemeIni.ReadInteger(Name, 'OneItemOnly', 0) = 1);
 end;
 
-procedure TTheme.ThemeLoadEqualizer(var ThemeEqualizer: TThemeEqualizer; const Name: string);
+procedure TTheme.ThemeLoadEqualizer(var ThemeEqualizer: TThemeEqualizer; const Name: AnsiString);
 var I: integer;
 begin
   ThemeEqualizer.Visible := (ThemeIni.ReadInteger(Name, 'Visible', 0) = 1);
@@ -2092,7 +2092,7 @@ begin
   SL.Free;
 end;
 
-function ColorExists(Name: string): integer;
+function ColorExists(Name: AnsiString): integer;
 var
   C: integer;
 begin
@@ -2102,7 +2102,7 @@ begin
       Result := C;
 end;
 
-procedure LoadColor(var R, G, B: real; ColorName: string);
+procedure LoadColor(var R, G, B: real; ColorName: AnsiString);
 var
   C: integer;
 begin
@@ -2188,7 +2188,7 @@ begin
   Result.B := sqrt(RGB.B);
 end;
 
-procedure TTheme.ThemeSave(const FileName: string);
+procedure TTheme.ThemeSave(const FileName: AnsiString);
 var
   I: integer;
 begin
@@ -2313,7 +2313,7 @@ begin
   ThemeIni.Free;
 end;
 
-procedure TTheme.ThemeSaveBasic(Theme: TThemeBasic; const Name: string);
+procedure TTheme.ThemeSaveBasic(Theme: TThemeBasic; const Name: AnsiString);
 begin
   ThemeIni.WriteInteger(Name, 'Texts', Length(Theme.Text));
 
@@ -2322,7 +2322,7 @@ begin
   ThemeSaveTexts(Theme.Text, Name + 'Text');
 end;
 
-procedure TTheme.ThemeSaveBackground(ThemeBackground: TThemeBackground; const Name: string);
+procedure TTheme.ThemeSaveBackground(ThemeBackground: TThemeBackground; const Name: AnsiString);
 begin
   if ThemeBackground.Tex <> '' then
     ThemeIni.WriteString(Name, 'Tex', ThemeBackground.Tex)
@@ -2332,7 +2332,7 @@ begin
   end;
 end;
 
-procedure TTheme.ThemeSaveStatic(ThemeStatic: TThemeStatic; const Name: string);
+procedure TTheme.ThemeSaveStatic(ThemeStatic: TThemeStatic; const Name: AnsiString);
 begin
   ThemeIni.WriteInteger(Name, 'X', ThemeStatic.X);
   ThemeIni.WriteInteger(Name, 'Y', ThemeStatic.Y);
@@ -2349,7 +2349,7 @@ begin
   ThemeIni.WriteFloat(Name, 'TexY2', ThemeStatic.TexY2);
 end;
 
-procedure TTheme.ThemeSaveStatics(ThemeStatic: AThemeStatic; const Name: string);
+procedure TTheme.ThemeSaveStatics(ThemeStatic: AThemeStatic; const Name: AnsiString);
 var
   S: integer;
 begin
@@ -2359,7 +2359,7 @@ begin
   ThemeIni.EraseSection(Name + {'Static' + }IntToStr(S+1));
 end;
 
-procedure TTheme.ThemeSaveText(ThemeText: TThemeText; const Name: string);
+procedure TTheme.ThemeSaveText(ThemeText: TThemeText; const Name: AnsiString);
 begin
   ThemeIni.WriteInteger(Name, 'X', ThemeText.X);
   ThemeIni.WriteInteger(Name, 'Y', ThemeText.Y);
@@ -2375,7 +2375,7 @@ begin
   ThemeIni.WriteFloat(Name, 'ReflectionSpacing', ThemeText.ReflectionSpacing);
 end;
 
-procedure TTheme.ThemeSaveTexts(ThemeText: AThemeText; const Name: string);
+procedure TTheme.ThemeSaveTexts(ThemeText: AThemeText; const Name: AnsiString);
 var
   T: integer;
 begin
@@ -2385,7 +2385,7 @@ begin
   ThemeIni.EraseSection(Name + {'Text' + }IntToStr(T+1));
 end;
 
-procedure TTheme.ThemeSaveButton(ThemeButton: TThemeButton; const Name: string);
+procedure TTheme.ThemeSaveButton(ThemeButton: TThemeButton; const Name: AnsiString);
 var
   T: integer;
 begin

@@ -37,11 +37,11 @@ function _projectM_create1(config_file: PChar): _PProjectM; cdecl; external libp
 {$IF PROJECTM_VERSION < 1000000} // 0.9x
 function _projectM_create2(gx: cint; gy: cint; fps: cint;
   texsize: cint; width: cint; height: cint;
-  preset_url: PChar; title_fonturl: PChar; title_menuurl: PChar): _PProjectM; cdecl; external libprojectM_cwrapper name 'projectM_create2';
+  preset_url: PChar; title_fonturl: PChar; title_menuurl: PAnsiChar): _PProjectM; cdecl; external libprojectM_cwrapper name 'projectM_create2';
 {$IFEND}
 
 procedure _projectM_resetGL(pm: _PProjectM; width: cint; height: cint); cdecl; external libprojectM_cwrapper name 'projectM_resetGL';
-procedure _projectM_setTitle(pm: _PProjectM; title: PChar); cdecl; external libprojectM_cwrapper name 'projectM_setTitle';
+procedure _projectM_setTitle(pm: _PProjectM; title: PAnsiChar); cdecl; external libprojectM_cwrapper name 'projectM_setTitle';
 procedure _projectM_renderFrame(pm: _PProjectM); cdecl; external libprojectM_cwrapper name 'projectM_renderFrame';
 function _projectM_initRenderToTexture(pm: _PProjectM): cuint; cdecl; external libprojectM_cwrapper name 'projectM_initRenderToTexture';
 
@@ -79,7 +79,7 @@ begin
 end;
 *)
 
-constructor TProjectM.Create(const configFile: string);
+constructor TProjectM.Create(const configFile: AnsiString);
 begin
   inherited Create();
 
@@ -98,9 +98,9 @@ begin
   _projectM_resetGL(data, width, height);
 end;
 
-procedure TProjectM.SetTitle(const title: string);
+procedure TProjectM.SetTitle(const title: AnsiString);
 begin
-  _projectM_setTitle(data, PChar(title));
+  _projectM_setTitle(data, PAnsiChar(title));
 end;
 
 procedure TProjectM.RenderFrame();

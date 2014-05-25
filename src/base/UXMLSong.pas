@@ -83,20 +83,20 @@ type
       BindLyrics: Boolean;    //Should the Lyrics be bind to the last Word (no Space)
       FirstNote: Boolean;     //Is this the First Note found? For Gap calculating
 
-      function  ParseLine(Line: RawByteString): Boolean;
+      function  ParseLine(Line: AnsiString): Boolean;
     public
       SongInfo: TSongInfo;
-      ErrorMessage: string;
+      ErrorMessage: AnsiString;
       Edition: UTF8String;
-      SingstarVersion: string;
+      SingstarVersion: AnsiString;
 
       Settings: record
-        DashReplacement: Char;
+        DashReplacement: AnsiChar;
       end;
 
       constructor Create;
 
-      function  ParseConfigForEdition(const Filename: IPath): String;
+      function  ParseConfigForEdition(const Filename: IPath): AnsiString;
 
       function  ParseSongHeader(const Filename: IPath): Boolean; //Parse Song Header only
       function  ParseSong (const Filename: IPath): Boolean;      //Parse whole Song
@@ -126,7 +126,11 @@ begin
   inherited Create;
   ErrorMessage := '';
 
+  {$IFDEF DELPHI_19_UP}
+  FormatSettings.DecimalSeparator := '.';
+  {$ELSE}
   DecimalSeparator := '.';
+  {$ENDIF}
 end;
 
 function TParser.ParseSong(const Filename: IPath): Boolean;
@@ -227,17 +231,17 @@ begin
     ErrorMessage := 'Can''t find melody.xml file';
 end;
 
-Function TParser.ParseLine(Line: String): Boolean;
+Function TParser.ParseLine(Line: AnsiString): Boolean;
 var
   Tag:    String;
-  Values: String;
+  Values: AnsiString;
   AValues: Array of Record
-    Name: String;
-    Value: String;
+    Name: AnsiString;
+    Value: AnsiString;
   end;
   I, J, K:   Integer;
   Duration, Tone: Integer;
-  Lyric: String;
+  Lyric: AnsiString;
   NoteType: Byte;
 
   Procedure MakeValuesArray;
@@ -583,13 +587,13 @@ begin
     Result := true;
 end;
 
-Function  TParser.ParseConfigForEdition(const Filename: IPath): String;
+Function  TParser.ParseConfigForEdition(const Filename: IPath): AnsiString;
 var
   txt: TStringlist;
   Stream: TBinaryFileStream;
   I: Integer;
   J, K: Integer;
-  S: String;
+  S: AnsiString;
 begin
   Result := '';
 

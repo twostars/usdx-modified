@@ -87,7 +87,7 @@ uses
 {**
  * Returns either Filename if it is absolute or a path relative to FontPath.
  *}
-function FindFontFile(const Filename: string): IPath;
+function FindFontFile(const Filename: AnsiString): IPath;
 begin
   Result := FontPath.Append(Filename);
   // if path does not exist, try as an absolute path
@@ -98,7 +98,7 @@ end;
 procedure AddFontFallbacks(FontIni: TMemIniFile; Font: TFont);
 var
   FallbackFont: IPath;
-  IdentName: string;
+  IdentName: AnsiString;
   I: integer;
 begin
   // evaluate the ini-file's 'Fallbacks' section
@@ -132,7 +132,7 @@ var
   Outline: single;
   Embolden: single;
   OutlineFont: TFTScalableOutlineFont;
-  SectionName: string;
+  SectionName: AnsiString;
 begin
   ActFont := 0;
 

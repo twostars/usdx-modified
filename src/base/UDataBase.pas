@@ -660,7 +660,7 @@ end;
  *)
 function TDataBaseSystem.GetTotalEntrys(Typ: TStatType): cardinal;
 var
-  Query: string;
+  Query: AnsiString;
 begin
   Result := 0;
 
@@ -692,7 +692,7 @@ end;
  *)
 function TDataBaseSystem.GetStatReset: TDateTime;
 var
-  Query: string;
+  Query: AnsiString;
 begin
   Result := 0;
 

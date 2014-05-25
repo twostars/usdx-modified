@@ -86,7 +86,7 @@ procedure Px_CloseMixer( mixer: PPxMixer ); cdecl; external LibName;
 *}
 
 function Px_GetNumMixers( mixer: PPxMixer ): cint; cdecl; external LibName;
-function Px_GetMixerName( mixer: PPxMixer; i: cint ): PChar; cdecl; external LibName;
+function Px_GetMixerName( mixer: PPxMixer; i: cint ): PAnsiChar; cdecl; external LibName;
 
 {*
  Master (output) volume
@@ -108,7 +108,7 @@ function Px_SupportsPCMOutputVolume( mixer: PPxMixer ): cint; cdecl; external Li
 *}
 
 function Px_GetNumOutputVolumes( mixer: PPxMixer ): cint; cdecl; external LibName;
-function Px_GetOutputVolumeName( mixer: PPxMixer; i: cint ): PChar; cdecl; external LibName;
+function Px_GetOutputVolumeName( mixer: PPxMixer; i: cint ): PAnsiChar; cdecl; external LibName;
 function Px_GetOutputVolume( mixer: PPxMixer; i: cint ): TPxVolume; cdecl; external LibName;
 procedure Px_SetOutputVolume( mixer: PPxMixer; i: cint; volume: TPxVolume ); cdecl; external LibName;
 
@@ -117,7 +117,7 @@ procedure Px_SetOutputVolume( mixer: PPxMixer; i: cint; volume: TPxVolume ); cde
 *}
 
 function Px_GetNumInputSources( mixer: PPxMixer ): cint; cdecl; external LibName;
-function Px_GetInputSourceName( mixer: PPxMixer; i: cint): PChar; cdecl; external LibName;
+function Px_GetInputSourceName( mixer: PPxMixer; i: cint): PAnsiChar; cdecl; external LibName;
 function Px_GetCurrentInputSource( mixer: PPxMixer ): cint; cdecl; external LibName; {* may return -1 == none *}
 procedure Px_SetCurrentInputSource( mixer: PPxMixer; i: cint ); cdecl; external LibName;
 

@@ -281,15 +281,15 @@ end;
 
 (* libavutil/error.h *)
 
-function av_make_error_string(errbuf: Pchar; errbuf_size: size_t; errnum: cint): Pchar; {$IFDEF HasInline}inline;{$ENDIF}
+function av_make_error_string(errbuf: PAnsiChar; errbuf_size: size_t; errnum: cint): PAnsiChar; {$IFDEF HasInline}inline;{$ENDIF}
 begin
   av_strerror(errnum, errbuf, errbuf_size);
   av_make_error_string := errbuf;
 end;
 
-function av_err2str(errnum: cint): pchar; {$IFDEF HasInline}inline;{$ENDIF}
+function av_err2str(errnum: cint): PAnsiChar; {$IFDEF HasInline}inline;{$ENDIF}
 var
-  errbuf: Pchar;
+  errbuf: PAnsiChar;
 begin
   errbuf := stralloc(AV_ERROR_MAX_STRING_SIZE);
   av_make_error_string(errbuf, AV_ERROR_MAX_STRING_SIZE, errnum);

@@ -59,7 +59,7 @@ type
     next_out:  pbytef;
     avail_out: uInt;
     total_out: uLong;
-    msg:       pchar;
+    msg:       PAnsiChar;
     state:     PInternalState;
     zalloc:    TAllocFunc;
     zfree:     TFreeFunc;
@@ -111,8 +111,8 @@ const
 
   Z_NULL = 0;
 
-function zlibVersionpchar(): pchar; cdecl; external libz name 'zlibVersion';
-function zlibVersion(): string;
+function zlibVersionPAnsiChar(): PAnsiChar; cdecl; external libz name 'zlibVersion';
+function zlibVersion(): AnsiString;
 
 function deflate(var strm: TZStream; flush: integer): integer; cdecl; external libz name 'deflate';
 function deflateEnd(var strm: TZStream): integer; cdecl; external libz name 'deflateEnd';
@@ -132,14 +132,14 @@ function compress(dest: pbytef; destLen: puLongf; source : pbytef; sourceLen: uL
 function compress2(dest: pbytef; destLen: puLongf; source : pbytef; sourceLen: uLong; level: integer): integer; cdecl; external libz name 'compress2';
 function uncompress(dest: pbytef; destLen: puLongf; source : pbytef; sourceLen: uLong): integer; cdecl; external libz name 'uncompress';
 
-function gzopen(path: pchar; mode: pchar): gzFile; cdecl; external libz name 'gzopen';
-function gzdopen(fd: integer; mode: pchar): gzFile; cdecl; external libz name 'gzdopen';
+function gzopen(path: PAnsiChar; mode: PAnsiChar): gzFile; cdecl; external libz name 'gzopen';
+function gzdopen(fd: integer; mode: PAnsiChar): gzFile; cdecl; external libz name 'gzdopen';
 function gzsetparams(thefile: gzFile; level: integer; strategy: integer): integer; cdecl; external libz name 'gzsetparams';
 function gzread(thefile: gzFile; buf: pointer; len: cardinal): integer; cdecl; external libz name 'gzread';
 function gzwrite(thefile: gzFile; buf: pointer; len: cardinal): integer; cdecl; external libz name 'gzwrite';
 function gzprintf(thefile: gzFile; format: pbytef; args: array of const): integer; cdecl; external libz name 'gzprintf';
 function gzputs(thefile: gzFile; s: pbytef): integer; cdecl; external libz name 'gzputs';
-function gzgets(thefile: gzFile; buf: pbytef; len: integer): pchar; cdecl; external libz name 'gzgets';
+function gzgets(thefile: gzFile; buf: pbytef; len: integer): PAnsiChar; cdecl; external libz name 'gzgets';
 function gzputc(thefile: gzFile; c: integer): integer; cdecl; external libz name 'gzputc';
 function gzgetc(thefile: gzFile): integer; cdecl; external libz name 'gzgetc';
 function gzflush(thefile: gzFile; flush: integer): integer; cdecl; external libz name 'gzflush';
@@ -148,22 +148,22 @@ function gzrewind(thefile: gzFile): integer; cdecl; external libz name 'gzrewind
 function gztell(thefile: gzFile): z_off_t; cdecl; external libz name 'gztell';
 function gzeof(thefile: gzFile): integer; cdecl; external libz name 'gzeof';
 function gzclose(thefile: gzFile): integer; cdecl; external libz name 'gzclose';
-function gzerror(thefile: gzFile; var errnum: integer): pchar; cdecl; external libz name 'gzerror';
+function gzerror(thefile: gzFile; var errnum: integer): PAnsiChar; cdecl; external libz name 'gzerror';
 
 function adler32(adler: uLong; buf: pbytef; len: uInt): uLong; cdecl; external libz name 'adler32';
 function crc32(crc: uLong; buf: pbytef; len: uInt): uLong; cdecl; external libz name 'crc32';
 
-function deflateInit_(var strm: TZStream; level: integer; version: pchar; stream_size: integer): integer; cdecl; external libz name 'deflateInit_';
+function deflateInit_(var strm: TZStream; level: integer; version: PAnsiChar; stream_size: integer): integer; cdecl; external libz name 'deflateInit_';
 function deflateInit(var strm: TZStream; level : integer) : integer;
-function inflateInit_(var strm: TZStream; version: pchar; stream_size: integer): integer; cdecl; external libz name 'inflateInit_';
+function inflateInit_(var strm: TZStream; version: PAnsiChar; stream_size: integer): integer; cdecl; external libz name 'inflateInit_';
 function inflateInit(var strm:TZStream) : integer;
-function deflateInit2_(var strm: TZStream; level: integer; method: integer; windowBits: integer; memLevel: integer; strategy: integer; version: pchar; stream_size: integer): integer; cdecl; external libz name 'deflateInit2_';
+function deflateInit2_(var strm: TZStream; level: integer; method: integer; windowBits: integer; memLevel: integer; strategy: integer; version: PAnsiChar; stream_size: integer): integer; cdecl; external libz name 'deflateInit2_';
 function deflateInit2(var strm: TZStream; level, method, windowBits, memLevel, strategy: integer): integer;
-function inflateInit2_(var strm: TZStream; windowBits: integer; version: pchar; stream_size: integer): integer; cdecl; external libz name 'inflateInit2_';
+function inflateInit2_(var strm: TZStream; windowBits: integer; version: PAnsiChar; stream_size: integer): integer; cdecl; external libz name 'inflateInit2_';
 function inflateInit2(var strm: TZStream; windowBits: integer): integer;
 
-function zErrorpchar(err: integer): pchar; cdecl; external libz name 'zError';
-function zError(err: integer): string;
+function zErrorPAnsiChar(err: integer): PAnsiChar; cdecl; external libz name 'zError';
+function zError(err: integer): AnsiString;
 function inflateSyncPoint(z: PZstream): integer; cdecl; external libz name 'inflateSyncPoint';
 function get_crc_table(): pointer; cdecl; external libz name 'get_crc_table';
 
@@ -172,9 +172,9 @@ procedure zlibFreeMem(AppData, Block: Pointer);  cdecl;
 
 implementation
 
-function zlibversion(): string;
+function zlibversion(): AnsiString;
 begin
-   zlibversion := string(zlibversionpchar);
+   zlibversion := string(zlibversionPAnsiChar);
 end;
 
 function deflateInit(var strm: TZStream; level: integer) : integer;
@@ -197,9 +197,9 @@ begin
    inflateInit2 := inflateInit2_(strm, windowBits, ZLIB_VERSION, sizeof(TZStream));
 end;
 
-function zError(err: integer): string;
+function zError(err: integer): AnsiString;
 begin
-   zerror := string(zErrorpchar(err));
+   zerror := string(zErrorPAnsiChar(err));
 end;
 
 function zlibAllocMem(AppData: Pointer; Items, Size: Integer): Pointer; cdecl;

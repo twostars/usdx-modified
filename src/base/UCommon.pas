@@ -60,15 +60,15 @@ const
  *   SplitString(' split  me now ', 0) -> ['split', 'me', 'now']
  *   SplitString(' split  me now ', 1) -> ['split', 'me now']
  *}
-function SplitString(const Str: string; MaxCount: integer = 0; Separators: TSysCharSet = SepWhitespace): TStringDynArray;
+function SplitString(const Str: AnsiString; MaxCount: integer = 0; Separators: TSysCharSet = SepWhitespace): TStringDynArray;
 
 
 type
   TMessageType = (mtInfo, mtError);
 
-procedure ShowMessage(const msg: string; msgType: TMessageType = mtInfo);
+procedure ShowMessage(const msg: AnsiString; msgType: TMessageType = mtInfo);
 
-procedure ConsoleWriteLn(const msg: string);
+procedure ConsoleWriteLn(const msg: AnsiString);
 
 {$IFDEF FPC}
 function RandomRange(aMin: integer; aMax: integer): integer;
@@ -89,22 +89,19 @@ procedure MergeSort(List: TList; CompareFunc: TListSortCompare);
 function GetAlignedMem(Size: cardinal; Alignment: integer): pointer;
 procedure FreeAlignedMem(P: pointer);
 
-function GetArrayIndex(const SearchArray: array of UTF8String; Value: string; CaseInsensitiv: boolean = false): integer;
+function GetArrayIndex(const SearchArray: array of UTF8String; Value: AnsiString; CaseInsensitiv: boolean = false): integer;
 
 
 implementation
 
 uses
   Math,
-  {$IFDEF Delphi}
-  Dialogs,
-  {$ENDIF}
   sdl,
   UFilesystem,
   UMain,
   UUnicodeUtils;
 
-function SplitString(const Str: string; MaxCount: integer; Separators: TSysCharSet): TStringDynArray;
+function SplitString(const Str: AnsiString; MaxCount: integer; Separators: TSysCharSet): TStringDynArray;
 
   {*
    * Adds Str[StartPos..Endpos-1] to the result array.
@@ -161,12 +158,12 @@ end;
 {$IF Defined(Linux) or Defined(FreeBSD)}
 
 var
-  PrevNumLocale: string;
+  PrevNumLocale: AnsiString;
 
 const
   LC_NUMERIC  = 1;
 
-function setlocale(category: integer; locale: pchar): pchar; cdecl; external 'c' name 'setlocale';
+function setlocale(category: integer; locale: PAnsiChar): PAnsiChar; cdecl; external 'c' name 'setlocale';
 
 {$IFEND}
 
@@ -197,7 +194,7 @@ end;
 procedure RestoreNumericLocale();
 begin
   {$IF Defined(LINUX) or Defined(FreeBSD)}
-  setlocale(LC_NUMERIC, PChar(PrevNumLocale));
+  setlocale(LC_NUMERIC, PAnsiChar(PrevNumLocale));
   {$IFEND}
 end;
 
@@ -315,7 +312,7 @@ var
  * Do not use this function directly because it is not thread-safe,
  * use ConsoleWriteLn() instead.
  *)
-procedure _ConsoleWriteLn(const aString: string); {$IFDEF HasInline}inline;{$ENDIF}
+procedure _ConsoleWriteLn(const aString: AnsiString); {$IFDEF HasInline}inline;{$ENDIF}
 begin
   {$IFDEF MSWINDOWS}
   // sanity check to avoid crashes with writeln()
@@ -401,7 +398,7 @@ end;
  * The solution is to create an FPC-managed thread which has the TLS data
  * and use it to handle the console-output (hence it is called Console-Handler)
  *}
-procedure ConsoleWriteLn(const msg: string);
+procedure ConsoleWriteLn(const msg: AnsiString);
 begin
 {$IFDEF CONSOLE}
   {$IFDEF FPC}
@@ -417,7 +414,7 @@ begin
 {$ENDIF}
 end;
 
-procedure ShowMessage(const msg: String; msgType: TMessageType);
+procedure ShowMessage(const msg: AnsiString; msgType: TMessageType);
 {$IFDEF MSWINDOWS}
 var Flags: cardinal;
 {$ENDIF}
@@ -428,7 +425,7 @@ begin
     mtError: Flags := MB_ICONERROR or MB_OK;
     else Flags := MB_OK;
   end;
-  MessageBox(0, PChar(msg), PChar(USDXVersionStr()), Flags);
+  MessageBoxA(0, PAnsiChar(msg), PAnsiChar(USDXVersionStr()), Flags);
 {$ELSE}
   ConsoleWriteln(msg);
 {$IFEND}
@@ -521,7 +518,7 @@ end;
  * Returns the index of Value in SearchArray
  * or -1 if Value is not in SearchArray.
  *)
-function GetArrayIndex(const SearchArray: array of UTF8String; Value: string;
+function GetArrayIndex(const SearchArray: array of UTF8String; Value: AnsiString;
     CaseInsensitiv: boolean = false): integer;
 var
   i: integer;

@@ -219,7 +219,7 @@ begin
   mainBundle := CFBundleGetMainBundle();
   resourcesURL := CFBundleCopyResourcesDirectoryURL(mainBundle);
   SetLength(bundlePath, PATH_MAX);
-  success := CFURLGetFileSystemRepresentation(resourcesURL, TRUE, PChar(bundlePath), PATH_MAX);
+  success := CFURLGetFileSystemRepresentation(resourcesURL, TRUE, PAnsiChar(bundlePath), PATH_MAX);
   if not success then
     writeln('CreateUserFolders:CFURLGetFileSystemRepresentation unexpectedly failed.');
   CFRelease(resourcesURL);

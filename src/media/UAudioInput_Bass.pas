@@ -58,7 +58,7 @@ type
     private
       function EnumDevices(): boolean;
     public
-      function GetName: String; override;
+      function GetName: AnsiString; override;
       function InitializeRecord: boolean; override;
       function FinalizeRecord: boolean; override;
   end;
@@ -346,7 +346,7 @@ end;
 
 { TAudioInput_Bass }
 
-function  TAudioInput_Bass.GetName: String;
+function  TAudioInput_Bass.GetName: AnsiString;
 begin
   result := 'BASS_Input';
 end;
@@ -354,7 +354,7 @@ end;
 function TAudioInput_Bass.EnumDevices(): boolean;
 var
   Descr:      UTF8String;
-  SourceName: PChar;
+  SourceName: PAnsiChar;
   Flags:      integer;
   BassDeviceID: integer;
   BassDevice:   TBassInputDevice;

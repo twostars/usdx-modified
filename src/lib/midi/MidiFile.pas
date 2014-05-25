@@ -8,8 +8,8 @@
 
   version 1.1
     added some function
-    function KeyToStr(key : integer) : string;
-    function MyTimeToStr(val : integer) : string;
+    function KeyToStr(key : integer) : AnsiString;
+    function MyTimeToStr(val : integer) : AnsiString;
     Bpm can be set to change speed
 
   version 1.2
@@ -72,10 +72,10 @@
     if playing yourself then events from last time to this time are produced
 
 
-  function KeyToStr(key : integer) : string;
+  function KeyToStr(key : integer) : AnsiString;
       give note string on key value:  e.g. C4
 
-  function MyTimeToStr(val : integer) : string;
+  function MyTimeToStr(val : integer) : AnsiString;
       give time string from msec time
 
   function  GetTrackLength:integer;
@@ -114,7 +114,7 @@ type
     event: byte;
     data1: byte;
     data2: byte;
-    str: string;
+    str: AnsiString;
     dticks: integer;
     time: integer;
     mtime: integer;
@@ -128,8 +128,8 @@ type
   TMidiTrack = class(TObject)
   protected
     events: TList;
-    name: string;
-    instrument: string;
+    name: AnsiString;
+    instrument: AnsiString;
     currentTime: integer;
     currentPos: integer;
     ready: boolean;
@@ -147,8 +147,8 @@ type
 
     procedure putEvent(event: PMidiEvent);
     function getEvent(index: integer): PMidiEvent;
-    function getName: string;
-    function getInstrument: string;
+    function getName: AnsiString;
+    function getInstrument: AnsiString;
     function getEventCount: integer;
     function getCurrentTime: integer;
     function getTrackLength: integer;
@@ -198,7 +198,7 @@ type
     procedure ProcessHeaderChunk;
     procedure ProcessTrackChunk;
     function ReadVarLength: integer;
-    function ReadString(l: integer): string;
+    function ReadString(l: integer): AnsiString;
     procedure SetOnMidiEvent(handler: TOnMidiEvent);
     procedure SetBpm(val: integer);
   public
@@ -230,8 +230,8 @@ type
     property OnUpdateEvent: TNotifyEvent read FOnUpdateEvent write FOnUpdateEvent;
   end;
 
-function KeyToStr(key: integer): string;
-function MyTimeToStr(val: integer): string;
+function KeyToStr(key: integer): AnsiString;
+function MyTimeToStr(val: integer): AnsiString;
 procedure Register;
 
 implementation
@@ -346,12 +346,12 @@ begin
   end;
 end;
 
-function TMidiTrack.getName: string;
+function TMidiTrack.getName: AnsiString;
 begin
   result := name;
 end;
 
-function TMidiTrack.getInstrument: string;
+function TMidiTrack.getInstrument: AnsiString;
 begin
   result := instrument;
 end;
@@ -648,7 +648,7 @@ var
   dTime: integer;
   event: integer;
   len: integer;
-  str: string;
+  str: AnsiString;
   midiEvent: PMidiEvent;
   i: integer;
   us_per_quarter: integer;
@@ -820,9 +820,9 @@ begin
   result := i;
 end;
 
-function TMidifile.ReadString(l: integer): string;
+function TMidifile.ReadString(l: integer): AnsiString;
 var
-  s: Pchar;
+  s: PChar;
   i: integer;
 begin
   GetMem(s, l + 1); ;
@@ -832,7 +832,7 @@ begin
     s[i] := Chr(chunkIndex^);
     inc(chunkIndex);
   end;
-  result := string(s);
+  result := AnsiString(s);
 end;
 
 procedure TMidifile.ReadFile;
@@ -851,10 +851,10 @@ begin
   numberTracks := Tracks.Count;
 end;
 
-function KeyToStr(key: integer): string;
+function KeyToStr(key: integer): AnsiString;
 var
   n: integer;
-  str: string;
+  str: AnsiString;
 begin
   n := key mod 12;
   case n of
@@ -871,20 +871,20 @@ begin
     10: str := 'A#';
     11: str := 'B';
   end;
-  Result := str + IntToStr(key div 12);
+  Result := str + AnsiString(IntToStr(key div 12));
 end;
 
-function IntToLenStr(val: integer; len: integer): string;
+function IntToLenStr(val: integer; len: integer): AnsiString;
 var
-  str: string;
+  str: AnsiString;
 begin
-  str := IntToStr(val);
+  str := AnsiString(IntToStr(val));
   while Length(str) < len do
     str := '0' + str;
   Result := str;
 end;
 
-function MyTimeToStr(val: integer): string;
+function MyTimeToStr(val: integer): AnsiString;
 var
   hour: integer;
   min:  integer;
@@ -897,7 +897,7 @@ begin
   sec  := sec mod 60;
   hour := min div 60;
   min  := min mod 60;
-  Result := IntToStr(hour) + ':' + IntToLenStr(min, 2) + ':' + IntToLenStr(sec, 2) + '.' + IntToLenStr(msec, 3);
+  Result := AnsiString(IntToStr(hour)) + ':' + IntToLenStr(min, 2) + ':' + IntToLenStr(sec, 2) + '.' + IntToLenStr(msec, 3);
 end;
 
 function TMidiFIle.GetFusPerTick : Double;

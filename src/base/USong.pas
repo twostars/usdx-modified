@@ -100,7 +100,7 @@ type
     FileLineNo  : integer;  // line, which is read last, for error reporting
 
     function DecodeFilename(Filename: RawByteString): IPath;
-    procedure ParseNote(LineNumber: integer; TypeP: char; StartP, DurationP, NoteP: integer; LyricS: UTF8String);
+    procedure ParseNote(LineNumber: integer; TypeP: AnsiChar; StartP, DurationP, NoteP: integer; LyricS: UTF8String);
     procedure NewSentence(LineNumberP: integer; Param1, Param2: integer);
     procedure FindRefrain(); // tries to find a refrain for the medley mode and preview start
 
@@ -638,7 +638,7 @@ var
   I, J:      integer;
   NoteIndex: integer;
 
-  NoteType:  char;
+  NoteType:  AnsiChar;
   SentenceEnd, Rest, Time: integer;
   Parser: TParser;
   FileNamePath: IPath;
@@ -872,9 +872,9 @@ end;
  * "International" StrToFloat variant. Uses either ',' or '.' as decimal
  * separator.
  *}
-function StrToFloatI18n(const Value: string): extended;
+function StrToFloatI18n(const Value: AnsiString): extended;
 var
-  TempValue : string;
+  TempValue : AnsiString;
 begin
   TempValue := Value;
   if (Pos(',', TempValue) <> 0) then
@@ -884,18 +884,18 @@ end;
 
 function TSong.ReadTXTHeader(SongFile: TTextFileStream; ReadCustomTags: Boolean): boolean;
 var
-  Line, Identifier: string;
-  Value: string;
+  Line, Identifier: UTF8String;
+  Value: AnsiString;
   SepPos: integer; // separator position
   Done: byte;      // bit-vector of mandatory fields
   MedleyFlags: byte; //bit-vector for medley/preview tags
   EncFile: IPath; // encoded filename
-  FullFileName: string;
+  FullFileName: AnsiString;
 
   { adds a custom header tag to the song
     if there is no ':' in the read line, Tag should be empty
     and the whole line should be in Content }
-  procedure AddCustomTag(const Tag, Content: String);
+  procedure AddCustomTag(const Tag, Content: AnsiString);
     var Len: Integer;
   begin
     if ReadCustomTags then
@@ -924,7 +924,7 @@ begin
   end;
 
   // check if file begins with a UTF-8 BOM, if so set encoding to UTF-8
-  if (CheckReplaceUTF8BOM(Line)) then
+  if (CheckReplaceUTF8BOM(RawByteString(Line))) then
     Encoding := encUTF8;
 
   //Read Lines while Line starts with # or its empty
@@ -1214,7 +1214,7 @@ begin
     Result := -1;
 end;
 
-procedure TSong.ParseNote(LineNumber: integer; TypeP: char; StartP, DurationP, NoteP: integer; LyricS: UTF8String);
+procedure TSong.ParseNote(LineNumber: integer; TypeP: AnsiChar; StartP, DurationP, NoteP: integer; LyricS: UTF8String);
 begin
   with Lines[LineNumber].Line[Lines[LineNumber].High] do
   begin

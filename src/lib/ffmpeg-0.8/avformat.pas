@@ -1706,7 +1706,7 @@ function avf_sdp_create(ac: PPAVFormatContext; n_files: cint; buff: PByteArray; 
  *
  * @param extensions a comma-separated list of filename extensions
  *)
-function av_match_ext(filename: {const} Pchar; extensions: {const} Pchar): cint;
+function av_match_ext(filename: {const} PAnsiChar; extensions: {const} PAnsiChar): cint;
   cdecl; external av__format;
 
 implementation

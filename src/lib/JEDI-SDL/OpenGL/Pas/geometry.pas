@@ -58,7 +58,7 @@ unit geometry;
 
 interface
 
-{$I jedi-sdl.inc}
+{$I ../../SDL/Pas/jedi-sdl.inc}
 
 type
   // data types needed for 3D graphics calculation,

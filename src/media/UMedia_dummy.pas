@@ -49,7 +49,7 @@ type
       DummyOutputDeviceList: TAudioOutputDeviceList;
     public
       constructor Create();
-      function GetName: string;
+      function GetName: AnsiString;
 
       function Init(): boolean;
       function Finalize(): boolean;
@@ -159,7 +159,7 @@ type
     TVideoPlayback_Dummy = class( TInterfacedObject, IVideoPlayback, IVideoVisualization )
     public
       constructor Create();
-      function GetName: string;
+      function GetName: AnsiString;
 
       function Init(): boolean;
       function Finalize(): boolean;
@@ -167,7 +167,7 @@ type
       function Open(const FileName: IPath): IVideo;
     end;
 
-function  TAudio_Dummy.GetName: string;
+function  TAudio_Dummy.GetName: AnsiString;
 begin
   Result := 'AudioDummy';
 end;
@@ -476,7 +476,7 @@ constructor TVideoPlayback_Dummy.Create();
 begin
 end;
 
-function TVideoPlayback_Dummy.GetName: string;
+function TVideoPlayback_Dummy.GetName: AnsiString;
 begin
   Result := 'VideoDummy';
 end;

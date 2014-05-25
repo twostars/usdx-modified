@@ -183,7 +183,7 @@ type
 type
   TAudioDecoder_FFmpeg = class(TInterfacedObject, IAudioDecoder)
     public
-      function GetName: string;
+      function GetName: AnsiString;
 
       function InitializeDecoder(): boolean;
       function FinalizeDecoder(): boolean;
@@ -1038,7 +1038,7 @@ begin
       Exit;
 
     // handle Status-packet
-    if (PAnsiChar(fAudioPaket.data) = STATUS_PACKET) then
+    if (PAnsiChar(fAudioPaket.data) = AnsiChar(STATUS_PACKET)) then
     begin
       fAudioPaket.data := nil;
       fAudioPaketData := nil;
@@ -1175,7 +1175,7 @@ end;
 
 { TAudioDecoder_FFmpeg }
 
-function TAudioDecoder_FFmpeg.GetName: String;
+function TAudioDecoder_FFmpeg.GetName: AnsiString;
 begin
   Result := 'FFmpeg_Decoder';
 end;

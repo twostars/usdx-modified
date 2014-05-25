@@ -100,8 +100,8 @@ type
     FWideStrings: TTntStrings;
     FAdapterCodePage: Cardinal;
   protected
-    function Get(Index: Integer): AnsiString; override;
-    procedure Put(Index: Integer; const S: AnsiString); override;
+    function Get(Index: Integer): string; override;
+    procedure Put(Index: Integer; const S: string); override;
     function GetCount: Integer; override;
     function GetObject(Index: Integer): TObject; override;
     procedure PutObject(Index: Integer; AObject: TObject); override;
@@ -111,7 +111,7 @@ type
     constructor Create(AWideStrings: TTntStrings; _AdapterCodePage: Cardinal = 0);
     procedure Clear; override;
     procedure Delete(Index: Integer); override;
-    procedure Insert(Index: Integer; const S: AnsiString); override;
+    procedure Insert(Index: Integer; const S: string); override;
     procedure LoadFromStreamEx(Stream: TStream; CodePage: Cardinal); override;
     procedure SaveToStreamEx(Stream: TStream; CodePage: Cardinal); override;
   end;
@@ -816,12 +816,12 @@ begin
   FWideStrings.Delete(Index);
 end;
 
-function TAnsiStringsForWideStringsAdapter.Get(Index: Integer): AnsiString;
+function TAnsiStringsForWideStringsAdapter.Get(Index: Integer): string;
 begin
   Result := WideStringToStringEx(FWideStrings.Get(Index), AdapterCodePage);
 end;
 
-procedure TAnsiStringsForWideStringsAdapter.Put(Index: Integer; const S: AnsiString);
+procedure TAnsiStringsForWideStringsAdapter.Put(Index: Integer; const S: string);
 begin
   FWideStrings.Put(Index, StringToWideStringEx(S, AdapterCodePage));
 end;
@@ -831,7 +831,7 @@ begin
   Result := FWideStrings.GetCount;
 end;
 
-procedure TAnsiStringsForWideStringsAdapter.Insert(Index: Integer; const S: AnsiString);
+procedure TAnsiStringsForWideStringsAdapter.Insert(Index: Integer; const S: string);
 begin
   FWideStrings.Insert(Index, StringToWideStringEx(S, AdapterCodePage));
 end;

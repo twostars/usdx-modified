@@ -50,11 +50,11 @@ function ULuaTextGL_Style(L: Plua_State): Integer; cdecl;
 { TextGl.Italic(isItalic: boolean) : sets if font is italic }
 function ULuaTextGL_Italic(L: Plua_State): Integer; cdecl;
 
-{ TextGl.Width(Text: String) : returns width of Text if printed
+{ TextGl.Width(Text: AnsiString) : returns width of Text if printed
   w/ current settings in pixels }
 function ULuaTextGL_Width(L: Plua_State): Integer; cdecl;
 
-{ TextGl.Print(Text: String) : prints text to screen w/ current
+{ TextGl.Print(Text: AnsiString) : prints text to screen w/ current
   settings}
 function ULuaTextGL_Print(L: Plua_State): Integer; cdecl;
 
@@ -103,7 +103,7 @@ begin
   if (Style >= 0) and (Style < Length(Fonts)) then
     SetFontStyle(Style)
   else
-    luaL_ArgError(L, 1, PChar('number from 0 to ' + IntToStr(High(Fonts)) + ' expected'));
+    luaL_ArgError(L, 1, PAnsiChar('number from 0 to ' + IntToStr(High(Fonts)) + ' expected'));
 
   Result := 0;
 end;
@@ -120,10 +120,10 @@ begin
   Result := 0;
 end;
 
-{ TextGl.Width(Text: String) : returns width of Text if printed
+{ TextGl.Width(Text: AnsiString) : returns width of Text if printed
   w/ current settings in pixels }
 function ULuaTextGL_Width(L: Plua_State): Integer; cdecl;
-  var Text: String;
+  var Text: AnsiString;
 begin
   Text := luaL_checkstring(L, 1);
   lua_pop(L, lua_gettop(L));
@@ -133,10 +133,10 @@ begin
   Result := 1;
 end;
 
-{ TextGl.Print(Text: String) : prints text to screen w/ current
+{ TextGl.Print(Text: AnsiString) : prints text to screen w/ current
   settings}
 function ULuaTextGL_Print(L: Plua_State): Integer; cdecl;
-  var Text: String;
+  var Text: AnsiString;
 begin
   Text := luaL_checkstring(L, 1);
 
